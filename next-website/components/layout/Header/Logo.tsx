@@ -17,7 +17,6 @@ export default function Logo({ variant = "header" }: LogoProps) {
         width={width}
         height={height}
         className="logo-img"
-        style={{ display: "inline-block", verticalAlign: "middle" }}
       />
     </Link>
   );

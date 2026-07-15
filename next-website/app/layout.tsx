@@ -40,6 +40,9 @@ export default function RootLayout({
         {/* Global Stylesheets from Asset Layer */}
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/css/fontawesome/css/all.min.css" />
+        <link rel="stylesheet" href="/css/frontend-lite.min.css" />
+        <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="/css/widget-slides.min.css" />
         <link rel="stylesheet" href="/wp-content/themes/hello-elementor/header-footer.min.css" />
         <link rel="stylesheet" href="/wp-content/themes/hello-elementor/style.min.css" />
         <link rel="stylesheet" href="/wp-content/themes/hello-elementor/theme.min.css" />

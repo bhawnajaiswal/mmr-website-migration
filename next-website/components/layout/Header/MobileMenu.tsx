@@ -19,71 +19,48 @@ export default function MobileMenu() {
   };
 
   return (
-    <div className="hfe-mobile-menu" style={{ display: "none" }}> {/* Managed via media queries in CSS */}
+    <div className="hfe-mobile-menu">
       {/* Hamburger Trigger */}
       <button
         onClick={toggleMenu}
         aria-label="Toggle Menu"
-        style={{
-          background: "none",
-          border: "none",
-          color: "#585858",
-          fontSize: "24px",
-          cursor: "pointer",
-          padding: "5px"
-        }}
+        className="hfe-mobile-menu-trigger"
       >
         <i className={isOpen ? "fas fa-times" : "fas fa-bars"}></i>
       </button>
 
       {/* Drawer Overlay */}
       {isOpen && (
-        <div style={{
-          position: "fixed",
-          top: "60px",
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: "#ffffff",
-          zIndex: 9999,
-          overflowY: "auto",
-          padding: "20px",
-          boxShadow: "0 4px 10px rgba(0,0,0,0.1)"
-        }}>
-          <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+        <div className="hfe-mobile-menu-drawer">
+          <ul className="hfe-mobile-menu-list">
             {NAVIGATION_ITEMS.map((item) => {
               const hasChildren = item.subItems && item.subItems.length > 0;
               const isExpanded = !!expandedItems[item.title];
 
               return (
-                <li key={item.title} style={{ borderBottom: "1px solid #f1f1f1", padding: "10px 0" }}>
+                <li key={item.title}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                     <Link
                       href={item.url}
                       onClick={() => setIsOpen(false)}
-                      style={{ color: "#333333", textDecoration: "none", fontSize: "16px", fontWeight: 500 }}
+                      className="hfe-mobile-menu-link"
                     >
                       {item.title}
                     </Link>
                     {hasChildren && (
                       <button
                         onClick={(e) => toggleSubItem(item.title, e)}
-                        style={{
-                          background: "none",
-                          border: "none",
-                          color: "#888888",
-                          fontSize: "14px",
-                          padding: "5px 10px"
-                        }}
+                        className="hfe-mobile-menu-expand-btn"
+                        style={{ background: "none", border: "none", color: "#888888", padding: "5px 10px" }}
                       >
-                        {isExpanded ? "▲" : "▼"}
+                        <i className={isExpanded ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i>
                       </button>
                     )}
                   </div>
 
                   {/* Sub-menu Level 1 */}
                   {hasChildren && isExpanded && (
-                    <ul style={{ listStyle: "none", margin: "10px 0 0 15px", padding: 0, borderLeft: "2px solid #443c7c" }}>
+                    <ul className="hfe-mobile-sub-menu" style={{ listStyle: "none", margin: "10px 0 0 15px", padding: 0, borderLeft: "2px solid #443c7c" }}>
                       {item.subItems!.map((subItem) => {
                         const hasSubChildren = subItem.subItems && subItem.subItems.length > 0;
                         const isSubExpanded = !!expandedItems[subItem.title];
@@ -105,11 +82,10 @@ export default function MobileMenu() {
                                     background: "none",
                                     border: "none",
                                     color: "#888888",
-                                    fontSize: "12px",
                                     padding: "3px 8px"
                                   }}
                                 >
-                                  {isSubExpanded ? "▲" : "▼"}
+                                  <i className={isSubExpanded ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i>
                                 </button>
                               )}
                             </div>
