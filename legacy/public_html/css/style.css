@@ -1,0 +1,386 @@
+@charset "utf-8";
+
+/* CSS Document */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+ul,
+ol {
+	padding: 0;
+}
+
+:root {
+	--primary: #a17bb6;
+	--primary1: #453a78;
+	--white: #ffffff;
+	--black: #121212;
+}
+
+body {
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #333
+}
+
+
+.header {
+	position: relative;
+	width: 100%;
+	height: auto;
+	z-index: 100;
+	padding: 0 50px;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0);
+	transition: border .5s linear;
+}
+
+.header .logo {
+	width: 144px;
+	padding: 25px 0;
+	float: left;
+}
+
+.header .logo img {
+	width: 144px;
+}
+
+.header .right {
+	width: 50%;
+	float: right;
+	margin: 33px 0 0 auto;
+}
+
+.header .right ul {
+	margin-left: auto;
+	margin-right: 0;
+	text-align: right;
+}
+
+.header .right ul li {
+	display: inline;
+	margin: 0 5px;
+	text-align: center;
+}
+
+.header .right ul li a {
+	color: var(--white);
+	font-size: 16px;
+	padding: 11px;
+	text-align: center;
+	margin: 0;
+	font-weight: 600;
+}
+
+.header .right ul li a .fa-phone-volume,
+.header .right ul li a .fa-envelope {
+	transform: scale(1.3, 1.3);
+}
+
+.header .right ul li a .fa-bars {
+	transform: scale(2, 1.5) !important;
+}
+
+.header .right ul li a:hover {
+	color: var(--white);
+}
+
+.header-appo {
+	background-color: #a17bb6;
+	color: #fff;
+	font-weight: 400;
+	line-height: 52px;
+	border-radius: 10px;
+	padding-left: 60px !important;
+	position: relative;
+}
+
+.header-appo img {
+	height: 40px !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.header-appo:hover {
+	background-color: var(--primary1);
+}
+
+.footer {
+	background-color: var(--primary);
+	padding: 50px 0 0 0;
+	position: relative;
+	margin-top: 200px;
+}
+
+.footer i {
+	position: absolute;
+	top: -10px;
+	margin: 0 auto;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 15px;
+	color: var(--primary1);
+}
+
+.footer .top-btn {
+	position: absolute;
+	top: -10px;
+	margin: 0 auto;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.footer .top-btn img {
+	width: 150px;
+}
+
+.footer a p {
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.section {
+	padding: 20px 0;
+}
+
+.section_white {
+	background-color: #fff;
+	position: relative;
+}
+
+.section_gray {
+	background-color: #ebebeb;
+	position: relative;
+}
+
+.section-title {
+	font-size: 36px;
+	line-height: 52px;
+	text-transform: capitalize;
+	color: var(--primary1);
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+
+.section-title-big {
+	font-size: 60px;
+	line-height: 70px;
+	text-transform: capitalize;
+	color: var(--primary1);
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+	color: #666666;
+	margin-bottom: 25px;
+}
+
+.text-justify {
+	text-align: justify !important;
+}
+
+
+.banner_text {
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	z-index: 1100;
+	width: 50% !important;
+}
+
+.banner_text p {
+	font-size: 20px;
+	color: #fff;
+	margin-bottom: 0;
+	margin-top: 20px;
+	font-weight: 400;
+	line-height: 36px;
+	width: 50%;
+}
+
+.banner_text h1 {
+	font-size: 48px;
+	font-weight: 600;
+	color: #fff;
+	width: 50%;
+}
+
+.swiper-slide-banner {
+	height: 560px !important;
+	width: auto;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.swiper-pagination-bullet {
+	width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 38px));
+	height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 38px));
+	background: url(../images/dot.png);
+	opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	bottom: var(--swiper-pagination-bottom, 20px);
+}
+
+
+.swiper-pagination-bullet-active {
+	opacity: 1;
+	background: none;
+	border: 15px solid rbga(0, 0, 0, 0);
+	background-image: url(../images/active-dot.png);
+	width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 38px));
+	height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 38px));
+}
+
+.services {
+	border: 1px solid #baa1ca;
+	background-color: #a17bb6;
+	border-radius: 10px;
+	padding: 15px;
+	height: 100%;
+}
+
+.services h4 {
+	margin-top: 20px;
+	color: #fff;
+	font-size: 22px;
+	line-height: 36px;
+	font-weight: 600;
+}
+
+.services ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+.services ul li {
+	color: #e1d9eb;
+	font-weight: 500;
+}
+
+.mb-300 {
+	margin-bottom: 300px;
+}
+
+#contact-form {
+	padding-bottom: 100px !important;
+}
+
+.contact-bg {
+	background-color: var(--primary1);
+	position: absolute;
+	padding: 30px;
+	top: -290px;
+}
+
+select.form-control {
+	background-color: #dfd6ea;
+	border-radius: 0px;
+	font-size: 18px;
+	height: 50px;
+	color: #636c72 !important;
+}
+.position-relative .select_cutstom {
+    background-color: #dfd6ea !important;
+    border-radius: 0px !important;
+    font-size: 18px !important;
+    height: 50px !important;
+}
+.ui-selectmenu-text {
+    line-height: 2 !important;
+	color: #636c72 !important;
+}
+
+input.form-control {
+	background-color: #dfd6ea;
+	border-radius: 0px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 18px;
+}
+
+textarea.form-control {
+	background-color: #dfd6ea;
+	border-radius: 0px;
+	font-size: 18px;
+}
+
+.btn {
+	border-radius: 10px;
+}
+
+.btn-primary {
+	background-color: var(--primary);
+	border: 1px solid var(--primary);
+}
+
+.btn-primary:hover {
+	border: 1px solid #fff;
+	background-color: var(--primary1);
+}
+
+.contact-bg p a {
+	font-size: 22px;
+	line-height: 22px;
+}
+
+.footer {
+	color: var(--white);
+}
+
+.footer-book-appo {
+	position: relative;
+	background-color: var(--primary1);
+	line-height: 60px;
+	border-radius: 10px;
+	padding: 0 25px 0 90px;
+	display: inline-block;
+	color: #fff;
+	font-weight: 600;
+	font-size: 22px;
+}
+
+.footer-book-appo img {
+	height: 60px !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.footer-book-appo:hover {
+	color: #fff;
+	background-color: #763a78;
+}
+
+.footer-contact {
+	color: #fff;
+	text-align: left;
+	font-size: 22px;
+}
+
+.copyrights {
+	color: #fff !important;
+	text-align: right;
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: 500;
+}
+
+.copyrights a {
+	color: var(--primary1) !important;
+}

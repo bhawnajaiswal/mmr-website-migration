@@ -1,0 +1,1006 @@
+[26-Jun-2026 14:00:48 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:00:48 UTC] PHP Notice:  Function is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:00:48 UTC] PHP Notice:  Function is_404 was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:00:48 UTC] PHP Notice:  Function is_feed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:00:48 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:00:48 UTC] PHP Notice:  Function is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:00:48 UTC] PHP Notice:  Function is_404 was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:00:48 UTC] PHP Notice:  Function is_feed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:01:28 UTC] PHP Fatal error:  Uncaught Error: Class "OCDI\OneClickDemoImport" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/one-click-demo-import/one-click-demo-import.php:44
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/one-click-demo-import/one-click-demo-import.php(111): OCDI_Plugin->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#6 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/one-click-demo-import/one-click-demo-import.php on line 44
+[26-Jun-2026 14:01:28 UTC] PHP Notice:  Function is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:01:28 UTC] PHP Notice:  Function is_404 was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:01:28 UTC] PHP Notice:  Function is_feed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:01:41 UTC] PHP Fatal error:  Uncaught Error: Class "Google\Site_Kit\Modules\Reader_Revenue_Manager\Settings" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Modules/Reader_Revenue_Manager.php:291
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Core/Modules/Module_With_Settings_Trait.php(50): Google\Site_Kit\Modules\Reader_Revenue_Manager->setup_settings()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Modules/Reader_Revenue_Manager.php(157): Google\Site_Kit\Modules\Reader_Revenue_Manager->get_settings()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Core/Modules/Modules.php(441): Google\Site_Kit\Modules\Reader_Revenue_Manager->__construct()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Core/Modules/Modules.php(224): Google\Site_Kit\Core\Modules\Modules->get_available_modules()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Plugin.php(174): Google\Site_Kit\Core\Modules\Modules->register()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): Google\Site_Kit\Plugin->Google\Site_Kit\{closure}()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#10 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#11 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#12 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#13 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Modules/Reader_Revenue_Manager.php on line 291
+[26-Jun-2026 14:01:43 UTC] PHP Fatal error:  Uncaught Error: Class "Google\Site_Kit\Modules\Reader_Revenue_Manager\Settings" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Modules/Reader_Revenue_Manager.php:291
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Core/Modules/Module_With_Settings_Trait.php(50): Google\Site_Kit\Modules\Reader_Revenue_Manager->setup_settings()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Modules/Reader_Revenue_Manager.php(157): Google\Site_Kit\Modules\Reader_Revenue_Manager->get_settings()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Core/Modules/Modules.php(441): Google\Site_Kit\Modules\Reader_Revenue_Manager->__construct()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Core/Modules/Modules.php(224): Google\Site_Kit\Core\Modules\Modules->get_available_modules()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Plugin.php(174): Google\Site_Kit\Core\Modules\Modules->register()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): Google\Site_Kit\Plugin->Google\Site_Kit\{closure}()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#10 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#11 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#12 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#13 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Modules/Reader_Revenue_Manager.php on line 291
+[26-Jun-2026 14:02:04 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:02:05 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:02:05 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:02:06 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:02:06 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:02:06 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:02:08 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:02:08 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:02:09 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1374): require('/home/u66649053...')
+#7 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1293): WP_CLI\Runner->load_wordpress()
+#8 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php(28): WP_CLI\Runner->start()
+#9 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/bootstrap.php(84): WP_CLI\Bootstrap\LaunchRunner->process()
+#10 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/wp-cli.php(35): WP_CLI\bootstrap()
+#11 phar:///usr/local/bin/wp-cli-2.12.0.phar/php/boot-phar.php(20): include('phar:///usr/loc...')
+#12 /usr/local/bin/wp-cli-2.12.0.phar(4): include('phar:///usr/loc...')
+#13 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:02:10 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1374): require('/home/u66649053...')
+#7 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1293): WP_CLI\Runner->load_wordpress()
+#8 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php(28): WP_CLI\Runner->start()
+#9 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/bootstrap.php(84): WP_CLI\Bootstrap\LaunchRunner->process()
+#10 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/wp-cli.php(35): WP_CLI\bootstrap()
+#11 phar:///usr/local/bin/wp-cli-2.12.0.phar/php/boot-phar.php(20): include('phar:///usr/loc...')
+#12 /usr/local/bin/wp-cli-2.12.0.phar(4): include('phar:///usr/loc...')
+#13 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:02:12 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:02:12 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:02:12 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1374): require('/home/u66649053...')
+#7 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1293): WP_CLI\Runner->load_wordpress()
+#8 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php(28): WP_CLI\Runner->start()
+#9 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/bootstrap.php(84): WP_CLI\Bootstrap\LaunchRunner->process()
+#10 phar:///usr/local/bin/wp-cli-2.12.0.phar/vendor/wp-cli/wp-cli/php/wp-cli.php(35): WP_CLI\bootstrap()
+#11 phar:///usr/local/bin/wp-cli-2.12.0.phar/php/boot-phar.php(20): include('phar:///usr/loc...')
+#12 /usr/local/bin/wp-cli-2.12.0.phar(4): include('phar:///usr/loc...')
+#13 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:02:37 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:02:52 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:02:53 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:03:10 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/create_autologin_zwituu9pkfewqdxyosrj4qkf9tlut4zy.php(29): require_once('/home/u66649053...')
+#9 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:03:47 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:03:47 UTC] PHP Notice:  Function is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:03:47 UTC] PHP Notice:  Function is_404 was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:03:47 UTC] PHP Notice:  Function is_feed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:10 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:04:10 UTC] PHP Notice:  Function is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:10 UTC] PHP Notice:  Function is_404 was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:10 UTC] PHP Notice:  Function is_feed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:11 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:04:11 UTC] PHP Notice:  Function is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:11 UTC] PHP Notice:  Function is_404 was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:11 UTC] PHP Notice:  Function is_feed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:12 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:04:12 UTC] PHP Notice:  Function is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:12 UTC] PHP Notice:  Function is_404 was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:12 UTC] PHP Notice:  Function is_feed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:17 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:04:17 UTC] PHP Notice:  Function is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:17 UTC] PHP Notice:  Function is_404 was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:17 UTC] PHP Notice:  Function is_feed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:18 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:04:18 UTC] PHP Notice:  Function is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:18 UTC] PHP Notice:  Function is_404 was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:18 UTC] PHP Notice:  Function is_feed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:19 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:04:19 UTC] PHP Notice:  Function is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:19 UTC] PHP Notice:  Function is_404 was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:19 UTC] PHP Notice:  Function is_feed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:37 UTC] PHP Fatal error:  Uncaught Error: Class "OCDI\OneClickDemoImport" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/one-click-demo-import/one-click-demo-import.php:44
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/one-click-demo-import/one-click-demo-import.php(111): OCDI_Plugin->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#6 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/one-click-demo-import/one-click-demo-import.php on line 44
+[26-Jun-2026 14:04:37 UTC] PHP Notice:  Function is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:37 UTC] PHP Notice:  Function is_404 was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:37 UTC] PHP Notice:  Function is_feed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:39 UTC] PHP Fatal error:  Uncaught Error: Class "OCDI\OneClickDemoImport" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/one-click-demo-import/one-click-demo-import.php:44
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/one-click-demo-import/one-click-demo-import.php(111): OCDI_Plugin->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#6 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/one-click-demo-import/one-click-demo-import.php on line 44
+[26-Jun-2026 14:04:39 UTC] PHP Notice:  Function is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:39 UTC] PHP Notice:  Function is_404 was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:39 UTC] PHP Notice:  Function is_feed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php on line 6085
+[26-Jun-2026 14:04:50 UTC] PHP Fatal error:  Uncaught Error: Class "Google\Site_Kit\Modules\Reader_Revenue_Manager\Settings" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Modules/Reader_Revenue_Manager.php:291
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Core/Modules/Module_With_Settings_Trait.php(50): Google\Site_Kit\Modules\Reader_Revenue_Manager->setup_settings()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Modules/Reader_Revenue_Manager.php(157): Google\Site_Kit\Modules\Reader_Revenue_Manager->get_settings()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Core/Modules/Modules.php(441): Google\Site_Kit\Modules\Reader_Revenue_Manager->__construct()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Core/Modules/Modules.php(224): Google\Site_Kit\Core\Modules\Modules->get_available_modules()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Plugin.php(174): Google\Site_Kit\Core\Modules\Modules->register()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): Google\Site_Kit\Plugin->Google\Site_Kit\{closure}()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#10 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#11 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#12 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#13 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Modules/Reader_Revenue_Manager.php on line 291
+[26-Jun-2026 14:04:52 UTC] PHP Fatal error:  Uncaught Error: Class "Google\Site_Kit\Modules\Reader_Revenue_Manager\Settings" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Modules/Reader_Revenue_Manager.php:291
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Core/Modules/Module_With_Settings_Trait.php(50): Google\Site_Kit\Modules\Reader_Revenue_Manager->setup_settings()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Modules/Reader_Revenue_Manager.php(157): Google\Site_Kit\Modules\Reader_Revenue_Manager->get_settings()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Core/Modules/Modules.php(441): Google\Site_Kit\Modules\Reader_Revenue_Manager->__construct()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Core/Modules/Modules.php(224): Google\Site_Kit\Core\Modules\Modules->get_available_modules()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Plugin.php(174): Google\Site_Kit\Core\Modules\Modules->register()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): Google\Site_Kit\Plugin->Google\Site_Kit\{closure}()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#10 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#11 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#12 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#13 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/google-site-kit/includes/Modules/Reader_Revenue_Manager.php on line 291
+[26-Jun-2026 14:05:04 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:05:04 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:05:04 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:05:05 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:05:05 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:05:05 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:05:21 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:06:10 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:06:11 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:07:16 UTC] Automatic updates starting...
+[26-Jun-2026 14:07:17 UTC]   Automatic plugin updates starting...
+[26-Jun-2026 14:07:17 UTC]     Upgrading plugin 'all-in-one-wp-migration'...
+[26-Jun-2026 14:07:20 UTC]     Plugin 'all-in-one-wp-migration' has been upgraded.
+[26-Jun-2026 14:07:22 UTC]     Scraping home page...
+[26-Jun-2026 14:07:24 UTC] '###### wp_scraping_result_start:ff6ea081fdf70f516d0901ec1afdbefb ######
+true
+###### wp_scraping_result_end:ff6ea081fdf70f516d0901ec1afdbefb ######
+'
+[26-Jun-2026 14:07:24 UTC]     The update for 'all-in-one-wp-migration' has no fatal errors.
+[26-Jun-2026 14:07:24 UTC]     Upgrading plugin 'coming-soon'...
+[26-Jun-2026 14:07:38 UTC]     Plugin 'coming-soon' has been upgraded.
+[26-Jun-2026 14:07:38 UTC]     'coming-soon/coming-soon.php' is inactive and will not be checked for fatal errors.
+[26-Jun-2026 14:07:38 UTC]     Upgrading plugin 'duplicate-page'...
+[26-Jun-2026 14:07:43 UTC]     Plugin 'duplicate-page' has been upgraded.
+[26-Jun-2026 14:07:45 UTC]     Scraping home page...
+[26-Jun-2026 14:07:45 UTC] '<!DOCTYPE html>
+<html dir=\'ltr\'>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width">
+			<title>Maintenance</title>
+	<style type="text/css">
+		html {
+			background: #f1f1f1;
+		}
+		body {
+			background: #fff;
+			border: 1px solid #ccd0d4;
+			color: #444;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+			margin: 2em auto;
+			padding: 1em 2em;
+			max-width: 700px;
+			-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+			box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+		}
+		h1 {
+			border-bottom: 1px solid #dadada;
+			clear: both;
+			color: #666;
+			font-size: 24px;
+			margin: 30px 0 0 0;
+			padding: 0;
+			padding-bottom: 7px;
+		}
+		#error-page {
+			margin-top: 50px;
+		}
+		#error-page p,
+		#error-page .wp-die-message {
+			font-size: 14px;
+			line-height: 1.5;
+			margin: 25px 0 20px;
+		}
+		#error-page code {
+			font-family: Consolas, Monaco, monospace;
+		}
+		ul li {
+			margin-bottom: 10px;
+			font-size: 14px ;
+		}
+		a {
+			color: #2271b1;
+		}
+		a:hover,
+		a:active {
+			color: #135e96;
+		}
+		a:focus {
+			color: #043959;
+			box-shadow: 0 0 0 2px #2271b1;
+			outline: 2px solid transparent;
+		}
+		.button {
+			background: #f3f5f6;
+			border: 1px solid #016087;
+			color: #016087;
+			display: inline-block;
+			text-decoration: none;
+			font-size: 13px;
+			line-height: 2;
+			height: 28px;
+			margin: 0;
+			padding: 0 10px 1px;
+			cursor: pointer;
+			-webkit-border-radius: 3px;
+			-webkit-appearance: none;
+			border-radius: 3px;
+			white-space: nowrap;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing:    border-box;
+			box-sizing:         border-box;
+
+			vertical-align: top;
+		}
+
+		.button.button-large {
+			line-height: 2.30769231;
+			min-height: 32px;
+			padding: 0 12px;
+		}
+
+		.button:hover,
+		.button:focus {
+			background: #f1f1f1;
+		}
+
+		.button:focus {
+			background: #f3f5f6;
+			border-color: #007cba;
+			-webkit-box-shadow: 0 0 0 1px #007cba;
+			box-shadow: 0 0 0 1px #007cba;
+			color: #016087;
+			outline: 2px solid transparent;
+			outline-offset: 0;
+		}
+
+		.button:active {
+			background: #f3f5f6;
+			border-color: #7e8993;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+
+			</style>
+</head>
+<body id="error-page">
+	<div class="wp-die-message">Briefly unavailable for scheduled maintenance. Check back in a minute.</div></body>
+</html>
+	'
+[26-Jun-2026 14:07:45 UTC]     The update for 'duplicate-page' has no fatal errors.
+[26-Jun-2026 14:07:45 UTC]     Upgrading plugin 'google-analytics-for-wordpress'...
+[26-Jun-2026 14:08:04 UTC] PHP Fatal error:  Uncaught Error: Class "Envato_Elements\API\Banners" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/envato-elements/inc/backend/class-rest.php:105
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): Envato_Elements\Backend\REST->register_routes()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/rest-api.php(589): do_action()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/rest-api.php(413): rest_get_server()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(565): WP_Hook->do_action()
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp.php(418): do_action_ref_array()
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp.php(813): WP->parse_request()
+#10 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php(1336): WP->main()
+#11 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(16): wp()
+#12 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#13 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/envato-elements/inc/backend/class-rest.php on line 105
+[26-Jun-2026 14:08:21 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:08:22 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:08:23 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:08:25 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:08:39 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/admin.php(34): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/plugins.php(10): require_once('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:09:04 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/admin-ajax.php(22): require_once('/home/u66649053...')
+#9 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:09:06 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/admin-ajax.php(22): require_once('/home/u66649053...')
+#9 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:09:23 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/admin.php(34): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/plugins.php(10): require_once('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:09:24 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/admin.php(34): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/plugins.php(10): require_once('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:09:25 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/admin.php(34): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/plugins.php(10): require_once('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:09:25 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/admin.php(34): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/plugins.php(10): require_once('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:09:25 UTC] PHP Fatal error:  Uncaught Error: Class "AIOSEO\Plugin\Common\Schema\Helpers" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php:127
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(301): AIOSEO\Plugin\Common\Schema\Schema->__construct()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(106): AIOSEO\Plugin\AIOSEO->load()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(85): AIOSEO\Plugin\AIOSEO->init()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/AIOSEO.php(372): AIOSEO\Plugin\AIOSEO::instance()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/all_in_one_seo_pack.php(98): aioseo()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(522): include_once('/home/u66649053...')
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/admin.php(34): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/plugins.php(10): require_once('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/all-in-one-seo-pack/app/Common/Schema/Schema.php on line 127
+[26-Jun-2026 14:09:40 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/admin.php(34): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/plugins.php(10): require_once('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:09:40 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/admin-ajax.php(22): require_once('/home/u66649053...')
+#9 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:09:41 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/admin.php(34): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/plugins.php(10): require_once('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:09:42 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/admin.php(34): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/plugins.php(10): require_once('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:09:53 UTC] PHP Fatal error:  Uncaught Error: Class "Envato_Elements\API\Banners" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/envato-elements/inc/backend/class-rest.php:105
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): Envato_Elements\Backend\REST->register_routes()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/rest-api.php(589): do_action()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/rest-api.php(413): rest_get_server()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(565): WP_Hook->do_action()
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp.php(418): do_action_ref_array()
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp.php(813): WP->parse_request()
+#10 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php(1336): WP->main()
+#11 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(16): wp()
+#12 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#13 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/envato-elements/inc/backend/class-rest.php on line 105
+[26-Jun-2026 14:12:15 UTC] PHP Fatal error:  Uncaught Error: Class "Envato_Elements\API\Banners" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/envato-elements/inc/backend/class-rest.php:105
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): Envato_Elements\Backend\REST->register_routes()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/rest-api.php(589): do_action()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/rest-api.php(413): rest_get_server()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(565): WP_Hook->do_action()
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp.php(418): do_action_ref_array()
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp.php(813): WP->parse_request()
+#10 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php(1336): WP->main()
+#11 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(16): wp()
+#12 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#13 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/envato-elements/inc/backend/class-rest.php on line 105
+[26-Jun-2026 14:12:27 UTC] PHP Warning:  Constant ELEMENTOR_PRO_VERSION already defined in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/elementor-pro.php on line 18
+[26-Jun-2026 14:12:27 UTC] PHP Warning:  Constant ELEMENTOR_PRO__FILE__ already defined in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/elementor-pro.php on line 20
+[26-Jun-2026 14:12:27 UTC] PHP Warning:  Constant ELEMENTOR_PRO_PLUGIN_BASE already defined in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/elementor-pro.php on line 21
+[26-Jun-2026 14:12:27 UTC] PHP Warning:  Constant ELEMENTOR_PRO_PATH already defined in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/elementor-pro.php on line 22
+[26-Jun-2026 14:12:27 UTC] PHP Warning:  Constant ELEMENTOR_PRO_ASSETS_PATH already defined in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/elementor-pro.php on line 23
+[26-Jun-2026 14:12:27 UTC] PHP Warning:  Constant ELEMENTOR_PRO_MODULES_PATH already defined in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/elementor-pro.php on line 24
+[26-Jun-2026 14:12:27 UTC] PHP Warning:  Constant ELEMENTOR_PRO_URL already defined in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/elementor-pro.php on line 25
+[26-Jun-2026 14:12:27 UTC] PHP Warning:  Constant ELEMENTOR_PRO_ASSETS_URL already defined in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/elementor-pro.php on line 26
+[26-Jun-2026 14:12:27 UTC] PHP Warning:  Constant ELEMENTOR_PRO_MODULES_URL already defined in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/elementor-pro.php on line 27
+[26-Jun-2026 14:12:28 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:12:28 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:12:33 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:12:33 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:12:33 UTC] PHP Fatal error:  Uncaught Error: Class "Envato_Elements\API\Banners" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/envato-elements/inc/backend/class-rest.php:105
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): Envato_Elements\Backend\REST->register_routes()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/rest-api.php(589): do_action()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/rest-api.php(413): rest_get_server()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(565): WP_Hook->do_action()
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp.php(418): do_action_ref_array()
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp.php(813): WP->parse_request()
+#10 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php(1336): WP->main()
+#11 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(16): wp()
+#12 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#13 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/envato-elements/inc/backend/class-rest.php on line 105
+[26-Jun-2026 14:12:33 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:12:33 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:12:37 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:12:37 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:12:39 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:12:39 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:12:58 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:12:58 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:12:58 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/admin-ajax.php(22): require_once('/home/u66649053...')
+#9 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:13:00 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:13:00 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:13:00 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:13:06 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:13:06 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:13:06 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(13): require_once('/home/u66649053...')
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#10 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:13:07 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:13:07 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:13:07 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Sitemaps_Taxonomies" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php:116
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php(75): WP_Sitemaps->register_sitemaps()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps.php(28): WP_Sitemaps->init()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): wp_sitemaps_get_server()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-settings.php(700): do_action()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-config.php(95): require_once('/home/u66649053...')
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-load.php(50): require_once('/home/u66649053...')
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-admin/admin-ajax.php(22): require_once('/home/u66649053...')
+#9 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/sitemaps/class-wp-sitemaps.php on line 116
+[26-Jun-2026 14:13:12 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:13:12 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:13:12 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:13:12 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:13:13 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:13:13 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:13:13 UTC] PHP Fatal error:  Uncaught Error: Class "Envato_Elements\API\Banners" not found in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/envato-elements/inc/backend/class-rest.php:105
+Stack trace:
+#0 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): Envato_Elements\Backend\REST->register_routes()
+#1 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/rest-api.php(589): do_action()
+#4 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/rest-api.php(413): rest_get_server()
+#5 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#6 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#7 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/plugin.php(565): WP_Hook->do_action()
+#8 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp.php(418): do_action_ref_array()
+#9 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/class-wp.php(813): WP->parse_request()
+#10 /home/u666490538/domains/mmrhospitals.com/public_html/wp-includes/functions.php(1336): WP->main()
+#11 /home/u666490538/domains/mmrhospitals.com/public_html/wp-blog-header.php(16): wp()
+#12 /home/u666490538/domains/mmrhospitals.com/public_html/index.php(17): require('/home/u66649053...')
+#13 {main}
+  thrown in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/envato-elements/inc/backend/class-rest.php on line 105
+[26-Jun-2026 14:13:13 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:13:13 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/modules/loop-builder/module.php on line 200
+[26-Jun-2026 14:13:15 UTC] PHP Deprecated:  version_compare(): Passing null to parameter #2 ($version2) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor/core/experiments/manager.php on line 173
+[26-Jun-2026 14:13:15 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/u666490538/domains/mmrhospitals.com/public_html/wp-content/plugins/elementor-pro-old/modules/loop-builder/module.php on line 200
