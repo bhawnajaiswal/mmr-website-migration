@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-top-container">
         
-        {/* Column 1: Brand Info, Booking Button & Socials */}
+        {/* Column 1: Brand Info & Booking Button */}
         <FooterColumn>
           <div className="footer-logo-wrap">
             <Link href="/">
@@ -48,69 +48,51 @@ export default function Footer() {
               </a>
             </p>
           </div>
+        </FooterColumn>
 
-          <div className="footer-socials">
+        {/* Column 2: Treatment & Services */}
+        <FooterColumn title="Treatment & Services">
+          <ul>
+            <li><Link href="/treatment-services">Treatment & Services</Link></li>
+            <li><Link href="/renal-care-2">Renal care</Link></li>
+            <li><Link href="/about-us">About us</Link></li>
+            <li><Link href="/faqs">FAQs</Link></li>
+          </ul>
+        </FooterColumn>
+
+        {/* Column 3: Treatments */}
+        <FooterColumn title="Treatments">
+          <ul>
+            <li><Link href="/ivf">IVF</Link></li>
+            <li><Link href="/iui">IUI</Link></li>
+            <li><Link href="/ivm">IVM</Link></li>
+            <li><Link href="/icsi-treatment">ICSI</Link></li>
+            <li><Link href="/infertility-men-women">Infertility men & women</Link></li>
+          </ul>
+        </FooterColumn>
+
+        {/* Column 4: Follow Us */}
+        <FooterColumn title="Follow Us">
+          <div className="footer-socials" style={{ marginTop: "0" }}>
             {SITE.social.facebook && (
               <a href={SITE.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <i className="fab fa-facebook-f"></i>
               </a>
             )}
+            {SITE.social.twitter && (
+              <a href={SITE.social.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <i className="fab fa-twitter"></i>
+              </a>
+            )}
+            <a href="https://in.pinterest.com/mmrhospitalraipur/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+              <i className="fab fa-pinterest"></i>
+            </a>
             {SITE.social.instagram && (
               <a href={SITE.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <i className="fab fa-instagram"></i>
               </a>
             )}
-            {SITE.social.youtube && (
-              <a href={SITE.social.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                <i className="fab fa-youtube"></i>
-              </a>
-            )}
           </div>
-        </FooterColumn>
-
-        {/* Column 2: Treatment & Services */}
-        <FooterColumn title="Treatment & Services">
-          <div className="footer-treatment-split">
-            <div>
-              <h6>IVF Center</h6>
-              <ul>
-                <li><Link href="/ivf-in-vitro-fertilization">IVF – In vitro Fertilization</Link></li>
-                <li><Link href="/iui-intra-uterine-insemination">IUI – Intra Uterine Insemination</Link></li>
-                <li><Link href="/womens-healthcare-fertility-center/icsi">ICSI</Link></li>
-                <li><Link href="/ivm-in-vitro-maturation-of-oocytes">IVM – In Vitro Maturation</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h6>Renal Center</h6>
-              <ul>
-                <li><Link href="/renal-care/diagnosis">Renal Diagnosis</Link></li>
-                <li><Link href="/chromic-kidney-disease">Chronic Kidney Disease</Link></li>
-                <li><Link href="/renal-care/intensive-renal-care-unit">Intensive Renal Care</Link></li>
-                <li><Link href="/renal-care/intervention-nephrology">Intervention Nephrology</Link></li>
-              </ul>
-            </div>
-          </div>
-        </FooterColumn>
-
-        {/* Column 3: Quick Links */}
-        <FooterColumn title="Quick Links">
-          <ul>
-            <li><Link href="/philosophy">Philosophy</Link></li>
-            <li><Link href="/founders">Founders</Link></li>
-            <li><Link href="/facilities">Facilities</Link></li>
-            <li><Link href="/career">Career</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-          </ul>
-        </FooterColumn>
-
-        {/* Column 4: Patient Zone */}
-        <FooterColumn title="Patient Zone">
-          <ul>
-            <li><Link href="/why-matruchhaya-hospitals">Why Matruchhaya Hospitals</Link></li>
-            <li><Link href="/consultation">Consultation for Gynecology</Link></li>
-            <li><Link href="/consultation-for-renal-problems">Consultation for Renal Problems</Link></li>
-            <li><Link href="/fertility-journey">Fertility Journey</Link></li>
-          </ul>
         </FooterColumn>
 
       </div>
@@ -133,9 +115,9 @@ export default function Footer() {
           <div className="footer-bottom-legal">
             <Link href="/privacy-policy">Privacy Policy</Link>
             <span>|</span>
-            <Link href="/disclaimer">Disclaimer</Link>
+            <Link href="/terms-of-use">Terms</Link>
             <span>|</span>
-            <Link href="/terms-of-use">Terms of Use</Link>
+            <Link href="/career">Careers</Link>
           </div>
         </div>
       </div>

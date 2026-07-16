@@ -78,11 +78,10 @@ export default function Blogs() {
       >
         <div className="elementor-widget-container">
           <div className="elementor-swiper">
-            <div className="elementor-main-swiper swiper" style={{ overflow: "hidden", position: "relative" }}>
+            <div className="elementor-main-swiper swiper">
               <div
                 className="swiper-wrapper"
                 style={{
-                  display: "flex",
                   gap: "10px",
                   transition: "transform 0.5s ease-in-out",
                   transform: isMobile 
@@ -96,10 +95,7 @@ export default function Blogs() {
                       className="elementor-carousel-image"
                       style={{
                         backgroundImage: `url('${slide.imageUrl}')`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center center",
-                        height: "240px",
-                        borderRadius: "4px"
+                        height: "240px"
                       }}
                     />
                   );

@@ -103,7 +103,7 @@ export default function Consultation() {
                     <div className="wpforms-field-container">
                       
                       {/* Name fields row */}
-                      <div className="wpforms-field wpforms-field-name wpforms-field-required" style={{ margin: "20px 0" }}>
+                      <div className="wpforms-field wpforms-field-name wpforms-field-required">
                         <fieldset style={{ border: "none", padding: 0, margin: 0 }}>
                           <legend className="wpforms-field-label" style={{ color: "#FFF6F6FA", fontSize: "16px", marginBottom: "8px", fontWeight: "600" }}>
                             Name <span className="wpforms-required-label">*</span>
@@ -117,15 +117,7 @@ export default function Consultation() {
                                 value={formData.firstName}
                                 onChange={handleChange}
                                 required
-                                style={{
-                                  width: "100%",
-                                  padding: "10px 14px",
-                                  borderRadius: "3px",
-                                  border: "1px solid rgba(0, 0, 0, 0.25)",
-                                  backgroundColor: "#ffffff",
-                                  color: "rgba(0, 0, 0, 0.7)",
-                                  fontSize: "14px"
-                                }}
+                                className="elementor-field elementor-size-lg elementor-field-textual"
                               />
                               <label htmlFor="wpforms-6155-field_2" style={{ color: "#FEF9F98C", fontSize: "12px", marginTop: "4px", display: "block" }}>
                                 First
@@ -139,15 +131,7 @@ export default function Consultation() {
                                 value={formData.lastName}
                                 onChange={handleChange}
                                 required
-                                style={{
-                                  width: "100%",
-                                  padding: "10px 14px",
-                                  borderRadius: "3px",
-                                  border: "1px solid rgba(0, 0, 0, 0.25)",
-                                  backgroundColor: "#ffffff",
-                                  color: "rgba(0, 0, 0, 0.7)",
-                                  fontSize: "14px"
-                                }}
+                                className="elementor-field elementor-size-lg elementor-field-textual"
                               />
                               <label htmlFor="wpforms-6155-field_2-last" style={{ color: "#FEF9F98C", fontSize: "12px", marginTop: "4px", display: "block" }}>
                                 Last
@@ -158,7 +142,7 @@ export default function Consultation() {
                       </div>
 
                       {/* Email field */}
-                      <div className="wpforms-field wpforms-field-email wpforms-field-required" style={{ margin: "20px 0" }}>
+                      <div className="wpforms-field wpforms-field-email wpforms-field-required" style={{ marginTop: "20px" }}>
                         <label className="wpforms-field-label" htmlFor="wpforms-6155-field_3" style={{ color: "#FFF6F6FA", fontSize: "16px", marginBottom: "8px", display: "block", fontWeight: "600" }}>
                           Email <span className="wpforms-required-label">*</span>
                         </label>
@@ -170,20 +154,12 @@ export default function Consultation() {
                           onChange={handleChange}
                           spellCheck="false"
                           required
-                          style={{
-                            width: "100%",
-                            padding: "10px 14px",
-                            borderRadius: "3px",
-                            border: "1px solid rgba(0, 0, 0, 0.25)",
-                            backgroundColor: "#ffffff",
-                            color: "rgba(0, 0, 0, 0.7)",
-                            fontSize: "14px"
-                          }}
+                          className="elementor-field elementor-size-lg elementor-field-textual"
                         />
                       </div>
 
                       {/* Dropdown field */}
-                      <div className="wpforms-field wpforms-field-select" style={{ margin: "20px 0" }}>
+                      <div className="wpforms-field wpforms-field-select" style={{ marginTop: "20px" }}>
                         <label className="wpforms-field-label" htmlFor="wpforms-6155-field_1" style={{ color: "#FFF6F6FA", fontSize: "16px", marginBottom: "8px", display: "block", fontWeight: "600" }}>
                           Treatment For
                         </label>
@@ -192,15 +168,7 @@ export default function Consultation() {
                           name="treatment"
                           value={formData.treatment}
                           onChange={handleChange}
-                          style={{
-                            width: "100%",
-                            padding: "10px 14px",
-                            borderRadius: "3px",
-                            border: "1px solid rgba(0, 0, 0, 0.25)",
-                            backgroundColor: "#ffffff",
-                            color: "rgba(0, 0, 0, 0.7)",
-                            fontSize: "14px"
-                          }}
+                          className="elementor-field elementor-size-lg elementor-field-textual"
                         >
                           <option value="Fertility">Fertility</option>
                           <option value="Renal Care">Renal Care</option>
@@ -220,13 +188,12 @@ export default function Consultation() {
                         style={{
                           backgroundColor: "#f08080",
                           color: "#ffffff",
-                          border: "none",
                           borderRadius: "45px",
                           padding: "12px 30px",
                           fontSize: "16px",
                           cursor: status === "submitting" ? "not-allowed" : "pointer",
                           fontWeight: "bold",
-                          transition: "background-color 0.3s"
+                          border: "none"
                         }}
                       >
                         {status === "submitting" ? "Sending..." : "Submit"}

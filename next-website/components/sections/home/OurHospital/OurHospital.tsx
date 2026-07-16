@@ -29,7 +29,6 @@ export default function OurHospital() {
                   className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-26e74b93"
                   data-id="26e74b93"
                   data-element_type="column"
-                  style={{ width: "55.167%" }}
                 >
                   <div className="elementor-widget-wrap elementor-element-populated">
                     
@@ -92,7 +91,6 @@ export default function OurHospital() {
                   className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-c71e6c"
                   data-id="c71e6c"
                   data-element_type="column"
-                  style={{ width: "44.833%" }}
                 >
                   <div className="elementor-widget-wrap elementor-element-populated">
                     
@@ -107,11 +105,6 @@ export default function OurHospital() {
                           decoding="async"
                           src="/wp-content/uploads/2024/04/MMR-Hospital-IVF-Center-1024-x-1024-px-1.png"
                           alt="best ivf center in Raipur"
-                          style={{
-                            maxWidth: "100%",
-                            height: "auto",
-                            borderRadius: "4px"
-                          }}
                         />
                       </div>
                     </div>
