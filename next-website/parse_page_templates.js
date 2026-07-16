@@ -1,18 +1,21 @@
 const fs = require('fs');
-const path = require('path');
 
-const src1 = 'c:/Users/bhawn/OneDrive/ドキュメント/website-MMR/mmr-website-migration/legacy/wordpress-export/plugins/elementor/assets/css/frontend-lite.min.css';
-const dest1 = 'c:/Users/bhawn/OneDrive/ドキュメント/website-MMR/mmr-website-migration/next-website/public/css/frontend-lite.min.css';
-
-const src2 = 'c:/Users/bhawn/OneDrive/ドキュメント/website-MMR/mmr-website-migration/legacy/wordpress-export/plugins/pro-elements/assets/css/widget-slides.min.css';
-const dest2 = 'c:/Users/bhawn/OneDrive/ドキュメント/website-MMR/mmr-website-migration/next-website/public/css/widget-slides.min.css';
+const cssPath = 'c:/Users/bhawn/OneDrive/ドキュメント/website-MMR/mmr-website-migration/next-website/public/wp-content/uploads/elementor/css/post-5721.css';
 
 try {
-  fs.copyFileSync(src1, dest1);
-  console.log('Successfully copied frontend-lite.min.css');
+  const content = fs.readFileSync(cssPath, 'utf8');
   
-  fs.copyFileSync(src2, dest2);
-  console.log('Successfully copied widget-slides.min.css');
+  const target = '65c0718a';
+  const idx = content.indexOf(target);
+  if (idx !== -1) {
+    console.log(`Found '${target}' in CSS:`);
+    const start = content.lastIndexOf('{', idx);
+    const end = content.indexOf('}', idx);
+    const selStart = content.lastIndexOf('}', start);
+    console.log(content.slice(selStart === -1 ? 0 : selStart + 1, end + 1).trim());
+  } else {
+    console.log(`Selector '${target}' NOT found.`);
+  }
 } catch (err) {
-  console.error('Error copying files:', err.message);
+  console.error('Error:', err.message);
 }
