@@ -1,6 +1,10 @@
 "use client";
 
-export default function SpecialFacilities() {
+interface SpecialFacilitiesProps {
+  showSocialIcons?: boolean;
+}
+
+export default function SpecialFacilities({ showSocialIcons = false }: SpecialFacilitiesProps) {
   const cards = [
     {
       colId: "125d6ca",
@@ -220,6 +224,51 @@ export default function SpecialFacilities() {
                           </p>
                         </div>
                       </div>
+
+                      {showSocialIcons && (
+                        <div
+                          className="elementor-element elementor-widget elementor-widget-social-icons elementor-shape-circle e-grid-align-left e-grid-align-mobile-center elementor-grid-0"
+                          data-id={card.colId === "125d6ca" ? "4679e56e" : (card.colId === "7912a3ce" ? "25edb1cd" : "4706a8de")}
+                          data-element_type="widget"
+                          data-widget_type="social-icons.default"
+                          style={{ padding: "0 24px 20px 16px", marginTop: "10px" }}
+                        >
+                          <div className="elementor-widget-container">
+                            <div className="elementor-social-icons-wrapper elementor-grid">
+                              <span className="elementor-grid-item">
+                                <a className="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-243955a" target="_blank" rel="noopener noreferrer">
+                                  <span className="elementor-screen-only">Facebook</span>
+                                  <i className="fa fa-facebook"></i>
+                                </a>
+                              </span>
+                              <span className="elementor-grid-item">
+                                <a className="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-7fb45c0" target="_blank" rel="noopener noreferrer">
+                                  <span className="elementor-screen-only">Twitter</span>
+                                  <i className="fa fa-twitter"></i>
+                                </a>
+                              </span>
+                              <span className="elementor-grid-item">
+                                <a className="elementor-icon elementor-social-icon elementor-social-icon-google-plus elementor-repeater-item-9eef2b8" target="_blank" rel="noopener noreferrer">
+                                  <span className="elementor-screen-only">Google-plus</span>
+                                  <i className="fa fa-google-plus"></i>
+                                </a>
+                              </span>
+                              <span className="elementor-grid-item">
+                                <a className="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-3693876" target="_blank" rel="noopener noreferrer">
+                                  <span className="elementor-screen-only">Linkedin</span>
+                                  <i className="fa fa-linkedin"></i>
+                                </a>
+                              </span>
+                              <span className="elementor-grid-item">
+                                <a className="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-918189a" target="_blank" rel="noopener noreferrer">
+                                  <span className="elementor-screen-only">Instagram</span>
+                                  <i className="fa fa-instagram"></i>
+                                </a>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      )}
 
                     </div>
                   </div>

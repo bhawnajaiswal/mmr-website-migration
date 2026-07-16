@@ -5,8 +5,9 @@ import Link from "next/link";
 interface SubPageIntroProps {
   title: string;
   paragraph1: string;
-  paragraph2: string;
+  paragraph2?: string;
   buttonLink?: string;
+  buttonText?: string;
 }
 
 export default function SubPageIntro({
@@ -14,6 +15,7 @@ export default function SubPageIntro({
   paragraph1,
   paragraph2,
   buttonLink = "/consultation-for-renal-problems",
+  buttonText = "Book appointment \u00BB",
 }: SubPageIntroProps) {
   return (
     <section
@@ -56,16 +58,18 @@ export default function SubPageIntro({
             </div>
 
             {/* Paragraph 2 */}
-            <div
-              className="elementor-element elementor-element-61a9feeb elementor-widget elementor-widget-text-editor"
-              data-id="61a9feeb"
-              data-element_type="widget"
-              data-widget_type="text-editor.default"
-            >
-              <div className="elementor-widget-container">
-                <p dangerouslySetInnerHTML={{ __html: paragraph2 }} />
+            {paragraph2 && (
+              <div
+                className="elementor-element elementor-element-61a9feeb elementor-widget elementor-widget-text-editor"
+                data-id="61a9feeb"
+                data-element_type="widget"
+                data-widget_type="text-editor.default"
+              >
+                <div className="elementor-widget-container">
+                  <p dangerouslySetInnerHTML={{ __html: paragraph2 }} />
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Book Appointment Button */}
             <div
@@ -81,7 +85,7 @@ export default function SubPageIntro({
                     href={buttonLink}
                   >
                     <span className="elementor-button-content-wrapper">
-                      <span className="elementor-button-text">Book appointment &raquo;</span>
+                      <span className="elementor-button-text">{buttonText}</span>
                     </span>
                   </Link>
                 </div>
