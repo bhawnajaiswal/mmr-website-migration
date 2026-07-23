@@ -2,7 +2,7 @@ export const SITE = {
   name: "MMR Hospital & IVF Center",
   url: "https://mmrhospitals.com",
   description: "Best IVF Center in Raipur, Chhattisgarh. We provide best infertility & IVF treatment.",
-  logo: "/wp-content/uploads/2023/10/logo-copy.png",
+  logo: "/wp-content/uploads/2024/04/Untitled-design-43.png",
   logoEnq: "/wp-content/uploads/2023/10/enq-round-1.png",
   logoWM: "/wp-content/uploads/2023/10/icon-WM.png",
   ctaButtonImg: "/wp-content/uploads/2023/10/button-book-consultaton.png",

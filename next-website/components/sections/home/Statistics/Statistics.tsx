@@ -4,24 +4,24 @@ const COUNTERS = [
   {
     columnId: "bab1ab9",
     widgetId: "f01d966",
-    start: 2,
+    start: 0,
     end: 20,
     suffix: "+",
     title: "Years of Experience"
   },
   {
-    columnId: "cc54d7f",
+    columnId: "dde1c2c",
     widgetId: "98cdd17",
-    start: 500,
+    start: 0,
     end: 2000,
     suffix: "+",
     title: "Live Births through IVF"
   },
   {
-    columnId: "5e084eb",
+    columnId: "f95d051",
     widgetId: "72d7a9b",
-    start: 1,
-    end: 1, // Exact value from Elementor database data; no default/placeholder substitutions
+    start: 0,
+    end: 100,
     suffix: "+",
     title: "Happy Families Created"
   }
@@ -33,6 +33,7 @@ export default function Statistics() {
       className="elementor-section elementor-top-section elementor-element elementor-element-6bafbdd0 elementor-section-full_width elementor-section-height-default envato-background-fix"
       data-id="6bafbdd0"
       data-element_type="section"
+      style={{ padding: "80px 0" }}
     >
       {/* Background Overlay styled by post-5721.css */}
       <div className="elementor-background-overlay" />
@@ -66,6 +67,7 @@ export default function Statistics() {
                 className="elementor-section elementor-inner-section elementor-element elementor-element-7663bb10 elementor-section-boxed elementor-section-height-default"
                 data-id="7663bb10"
                 data-element_type="section"
+                style={{ marginBottom: "30px" }}
               >
                 <div className="elementor-container elementor-column-gap-wide">
                   <div className="elementor-row">
@@ -131,7 +133,7 @@ export default function Statistics() {
                 data-element_type="section"
               >
                 <div className="elementor-container elementor-column-gap-wide">
-                  <div className="elementor-row">
+                  <div className="elementor-row" style={{ display: "flex", justifyContent: "space-between" }}>
                     {COUNTERS.map((cnt) => (
                       <CounterCard
                         key={cnt.widgetId}

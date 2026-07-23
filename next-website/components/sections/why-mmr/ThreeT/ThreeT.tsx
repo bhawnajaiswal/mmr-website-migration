@@ -84,7 +84,7 @@ export default function ThreeT() {
                   
                   {/* Left inner col: "1." */}
                   <div
-                    className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-25d1f9cb"
+                    className="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-25d1f9cb"
                     data-id="25d1f9cb"
                     data-element_type="column"
                   >
@@ -104,7 +104,7 @@ export default function ThreeT() {
 
                   {/* Right inner col: Title & Copy */}
                   <div
-                    className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7a1794c2"
+                    className="elementor-column elementor-col-75 elementor-inner-column elementor-element elementor-element-7a1794c2"
                     data-id="7a1794c2"
                     data-element_type="column"
                   >
@@ -157,7 +157,7 @@ export default function ThreeT() {
                   
                   {/* Left inner col: "2." */}
                   <div
-                    className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7a2b872a"
+                    className="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-7a2b872a"
                     data-id="7a2b872a"
                     data-element_type="column"
                   >
@@ -177,7 +177,7 @@ export default function ThreeT() {
 
                   {/* Right inner col: Title & Copy */}
                   <div
-                    className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-dd8c03a"
+                    className="elementor-column elementor-col-75 elementor-inner-column elementor-element elementor-element-dd8c03a"
                     data-id="dd8c03a"
                     data-element_type="column"
                   >
@@ -232,7 +232,7 @@ export default function ThreeT() {
                   
                   {/* Left inner col: "3." */}
                   <div
-                    className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-6deadee5"
+                    className="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-6deadee5"
                     data-id="6deadee5"
                     data-element_type="column"
                   >
@@ -252,7 +252,7 @@ export default function ThreeT() {
 
                   {/* Right inner col: Title & Copy */}
                   <div
-                    className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-751aa4ae"
+                    className="elementor-column elementor-col-75 elementor-inner-column elementor-element elementor-element-751aa4ae"
                     data-id="751aa4ae"
                     data-element_type="column"
                   >

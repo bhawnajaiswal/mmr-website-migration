@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const sqlPath = 'c:/Users/bhawn/OneDrive/ドキュメント/website-MMR/mmr-website-migration/legacy/database/u666490538_pAxQz.sql';
-const targetPageId = '3731';
+const targetPageId = '159';
 
 const extractElementorData = () => {
   const content = fs.readFileSync(sqlPath, 'utf8');

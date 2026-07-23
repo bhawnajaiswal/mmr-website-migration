@@ -80,7 +80,7 @@ export default function CounterCard({
                   data-to-value={end}
                   data-from-value={start}
                 >
-                  {count}
+                  {count.toLocaleString()}
                 </span>
                 <span className="elementor-counter-number-suffix">{suffix}</span>
               </div>

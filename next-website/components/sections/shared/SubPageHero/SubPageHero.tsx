@@ -7,6 +7,7 @@ interface SubPageHeroProps {
   title: string;
   subtitle?: string;
   buttonLink?: string;
+  backgroundColor?: string;
 }
 
 export default function SubPageHero({
@@ -14,6 +15,7 @@ export default function SubPageHero({
   title,
   subtitle = "",
   buttonLink = "/consultation-for-renal-problems",
+  backgroundColor = "#754CAD",
 }: SubPageHeroProps) {
   return (
     <section
@@ -21,7 +23,7 @@ export default function SubPageHero({
       data-id={secId}
       data-element_type="section"
       data-settings='{"shape_divider_bottom":"tilt"}'
-      style={{ backgroundColor: "#754CAD" }}
+      style={backgroundColor ? { backgroundColor } : undefined}
     >
       <div className="elementor-background-overlay" />
       

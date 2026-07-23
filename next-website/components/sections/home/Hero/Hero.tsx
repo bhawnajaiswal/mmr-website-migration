@@ -6,7 +6,7 @@ import HeroSlide from "./HeroSlide";
 const SLIDES = [
   {
     id: "fc4f1bf",
-    heading: "Best IVF Center In Raipur.",
+    heading: "Best  IVF  Center In Raipur.",
     description: "We provide the best treatment for you\n&\nWe ensure that your dream of parenthood comes true",
     buttonText: "Book Appointment",
     buttonUrl: "/consultation",
@@ -46,6 +46,9 @@ export default function Hero() {
       data-id="5c366d9"
       data-element_type="section"
     >
+      {/* Background Overlay */}
+      <div className="elementor-background-overlay"></div>
+
       <div className="elementor-container elementor-column-gap-no">
         <div
           className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6ef85f1"
@@ -54,7 +57,7 @@ export default function Hero() {
         >
           <div className="elementor-widget-wrap elementor-element-populated">
             <div
-              className="elementor-widget elementor-widget-slides elementor-element elementor-element-0efb687"
+              className="elementor-widget elementor-widget-slides elementor-element elementor-element-0efb687 elementor--v-position-bottom elementor--h-position-center"
               data-id="0efb687"
               data-element_type="widget"
               data-widget_type="slides.default"

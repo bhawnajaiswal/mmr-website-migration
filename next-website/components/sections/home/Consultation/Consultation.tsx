@@ -21,7 +21,6 @@ export default function Consultation() {
     setStatus("submitting");
     
     try {
-      // Simulate API submit to match CRM endpoint requirements later
       const response = await fetch("/api/appointment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -44,7 +43,13 @@ export default function Consultation() {
       className="elementor-section elementor-top-section elementor-element elementor-element-b656142 envato-background-fix elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle"
       data-id="b656142"
       data-element_type="section"
-      data-settings='{"background_background":"classic","shape_divider_bottom":"pyramids","shape_divider_bottom_negative":"yes","shape_divider_top":"pyramids"}'
+      style={{
+        minHeight: "90vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        position: "relative"
+      }}
     >
       <div className="elementor-background-overlay" />
       
@@ -62,13 +67,13 @@ export default function Consultation() {
         </svg>
       </div>
 
-      <div className="elementor-container elementor-column-gap-no">
+      <div className="elementor-container elementor-column-gap-no" style={{ width: "100%", maxWidth: "1040px" }}>
         <div
           className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6a54dc55"
           data-id="6a54dc55"
           data-element_type="column"
         >
-          <div className="elementor-widget-wrap elementor-element-populated">
+          <div className="elementor-widget-wrap elementor-element-populated" style={{ padding: "100px 20px" }}>
             
             {/* Main Heading */}
             <div
@@ -76,75 +81,103 @@ export default function Consultation() {
               data-id="2e30534f"
               data-element_type="widget"
               data-widget_type="heading.default"
+              style={{ textAlign: "center", marginBottom: "40px" }}
             >
               <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">
+                <h2
+                  className="elementor-heading-title elementor-size-default"
+                  style={{
+                    color: "#ffffff",
+                    fontFamily: '"Nunito", sans-serif',
+                    fontSize: "31px",
+                    fontWeight: "600",
+                    lineHeight: "1.16em"
+                  }}
+                >
                   If you have been facing any infertility problem, then <br />
                   consult our fertility specialist.
                 </h2>
               </div>
             </div>
 
-            {/* Custom WPForms Replicant Widget */}
+            {/* Form Container (Matches Production 1040px Width Container) */}
             <div
               className="elementor-element elementor-element-0c61adb elementor-widget elementor-widget-wpforms"
               data-id="0c61adb"
               data-element_type="widget"
               data-widget_type="wpforms.default"
+              style={{ width: "100%" }}
             >
               <div className="elementor-widget-container">
-                <div className="wpforms-container wpforms-container-full" id="wpforms-container-6155">
+                <div className="wpforms-container" id="wpforms-container-6155">
                   <form
                     id="wpforms-form-6155"
-                    className="wpforms-validate wpforms-form wpforms-ajax-form"
-                    data-formid="6155"
+                    className="wpforms-form"
                     onSubmit={handleSubmit}
                   >
                     <div className="wpforms-field-container">
                       
-                      {/* Name fields row */}
-                      <div className="wpforms-field wpforms-field-name wpforms-field-required">
-                        <fieldset style={{ border: "none", padding: 0, margin: 0 }}>
-                          <legend className="wpforms-field-label" style={{ color: "#FFF6F6FA", fontSize: "16px", marginBottom: "8px", fontWeight: "600" }}>
-                            Name <span className="wpforms-required-label">*</span>
-                          </legend>
-                          <div style={{ display: "flex", gap: "15px" }}>
-                            <div style={{ flex: 1 }}>
-                              <input
-                                type="text"
-                                id="wpforms-6155-field_2"
-                                name="firstName"
-                                value={formData.firstName}
-                                onChange={handleChange}
-                                required
-                                className="elementor-field elementor-size-lg elementor-field-textual"
-                              />
-                              <label htmlFor="wpforms-6155-field_2" style={{ color: "#FEF9F98C", fontSize: "12px", marginTop: "4px", display: "block" }}>
-                                First
-                              </label>
-                            </div>
-                            <div style={{ flex: 1 }}>
-                              <input
-                                type="text"
-                                id="wpforms-6155-field_2-last"
-                                name="lastName"
-                                value={formData.lastName}
-                                onChange={handleChange}
-                                required
-                                className="elementor-field elementor-size-lg elementor-field-textual"
-                              />
-                              <label htmlFor="wpforms-6155-field_2-last" style={{ color: "#FEF9F98C", fontSize: "12px", marginTop: "4px", display: "block" }}>
-                                Last
-                              </label>
-                            </div>
+                      {/* Name Fields (2 Columns) */}
+                      <div className="wpforms-field wpforms-field-name" style={{ marginBottom: "18px" }}>
+                        <label className="wpforms-field-label" style={{ color: "#ffffff", fontSize: "15px", marginBottom: "6px", display: "block", fontWeight: "600" }}>
+                          Name <span className="wpforms-required-label" style={{ color: "#ff8080" }}>*</span>
+                        </label>
+                        <div style={{ display: "flex", gap: "15px" }}>
+                          <div style={{ flex: 1 }}>
+                            <input
+                              type="text"
+                              id="wpforms-6155-field_2"
+                              name="firstName"
+                              value={formData.firstName}
+                              onChange={handleChange}
+                              required
+                              style={{
+                                width: "100%",
+                                padding: "10px 14px",
+                                fontSize: "15px",
+                                borderRadius: "4px",
+                                border: "1px solid #ffffff",
+                                backgroundColor: "rgba(255, 255, 255, 0.95)",
+                                color: "#333333",
+                                outline: "none",
+                                boxSizing: "border-box"
+                              }}
+                            />
+                            <label htmlFor="wpforms-6155-field_2" style={{ color: "rgba(255, 255, 255, 0.8)", fontSize: "12px", marginTop: "4px", display: "block" }}>
+                              First
+                            </label>
                           </div>
-                        </fieldset>
+                          <div style={{ flex: 1 }}>
+                            <input
+                              type="text"
+                              id="wpforms-6155-field_2-last"
+                              name="lastName"
+                              value={formData.lastName}
+                              onChange={handleChange}
+                              required
+                              style={{
+                                width: "100%",
+                                padding: "10px 14px",
+                                fontSize: "15px",
+                                borderRadius: "4px",
+                                border: "1px solid #ffffff",
+                                backgroundColor: "rgba(255, 255, 255, 0.95)",
+                                color: "#333333",
+                                outline: "none",
+                                boxSizing: "border-box"
+                              }}
+                            />
+                            <label htmlFor="wpforms-6155-field_2-last" style={{ color: "rgba(255, 255, 255, 0.8)", fontSize: "12px", marginTop: "4px", display: "block" }}>
+                              Last
+                            </label>
+                          </div>
+                        </div>
                       </div>
 
-                      {/* Email field */}
-                      <div className="wpforms-field wpforms-field-email wpforms-field-required" style={{ marginTop: "20px" }}>
-                        <label className="wpforms-field-label" htmlFor="wpforms-6155-field_3" style={{ color: "#FFF6F6FA", fontSize: "16px", marginBottom: "8px", display: "block", fontWeight: "600" }}>
-                          Email <span className="wpforms-required-label">*</span>
+                      {/* Email Field */}
+                      <div className="wpforms-field wpforms-field-email" style={{ marginBottom: "18px" }}>
+                        <label className="wpforms-field-label" htmlFor="wpforms-6155-field_3" style={{ color: "#ffffff", fontSize: "15px", marginBottom: "6px", display: "block", fontWeight: "600" }}>
+                          Email <span className="wpforms-required-label" style={{ color: "#ff8080" }}>*</span>
                         </label>
                         <input
                           type="email"
@@ -154,13 +187,23 @@ export default function Consultation() {
                           onChange={handleChange}
                           spellCheck="false"
                           required
-                          className="elementor-field elementor-size-lg elementor-field-textual"
+                          style={{
+                            width: "100%",
+                            padding: "10px 14px",
+                            fontSize: "15px",
+                            borderRadius: "4px",
+                            border: "1px solid #ffffff",
+                            backgroundColor: "rgba(255, 255, 255, 0.95)",
+                            color: "#333333",
+                            outline: "none",
+                            boxSizing: "border-box"
+                          }}
                         />
                       </div>
 
-                      {/* Dropdown field */}
-                      <div className="wpforms-field wpforms-field-select" style={{ marginTop: "20px" }}>
-                        <label className="wpforms-field-label" htmlFor="wpforms-6155-field_1" style={{ color: "#FFF6F6FA", fontSize: "16px", marginBottom: "8px", display: "block", fontWeight: "600" }}>
+                      {/* Dropdown Field */}
+                      <div className="wpforms-field wpforms-field-select" style={{ marginBottom: "24px" }}>
+                        <label className="wpforms-field-label" htmlFor="wpforms-6155-field_1" style={{ color: "#ffffff", fontSize: "15px", marginBottom: "6px", display: "block", fontWeight: "600" }}>
                           Treatment For
                         </label>
                         <select
@@ -168,7 +211,17 @@ export default function Consultation() {
                           name="treatment"
                           value={formData.treatment}
                           onChange={handleChange}
-                          className="elementor-field elementor-size-lg elementor-field-textual"
+                          style={{
+                            width: "100%",
+                            padding: "10px 14px",
+                            fontSize: "15px",
+                            borderRadius: "4px",
+                            border: "1px solid #ffffff",
+                            backgroundColor: "rgba(255, 255, 255, 0.95)",
+                            color: "#333333",
+                            outline: "none",
+                            boxSizing: "border-box"
+                          }}
                         >
                           <option value="Fertility">Fertility</option>
                           <option value="Renal Care">Renal Care</option>
@@ -178,22 +231,23 @@ export default function Consultation() {
                     </div>
 
                     {/* Submit Button */}
-                    <div className="wpforms-submit-container" style={{ textAlign: "center", marginTop: "30px" }}>
+                    <div className="wpforms-submit-container" style={{ textAlign: "center" }}>
                       <button
                         type="submit"
                         name="wpforms[submit]"
                         id="wpforms-submit-6155"
-                        className="elementor-button"
                         disabled={status === "submitting"}
                         style={{
                           backgroundColor: "#f08080",
                           color: "#ffffff",
                           borderRadius: "45px",
-                          padding: "12px 30px",
+                          padding: "12px 40px",
                           fontSize: "16px",
                           cursor: status === "submitting" ? "not-allowed" : "pointer",
-                          fontWeight: "bold",
-                          border: "none"
+                          fontWeight: "700",
+                          border: "none",
+                          boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
+                          transition: "background-color 0.3s ease"
                         }}
                       >
                         {status === "submitting" ? "Sending..." : "Submit"}
@@ -221,9 +275,18 @@ export default function Consultation() {
               data-id="1557ac98"
               data-element_type="widget"
               data-widget_type="heading.default"
+              style={{ textAlign: "center", marginTop: "24px" }}
             >
               <div className="elementor-widget-container">
-                <h3 className="elementor-heading-title elementor-size-default">
+                <h3
+                  className="elementor-heading-title elementor-size-default"
+                  style={{
+                    color: "#ffffff",
+                    fontFamily: '"Nunito Sans", sans-serif',
+                    fontSize: "16px",
+                    fontWeight: "300"
+                  }}
+                >
                   Terms & conditions are apply
                 </h3>
               </div>

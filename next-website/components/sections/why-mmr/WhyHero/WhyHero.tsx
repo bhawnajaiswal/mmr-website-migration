@@ -7,8 +7,15 @@ export default function WhyHero() {
       data-id="2eaf08b7"
       data-element_type="section"
       data-settings='{"background_background":"classic","shape_divider_bottom":"tilt"}'
+      style={{
+        backgroundImage: "url('/wp-content/uploads/2024/04/medic-hospital-laboratory-medical-40559.jpg')",
+        backgroundPosition: "bottom center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        position: "relative"
+      }}
     >
-      <div className="elementor-background-overlay" />
+      <div className="elementor-background-overlay" style={{ position: "absolute", inset: 0 }} />
       
       {/* Bottom Tilt Divider */}
       <div className="elementor-shape elementor-shape-bottom" data-negative="false">
@@ -17,7 +24,7 @@ export default function WhyHero() {
         </svg>
       </div>
 
-      <div className="elementor-container elementor-column-gap-wider">
+      <div className="elementor-container elementor-column-gap-wider" style={{ width: "100%" }}>
         <div
           className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6a26c3ca"
           data-id="6a26c3ca"

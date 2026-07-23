@@ -8,28 +8,33 @@
    ========================================================================== */
 
 /* Top Bar Container */
+/* Top Bar Container */
 .hfe-top-bar {
-  background-color: var(--primary1, #453a78); /* Fallback to theme dark color */
-  color: #ffffff;
-  padding: 8px 0;
-  font-size: 14px;
+  background-color: #d2bad6;
+  color: #192431;
+  padding: 6px 0;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .hfe-top-bar-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  maxWidth: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .hfe-top-bar-left ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 20px;
+  gap: 25px;
 }
 
 .hfe-top-bar-left li {
@@ -38,22 +43,18 @@
   gap: 6px;
 }
 
+.hfe-top-bar-left i {
+  color: #4c5b6d;
+  font-size: 14px;
+}
+
 .hfe-top-bar-left a {
-  color: #ffffff;
+  color: #192431;
   text-decoration: none;
 }
 
-.hfe-social-list {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 15px;
-}
-
-.hfe-social-list a {
-  color: #ffffff;
-  font-size: 14px;
+.hfe-top-bar-left a:hover {
+  color: #443474;
 }
 
 /* Main Branding & Navigation Row */
@@ -65,7 +66,8 @@
 }
 
 .main-header-row {
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-top: 3px solid #F4F4F4;
+  background-color: #FDFDFD;
   padding: 10px 0;
 }
 
@@ -78,19 +80,45 @@
   padding: 0 15px;
 }
 
-.logo-img {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.header-col-right {
+.header-col-left {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.hfe-enquiry-trigger {
+.header-brand-title {
+  margin: 0;
+  padding: 0;
+}
+
+.header-brand-title a {
+  color: #443474;
+  font-family: "Jost", Sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  letter-spacing: 0.7px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.logo-img {
   display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+.header-col-center {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header-col-right {
+  display: flex;
+  align-items: center;
 }
 
 /* ==========================================================================
@@ -105,7 +133,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 25px;
+  gap: 5px;
 }
 
 .hfe-nav-menu > li {
@@ -114,12 +142,19 @@
 
 .hfe-menu-item {
   display: block;
-  padding: 15px 0;
+  padding: 18px 18px;
   color: #585858;
-  font-weight: 500;
-  font-size: 15px;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
   text-decoration: none;
   transition: color 0.2s;
+}
+
+.hfe-menu-item:hover,
+.hfe-menu-item.active {
+  color: #2b89ff;
 }
 
 /* Dropdown Submenus */
@@ -133,9 +168,9 @@
   padding: 10px 0;
   margin: 0;
   list-style: none;
-  min-width: 220px;
+  min-width: 240px;
   z-index: 999;
-  border-top: 3px solid var(--primary1, #453a78);
+  border-top: 3px solid #443474;
 }
 
 .hfe-nav-menu li:hover > .sub-menu {
@@ -146,14 +181,17 @@
   display: block;
   padding: 8px 20px;
   color: #333333;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 13px;
+  font-weight: 500;
   text-decoration: none;
-  font-size: 14px;
   transition: background 0.2s, color 0.2s;
 }
 
-.hfe-sub-menu-item:hover {
+.hfe-sub-menu-item:hover,
+.hfe-sub-menu-item.active {
   background-color: #f8f9fa;
-  color: var(--primary1, #453a78);
+  color: #2b89ff;
 }
 
 /* Dropdown Sub-Submenus (Level 3) */
@@ -167,9 +205,9 @@
   padding: 10px 0;
   margin: 0;
   list-style: none;
-  min-width: 200px;
+  min-width: 220px;
   z-index: 1000;
-  border-left: 2px solid var(--primary1, #453a78);
+  border-left: 2px solid #443474;
 }
 
 .sub-menu li:hover > .sub-menu-nested {
@@ -215,182 +253,420 @@
 /* ==========================================================================
    Footer Layout Styles
    ========================================================================== */
+/* ==========================================================================
+   Footer — Production Parity
+   ========================================================================== */
+
 .site-footer {
-  background-color: var(--primary1, #453a78);
-  color: #f1f1f1;
-  padding: 60px 0 20px;
+  background: #51437f;
+  color: #fff;
+  padding: 0;
+  font-family: "Montserrat", Sans-serif;
 }
 
 .footer-top-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 12px 7%;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.2fr 1fr;
+  align-items: start;
+  gap: 50px;
+}
+
+/* Production does not show the logo / consultation block */
+.footer-column:first-child .footer-logo-wrap,
+.footer-column:first-child .footer-cta-wrap,
+.footer-column:first-child .footer-contact-info p:first-of-type {
+  display: none;
 }
 
 .footer-column {
-  flex: 1 1 200px;
-  margin: 10px 0;
+  margin: 0;
+  text-align: left;
 }
 
 .footer-column h5 {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  position: relative;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid rgba(255,255,255,.55);
 }
 
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 40px;
-  padding-top: 20px;
-  font-size: 13px;
+/* First column = Contact Us */
+.footer-column:first-child {
+  text-align: center;
 }
 
-.footer-bottom-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Hover opacity utility for top bar and footer social links */
-.hfe-social-list li a:hover {
-  opacity: 0.8;
-}
-
-.footer-logo-wrap {
-  margin-bottom: 20px;
-}
-
-.footer-logo-img {
-  background-color: #ffffff;
-  padding: 5px;
-  border-radius: 4px;
-}
-
-.footer-cta-wrap {
+.footer-column:first-child::before {
+  content: "Contact Us";
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
   margin-bottom: 25px;
 }
 
-.footer-cta-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .footer-contact-info {
+  color: #fff;
   font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  line-height: 1.4;
+  margin: 0;
 }
 
 .footer-contact-info p {
-  margin: 5px 0;
+  margin: 8px 0;
 }
 
-.footer-contact-info a {
-  color: #f1f1f1;
+.footer-contact-info a,
+.footer-column a,
+.footer-treatment-split a {
+  color: #fff;
   text-decoration: none;
 }
 
-.footer-treatment-split {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.footer-treatment-split h6 {
-  color: #ffffff;
-  font-weight: 600;
-  margin: 0 0 10px 0;
-  font-size: 14px;
-}
-
+.footer-column ul,
 .footer-treatment-split ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 13px;
-  line-height: 2;
-}
-
-.footer-treatment-split a {
-  color: #f1f1f1;
-  text-decoration: none;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   font-size: 14px;
-  line-height: 2.2;
+  line-height: normal;
 }
 
-.footer-column a {
-  color: #f1f1f1;
-  text-decoration: none;
+.footer-column li,
+.footer-treatment-split li {
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255,255,255,.55);
 }
 
-.footer-bottom-credits {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
+.footer-treatment-split {
+  display: contents;
 }
 
-.footer-bottom-credits a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.footer-bottom-legal {
-  display: flex;
-  gap: 10px;
-}
-
-.footer-bottom-legal a {
-  color: #f1f1f1;
-  text-decoration: none;
+.footer-treatment-split h6 {
+  display: none;
 }
 
 .footer-socials {
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
 }
 
 .footer-socials a {
-  color: #ffffff;
-  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #173c70;
+  color: #fff;
+  font-size: 14px;
 }
 
-/* Responsive Hide/Show Breakpoints */
-@media (min-width: 1025px) {
-  .hfe-mobile-menu {
-    display: none !important;
+/* Bottom copyright bar */
+.footer-bottom {
+  background: #171b1e;
+  border: 0;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 13px;
+}
+
+.footer-bottom-container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 16%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom-credits,
+.footer-bottom-legal {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-bottom-credits a,
+.footer-bottom-legal a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+/* Hide broken/extra credit image if present */
+.footer-bottom-credits img {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .footer-top-container {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+    gap: 30px;
   }
-  .header-col-center {
-    display: block !important;
+
+  .footer-bottom-container {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
   }
 }
 
-@media (max-width: 1024px) {
-  .header-col-center {
-    display: none !important;
+/* Homepage Hero Slider Arrows */
+.elementor-widget-slides .elementor-swiper-button {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 20 !important;
+}
+
+.elementor-widget-slides .elementor-swiper-button-prev {
+  left: 10px !important;
+}
+
+.elementor-widget-slides .elementor-swiper-button-next {
+  right: 10px !important;
+  left: auto !important;
+}
+
+/* Doctor Card Social Icons Layout */
+.elementor-widget-social-icons .elementor-social-icons-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 6px !important;
+  margin-top: 10px;
+}
+
+.elementor-widget-social-icons .elementor-grid-item {
+  display: inline-flex !important;
+}
+
+.elementor-widget-social-icons .elementor-icon.elementor-social-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 28px !important;
+  height: 28px !important;
+  font-size: 14px !important;
+  background-color: transparent !important;
+  color: #777777 !important;
+  transition: color 0.3s ease;
+}
+
+.elementor-widget-social-icons .elementor-icon.elementor-social-icon i {
+  font-size: 14px !important;
+  color: #777777 !important;
+}
+
+.elementor-widget-social-icons .elementor-icon.elementor-social-icon:hover i {
+  color: #333333 !important;
+}
+
+.doctor-card-wrap {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.06);
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+/* Standard Elementor Divider Styles */
+.elementor-widget-divider .elementor-divider {
+  display: flex;
+}
+.elementor-widget-divider .elementor-divider-separator {
+  border-block-start: var(--divider-border-width, 1px) var(--divider-border-style, solid) var(--divider-color, #ccc);
+  width: var(--divider-border-width, 100%);
+  margin: 0 auto;
+}
+
+/* Elementor Counter Widget Layout */
+.elementor-counter {
+  text-align: center;
+}
+
+.elementor-counter-number-wrapper {
+  display: inline-flex;
+  font-size: 69px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  color: #305595 !important;
+  font-family: "Roboto", sans-serif !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.elementor-counter-title {
+  font-family: "Nunito Sans", sans-serif !important;
+  font-size: 19px !important;
+  font-weight: 400 !important;
+  line-height: 2.5 !important;
+  color: #69727d !important;
+  margin-top: 5px;
+}
+
+/* Blogs Media Carousel Layout */
+.blog-card-item {
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.blog-card-item .elementor-carousel-image {
+  border-radius: 0px !important;
+  transition: transform 0.3s ease;
+}
+
+.blog-card-item:hover .elementor-carousel-image {
+  transform: scale(1.02);
+}
+
+/* ==========================================================================
+   Elementor Shape Dividers
+   ========================================================================== */
+.elementor-shape {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  direction: ltr;
+  z-index: 2;
+}
+
+.elementor-shape-top {
+  top: -1px;
+}
+
+.elementor-shape-bottom {
+  bottom: -1px;
+}
+
+.elementor-shape svg {
+  display: block;
+  width: calc(100% + 1.3px);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.elementor-shape-fill {
+  fill: #ffffff;
+}
+
+/* ==========================================================================
+   Elementor Accordion Layout Styles
+   ========================================================================== */
+.elementor-accordion {
+  text-align: left;
+  width: 100%;
+}
+
+.elementor-accordion-item {
+  border: 1px solid rgba(12, 12, 12, 0.16);
+  margin-bottom: -1px;
+}
+
+.elementor-accordion .elementor-tab-title {
+  margin: 0;
+  padding: 20px 24px !important;
+  font-family: "Nunito", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.elementor-accordion .elementor-tab-title.elementor-active {
+  border-bottom-color: rgba(12, 12, 12, 0.16);
+}
+
+.elementor-accordion-title {
+  color: #666666;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.elementor-active .elementor-accordion-title {
+  color: #0c010a;
+  font-weight: 600;
+}
+
+.elementor-accordion-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  order: 10;
+}
+
+.elementor-accordion-icon i {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.62);
+}
+
+.elementor-active .elementor-accordion-icon i {
+  color: #000000;
+}
+
+.elementor-tab-content {
+  padding: 20px 24px !important;
+  background-color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #333333;
+}
+
+/* ==========================================================================
+   Why MMR Hospital Page Layout Tweaks
+   ========================================================================== */
+.main-content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.why-left-image-col {
+  background-color: #2872F8;
+  background-image: url("/wp-content/uploads/2024/04/Untitled-design-44.png");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .why-left-image-col {
+    min-height: 250px !important;
+    width: 100% !important;
   }
-  .hfe-mobile-menu {
-    display: block !important;
+  .elementor-section.elementor-element-1f4a9d6 > .elementor-container {
+    flex-direction: column !important;
   }
-  .hfe-enquiry-trigger {
-    display: none !important;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .why-left-image-col {
+    min-height: 350px !important;
+    width: 100% !important;
+  }
+  .elementor-section.elementor-element-1f4a9d6 > .elementor-container {
+    flex-direction: column !important;
   }
 }

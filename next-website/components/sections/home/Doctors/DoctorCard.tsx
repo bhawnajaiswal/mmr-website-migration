@@ -37,7 +37,7 @@ export default function DoctorCard({
       data-id={columnId}
       data-element_type="column"
     >
-      <div className="elementor-widget-wrap elementor-element-populated">
+      <div className="elementor-widget-wrap elementor-element-populated doctor-card-wrap">
         
         {/* Profile Image */}
         <div
@@ -110,60 +110,60 @@ export default function DoctorCard({
               
               <span className="elementor-grid-item">
                 <a
-                  href={socialLinks.facebook || "#"}
+                  href={socialLinks.facebook || "https://facebook.com"}
                   className="elementor-icon elementor-social-icon elementor-social-icon-facebook-f"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Facebook"
                 >
-                  <span className="elementor-screen-only">Facebook-f</span>
                   <i className="fab fa-facebook-f" />
                 </a>
               </span>
 
               <span className="elementor-grid-item">
                 <a
-                  href={socialLinks.twitter || "#"}
+                  href={socialLinks.twitter || "https://twitter.com"}
                   className="elementor-icon elementor-social-icon elementor-social-icon-twitter"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Twitter"
                 >
-                  <span className="elementor-screen-only">Twitter</span>
                   <i className="fab fa-twitter" />
                 </a>
               </span>
 
               <span className="elementor-grid-item">
                 <a
-                  href={socialLinks.googlePlus || "#"}
+                  href={socialLinks.googlePlus || "https://google.com"}
                   className="elementor-icon elementor-social-icon elementor-social-icon-google-plus"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Google Plus"
                 >
-                  <span className="elementor-screen-only">Google-plus</span>
                   <i className="fab fa-google-plus-g" />
                 </a>
               </span>
 
               <span className="elementor-grid-item">
                 <a
-                  href={socialLinks.linkedin || "#"}
+                  href={socialLinks.linkedin || "https://linkedin.com"}
                   className="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="LinkedIn"
                 >
-                  <span className="elementor-screen-only">Linkedin</span>
                   <i className="fab fa-linkedin-in" />
                 </a>
               </span>
 
               <span className="elementor-grid-item">
                 <a
-                  href={socialLinks.instagram || "#"}
+                  href={socialLinks.instagram || "https://instagram.com"}
                   className="elementor-icon elementor-social-icon elementor-social-icon-instagram"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Instagram"
                 >
-                  <span className="elementor-screen-only">Instagram</span>
                   <i className="fab fa-instagram" />
                 </a>
               </span>

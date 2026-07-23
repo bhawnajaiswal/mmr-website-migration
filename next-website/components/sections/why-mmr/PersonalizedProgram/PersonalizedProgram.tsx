@@ -138,12 +138,12 @@ export default function PersonalizedProgram() {
         
         {/* Left Column: Background Image (stretches to fill height) */}
         <div
-          className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-158c73ed"
+          className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-158c73ed why-left-image-col"
           data-id="158c73ed"
           data-element_type="column"
           data-settings='{"background_background":"classic"}'
         >
-          <div className="elementor-widget-wrap elementor-element-populated">
+          <div className="elementor-widget-wrap elementor-element-populated" style={{ height: "100%", position: "relative" }}>
             <div className="elementor-background-overlay" />
           </div>
         </div>

@@ -7,8 +7,15 @@ export default function HelpCTA() {
       data-id="3ec07206"
       data-element_type="section"
       data-settings='{"background_background":"classic","shape_divider_bottom":"tilt","shape_divider_top":"tilt"}'
+      style={{
+        backgroundImage: "url('/wp-content/uploads/2024/04/medic-hospital-laboratory-medical-40559.jpg')",
+        backgroundPosition: "top center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        position: "relative"
+      }}
     >
-      <div className="elementor-background-overlay" />
+      <div className="elementor-background-overlay" style={{ position: "absolute", inset: 0 }} />
       
       {/* Top Tilt Divider */}
       <div className="elementor-shape elementor-shape-top" data-negative="false">
@@ -24,7 +31,7 @@ export default function HelpCTA() {
         </svg>
       </div>
 
-      <div className="elementor-container elementor-column-gap-wide">
+      <div className="elementor-container elementor-column-gap-wide" style={{ width: "100%" }}>
         <div
           className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7610d488"
           data-id="7610d488"

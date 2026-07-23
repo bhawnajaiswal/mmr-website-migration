@@ -25,16 +25,28 @@ export default function HeroSlide({
         height: "630px"
       }}
     >
-      {/* Background Image Container */}
-      <div className="swiper-slide-bg" />
+      {/* Background Image Container (Absolute behind text) */}
+      <div
+        className="swiper-slide-bg"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundPosition: "center center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat"
+        }}
+      />
 
       {/* Slide Inner Overlay & Content Container */}
       <div className="swiper-slide-inner">
-        <div className="swiper-slide-contents">
+        <div className="elementor-slide-content">
           <h2 className="elementor-slide-heading">
             {heading}
           </h2>
-          <p className="elementor-slide-description">
+          <p className="elementor-slide-description" style={{ whiteSpace: "pre-line" }}>
             {description}
           </p>
           <a href={buttonUrl} className="elementor-slide-button">
