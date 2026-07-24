@@ -62,9 +62,10 @@ export default function SubPageHero({
                 data-widget_type="heading.default"
               >
                 <div className="elementor-widget-container">
-                  <h3 className="elementor-heading-title elementor-size-default">
-                    {subtitle}
-                  </h3>
+                  <h3
+                    className="elementor-heading-title elementor-size-default"
+                    dangerouslySetInnerHTML={{ __html: subtitle }}
+                  />
                 </div>
               </div>
             )}
@@ -76,9 +77,11 @@ export default function SubPageHero({
               data-widget_type="heading.default"
             >
               <div className="elementor-widget-container">
-                <h1 className="elementor-heading-title elementor-size-default" style={{ color: "#FFFFFF" }}>
-                  {title}
-                </h1>
+                <h1
+                  className="elementor-heading-title elementor-size-default"
+                  style={{ color: "#FFFFFF" }}
+                  dangerouslySetInnerHTML={{ __html: title }}
+                />
               </div>
             </div>
 

@@ -41,13 +41,15 @@ export default function SpecialFacilities({ showSocialIcons = false }: SpecialFa
       data-id="1e71954b"
       data-element_type="section"
       data-settings='{"shape_divider_top":"tilt","shape_divider_bottom":"tilt"}'
-      style={{ padding: "80px 0 110px 0" }}
+      style={{ padding: "80px 0 110px 0", position: "relative" }}
     >
       <div
         className="elementor-background-overlay"
         style={{
           backgroundColor: "#f5f7f9",
-          opacity: 0.9
+          opacity: 0.9,
+          position: "absolute",
+          inset: 0
         }}
       />
       
@@ -67,7 +69,7 @@ export default function SpecialFacilities({ showSocialIcons = false }: SpecialFa
 
       <div
         className="elementor-container elementor-column-gap-wide"
-        style={{ maxWidth: "1040px", margin: "0 auto" }}
+        style={{ maxWidth: "1040px", margin: "0 auto", width: "100%", padding: "0 20px", position: "relative" }}
       >
         <div
           className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1e3d2b4b"
@@ -81,6 +83,7 @@ export default function SpecialFacilities({ showSocialIcons = false }: SpecialFa
               className="elementor-section elementor-inner-section elementor-element elementor-element-479ef77c elementor-section-boxed elementor-section-height-default elementor-section-height-default"
               data-id="479ef77c"
               data-element_type="section"
+              style={{ marginBottom: "30px" }}
             >
               <div className="elementor-container elementor-column-gap-wide">
                 <div
@@ -140,19 +143,18 @@ export default function SpecialFacilities({ showSocialIcons = false }: SpecialFa
               data-id="1942650e"
               data-element_type="section"
             >
-              <div className="elementor-container elementor-column-gap-default">
+              <div className="elementor-container special-facilities-grid" style={{ display: "flex", gap: "24px" }}>
                 {cards.map((card) => (
                   <div
                     key={card.colId}
-                    className="elementor-column elementor-col-33 elementor-inner-column elementor-element"
+                    className="elementor-column elementor-col-33 elementor-inner-column elementor-element special-facility-card"
                     data-id={card.colId}
                     data-element_type="column"
                     style={{
                       backgroundColor: "#ffffff",
                       borderRadius: "4px",
-                      boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-                      textAlign: "left",
-                      margin: "20px"
+                      boxShadow: "0 0 10px rgba(0,0,0,0.06)",
+                      textAlign: "left"
                     }}
                   >
                     <div className="elementor-widget-wrap elementor-element-populated" style={{ padding: "0 0 20px 0" }}>

@@ -6,8 +6,8 @@ interface LogoProps {
 }
 
 export default function Logo({ variant = "header" }: LogoProps) {
-  const width = variant === "header" ? 150 : 144;
-  const height = variant === "header" ? 71 : 66;
+  const width = variant === "header" ? 130 : 144;
+  const height = variant === "header" ? 62 : 66;
 
   return (
     <Link href="/" className="logo-link">

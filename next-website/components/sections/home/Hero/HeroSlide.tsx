@@ -1,3 +1,5 @@
+import styles from "@/app/Home.module.css";
+
 interface HeroSlideProps {
   heading: string;
   description: string;
@@ -15,41 +17,38 @@ export default function HeroSlide({
   slideIdClass,
   isActive
 }: HeroSlideProps) {
+  // Original legacy Elementor properties
+  const bgImgUrl = slideIdClass === "elementor-repeater-item-fc4f1bf"
+    ? "/wp-content/uploads/2024/04/Home-10.png"
+    : "/wp-content/uploads/2024/04/Home-12.png";
+
+  const bgColor = slideIdClass === "elementor-repeater-item-fc4f1bf"
+    ? "#833ca3"
+    : "#4054b2";
+
   return (
     <div
-      className={`swiper-slide ${slideIdClass} ${isActive ? "swiper-slide-active" : ""}`}
-      style={{
-        display: isActive ? "block" : "none",
-        position: "relative",
-        width: "100%",
-        height: "630px"
-      }}
+      className={`${styles.slideItem} ${isActive ? styles.slideItemActive : ""}`}
     >
-      {/* Background Image Container (Absolute behind text) */}
+      {/* Background Image & Color styled as in legacy CSS */}
       <div
-        className="swiper-slide-bg"
+        className={styles.slideBg}
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          backgroundPosition: "center center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat"
+          backgroundImage: `url('${bgImgUrl}')`,
+          backgroundColor: bgColor
         }}
       />
 
       {/* Slide Inner Overlay & Content Container */}
-      <div className="swiper-slide-inner">
-        <div className="elementor-slide-content">
-          <h2 className="elementor-slide-heading">
+      <div className={styles.slideInner}>
+        <div className={styles.slideContent}>
+          <h2 className={styles.slideHeading}>
             {heading}
           </h2>
-          <p className="elementor-slide-description" style={{ whiteSpace: "pre-line" }}>
+          <p className={styles.slideDescription}>
             {description}
           </p>
-          <a href={buttonUrl} className="elementor-slide-button">
+          <a href={buttonUrl} className={styles.slideButton}>
             {buttonText}
           </a>
         </div>

@@ -1,3 +1,4 @@
+import styles from "./Home.module.css";
 import Hero from "@/components/sections/home/Hero/Hero";
 import Intro from "@/components/sections/home/Intro/Intro";
 import Nephrology from "@/components/sections/home/Nephrology/Nephrology";
@@ -19,7 +20,8 @@ export default function Home() {
       />
 
       <main className="main-content">
-        <div data-elementor-type="wp-page" data-elementor-id="5721" className="elementor elementor-5721">
+        {/* Phase 1 Redesigned Sections wrapped in page-scoped styles container */}
+        <div className={styles.homeContainer}>
           {/* Section 1: Hero Banner Slider */}
           <Hero />
 
@@ -28,7 +30,10 @@ export default function Home() {
 
           {/* Section 3: Renal Care/Nephrology Section */}
           <Nephrology />
+        </div>
 
+        {/* Legacy Sections left intact for visual validation pass */}
+        <div data-elementor-type="wp-page" data-elementor-id="5721" className="elementor elementor-5721">
           {/* Section 4: Why Choose Us Section */}
           <WhyChooseUs />
 

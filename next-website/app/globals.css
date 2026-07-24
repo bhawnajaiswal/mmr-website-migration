@@ -44,7 +44,7 @@
 }
 
 .hfe-top-bar-left i {
-  color: #4c5b6d;
+  color: #105ab5;
   font-size: 14px;
 }
 
@@ -66,74 +66,87 @@
 }
 
 .main-header-row {
-  border-top: 3px solid #F4F4F4;
-  background-color: #FDFDFD;
-  padding: 10px 0;
+  border-top: 3px solid #f4f4f4;
+  background-color: #fdfdfd;
+  padding: 0;
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1420px;
+  min-height: 80px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .header-col-left {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 14px;
+  flex: 0 0 auto;
 }
 
 .header-brand-title {
   margin: 0;
   padding: 0;
+  width: 230px;
+  flex-shrink: 0;
 }
 
 .header-brand-title a {
   color: #443474;
-  font-family: "Jost", Sans-serif;
-  font-size: 1.2rem;
+  font-family: "Jost", sans-serif;
+  font-size: 1.05rem;
   font-weight: 600;
   text-transform: uppercase;
-  line-height: 1.2em;
-  letter-spacing: 0.7px;
+  line-height: 1.3;
+  letter-spacing: 0.4px;
   text-decoration: none;
-  transition: color 0.2s;
+  display: block;
 }
 
-.logo-img {
-  display: inline-block;
-  vertical-align: middle;
-  object-fit: contain;
-}
 
 .header-col-center {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  flex-grow: 1;
+  flex: 1;
+  min-width: 0;
+  margin-left: 32px;
 }
 
-.header-col-right {
+
+.logo-img {
+  display: block;
+  height: 62px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header-col-left {
   display: flex;
   align-items: center;
+  gap: 16px;
+  flex: 0 0 auto;
 }
 
 /* ==========================================================================
    Navigation Dropdowns (Desktop)
    ========================================================================== */
 .hfe-nav {
-  display: block;
+  width: 100%;
 }
 
 .hfe-nav-menu {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 5px;
+  gap: 0;
 }
 
 .hfe-nav-menu > li {
@@ -141,15 +154,18 @@
 }
 
 .hfe-menu-item {
-  display: block;
-  padding: 18px 18px;
-  color: #585858;
-  font-family: "Montserrat", Sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  padding: 16px 10px;
+  color: #4f4f4f;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 700;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
   text-decoration: none;
-  transition: color 0.2s;
 }
 
 .hfe-menu-item:hover,
@@ -251,6 +267,75 @@
 }
 
 /* ==========================================================================
+   Header Responsive Breakpoints
+   ========================================================================== */
+
+/* Full desktop navigation */
+@media (min-width: 1351px) {
+  .header-col-center {
+    display: flex !important;
+    min-width: 0;
+  }
+
+  .hfe-mobile-menu {
+    display: none !important;
+  }
+}
+
+/* Tablet + smaller desktop */
+@media (max-width: 1350px) {
+  .header-col-center {
+    display: none !important;
+  }
+
+  .hfe-mobile-menu {
+    display: block !important;
+  }
+
+  .header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+  .header-col-right {
+    margin-left: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .main-header-row {
+    padding: 0;
+  }
+
+  .header-container {
+    padding: 0 12px;
+  }
+
+  .header-brand-title {
+  margin: 0;
+  padding: 0;
+  width: 215px;
+  flex-shrink: 0;
+}
+
+  .header-brand-title a {
+    font-size: 0.9rem;
+    letter-spacing: 0.2px;
+  }
+
+  .logo-img {
+    width: 90px;
+    height: auto;
+  }
+}
+
+/* ==========================================================================
    Footer Layout Styles
    ========================================================================== */
 /* ==========================================================================
@@ -273,6 +358,11 @@
   grid-template-columns: 1.1fr 1fr 1.2fr 1fr;
   align-items: start;
   gap: 50px;
+}
+
+.footer-top-container,
+.footer-bottom-container {
+  box-sizing: border-box;
 }
 
 /* Production does not show the logo / consultation block */
@@ -668,5 +758,30 @@
   }
   .elementor-section.elementor-element-1f4a9d6 > .elementor-container {
     flex-direction: column !important;
+  }
+}
+
+/* ==========================================================================
+   Special Facilities Grid Responsive Layout
+   ========================================================================== */
+.special-facility-card {
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.special-facility-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+@media (max-width: 768px) {
+  .special-facilities-grid {
+    flex-direction: column !important;
+    gap: 20px !important;
+    padding: 0 10px !important;
+  }
+  
+  .special-facility-card {
+    width: 100% !important;
   }
 }
