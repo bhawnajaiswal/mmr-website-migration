@@ -1,11 +1,8 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import SubPageHero from "@/components/sections/shared/SubPageHero/SubPageHero";
+"use client";
 
-export const metadata: Metadata = {
-  title: "News & Blogs – MMR Hospital & IVF Center – Best IVF Center in Raipur",
-  description: "Stay updated with the latest news, updates, and informative medical blogs from MMR Hospital & IVF Center Raipur.",
-};
+import { useEffect, useRef, useState, ReactNode } from "react";
+import Link from "next/link";
+import styles from "./NewsBlogs.module.css";
 
 const blogPosts = [
   {
@@ -51,207 +48,148 @@ const blogPosts = [
   }
 ];
 
+// Helper component for Intersection Observer Scroll Reveal
+function ScrollRevealSection({ children, className = "", style }: { children: ReactNode; className?: string; style?: React.CSSProperties }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      style={style}
+      className={`${className} ${styles.scrollReveal} ${isVisible ? styles.revealVisible : ""}`}
+    >
+      {children}
+    </div>
+  );
+}
+
 export default function NewsBlogsPage() {
   return (
-    <>
-      {/* Load page-specific Elementor Stylesheet */}
-      <link
-        rel="stylesheet"
-        href="/wp-content/uploads/elementor/css/post-159.css"
-      />
-
+    <div className={styles.container}>
       <main className="main-content">
-        <div data-elementor-type="wp-page" data-elementor-id="159" className="elementor elementor-159">
+        
+        {/* Section 1: Hero Banner */}
+        <section className={styles.heroSection}>
+          <div className={styles.heroOverlay} />
           
-          {/* Section 1: Hero Banner (ID: 460c2d75) */}
-          <SubPageHero
-            secId="460c2d75"
-            title="News And Blogs"
-            backgroundColor="transparent"
-          />
+          <div className={`${styles.shapeDivider} ${styles.shapeDividerBottom}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={styles.shapeDividerSvg}>
+              <path d="M0,6V0h1000v100L0,6z" />
+            </svg>
+          </div>
 
-          {/* Section 2: Blog Posts Grid (ID: 64b7f810) */}
-          <section
-            className="elementor-section elementor-top-section elementor-element elementor-element-64b7f810 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-            data-id="64b7f810"
-            data-element_type="section"
-          >
-            <div className="elementor-container elementor-column-gap-default">
-              <div className="elementor-row">
-                <div
-                  className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-110abc7"
-                  data-id="110abc7"
-                  data-element_type="column"
-                >
-                  <div className="elementor-widget-wrap elementor-element-populated">
-                    <div
-                      className="elementor-element elementor-element-66eba6a elementor-grid-3 elementor-posts--thumbnail-top elementor-widget elementor-widget-posts"
-                      data-id="66eba6a"
-                      data-element_type="widget"
-                      data-widget_type="posts.classic"
-                    >
-                      <div className="elementor-widget-container">
-                        <div className="elementor-posts-container elementor-posts elementor-posts--skin-classic elementor-grid">
-                          
-                          {blogPosts.map(post => (
-                            <article
-                              key={post.id}
-                              className={`elementor-post elementor-grid-item post-${post.id} post type-post status-publish format-standard has-post-thumbnail hentry`}
-                            >
-                              <Link
-                                className="elementor-post__thumbnail__link"
-                                href={`/news-blogs/${post.slug}`}
-                              >
-                                <div className="elementor-post__thumbnail">
-                                  <img
-                                    src={post.image}
-                                    alt={post.title}
-                                    width={400}
-                                    height={250}
-                                    style={{ objectFit: "cover", width: "100%", height: "200px" }}
-                                    loading="lazy"
-                                  />
-                                </div>
-                              </Link>
-                              
-                              <div className="elementor-post__text">
-                                <h3 className="elementor-post__title">
-                                  <Link href={`/news-blogs/${post.slug}`}>
-                                    {post.title}
-                                  </Link>
-                                </h3>
-                                
-                                <div className="elementor-post__meta-data">
-                                  <span className="elementor-post-date">{post.date}</span>
-                                </div>
-                                
-                                <div className="elementor-post__excerpt">
-                                  <p>{post.excerpt}</p>
-                                </div>
-                                
-                                <Link
-                                  className="elementor-post__read-more"
-                                  href={`/news-blogs/${post.slug}`}
-                                >
-                                  Read More »
-                                </Link>
-                              </div>
-                            </article>
-                          ))}
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div className={styles.heroContent}>
+            <div className={styles.heroDivider} />
+            <div className={styles.heroTitle}>
+              <h1>
+                News And Blogs
+              </h1>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Section 3: Bottom Banner (ID: 6070715) */}
-          <section
-            className="elementor-section elementor-top-section elementor-element elementor-element-6070715 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-            data-id="6070715"
-            data-element_type="section"
-          >
-            <div className="elementor-container elementor-column-gap-default">
-              <div className="elementor-row">
-                <div
-                  className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cda5bf2"
-                  data-id="cda5bf2"
-                  data-element_type="column"
-                >
-                  <div className="elementor-widget-wrap elementor-element-populated">
-                    <div
-                      className="elementor-section elementor-inner-section elementor-element elementor-element-0e015f4 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                      data-id="0e015f4"
-                      data-element_type="section"
+        {/* Section 2: Blog Posts Grid */}
+        <section className={styles.blogsSection}>
+          <div className={styles.blogsContainer}>
+            <div className={styles.blogsGrid}>
+              {blogPosts.map((post, idx) => (
+                <ScrollRevealSection key={post.id}>
+                  <article
+                    className={styles.blogCard}
+                    style={{ transitionDelay: `${idx * 100}ms` }}
+                  >
+                    <Link
+                      className={styles.blogImageWrapper}
+                      href={`/news-blogs/${post.slug}`}
                     >
-                      <div className="elementor-container elementor-column-gap-default">
-                        <div className="elementor-row">
-                          
-                          {/* Left Column: Info Text */}
-                          <div
-                            className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-036ff78"
-                            data-id="036ff78"
-                            data-element_type="column"
-                          >
-                            <div className="elementor-widget-wrap elementor-element-populated">
-                              <div
-                                className="elementor-element elementor-element-93f97d3 elementor-widget elementor-widget-heading"
-                                data-id="93f97d3"
-                                data-element_type="widget"
-                                data-widget_type="heading.default"
-                              >
-                                <div className="elementor-widget-container">
-                                  <h2 className="elementor-heading-title elementor-size-default">
-                                    Our Hospital
-                                  </h2>
-                                </div>
-                              </div>
-                              <div
-                                className="elementor-element elementor-element-f2f77cc elementor-widget elementor-widget-heading"
-                                data-id="f2f77cc"
-                                data-element_type="widget"
-                                data-widget_type="heading.default"
-                              >
-                                <div className="elementor-widget-container">
-                                  <h3 className="elementor-heading-title elementor-size-default">
-                                    We are available for 24/7 for your service.
-                                  </h3>
-                                </div>
-                              </div>
-                              <div
-                                className="elementor-element elementor-element-e8eee31 elementor-widget elementor-widget-text-editor"
-                                data-id="e8eee31"
-                                data-element_type="widget"
-                                data-widget_type="text-editor.default"
-                              >
-                                <div className="elementor-widget-container">
-                                  <div className="elementor-text-editor elementor-clearfix">
-                                    <p>At MMR Hospital &amp; IVF Center, we understand that healthcare needs can arise at any time, which is why we are proud to offer round-the-clock services to our patients. Our dedicated team of medical professionals and support staff is available 24/7 to provide prompt, compassionate, and high-quality care whenever you need it.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Right Column: Hospital Image */}
-                          <div
-                            className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-46e91ab"
-                            data-id="46e91ab"
-                            data-element_type="column"
-                          >
-                            <div className="elementor-widget-wrap elementor-element-populated">
-                              <div
-                                className="elementor-element elementor-element-54c639f elementor-widget elementor-widget-image"
-                                data-id="54c639f"
-                                data-element_type="widget"
-                                data-widget_type="image.default"
-                              >
-                                <div className="elementor-widget-container">
-                                  <img
-                                    src="/wp-content/uploads/2024/04/MMR-Hospital-IVF-Center-1024-x-1024-px-1.png"
-                                    alt="MMR Hospital IVF Center"
-                                    width={1024}
-                                    height={1024}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                        </div>
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className={styles.blogImage}
+                        loading="lazy"
+                      />
+                    </Link>
+                    
+                    <div className={styles.blogCardContent}>
+                      <div className={styles.blogMeta}>
+                        <i className="far fa-calendar-alt" />
+                        <span>{post.date}</span>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
 
-        </div>
+                      <h3 className={styles.blogCardTitle}>
+                        <Link href={`/news-blogs/${post.slug}`}>
+                          {post.title}
+                        </Link>
+                      </h3>
+                      
+                      <p className={styles.blogExcerpt}>{post.excerpt}</p>
+                      
+                      <Link
+                        className={styles.readMoreLink}
+                        href={`/news-blogs/${post.slug}`}
+                      >
+                        Read More <i className="fas fa-long-arrow-alt-right" />
+                      </Link>
+                    </div>
+                  </article>
+                </ScrollRevealSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3: Bottom Banner */}
+        <section className={styles.hospitalSection}>
+          {/* Decoupled Scoped Top Divider */}
+          <div className={`${styles.shapeDivider} ${styles.shapeDividerTop}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={`${styles.shapeDividerSvg} ${styles.shapeDividerFillLight}`}>
+              <path d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9" />
+            </svg>
+          </div>
+
+          <div className={styles.hospitalContainer}>
+            {/* Left Column: Info Text */}
+            <ScrollRevealSection className={styles.hospitalLeft}>
+              <span className={styles.hospitalSubtitle}>Our Hospital</span>
+              <h2 className={styles.hospitalTitle}>We are available for 24/7 for your service.</h2>
+              <p className={styles.hospitalDesc}>
+                At MMR Hospital &amp; IVF Center, we understand that healthcare needs can arise at any time, which is why we are proud to offer round-the-clock services to our patients. Our dedicated team of medical professionals and support staff is available 24/7 to provide prompt, compassionate, and high-quality care whenever you need it.
+              </p>
+            </ScrollRevealSection>
+
+            {/* Right Column: Hospital Image */}
+            <ScrollRevealSection className={styles.hospitalRight}>
+              <img
+                src="/wp-content/uploads/2024/04/MMR-Hospital-IVF-Center-1024-x-1024-px-1.png"
+                alt="MMR Hospital IVF Center"
+                className={styles.hospitalImage}
+              />
+            </ScrollRevealSection>
+          </div>
+        </section>
+
       </main>
-    </>
+    </div>
   );
 }

@@ -1,0 +1,372 @@
+/* NewsBlogs.module.css - Scoped styles for the News & Blogs page */
+
+.container {
+  --color-primary: #5c359a;
+  --color-secondary: #305595;
+  --color-accent: #f08080;
+  --color-background-light: #f8fafc;
+  --color-text-dark: #1e293b;
+  --color-text-muted: #64748b;
+  --color-white: #ffffff;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 25px -5px rgba(48, 85, 149, 0.08), 0 8px 10px -6px rgba(48, 85, 149, 0.05);
+  --transition-smooth: all 0.25s ease-in-out;
+  
+  width: 100%;
+  color: var(--color-text-dark);
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Shape Dividers
+   ========================================================================== */
+.shapeDivider {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.shapeDividerBottom {
+  bottom: -1px;
+}
+
+.shapeDividerTop {
+  top: -1px;
+}
+
+.shapeDividerSvg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100%;
+  fill: #ffffff;
+}
+
+.shapeDividerFillLight {
+  fill: var(--color-background-light);
+}
+
+/* ==========================================================================
+   1. Hero Section
+   ========================================================================== */
+.heroSection {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #442a78 0%, #224378 100%);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(270deg, rgba(0, 181, 191, 0.25) 15%, rgba(255, 255, 255, 0.05) 80%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 5;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroDivider {
+  width: 48px;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+.heroTitle h1 {
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+  margin: 8px 0;
+}
+
+/* ==========================================================================
+   2. Blog Posts Grid Section
+   ========================================================================== */
+.blogsSection {
+  background-color: var(--color-white);
+  padding: 80px 20px;
+}
+
+.blogsContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.blogsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.blogCard {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(48, 85, 149, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+.blogCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(92, 53, 154, 0.12);
+}
+
+.blogImageWrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color-background-light);
+}
+
+.blogImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.blogCard:hover .blogImage {
+  transform: scale(1.05);
+}
+
+.blogCardContent {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blogMeta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.blogMeta i {
+  color: var(--color-accent);
+}
+
+.blogCardTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.4;
+  margin: 0 0 12px;
+}
+
+.blogCardTitle a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.blogCardTitle a:hover {
+  color: var(--color-primary);
+}
+
+.blogExcerpt {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.readMoreLink {
+  align-self: flex-start;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-smooth);
+}
+
+.readMoreLink:hover {
+  color: var(--color-primary);
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   3. Bottom Hospital Info Section (2 columns)
+   ========================================================================== */
+.hospitalSection {
+  background-color: var(--color-background-light);
+  padding: 85px 20px;
+  position: relative;
+}
+
+.hospitalContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hospitalLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hospitalSubtitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.hospitalTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.hospitalDesc {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.hospitalRight {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(48, 85, 149, 0.08);
+  background-color: var(--color-white);
+}
+
+.hospitalImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   Motion & Scroll Reveal Utilities
+   ========================================================================== */
+.scrollReveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.revealVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints & Media Queries
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .heroSection {
+    min-height: 45vh;
+  }
+  
+  .heroTitle h1 {
+    font-size: 2.75rem;
+  }
+
+  .blogsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hospitalContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 40vh;
+    padding: 50px 20px;
+  }
+  
+  .heroTitle h1 {
+    font-size: 2.25rem;
+  }
+
+  .blogsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hospitalTitle {
+    font-size: 1.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroContent {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .scrollReveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .blogCard:hover {
+    transform: none !important;
+  }
+  .blogCard:hover .blogImage {
+    transform: none !important;
+  }
+}

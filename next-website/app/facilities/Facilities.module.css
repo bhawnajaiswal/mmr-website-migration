@@ -1,0 +1,283 @@
+/* Facilities.module.css - Scoped styles for the Facilities page */
+
+.container {
+  --color-primary: #5c359a;
+  --color-secondary: #305595;
+  --color-accent: #f08080;
+  --color-background-light: #f8fafc;
+  --color-text-dark: #1e293b;
+  --color-text-muted: #64748b;
+  --color-white: #ffffff;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 25px -5px rgba(48, 85, 149, 0.08), 0 8px 10px -6px rgba(48, 85, 149, 0.05);
+  --transition-smooth: all 0.25s ease-in-out;
+  
+  width: 100%;
+  color: var(--color-text-dark);
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Shape Dividers
+   ========================================================================== */
+.shapeDivider {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.shapeDividerBottom {
+  bottom: -1px;
+}
+
+.shapeDividerSvg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100%;
+  fill: #ffffff;
+}
+
+/* ==========================================================================
+   1. Hero Section
+   ========================================================================== */
+.heroSection {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #442a78 0%, #224378 100%);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(270deg, rgba(0, 181, 191, 0.25) 15%, rgba(255, 255, 255, 0.05) 80%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 5;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroDivider {
+  width: 48px;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+.heroTitle h1 {
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+  margin: 8px 0;
+}
+
+/* ==========================================================================
+   2. Alternating Grid Section
+   ========================================================================== */
+.gridSection {
+  background-color: var(--color-white);
+  padding: 85px 20px;
+}
+
+.gridContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+}
+
+.facilityBlock {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 45px;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  padding: 24px;
+  transition: var(--transition-smooth);
+}
+
+.facilityBlockReverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.facilityImageWrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background-color: var(--color-background-light);
+  border: 1px solid rgba(48, 85, 149, 0.08);
+}
+
+.facilityImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.facilityBlock:hover .facilityImage {
+  transform: scale(1.04);
+}
+
+.facilityContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.facilityHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.facilityTitle {
+  font-size: 2.15rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-secondary);
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.facilityAccentLine {
+  width: 36px;
+  height: 3px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
+
+.facilityText {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Motion & Scroll Reveal Utilities
+   ========================================================================== */
+.scrollReveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.revealVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints & Media Queries
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .heroSection {
+    min-height: 45vh;
+  }
+  
+  .heroTitle h1 {
+    font-size: 2.75rem;
+  }
+
+  .gridSection {
+    padding: 60px 20px;
+  }
+
+  .gridContainer {
+    gap: 55px;
+  }
+
+  .facilityBlock, .facilityBlockReverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 16px;
+  }
+
+  /* Force image to top in reverse layouts on smaller screens */
+  .facilityBlockReverse .facilityImageWrapper {
+    order: -1;
+  }
+
+  .facilityTitle {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 40vh;
+    padding: 50px 20px;
+  }
+  
+  .heroTitle h1 {
+    font-size: 2.25rem;
+  }
+  
+  .gridSection {
+    padding: 50px 20px;
+  }
+
+  .facilityTitle {
+    font-size: 1.5rem;
+  }
+
+  .facilityText {
+    font-size: 0.98rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroContent {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .scrollReveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .facilityBlock:hover .facilityImage {
+    transform: none !important;
+  }
+}

@@ -1,8 +1,44 @@
 "use client";
 
-import { useState } from "react";
-import SubPageHero from "@/components/sections/shared/SubPageHero/SubPageHero";
+import { useEffect, useRef, useState, ReactNode } from "react";
 import Link from "next/link";
+import styles from "./Contact.module.css";
+
+// Helper component for Intersection Observer Scroll Reveal
+function ScrollRevealSection({ children, className = "", style }: { children: ReactNode; className?: string; style?: React.CSSProperties }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      style={style}
+      className={`${className} ${styles.scrollReveal} ${isVisible ? styles.revealVisible : ""}`}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function ContactUsPage() {
   const [formData, setFormData] = useState({
@@ -45,512 +81,284 @@ export default function ContactUsPage() {
       return;
     }
 
-    // TODO: Finalize form submission backend architecture (save-to-database, email action, and redirect).
+    // Form logic is preserved
   };
 
   return (
-    <>
-      {/* Load page-specific Elementor Stylesheet */}
-      <link
-        rel="stylesheet"
-        href="/wp-content/uploads/elementor/css/post-6684.css"
-      />
-
+    <div className={styles.container}>
       <main className="main-content">
-        <div data-elementor-type="wp-page" data-elementor-id="6684" className="elementor elementor-6684">
+        
+        {/* Section 1: Hero Banner */}
+        <section className={styles.heroSection}>
+          <div className={styles.heroOverlay} />
           
-          {/* Section 1: Hero Banner (ID: 66d1934) */}
-          {/* Preserving production quirk: title is "Thanks for Connecting with us..." */}
-          <SubPageHero
-            secId="66d1934"
-            title="Thanks for Connecting with us..."
-            subtitle="+91 9244122040"
-            buttonLink="/treatment-services"
-            backgroundColor="transparent"
-          />
+          <div className={`${styles.shapeDivider} ${styles.shapeDividerBottom}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={styles.shapeDividerSvg}>
+              <path d="M0,6V0h1000v100L0,6z" />
+            </svg>
+          </div>
 
-          {/* Section 2: Info Block (ID: 5745c968) */}
-          <section
-            className="elementor-section elementor-top-section elementor-element elementor-element-5745c968 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-            data-id="5745c968"
-            data-element_type="section"
-          >
-            <div className="elementor-container elementor-column-gap-default">
-              <div className="elementor-row">
+          <div className={styles.heroContent}>
+            <div className={styles.heroDivider} />
+            <div className={styles.heroTitle}>
+              {/* Preserving production title quirk: "Thanks for Connecting with us..." */}
+              <h1>Thanks for Connecting with us...</h1>
+            </div>
+            <span className={styles.heroSubtitle}>+91 9244122040</span>
+          </div>
+        </section>
+
+        {/* Section 2: Info Block (3 columns) */}
+        <section className={styles.infoSection}>
+          <div className={styles.infoContainer}>
+            
+            {/* Column 1: Hospital Name */}
+            <ScrollRevealSection>
+              <div className={styles.infoCard}>
+                <div className={styles.infoCardHeader}>
+                  <div className={styles.infoCardIcon}>
+                    <i className="fas fa-hospital" />
+                  </div>
+                  <h3 className={styles.infoCardTitle}>Our Center</h3>
+                </div>
+                <div className={styles.infoList}>
+                  <p style={{ fontWeight: "700", color: "#305595", fontSize: "1.1rem", margin: 0 }}>
+                    MMR Hospital &amp; IVF Center.
+                  </p>
+                  <p style={{ color: "#64748b", margin: 0, fontSize: "0.95rem" }}>
+                    Matruchhaya Medicare &amp; Research Pvt. Ltd.
+                  </p>
+                </div>
+              </div>
+            </ScrollRevealSection>
+
+            {/* Column 2: Contact Us Info */}
+            <ScrollRevealSection>
+              <div className={styles.infoCard}>
+                <div className={styles.infoCardHeader}>
+                  <div className={styles.infoCardIcon}>
+                    <i className="fas fa-info-circle" />
+                  </div>
+                  <h3 className={styles.infoCardTitle}>Contact Info</h3>
+                </div>
+                <ul className={styles.infoList}>
+                  <li className={styles.infoListItem}>
+                    <i className="fas fa-map-marker-alt" />
+                    <span>Plot No. C, 132-133, Sector-9, Kamal Vihar, Raipur, Dunda, Chhattisgarh 492004</span>
+                  </li>
+                  <li className={styles.infoListItem}>
+                    <i className="fas fa-phone-alt" />
+                    <a href="tel:+919244122040">+91 9244122040</a>
+                  </li>
+                  <li className={styles.infoListItem}>
+                    <i className="fas fa-envelope" />
+                    <a href="mailto:info@mmrhospitals.com">info@mmrhospitals.com</a>
+                  </li>
+                </ul>
+              </div>
+            </ScrollRevealSection>
+
+            {/* Column 3: Appointments */}
+            <ScrollRevealSection>
+              <div className={styles.infoCard}>
+                <div className={styles.infoCardHeader}>
+                  <div className={styles.infoCardIcon}>
+                    <i className="fas fa-calendar-check" />
+                  </div>
+                  <h3 className={styles.infoCardTitle}>Appointments</h3>
+                </div>
+                <div className={styles.infoList}>
+                  <p className={styles.bookText}>Book an appointment for you.</p>
+                  <Link href="/consultation" className={styles.bookButton}>
+                    Book Online
+                  </Link>
+                </div>
+              </div>
+            </ScrollRevealSection>
+
+          </div>
+        </section>
+
+        {/* Section 3: Visit Our Hospital / Map Section */}
+        <section className={styles.visitSection}>
+          {/* Decoupled Scoped Top Divider */}
+          <div className={`${styles.shapeDivider} ${styles.shapeDividerTop}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={`${styles.shapeDividerSvg} ${styles.shapeDividerFillLight}`}>
+              <path d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9" />
+            </svg>
+          </div>
+
+          {/* Decoupled Scoped Bottom Divider */}
+          <div className={`${styles.shapeDivider} ${styles.shapeDividerBottom}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={styles.shapeDividerSvg}>
+              <path d="M761.9,40.6L643.1,24L333.9,93.8L0.1,1H0v99h1000V1" />
+            </svg>
+          </div>
+
+          <div className={styles.visitContainer}>
+            {/* Left Column: Wording */}
+            <ScrollRevealSection className={styles.visitLeft}>
+              <h2 className={styles.visitTitle}>Visit our Hospital</h2>
+              <p className={styles.visitText}>
+                Have a question or need assistance? Don&apos;t hesitate to contact us via phone, email, or by filling out the form below. Our dedicated staff is committed to providing you with prompt and personalized support. We provide you the best gynecologist in Raipur.
+              </p>
+            </ScrollRevealSection>
+
+            {/* Right Column: Google Maps Embed */}
+            <ScrollRevealSection className={styles.visitRight}>
+              <iframe
+                title="MMR Hospital and IVF Center Raipur Map"
+                src="https://maps.google.com/maps?q=MMR%20Hospital%20and%20IVF%20Center,%20Raipur&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="360"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                className={styles.mapEmbed}
+              />
+            </ScrollRevealSection>
+          </div>
+        </section>
+
+        {/* Section 4: Send Us a Message Form Section */}
+        <section className={styles.formSection}>
+          <div className={styles.formContainer}>
+            <ScrollRevealSection>
+              <div className={styles.formCard}>
+                <h2 className={styles.formTitle}>Send us a Message</h2>
                 
-                {/* Column 1: Hospital Name */}
-                <div
-                  className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1f91cd2a"
-                  data-id="1f91cd2a"
-                  data-element_type="column"
-                >
-                  <div className="elementor-widget-wrap elementor-element-populated">
-                    <div
-                      className="elementor-element elementor-element-1f036e6c elementor-widget elementor-widget-heading"
-                      data-id="1f036e6c"
-                      data-element_type="widget"
-                      data-widget_type="heading.default"
-                    >
-                      <div className="elementor-widget-container">
-                        <h2 className="elementor-heading-title elementor-size-default">
-                          MMR Hospital &amp; IVF Center.
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Column 2: Contact Us Info */}
-                <div
-                  className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-7618afd4"
-                  data-id="7618afd4"
-                  data-element_type="column"
-                >
-                  <div className="elementor-widget-wrap elementor-element-populated">
-                    <div
-                      className="elementor-element elementor-element-3c7ef932 elementor-widget elementor-widget-heading"
-                      data-id="3c7ef932"
-                      data-element_type="widget"
-                      data-widget_type="heading.default"
-                    >
-                      <div className="elementor-widget-container">
-                        <h2 className="elementor-heading-title elementor-size-default">
-                          Contact Us
-                        </h2>
-                      </div>
-                    </div>
-                    <div
-                      className="elementor-element elementor-element-20ac5432 elementor-widget elementor-widget-icon-list"
-                      data-id="20ac5432"
-                      data-element_type="widget"
-                      data-widget_type="icon-list.default"
-                    >
-                      <div className="elementor-widget-container">
-                        <ul className="elementor-icon-list-items">
-                          <li className="elementor-icon-list-item">
-                            <span className="elementor-icon-list-text">
-                              Plot No. C, 132-133, Sector-9, Kamal Vihar, Raipur, Dunda, Chhattisgarh 492004
-                            </span>
-                          </li>
-                          <li className="elementor-icon-list-item">
-                            <a href="tel:+919244122040">
-                              <span className="elementor-icon-list-text">+91 9244122040</span>
-                            </a>
-                          </li>
-                          <li className="elementor-icon-list-item">
-                            <a href="mailto:info@mmrhospitals.com">
-                              <span className="elementor-icon-list-text">info@mmrhospitals.com</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Column 3: Appointments */}
-                <div
-                  className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-55bd61f"
-                  data-id="55bd61f"
-                  data-element_type="column"
-                >
-                  <div className="elementor-widget-wrap elementor-element-populated">
-                    <div
-                      className="elementor-element elementor-element-4cd3f484 elementor-widget elementor-widget-heading"
-                      data-id="4cd3f484"
-                      data-element_type="widget"
-                      data-widget_type="heading.default"
-                    >
-                      <div className="elementor-widget-container">
-                        <h2 className="elementor-heading-title elementor-size-default">
-                          Appointments
-                        </h2>
-                      </div>
-                    </div>
-                    <div
-                      className="elementor-section elementor-inner-section elementor-element elementor-element-362c039b elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                      data-id="362c039b"
-                      data-element_type="section"
-                    >
-                      <div className="elementor-container elementor-column-gap-default">
-                        <div className="elementor-row">
-                          <div
-                            className="elementor-column elementor-col-100 elementor-inner-column elementor-element"
-                            data-element_type="column"
-                          >
-                            <div className="elementor-widget-wrap elementor-element-populated">
-                              <div
-                                className="elementor-element elementor-element-65d7f104 elementor-widget elementor-widget-text-editor"
-                                data-id="65d7f104"
-                                data-element_type="widget"
-                                data-widget_type="text-editor.default"
-                              >
-                                <div className="elementor-widget-container">
-                                  <div className="elementor-text-editor elementor-clearfix">
-                                    <p>Book an appointment for you.</p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                className="elementor-element elementor-element-4efbbed9 elementor-align-left elementor-widget elementor-widget-button"
-                                data-id="4efbbed9"
-                                data-element_type="widget"
-                                data-widget_type="button.default"
-                              >
-                                <div className="elementor-widget-container">
-                                  <div className="elementor-button-wrapper">
-                                    <Link
-                                      href="/consultation"
-                                      className="elementor-button elementor-button-link elementor-size-md elementor-animation-shrink"
-                                    >
-                                      <span className="elementor-button-content-wrapper">
-                                        <span className="elementor-button-text">Book Online</span>
-                                      </span>
-                                    </Link>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </section>
-
-          {/* Section 3: Visit Our Hospital / Map Section (ID: 862287f) */}
-          <section
-            className="elementor-section elementor-top-section elementor-element elementor-element-862287f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-            data-id="862287f"
-            data-element_type="section"
-          >
-            <div className="elementor-container elementor-column-gap-default">
-              <div className="elementor-row">
-                
-                {/* Left Column: Wording */}
-                <div
-                  className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-269f68d6"
-                  data-id="269f68d6"
-                  data-element_type="column"
-                >
-                  <div className="elementor-widget-wrap elementor-element-populated">
-                    <div
-                      className="elementor-element elementor-element-531495f5 elementor-widget elementor-widget-heading"
-                      data-id="531495f5"
-                      data-element_type="widget"
-                      data-widget_type="heading.default"
-                    >
-                      <div className="elementor-widget-container">
-                        <h2 className="elementor-heading-title elementor-size-default">
-                          Visit our Hospital
-                        </h2>
-                      </div>
-                    </div>
-                    <div
-                      className="elementor-element elementor-element-5f5565 elementor-widget elementor-widget-text-editor"
-                      data-id="5f5565"
-                      data-element_type="widget"
-                      data-widget_type="text-editor.default"
-                    >
-                      <div className="elementor-widget-container">
-                        <div className="elementor-text-editor elementor-clearfix">
-                          <p>Have a question or need assistance? Don&apos;t hesitate to contact us via phone, email, or by filling out the form below. Our dedicated staff is committed to providing you with prompt and personalized support. We provide you the best gynecologist in Raipur.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right Column: Google Maps Embed */}
-                <div
-                  className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-381dbce9"
-                  data-id="381dbce9"
-                  data-element_type="column"
-                >
-                  <div className="elementor-widget-wrap elementor-element-populated">
-                    <div
-                      className="elementor-section elementor-inner-section elementor-element elementor-element-3316da1b elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                      data-id="3316da1b"
-                      data-element_type="section"
-                    >
-                      <div className="elementor-container elementor-column-gap-default">
-                        <div className="elementor-row">
-                          <div
-                            className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-4c8787c7"
-                            data-id="4c8787c7"
-                            data-element_type="column"
-                          >
-                            <div className="elementor-widget-wrap elementor-element-populated">
-                              <div
-                                className="elementor-element elementor-element-2887f9f3 elementor-widget elementor-widget-google_maps"
-                                data-id="2887f9f3"
-                                data-element_type="widget"
-                                data-widget_type="google_maps.default"
-                              >
-                                <div className="elementor-widget-container">
-                                  <div className="elementor-custom-embed">
-                                    <iframe
-                                      title="MMR Hospital and IVF Center Raipur Map"
-                                      src="https://maps.google.com/maps?q=MMR%20Hospital%20and%20IVF%20Center,%20Raipur&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                      width="100%"
-                                      height="360"
-                                      style={{ border: 0 }}
-                                      allowFullScreen
-                                      loading="lazy"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </section>
-
-          {/* Section 4: Send Us a Message Form Section (ID: 48930726) */}
-          <section
-            className="elementor-section elementor-top-section elementor-element elementor-element-48930726 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-            data-id="48930726"
-            data-element_type="section"
-          >
-            <div className="elementor-container elementor-column-gap-default">
-              <div className="elementor-row">
-                <div
-                  className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1c9e593d"
-                  data-id="1c9e593d"
-                  data-element_type="column"
-                >
-                  <div className="elementor-widget-wrap elementor-element-populated">
+                <form onSubmit={handleSubmit}>
+                  <div className={styles.formGrid}>
                     
-                    <div
-                      className="elementor-element elementor-element-7d432646 elementor-widget elementor-widget-heading"
-                      data-id="7d432646"
-                      data-element_type="widget"
-                      data-widget_type="heading.default"
-                    >
-                      <div className="elementor-widget-container">
-                        <h2 className="elementor-heading-title elementor-size-default">
-                          Send us a Message
-                        </h2>
-                      </div>
+                    {/* Field 1: Name */}
+                    <div>
+                      <input
+                        type="text"
+                        name="name"
+                        id="form-field-email"
+                        className={`${styles.formInput} ${errors.name ? styles.inputError : ""}`}
+                        placeholder="Your Name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                      />
+                      {errors.name && (
+                        <span className={styles.errorMessage}>{errors.name}</span>
+                      )}
                     </div>
 
-                    <div
-                      className="elementor-element elementor-element-1395f388 elementor-widget elementor-widget-form"
-                      data-id="1395f388"
-                      data-element_type="widget"
-                      data-widget_type="form.default"
-                    >
-                      <div className="elementor-widget-container">
-                        <form className="elementor-form" onSubmit={handleSubmit}>
-                          <div className="elementor-form-fields-wrapper elementor-labels-above">
-                            
-                            {/* Field 1: Name (custom ID is "email") */}
-                            <div className="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-email elementor-col-100">
-                              <input
-                                type="text"
-                                name="name"
-                                id="form-field-email"
-                                className={`elementor-field-textual elementor-size-md elementor-field ${
-                                  errors.name ? "elementor-error" : ""
-                                }`}
-                                placeholder="Your Name"
-                                value={formData.name}
-                                onChange={handleInputChange}
-                              />
-                              {errors.name && (
-                                <span className="elementor-form-error-message">{errors.name}</span>
-                              )}
-                            </div>
+                    {/* Field 2: Email */}
+                    <div>
+                      <input
+                        type="email"
+                        name="email"
+                        id="form-field-6850d19"
+                        className={`${styles.formInput} ${errors.email ? styles.inputError : ""}`}
+                        placeholder="someone@example.com"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                      />
+                      {errors.email && (
+                        <span className={styles.errorMessage}>{errors.email}</span>
+                      )}
+                    </div>
 
-                            {/* Field 2: Email (custom ID is "6850d19") */}
-                            <div className="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-6850d19 elementor-col-100">
-                              <input
-                                type="email"
-                                name="email"
-                                id="form-field-6850d19"
-                                className={`elementor-field-textual elementor-size-md elementor-field ${
-                                  errors.email ? "elementor-error" : ""
-                                }`}
-                                placeholder="someone@example.com"
-                                value={formData.email}
-                                onChange={handleInputChange}
-                              />
-                              {errors.email && (
-                                <span className="elementor-form-error-message">{errors.email}</span>
-                              )}
-                            </div>
+                    {/* Field 3: Website */}
+                    <div>
+                      <input
+                        type="url"
+                        name="website"
+                        id="form-field-f9f57ad"
+                        className={styles.formInput}
+                        placeholder="http://yourwebsite.com"
+                        value={formData.website}
+                        onChange={handleInputChange}
+                      />
+                    </div>
 
-                            {/* Field 3: Website (custom ID is "f9f57ad") */}
-                            <div className="elementor-field-type-url elementor-field-group elementor-column elementor-field-group-f9f57ad elementor-col-100">
-                              <input
-                                type="url"
-                                name="website"
-                                id="form-field-f9f57ad"
-                                className="elementor-field-textual elementor-size-md elementor-field"
-                                placeholder="http://yourwebsite.com"
-                                value={formData.website}
-                                onChange={handleInputChange}
-                              />
-                            </div>
+                    {/* Field 4: Message */}
+                    <div>
+                      <textarea
+                        className={styles.formTextarea}
+                        name="message"
+                        id="form-field-da6d553"
+                        rows={4}
+                        placeholder="Message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                      />
+                    </div>
 
-                            {/* Field 4: Message (custom ID is "da6d553") */}
-                            <div className="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-da6d553 elementor-col-100">
-                              <textarea
-                                className="elementor-field-textual elementor-size-md elementor-field"
-                                name="message"
-                                id="form-field-da6d553"
-                                rows={4}
-                                placeholder="Message"
-                                value={formData.message}
-                                onChange={handleInputChange}
-                              />
-                            </div>
-
-                            {/* Submit Button */}
-                            <div className="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
-                              <button
-                                type="submit"
-                                className="elementor-button elementor-size-md elementor-form-submit-button"
-                              >
-                                <span className="elementor-button-content-wrapper">
-                                  <span className="elementor-button-text">Send Message</span>
-                                </span>
-                              </button>
-                            </div>
-
-                          </div>
-                        </form>
-                      </div>
+                    {/* Submit Button */}
+                    <div>
+                      <button
+                        type="submit"
+                        className={styles.submitButton}
+                      >
+                        Send Message
+                      </button>
                     </div>
 
                   </div>
-                </div>
+                </form>
               </div>
-            </div>
-          </section>
+            </ScrollRevealSection>
+          </div>
+        </section>
 
-          {/* Section 5: Social / Stay Connected (ID: 7b036404) */}
-          <section
-            className="elementor-section elementor-top-section elementor-element elementor-element-7b036404 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-            data-id="7b036404"
-            data-element_type="section"
-          >
-            <div className="elementor-container elementor-column-gap-default">
-              <div className="elementor-row">
-                <div
-                  className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-25aa3a76"
-                  data-id="25aa3a76"
-                  data-element_type="column"
-                >
-                  <div className="elementor-widget-wrap elementor-element-populated">
-                    
-                    <div
-                      className="elementor-element elementor-element-3c8bc194 elementor-widget elementor-widget-heading"
-                      data-id="3c8bc194"
-                      data-element_type="widget"
-                      data-widget_type="heading.default"
-                    >
-                      <div className="elementor-widget-container">
-                        <h2 className="elementor-heading-title elementor-size-default">
-                          Stay Connected.
-                        </h2>
-                      </div>
-                    </div>
+        {/* Section 5: Social / Stay Connected */}
+        <section className={styles.socialSection}>
+          <div className={styles.socialContainer}>
+            <ScrollRevealSection className={styles.socialTitle}>
+              <h2>Stay Connected.</h2>
+            </ScrollRevealSection>
+            <ScrollRevealSection className={styles.socialDesc}>
+              <h3>
+                We&apos;d love to hear from you on our social network.<br />Use the following social mediums and give your valuable suggestions.
+              </h3>
+            </ScrollRevealSection>
 
-                    <div
-                      className="elementor-element elementor-element-3e27daf6 elementor-widget elementor-widget-heading"
-                      data-id="3e27daf6"
-                      data-element_type="widget"
-                      data-widget_type="heading.default"
-                    >
-                      <div className="elementor-widget-container">
-                        <h3 className="elementor-heading-title elementor-size-default">
-                          We&apos;d love to hear from you on our social network.<br />Use the following social mediums and give your valuable suggestions.
-                        </h3>
-                      </div>
-                    </div>
+            <ScrollRevealSection className={styles.socialList}>
+              <a
+                className={styles.socialIconLink}
+                href="https://www.facebook.com/profile.php?id=61553532623603&amp;mibextid=ZbWKwL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-facebook-f" />
+              </a>
 
-                    <div
-                      className="elementor-element elementor-element-59f25837 elementor-shape-circle e-grid-align-center elementor-widget elementor-widget-social-icons"
-                      data-id="59f25837"
-                      data-element_type="widget"
-                      data-widget_type="social-icons.default"
-                    >
-                      <div className="elementor-widget-container">
-                        <div className="elementor-social-icons-wrapper elementor-grid-align-center">
-                          
-                          <span className="elementor-grid-item">
-                            <a
-                              className="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-shrink"
-                              href="https://www.facebook.com/profile.php?id=61553532623603&amp;mibextid=ZbWKwL"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <span className="elementor-screen-only">Facebook-f</span>
-                              <i className="fab fa-facebook-f" />
-                            </a>
-                          </span>
+              <a
+                className={styles.socialIconLink}
+                href="https://twitter.com/MMRHospital"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-twitter" />
+              </a>
 
-                          <span className="elementor-grid-item">
-                            <a
-                              className="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-animation-shrink"
-                              href="https://twitter.com/MMRHospital"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <span className="elementor-screen-only">Twitter</span>
-                              <i className="fab fa-twitter" />
-                            </a>
-                          </span>
+              {/* Preserving production G+ to Pinterest mapping quirk */}
+              <a
+                className={styles.socialIconLink}
+                href="https://in.pinterest.com/mmrhospitalraipur/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-pinterest" />
+              </a>
 
-                          {/* Preserving production G+ to Pinterest mapping quirk */}
-                          <span className="elementor-grid-item">
-                            <a
-                              className="elementor-icon elementor-social-icon elementor-social-icon-google-plus elementor-animation-shrink"
-                              href="https://in.pinterest.com/mmrhospitalraipur/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <span className="elementor-screen-only">Google-plus</span>
-                              <i className="fab fa-pinterest" />
-                            </a>
-                          </span>
+              <a
+                className={styles.socialIconLink}
+                href="https://www.instagram.com/mmrhospitalandivfcenter/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-instagram" />
+              </a>
+            </ScrollRevealSection>
+          </div>
+        </section>
 
-                          <span className="elementor-grid-item">
-                            <a
-                              className="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-shrink"
-                              href="https://www.instagram.com/mmrhospitalandivfcenter/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <span className="elementor-screen-only">Instagram</span>
-                              <i className="fab fa-instagram" />
-                            </a>
-                          </span>
-
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-        </div>
       </main>
-    </>
+    </div>
   );
 }
