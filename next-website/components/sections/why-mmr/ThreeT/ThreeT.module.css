@@ -1,0 +1,169 @@
+.threeTSection {
+  position: relative;
+  padding: 80px 24px;
+  background-color: #f8fafc;
+  overflow: hidden;
+}
+
+.threeTContainer {
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.threeTHeader {
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.threeTVisible .threeTHeader {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.threeTTitle {
+  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2b89ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 10px 0;
+}
+
+.threeTSubtitle {
+  font-family: "Jost", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #443474;
+  margin: 0 0 16px 0;
+}
+
+.threeTDivider {
+  display: flex;
+  justify-content: center;
+}
+
+.threeTDividerLine {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #443474 0%, #2b89ff 100%);
+  border-radius: 2px;
+}
+
+.threeTGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 20px;
+}
+
+.threeTCard {
+  background-color: #ffffff;
+  border: 1px solid rgba(68, 52, 116, 0.06);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 20px rgba(68, 52, 116, 0.02);
+  display: flex;
+  gap: 20px;
+  align-items: start;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease;
+}
+
+.threeTVisible .threeTCard {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.threeTNumber {
+  font-family: "Jost", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #e06d6d;
+  line-height: 1;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.threeTContent {
+  flex: 1;
+}
+
+.threeTCardTitle {
+  font-family: "Jost", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #443474;
+  margin: 0 0 12px 0;
+}
+
+.threeTCardText {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Desktop Hover Lift Restriction */
+@media (min-width: 1025px) {
+  .threeTCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(68, 52, 116, 0.06);
+    border-color: rgba(43, 137, 255, 0.15);
+  }
+  .threeTCard:hover .threeTNumber {
+    transform: scale(1.08);
+  }
+}
+
+/* Responsive ThreeT */
+@media (max-width: 1024px) {
+  .threeTGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .threeTSection {
+    padding: 60px 20px;
+  }
+  .threeTSubtitle {
+    font-size: 1.85rem;
+  }
+  .threeTGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .threeTCard {
+    padding: 30px 24px;
+  }
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .threeTHeader,
+  .threeTCard {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .threeTCard:hover {
+    transform: none !important;
+    box-shadow: 0 4px 20px rgba(68, 52, 116, 0.02) !important;
+  }
+  .threeTCard:hover .threeTNumber {
+    transform: none !important;
+  }
+}

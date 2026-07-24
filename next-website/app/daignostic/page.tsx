@@ -1,276 +1,383 @@
-import SubPageHero from "@/components/sections/shared/SubPageHero/SubPageHero";
-import SubPageIntro from "@/components/sections/shared/SubPageIntro/SubPageIntro";
-import SpecialFacilities from "@/components/sections/shared/SpecialFacilities/SpecialFacilities";
-import SubPageCTA from "@/components/sections/shared/SubPageCTA/SubPageCTA";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Diagnostic \u2013 MMR Hospital & IVF Center \u2013 Best IVF Center in Raipur",
-  description: "MMR Hospital & IVF Center is the best IVF center in Raipur. We have highly experienced staff who provide world-class infertility treatment.",
-  openGraph: {
-    title: "Diagnostic \u2013 MMR Hospital & IVF Center \u2013 Best IVF Center in Raipur",
-    description: "MMR Hospital & IVF Center is the best IVF center in Raipur. We have highly experienced staff who provide world-class infertility treatment.",
-  }
-};
+import { useEffect, useRef, useState, ReactNode } from "react";
+import Link from "next/link";
+import styles from "@/app/TreatmentPage.module.css";
+
+// Helper component for Intersection Observer Scroll Reveal
+function ScrollRevealSection({ children, className = "", style }: { children: ReactNode; className?: string; style?: React.CSSProperties }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      style={style}
+      className={`${className} ${styles.scrollReveal} ${isVisible ? styles.revealVisible : ""}`}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function DiagnosticPage() {
+  const fertilityAssessment = [
+    "Hormonal assays to evaluate ovarian function",
+    "Semen analysis for male fertility assessment",
+    "Ovulation monitoring through ultrasound and blood tests",
+    "Hysterosalpingography (HSG) to assess fallopian tube patency",
+    "Sonohysterography to evaluate uterine abnormalities",
+    "Genetic screening for hereditary fertility issues"
+  ];
+
+  const renalFunction = [
+    "Blood tests to assess kidney function (e.g., creatinine, blood urea nitrogen)",
+    "Urine tests to detect abnormalities (e.g., proteinuria, hematuria)",
+    "Glomerular filtration rate (GFR) measurement",
+    "Imaging studies (e.g., ultrasound, CT scan) for kidney evaluation",
+    "Renal biopsy for diagnosing kidney diseases"
+  ];
+
+  const imagingStudies = [
+    "Ultrasound imaging for reproductive organs and kidneys",
+    "Transvaginal ultrasound for detailed assessment of the female reproductive system",
+    "Doppler ultrasound for assessing blood flow in the kidneys",
+    "CT scans and MRI scans for detailed anatomical evaluation"
+  ];
+
+  const endocrineTesting = [
+    "Hormonal assays to evaluate thyroid function, adrenal function, and reproductive hormones",
+    "Dynamic endocrine tests to assess hormonal responses to stimulation",
+    "Thyroid ultrasound for thyroid gland evaluation"
+  ];
+
+  const geneticTesting = [
+    "Preimplantation genetic testing (PGT) for screening chromosomal abnormalities in embryos during IVF",
+    "Genetic counseling and testing for hereditary conditions impacting fertility or kidney health."
+  ];
+
+  const facilities = [
+    {
+      imgSrc: "/wp-content/uploads/2024/08/MMR-Hospital.png",
+      title: "Advanced Modular Operation Theatre",
+      desc: "We have the best modular operation theatre's with all facilities."
+    },
+    {
+      imgSrc: "/wp-content/uploads/2024/08/MMR-Hospital-1.png",
+      title: "Embryology Lab",
+      desc: "We provide best IVF, ICSI & IUI treatments."
+    },
+    {
+      imgSrc: "/wp-content/uploads/2024/08/MMR-Hospital-2.png",
+      title: "Pathology",
+      desc: "We have pathology lab with our best lab technician."
+    }
+  ];
+
   return (
-    <>
-      {/* Load page-specific Elementor Stylesheet */}
-      <link
-        rel="stylesheet"
-        href="/wp-content/uploads/elementor/css/post-6253.css"
-      />
-
+    <div className={styles.container}>
       <main className="main-content">
-        <div data-elementor-type="wp-page" data-elementor-id="6253" className="elementor elementor-6253">
-          {/* Section 1: Hero Banner */}
-          <SubPageHero secId="6e3b5e9c" title="Diagnostic" />
+        
+        {/* Section 1: Hero Banner */}
+        <section className={styles.heroSection}>
+          <div className={styles.heroOverlay} />
+          
+          <div className={`${styles.shapeDivider} ${styles.shapeDividerBottom}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={styles.shapeDividerSvg}>
+              <path d="M0,6V0h1000v100L0,6z" />
+            </svg>
+          </div>
 
-          {/* Section 2: Intro Section */}
-          <SubPageIntro
-            title="Diagnostic Services at MMR Hospital &amp; IVF Center"
-            paragraph1="At MMR Hospital &amp; IVF Center, we understand that accurate diagnosis is the cornerstone of effective medical treatment. Our comprehensive range of diagnostic services is designed to provide precise insights into your health condition, guiding our team of experts in formulating personalized treatment plans tailored to your specific needs."
-            buttonText="Know about our experts.."
-            buttonLink="/our-expert-team"
-          />
-
-          {/* Section 3: Core Details Section */}
-          <section
-            className="elementor-section elementor-top-section elementor-element elementor-element-3705ee5b elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-            data-id="3705ee5b"
-            data-element_type="section"
-          >
-            <div className="elementor-container elementor-column-gap-default">
-              <div
-                className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5da29a7a"
-                data-id="5da29a7a"
-                data-element_type="column"
-              >
-                <div className="elementor-widget-wrap elementor-element-populated">
-                  
-                  {/* Inner Section 1: Our Diagnostic Services Include */}
-                  <div
-                    className="elementor-section elementor-inner-section elementor-element elementor-element-77d53844 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                    data-id="77d53844"
-                    data-element_type="section"
-                  >
-                    <div className="elementor-container elementor-column-gap-default">
-                      <div className="elementor-row">
-                        <div
-                          className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-4a3a61cb"
-                          data-id="4a3a61cb"
-                          data-element_type="column"
-                        >
-                          <div className="elementor-widget-wrap elementor-element-populated">
-                            
-                            <div
-                              className="elementor-element elementor-element-dafe6b4 elementor-widget elementor-widget-heading"
-                              data-id="dafe6b4"
-                              data-element_type="widget"
-                              data-widget_type="heading.default"
-                            >
-                              <div className="elementor-widget-container">
-                                <h3 className="elementor-heading-title elementor-size-default">
-                                  Our Diagnostic Services Include:
-                                </h3>
-                              </div>
-                            </div>
-
-                            <div
-                              className="elementor-element elementor-element-4648b52 elementor-widget elementor-widget-text-editor"
-                              data-id="4648b52"
-                              data-element_type="widget"
-                              data-widget_type="text-editor.default"
-                            >
-                              <div className="elementor-widget-container">
-                                <div className="elementor-text-editor elementor-clearfix">
-                                  <p><strong>1. Fertility Assessment:</strong></p>
-                                  <ul>
-                                    <li>Hormonal assays to evaluate ovarian function</li>
-                                    <li>Semen analysis for male fertility assessment</li>
-                                    <li>Ovulation monitoring through ultrasound and blood tests</li>
-                                    <li>Hysterosalpingography (HSG) to assess fallopian tube patency</li>
-                                    <li>Sonohysterography to evaluate uterine abnormalities</li>
-                                    <li>Genetic screening for hereditary fertility issues</li>
-                                  </ul>
-                                  <p><strong>2. Renal Function Testing:</strong></p>
-                                  <ul>
-                                    <li>Blood tests to assess kidney function (e.g., creatinine, blood urea nitrogen)</li>
-                                    <li>Urine tests to detect abnormalities (e.g., proteinuria, hematuria)</li>
-                                    <li>Glomerular filtration rate (GFR) measurement</li>
-                                    <li>Imaging studies (e.g., ultrasound, CT scan) for kidney evaluation</li>
-                                    <li>Renal biopsy for diagnosing kidney diseases</li>
-                                  </ul>
-                                  <p><strong>3. Imaging Studies:</strong></p>
-                                  <ul>
-                                    <li>Ultrasound imaging for reproductive organs and kidneys</li>
-                                    <li>Transvaginal ultrasound for detailed assessment of the female reproductive system</li>
-                                    <li>Doppler ultrasound for assessing blood flow in the kidneys</li>
-                                    <li>CT scans and MRI scans for detailed anatomical evaluation</li>
-                                  </ul>
-                                  <p><strong>4. Endocrine Testing:</strong></p>
-                                  <ul>
-                                    <li>Hormonal assays to evaluate thyroid function, adrenal function, and reproductive hormones</li>
-                                    <li>Dynamic endocrine tests to assess hormonal responses to stimulation</li>
-                                    <li>Thyroid ultrasound for thyroid gland evaluation</li>
-                                  </ul>
-                                  <p><strong>5. Genetic Testing:</strong></p>
-                                  <ul>
-                                    <li>Preimplantation genetic testing (PGT) for screening chromosomal abnormalities in embryos during IVF</li>
-                                    <li>Genetic counseling and testing for hereditary conditions impacting fertility or kidney health.</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Inner Section 2: Compassionate Care, Accurate Results */}
-                  <div
-                    className="elementor-section elementor-inner-section elementor-element elementor-element-9ab4075 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                    data-id="9ab4075"
-                    data-element_type="section"
-                  >
-                    <div className="elementor-container elementor-column-gap-default">
-                      <div className="elementor-row">
-                        <div
-                          className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-fb4c32a"
-                          data-id="fb4c32a"
-                          data-element_type="column"
-                        >
-                          <div className="elementor-widget-wrap elementor-element-populated">
-                            
-                            <div
-                              className="elementor-element elementor-element-f99f6d3 elementor-widget elementor-widget-heading"
-                              data-id="f99f6d3"
-                              data-element_type="widget"
-                              data-widget_type="heading.default"
-                            >
-                              <div className="elementor-widget-container">
-                                <h3 className="elementor-heading-title elementor-size-default">
-                                  Compassionate Care, Accurate Results
-                                </h3>
-                              </div>
-                            </div>
-
-                            <div
-                              className="elementor-element elementor-element-8699d30 elementor-widget elementor-widget-text-editor"
-                              data-id="8699d30"
-                              data-element_type="widget"
-                              data-widget_type="text-editor.default"
-                            >
-                              <div className="elementor-widget-container">
-                                <div className="elementor-text-editor elementor-clearfix">
-                                  <p>At MMR Hospital &amp; IVF Center, we prioritize patient comfort and satisfaction throughout the diagnostic process. Our experienced team of healthcare professionals ensures that you receive personalized attention and support at every step. From scheduling appointments to explaining test results, we strive to make your diagnostic experience as seamless and stress-free as possible.</p>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div
-                              className="elementor-element elementor-element-1bbd18c elementor-widget elementor-widget-text-editor"
-                              data-id="1bbd18c"
-                              data-element_type="widget"
-                              data-widget_type="text-editor.default"
-                            >
-                              <div className="elementor-widget-container">
-                                <div className="elementor-text-editor elementor-clearfix">
-                                  <p>
-                                    If you're experiencing male infertility or have concerns about your reproductive health, we're here to help. Schedule a consultation with our experienced fertility specialists at MMR Hospital &amp; IVF Center to explore your options for achieving your fertility goals.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Inner Section 3: Schedule Your Diagnostic Evaluation Today */}
-                  <div
-                    className="elementor-section elementor-inner-section elementor-element elementor-element-2c3b016 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                    data-id="2c3b016"
-                    data-element_type="section"
-                  >
-                    <div className="elementor-container elementor-column-gap-default">
-                      <div className="elementor-row">
-                        <div
-                          className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-fb4c32b"
-                          data-id="fb4c32b"
-                          data-element_type="column"
-                        >
-                          <div className="elementor-widget-wrap elementor-element-populated">
-                            
-                            <div
-                              className="elementor-element elementor-element-c221728 elementor-widget elementor-widget-heading"
-                              data-id="c221728"
-                              data-element_type="widget"
-                              data-widget_type="heading.default"
-                            >
-                              <div className="elementor-widget-container">
-                                <h3 className="elementor-heading-title elementor-size-default">
-                                  Schedule Your Diagnostic Evaluation Today
-                                </h3>
-                              </div>
-                            </div>
-
-                            <div
-                              className="elementor-element elementor-element-bea579a elementor-widget elementor-widget-text-editor"
-                              data-id="bea579a"
-                              data-element_type="widget"
-                              data-widget_type="text-editor.default"
-                            >
-                              <div className="elementor-widget-container">
-                                <div className="elementor-text-editor elementor-clearfix">
-                                  <p>Throughout your infertility testing journey, our caring and dedicated team at MMR Hospital &amp; IVF Center will provide you with the support, guidance, and encouragement you need. We understand the challenges you may face and are here to offer compassionate care and hope for a positive outcome. We are the best diagnostic center in Raipur.</p>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div
-                              className="elementor-element elementor-element-bea2c78 elementor-widget elementor-widget-text-editor"
-                              data-id="bea2c78"
-                              data-element_type="widget"
-                              data-widget_type="text-editor.default"
-                            >
-                              <div className="elementor-widget-container">
-                                <div className="elementor-text-editor elementor-clearfix">
-                                  <p>
-                                    If you're seeking accurate diagnosis and expert medical care, MMR Hospital &amp; IVF Center is here to help. Contact us today to schedule your diagnostic evaluation and take the first step towards better health and well-being. Your journey to optimal health starts here.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
+          <div className={styles.heroContent}>
+            <div className={styles.heroDivider} />
+            <div className={styles.heroTitle}>
+              <h1>
+                Diagnostic
+              </h1>
             </div>
-          </section>
+            <Link className={styles.heroButton} href="/consultation/">
+              <i aria-hidden="true" className="fas fa-envelope-open" style={{ marginRight: "8px" }} />
+              BOOK AN APPOINTMENT
+            </Link>
+          </div>
+        </section>
 
-          {/* Section 4: Special Facilities Grid */}
-          <SpecialFacilities showSocialIcons={false} />
+        {/* Section 2: Intro Section */}
+        <ScrollRevealSection className={styles.introSection}>
+          <div className={styles.introContainer}>
+            <div className={styles.introContent}>
+              <div className={styles.introTitle}>
+                <h2>Diagnostic Services at MMR Hospital &amp; IVF Center</h2>
+              </div>
+              <p className={styles.introText1}>
+                At MMR Hospital &amp; IVF Center, we understand that accurate diagnosis is the cornerstone of effective medical treatment. Our comprehensive range of diagnostic services is designed to provide precise insights into your health condition, guiding our team of experts in formulating personalized treatment plans tailored to your specific needs.
+              </p>
+              <Link className={styles.introButton} href="/our-expert-team">
+                Know about our experts..
+              </Link>
+            </div>
+          </div>
+        </ScrollRevealSection>
 
-          {/* Section 5: CTA Callout */}
-          <SubPageCTA
-            title="Make your Parenthood dream come true."
-            description="If you're struggling with infertility, we're here to help. Contact us today to schedule a consultation and take the first step towards building the family you've always wanted."
-            buttonText="BOOK Consultation"
-            buttonLink="/consultation"
-          />
-        </div>
+        {/* Section 3: Diagnostic Categories */}
+        {/* 1. Fertility Assessment */}
+        <section className={styles.benefitsSection}>
+          <div className={styles.benefitsContainer}>
+            <ScrollRevealSection className={styles.sectionHeader}>
+              <div className={styles.sectionTitle}>
+                <h2>1. Fertility Assessment</h2>
+              </div>
+              <div className={styles.sectionDivider} />
+            </ScrollRevealSection>
+
+            <div className={styles.benefitsGrid}>
+              {fertilityAssessment.map((item, idx) => (
+                <ScrollRevealSection key={idx}>
+                  <div
+                    className={styles.benefitCard}
+                    style={{ transitionDelay: `${idx * 100}ms` }}
+                  >
+                    <div className={styles.benefitIcon}>
+                      <i className="fas fa-check-circle" />
+                    </div>
+                    <span className={styles.benefitText}>{item}</span>
+                  </div>
+                </ScrollRevealSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 2. Renal Function Testing */}
+        <section className={styles.benefitsSection} style={{ backgroundColor: "var(--color-background-light)", borderTop: "none" }}>
+          <div className={styles.benefitsContainer}>
+            <ScrollRevealSection className={styles.sectionHeader}>
+              <div className={styles.sectionTitle}>
+                <h2>2. Renal Function Testing</h2>
+              </div>
+              <div className={styles.sectionDivider} />
+            </ScrollRevealSection>
+
+            <div className={styles.benefitsGrid}>
+              {renalFunction.map((item, idx) => (
+                <ScrollRevealSection key={idx}>
+                  <div
+                    className={`${styles.benefitCard} ${styles.serviceCard}`}
+                    style={{ transitionDelay: `${idx * 100}ms` }}
+                  >
+                    <div className={styles.benefitIcon}>
+                      <i className="fas fa-check-circle" />
+                    </div>
+                    <span className={styles.benefitText}>{item}</span>
+                  </div>
+                </ScrollRevealSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 3. Imaging Studies */}
+        <section className={styles.benefitsSection}>
+          <div className={styles.benefitsContainer}>
+            <ScrollRevealSection className={styles.sectionHeader}>
+              <div className={styles.sectionTitle}>
+                <h2>3. Imaging Studies</h2>
+              </div>
+              <div className={styles.sectionDivider} />
+            </ScrollRevealSection>
+
+            <div className={styles.benefitsGrid} style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
+              {imagingStudies.map((item, idx) => (
+                <ScrollRevealSection key={idx}>
+                  <div
+                    className={styles.benefitCard}
+                    style={{ transitionDelay: `${idx * 100}ms` }}
+                  >
+                    <div className={styles.benefitIcon}>
+                      <i className="fas fa-check-circle" />
+                    </div>
+                    <span className={styles.benefitText}>{item}</span>
+                  </div>
+                </ScrollRevealSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 4. Endocrine Testing */}
+        <section className={styles.benefitsSection} style={{ backgroundColor: "var(--color-background-light)", borderTop: "none" }}>
+          <div className={styles.benefitsContainer}>
+            <ScrollRevealSection className={styles.sectionHeader}>
+              <div className={styles.sectionTitle}>
+                <h2>4. Endocrine Testing</h2>
+              </div>
+              <div className={styles.sectionDivider} />
+            </ScrollRevealSection>
+
+            <div className={styles.benefitsGrid}>
+              {endocrineTesting.map((item, idx) => (
+                <ScrollRevealSection key={idx}>
+                  <div
+                    className={`${styles.benefitCard} ${styles.serviceCard}`}
+                    style={{ transitionDelay: `${idx * 100}ms` }}
+                  >
+                    <div className={styles.benefitIcon}>
+                      <i className="fas fa-check-circle" />
+                    </div>
+                    <span className={styles.benefitText}>{item}</span>
+                  </div>
+                </ScrollRevealSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 5. Genetic Testing */}
+        <section className={styles.benefitsSection} style={{ borderBottom: "1px solid rgba(92, 53, 154, 0.05)" }}>
+          <div className={styles.benefitsContainer}>
+            <ScrollRevealSection className={styles.sectionHeader}>
+              <div className={styles.sectionTitle}>
+                <h2>5. Genetic Testing</h2>
+              </div>
+              <div className={styles.sectionDivider} />
+            </ScrollRevealSection>
+
+            <div className={styles.benefitsGrid} style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
+              {geneticTesting.map((item, idx) => (
+                <ScrollRevealSection key={idx}>
+                  <div
+                    className={styles.benefitCard}
+                    style={{ transitionDelay: `${idx * 100}ms` }}
+                  >
+                    <div className={styles.benefitIcon}>
+                      <i className="fas fa-check-circle" />
+                    </div>
+                    <span className={styles.benefitText}>{item}</span>
+                  </div>
+                </ScrollRevealSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Supporting Care Information Section */}
+        <section className={styles.whySection}>
+          <div className={styles.whyContainer}>
+            <ScrollRevealSection className={styles.whyFooterText}>
+              <h3 style={{ fontSize: "1.4rem", fontWeight: "800", color: "#305595" }}>
+                Compassionate Care, Accurate Results
+              </h3>
+              <p>
+                At MMR Hospital &amp; IVF Center, we prioritize patient comfort and satisfaction throughout the diagnostic process. Our experienced team of healthcare professionals ensures that you receive personalized attention and support at every step. From scheduling appointments to explaining test results, we strive to make your diagnostic experience as seamless and stress-free as possible.
+              </p>
+              <p>
+                If you&apos;re experiencing male infertility or have concerns about your reproductive health, we&apos;re here to help. Schedule a consultation with our experienced fertility specialists at MMR Hospital &amp; IVF Center to explore your options for achieving your fertility goals.
+              </p>
+            </ScrollRevealSection>
+
+            <ScrollRevealSection className={styles.whyFooterText} style={{ marginTop: "24px" }}>
+              <h3 style={{ fontSize: "1.4rem", fontWeight: "800", color: "#305595" }}>
+                Schedule Your Diagnostic Evaluation Today
+              </h3>
+              <p>
+                Throughout your infertility testing journey, our caring and dedicated team at MMR Hospital &amp; IVF Center will provide you with the support, guidance, and encouragement you need. We understand the challenges you may face and are here to offer compassionate care and hope for a positive outcome. We are the best diagnostic center in Raipur.
+              </p>
+              <p>
+                If you&apos;re seeking accurate diagnosis and expert medical care, MMR Hospital &amp; IVF Center is here to help. Contact us today to schedule your diagnostic evaluation and take the first step towards better health and well-being. Your journey to optimal health starts here.
+              </p>
+            </ScrollRevealSection>
+          </div>
+        </section>
+
+        {/* Section 6: Special Facilities Grid */}
+        <section className={styles.facilitiesSection}>
+          {/* Decoupled Scoped Top Divider */}
+          <div className={`${styles.shapeDivider} ${styles.shapeDividerTop}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={`${styles.shapeDividerSvg} ${styles.shapeDividerFillLight}`}>
+              <path d="M0,6V0h1000v100L0,6z" />
+            </svg>
+          </div>
+
+          {/* Decoupled Scoped Bottom Divider */}
+          <div className={`${styles.shapeDivider} ${styles.shapeDividerBottom}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={styles.shapeDividerSvg}>
+              <path d="M0,6V0h1000v100L0,6z" />
+            </svg>
+          </div>
+
+          <div className={styles.facilitiesContainer}>
+            <ScrollRevealSection className={styles.sectionHeader}>
+              <div className={styles.sectionTitle}>
+                <h2>Special Facilities in our Hospital</h2>
+              </div>
+              <div className={styles.sectionDivider} />
+            </ScrollRevealSection>
+
+            <div className={styles.facilitiesGrid}>
+              {facilities.map((fac, idx) => (
+                <ScrollRevealSection key={idx}>
+                  <div className={styles.facilityCard} style={{ transitionDelay: `${idx * 150}ms` }}>
+                    <div className={styles.facilityImageWrapper}>
+                      <img
+                        src={fac.imgSrc}
+                        alt={fac.title}
+                        className={styles.facilityImage}
+                      />
+                    </div>
+                    <div className={styles.facilityCardContent}>
+                      <h3 className={styles.facilityCardTitle}>{fac.title}</h3>
+                      <p className={styles.facilityCardDesc}>{fac.desc}</p>
+                    </div>
+                  </div>
+                </ScrollRevealSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Section 7: Final CTA Section */}
+        <section
+          className={styles.ctaSection}
+          style={{
+            backgroundImage: "url('/wp-content/uploads/2024/03/happy-young-sri-lankan-parents-with-baby-scaled.jpg')"
+          }}
+        >
+          <div className={styles.ctaOverlay} />
+
+          <ScrollRevealSection className={styles.ctaContainer}>
+            <div className={styles.ctaTitle}>
+              <h2>Make your Parenthood dream come true.</h2>
+            </div>
+            <p className={styles.ctaDesc}>
+              If you&apos;re struggling with infertility, we&apos;re here to help. Contact us today to schedule a consultation and take the first step towards building the family you&apos;ve always wanted.
+            </p>
+            <Link className={styles.ctaButton} href="/consultation/">
+              BOOK Consultation
+            </Link>
+          </ScrollRevealSection>
+        </section>
+
       </main>
-    </>
+    </div>
   );
 }
