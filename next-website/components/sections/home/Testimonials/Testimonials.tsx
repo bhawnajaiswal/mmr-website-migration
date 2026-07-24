@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import styles from "@/app/Home.module.css";
 
 const REVIEWS = [
   {
@@ -28,250 +29,149 @@ const REVIEWS = [
 
 export default function Testimonials() {
   const [activeIdx, setActiveIdx] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setActiveIdx((prev) => (prev + 1) % REVIEWS.length);
+      handleSlideChange((activeIdx + 1) % REVIEWS.length);
     }, 6000);
     return () => clearInterval(timer);
-  }, []);
+  }, [activeIdx]);
+
+  const handleSlideChange = (newIdx: number) => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setTimeout(() => {
+      setActiveIdx(newIdx);
+      setIsAnimating(false);
+    }, 300); // Matches the transition duration in CSS
+  };
 
   const handlePrev = () => {
-    setActiveIdx((prev) => (prev - 1 + REVIEWS.length) % REVIEWS.length);
+    handleSlideChange((activeIdx - 1 + REVIEWS.length) % REVIEWS.length);
   };
 
   const handleNext = () => {
-    setActiveIdx((prev) => (prev + 1) % REVIEWS.length);
+    handleSlideChange((activeIdx + 1) % REVIEWS.length);
   };
 
   return (
     <section
-      className="elementor-section elementor-top-section elementor-element elementor-element-26181dfa elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-      data-id="26181dfa"
-      data-element_type="section"
-      style={{ padding: "40px 0" }}
+      ref={sectionRef}
+      className={`${styles.reviewSection} ${isVisible ? styles.reviewSectionVisible : ""}`}
     >
-      <div className="elementor-background-overlay" />
-      <div className="elementor-container elementor-column-gap-no">
-        <div
-          className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-630f9ced"
-          data-id="630f9ced"
-          data-element_type="column"
-        >
-          <div className="elementor-widget-wrap elementor-element-populated">
-            <section
-              className="elementor-section elementor-inner-section elementor-element elementor-element-2c584a20 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-              data-id="2c584a20"
-              data-element_type="section"
-              style={{ margin: "0 auto", padding: "0" }}
+      <div className={styles.reviewContainer}>
+        {/* Heading */}
+        <div className={styles.reviewHeader}>
+          <h2 className={styles.reviewTitle}>
+            <a
+              href="https://g.page/r/CXmzt0u5XrAxEBM/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.reviewTitleLink}
             >
-              <div className="elementor-container elementor-column-gap-no">
+              Google reviews by patients
+            </a>
+          </h2>
+          <div className={styles.reviewTitleDivider}>
+            <span className={styles.reviewTitleDividerLine} />
+          </div>
+        </div>
+
+        {/* Carousel Wrapper */}
+        <div className={styles.reviewCarouselWrapper}>
+          <div className={styles.reviewCarouselInner}>
+            {REVIEWS.map((review, index) => {
+              const isActive = index === activeIdx;
+              return (
                 <div
-                  className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-3788e02"
-                  data-id="3788e02"
-                  data-element_type="column"
+                  key={review.id}
+                  className={`${styles.reviewSlide} ${isActive ? styles.reviewSlideActive : ""} ${isAnimating && isActive ? styles.reviewSlideTransitioning : ""}`}
+                  style={{
+                    display: isActive ? "block" : "none"
+                  }}
                 >
-                  <div className="elementor-widget-wrap elementor-element-populated">
-                    
-                    {/* Heading Widget */}
-                    <div
-                      className="elementor-element elementor-element-21cd86a2 elementor-widget elementor-widget-heading"
-                      data-id="21cd86a2"
-                      data-element_type="widget"
-                      data-widget_type="heading.default"
-                      style={{ textAlign: "center", marginBottom: "30px" }}
-                    >
-                      <div className="elementor-widget-container">
-                        <h3 className="elementor-heading-title elementor-size-default">
-                          <a
-                            href="https://g.page/r/CXmzt0u5XrAxEBM/review"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Google reviews by patient
-                          </a>
-                        </h3>
-                      </div>
-                    </div>
-
-                    {/* Reviews Swiper Widget Container */}
-                    <div
-                      className="elementor-element elementor-element-c755703 elementor-widget elementor-widget-reviews"
-                      data-id="c755703"
-                      data-element_type="widget"
-                      data-widget_type="reviews.default"
-                    >
-                      <div className="elementor-widget-container">
-                        <div className="reviews-carousel-wrapper" style={{ position: "relative", maxWidth: "1140px", margin: "0 auto", padding: "0 60px" }}>
-                          
-                          <div className="swiper-wrapper" style={{ minHeight: "220px", position: "relative" }}>
-                            {REVIEWS.map((review, index) => {
-                              const isActive = index === activeIdx;
-                              return (
-                                <div
-                                  key={review.id}
-                                  className="swiper-slide"
-                                  style={{
-                                    display: isActive ? "block" : "none",
-                                    width: "100%"
-                                  }}
-                                >
-                                  <div
-                                    className={`elementor-testimonial elementor-repeater-item-${review.id}`}
-                                    style={{
-                                      backgroundColor: "#ffffff",
-                                      padding: "30px",
-                                      border: "1px solid #eaeaea",
-                                      textAlign: "left",
-                                      borderRadius: "0px"
-                                    }}
-                                  >
-                                    <div
-                                      className="elementor-testimonial__header"
-                                      style={{
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "space-between",
-                                        marginBottom: "16px"
-                                      }}
-                                    >
-                                      <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
-                                        <div className="elementor-testimonial__image">
-                                          <img
-                                            src="/wp-content/plugins/elementor/assets/images/placeholder.png"
-                                            alt={review.name}
-                                            style={{
-                                              width: "50px",
-                                              height: "50px",
-                                              borderRadius: "50%",
-                                              objectFit: "cover"
-                                            }}
-                                          />
-                                        </div>
-                                        <cite className="elementor-testimonial__cite" style={{ fontStyle: "normal" }}>
-                                          <div
-                                            className="elementor-testimonial__name"
-                                            style={{
-                                              fontFamily: '"Nunito", sans-serif',
-                                              fontSize: "17px",
-                                              fontWeight: "700",
-                                              color: "#333333"
-                                            }}
-                                          >
-                                            {review.name}
-                                          </div>
-                                          <div className="elementor-star-rating" style={{ color: "#f0ad4e", fontSize: "16px", margin: "3px 0" }}>
-                                            {"★".repeat(review.stars)}
-                                          </div>
-                                          <div
-                                            className="elementor-testimonial__title"
-                                            style={{
-                                              fontSize: "13px",
-                                              color: "#888888"
-                                            }}
-                                          >
-                                            {review.title}
-                                          </div>
-                                        </cite>
-                                      </div>
-
-                                      <div
-                                        className="elementor-testimonial__icon elementor-icon elementor-icon-google"
-                                        style={{ fontSize: "32px", color: "#4285F4" }}
-                                      >
-                                        <i className="fab fa-google" />
-                                      </div>
-                                    </div>
-
-                                    <div className="elementor-testimonial__content">
-                                      <div
-                                        className="elementor-testimonial__text"
-                                        style={{
-                                          fontFamily: '"Nunito Sans", sans-serif',
-                                          fontSize: "15px",
-                                          lineHeight: "1.6",
-                                          color: "#555555",
-                                          whiteSpace: "pre-line"
-                                        }}
-                                      >
-                                        {review.text}
-                                      </div>
-                                    </div>
-
-                                  </div>
-                                </div>
-                              );
-                            })}
+                  <div className={styles.reviewCard}>
+                    <div className={styles.reviewCardHeader}>
+                      <div className={styles.reviewUserInfo}>
+                        <div className={styles.reviewAvatar}>
+                          {/* Use first letter of name as a modern avatar placeholder */}
+                          <span>{review.name.charAt(0)}</span>
+                        </div>
+                        <div className={styles.reviewMeta}>
+                          <span className={styles.reviewName}>{review.name}</span>
+                          <div className={styles.reviewStars}>
+                            {"★".repeat(review.stars)}
+                            {"☆".repeat(5 - review.stars)}
                           </div>
-
-                          {/* Pagination bullets */}
-                          <div
-                            className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"
-                            style={{ display: "flex", justifyContent: "center", gap: "8px", marginTop: "20px" }}
-                          >
-                            {REVIEWS.map((_, index) => (
-                              <span
-                                key={index}
-                                onClick={() => setActiveIdx(index)}
-                                className={`swiper-pagination-bullet ${
-                                  index === activeIdx ? "swiper-pagination-bullet-active" : ""
-                                }`}
-                                style={{
-                                  width: "10px",
-                                  height: "10px",
-                                  borderRadius: "50%",
-                                  backgroundColor: index === activeIdx ? "#305595" : "#ccc",
-                                  cursor: "pointer",
-                                  display: "inline-block"
-                                }}
-                              />
-                            ))}
-                          </div>
-
-                          {/* Navigation Arrows */}
-                          <div
-                            onClick={handlePrev}
-                            className="elementor-swiper-button elementor-swiper-button-prev"
-                            role="button"
-                            aria-label="Previous Slide"
-                            style={{
-                              position: "absolute",
-                              top: "50%",
-                              left: "15px",
-                              transform: "translateY(-50%)",
-                              cursor: "pointer",
-                              fontSize: "24px",
-                              color: "#305595"
-                            }}
-                          >
-                            <i className="fas fa-chevron-left" />
-                          </div>
-                          <div
-                            onClick={handleNext}
-                            className="elementor-swiper-button elementor-swiper-button-next"
-                            role="button"
-                            aria-label="Next Slide"
-                            style={{
-                              position: "absolute",
-                              top: "50%",
-                              right: "15px",
-                              transform: "translateY(-50%)",
-                              cursor: "pointer",
-                              fontSize: "24px",
-                              color: "#305595"
-                            }}
-                          >
-                            <i className="fas fa-chevron-right" />
-                          </div>
-
+                          <span className={styles.reviewSubtitle}>Patient Review</span>
                         </div>
                       </div>
+
+                      <div className={styles.reviewGoogleBrand}>
+                        <i className="fab fa-google" />
+                      </div>
                     </div>
 
+                    <div className={styles.reviewCardContent}>
+                      <p className={styles.reviewText}>&ldquo;{review.text}&rdquo;</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </section>
+              );
+            })}
+          </div>
+
+          {/* Navigation Controls */}
+          <button
+            onClick={handlePrev}
+            className={`${styles.reviewNavButton} ${styles.reviewNavPrev}`}
+            aria-label="Previous review"
+          >
+            <i className="fas fa-chevron-left" />
+          </button>
+          <button
+            onClick={handleNext}
+            className={`${styles.reviewNavButton} ${styles.reviewNavNext}`}
+            aria-label="Next review"
+          >
+            <i className="fas fa-chevron-right" />
+          </button>
+
+          {/* Pagination Dots */}
+          <div className={styles.reviewDots}>
+            {REVIEWS.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleSlideChange(index)}
+                className={`${styles.reviewDot} ${index === activeIdx ? styles.reviewDotActive : ""}`}
+                aria-label={`Go to review ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>

@@ -1,49 +1,33 @@
+import styles from "@/app/Home.module.css";
+
 interface WhyChooseCardProps {
-  columnId: string;
-  widgetId: string;
   iconClass: string;
   title: string;
   description: string;
+  index: number;
+  animate: boolean;
 }
 
 export default function WhyChooseCard({
-  columnId,
-  widgetId,
   iconClass,
   title,
-  description
+  description,
+  index,
+  animate
 }: WhyChooseCardProps) {
   return (
     <div
-      className={`elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-${columnId}`}
-      data-id={columnId}
-      data-element_type="column"
+      className={`${styles.whyCard} ${animate ? styles.whyCardVisible : ""}`}
+      style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <div className="elementor-widget-wrap elementor-element-populated">
-        <div
-          className={`elementor-widget elementor-widget-icon-box elementor-element elementor-element-${widgetId}`}
-          data-id={widgetId}
-          data-element_type="widget"
-          data-widget_type="icon-box.default"
-        >
-          <div className="elementor-widget-container">
-            <div className="elementor-icon-box-wrapper">
-              <div className="elementor-icon-box-icon">
-                <span className="elementor-icon elementor-animation-">
-                  <i className={iconClass} aria-hidden="true"></i>
-                </span>
-              </div>
-              <div className="elementor-icon-box-content">
-                <h3 className="elementor-icon-box-title">
-                  <span>{title}</span>
-                </h3>
-                <p className="elementor-icon-box-description">
-                  {description}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className={styles.whyCardIconContainer}>
+        <span className={styles.whyCardIcon}>
+          <i className={iconClass} aria-hidden="true"></i>
+        </span>
+      </div>
+      <div className={styles.whyCardContent}>
+        <h3 className={styles.whyCardTitle}>{title}</h3>
+        <p className={styles.whyCardDescription}>{description}</p>
       </div>
     </div>
   );

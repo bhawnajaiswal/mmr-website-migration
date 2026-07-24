@@ -548,3 +548,1393 @@
     gap: 10px;
   }
 }
+
+/* ==========================================================================
+   Why Choose Us Section Redesign
+   ========================================================================== */
+.whySection {
+  position: relative;
+  padding: 100px 24px 80px;
+  background: linear-gradient(180deg, #f8f6fc 0%, #ffffff 100%);
+  overflow: hidden;
+}
+
+.whyShapeDivider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.whyShapeDividerSvg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 40px;
+  transform: rotateY(180deg);
+}
+
+.whyContainer {
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.whyHeader {
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.whySectionVisible .whyHeader {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whySubtitle {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2b89ff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.whyTitle {
+  font-family: "Jost", sans-serif;
+  font-size: 2.45rem;
+  font-weight: 700;
+  color: #443474;
+  margin: 0 0 16px 0;
+}
+
+.whyDivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whyDividerLine {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #443474 0%, #2b89ff 100%);
+  border-radius: 2px;
+}
+
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+}
+
+.whyCard {
+  background-color: #ffffff;
+  border: 1px solid rgba(68, 52, 116, 0.08);
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 20px rgba(68, 52, 116, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              border-color 0.4s ease, 
+              opacity 0.8s ease, 
+              transform 0.8s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.whyCardVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whyCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(68, 52, 116, 0.08);
+  border-color: rgba(43, 137, 255, 0.2);
+}
+
+.whyCardIconContainer {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background-color: rgba(68, 52, 116, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: #443474;
+  font-size: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.whyCard:hover .whyCardIconContainer {
+  background-color: #2b89ff;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.whyCardTitle {
+  font-family: "Jost", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #443474;
+  margin: 0 0 12px 0;
+  transition: color 0.3s ease;
+}
+
+.whyCard:hover .whyCardTitle {
+  color: #2b89ff;
+}
+
+.whyCardDescription {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .whyGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .whyTitle {
+    font-size: 2.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .whySection {
+    padding: 70px 20px 60px;
+  }
+  .whyGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .whyTitle {
+    font-size: 1.85rem;
+  }
+  .whyCard {
+    padding: 30px 24px;
+  }
+}
+
+/* Prefers Reduced Motion support */
+@media (prefers-reduced-motion: reduce) {
+  .whyHeader,
+  .whyCard {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .whyCard:hover {
+    transform: none !important;
+    box-shadow: 0 4px 20px rgba(68, 52, 116, 0.03) !important;
+  }
+}
+
+/* ==========================================================================
+   Meet The Team / Doctors Section Redesign
+   ========================================================================== */
+.docSection {
+  position: relative;
+  padding: 120px 24px 100px;
+  background-color: #eef1f3;
+  overflow: hidden;
+}
+
+.docShapeDividerTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.docShapeDividerBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.docShapeDividerSvg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 40px;
+}
+
+.docContainer {
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.docHeader {
+  text-align: center;
+  margin-bottom: 55px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.docSectionVisible .docHeader {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.docSubtitle {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2b89ff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.docTitle {
+  font-family: "Jost", sans-serif;
+  font-size: 2.45rem;
+  font-weight: 700;
+  color: #443474;
+  margin: 0 0 16px 0;
+}
+
+.docDivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.docDividerLine {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #443474 0%, #2b89ff 100%);
+  border-radius: 2px;
+}
+
+.docGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  width: 100%;
+}
+
+.docCard {
+  background-color: #ffffff;
+  border: 1px solid rgba(68, 52, 116, 0.06);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(68, 52, 116, 0.02);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              opacity 0.8s ease, 
+              transform 0.8s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.docCardVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.docCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(68, 52, 116, 0.07);
+}
+
+.docCardImageWrapper {
+  flex: 0 0 40%;
+  position: relative;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.docCardImage {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.docCard:hover .docCardImage {
+  transform: scale(1.03);
+}
+
+.docCardContent {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.docCardName {
+  font-family: "Jost", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #443474;
+  margin: 0 0 6px 0;
+}
+
+.docCardDegree {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #e06d6d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.docCardDesc {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: #64748b;
+  margin: 0 0 16px 0;
+}
+
+.docCardSocial {
+  display: flex;
+  gap: 10px;
+}
+
+.docCardSocial a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(68, 52, 116, 0.05);
+  color: #443474;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.docCardSocial a:hover {
+  background-color: #2b89ff;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .docGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .docCard {
+    flex-direction: column;
+  }
+  .docCardImageWrapper {
+    width: 100%;
+    height: 240px;
+  }
+  .docCardImage {
+    min-height: auto;
+  }
+  .docCardContent {
+    padding: 24px;
+  }
+  .docTitle {
+    font-size: 2.15rem;
+  }
+}
+
+/* Prefers Reduced Motion support */
+@media (prefers-reduced-motion: reduce) {
+  .docHeader,
+  .docCard {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .docCard:hover {
+    transform: none !important;
+    box-shadow: 0 4px 20px rgba(68, 52, 116, 0.02) !important;
+  }
+  .docCardImage {
+    transition: none !important;
+  }
+  .docCard:hover .docCardImage {
+    transform: none !important;
+  }
+}
+
+/* ==========================================================================
+   Statistics Section Redesign
+   ========================================================================== */
+.statsSection {
+  position: relative;
+  padding: 80px 24px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.statsContainer {
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.statsHeader {
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.statsSectionVisible .statsHeader {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.statsSubtitle {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2b89ff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.statsTitle {
+  font-family: "Jost", sans-serif;
+  font-size: 2.45rem;
+  font-weight: 700;
+  color: #443474;
+  margin: 0 0 16px 0;
+}
+
+.statsDivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statsDividerLine {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #443474 0%, #2b89ff 100%);
+  border-radius: 2px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+}
+
+.statsCard {
+  background: linear-gradient(135deg, #ffffff 0%, #fcfaff 100%);
+  border: 1px solid rgba(68, 52, 116, 0.06);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(68, 52, 116, 0.02);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              opacity 0.8s ease, 
+              transform 0.8s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.statsCardVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.statsCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(68, 52, 116, 0.06);
+  border-color: rgba(43, 137, 255, 0.2);
+}
+
+.statsNumberWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 12px;
+  color: #443474;
+}
+
+.statsNumber {
+  font-family: "Jost", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.statsSuffix {
+  font-family: "Jost", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2b89ff;
+  margin-left: 2px;
+}
+
+.statsCardTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #64748b;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   Google Reviews / Testimonials Section Redesign
+   ========================================================================== */
+.reviewSection {
+  position: relative;
+  padding: 80px 24px;
+  background-color: #f8fafc;
+  overflow: hidden;
+}
+
+.reviewContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.reviewHeader {
+  text-align: center;
+  margin-bottom: 45px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reviewSectionVisible .reviewHeader {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reviewTitle {
+  font-family: "Jost", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+}
+
+.reviewTitleLink {
+  color: #443474;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.reviewTitleLink:hover {
+  color: #2b89ff;
+}
+
+.reviewTitleDivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviewTitleDividerLine {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #443474 0%, #2b89ff 100%);
+  border-radius: 2px;
+}
+
+.reviewCarouselWrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+
+.reviewCarouselInner {
+  position: relative;
+  width: 100%;
+}
+
+.reviewSlide {
+  width: 100%;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.reviewSlideActive {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.reviewCard {
+  background-color: #ffffff;
+  border: 1px solid rgba(68, 52, 116, 0.06);
+  border-radius: 24px;
+  padding: 40px 48px;
+  box-shadow: 0 8px 30px rgba(68, 52, 116, 0.03);
+  position: relative;
+}
+
+.reviewCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.reviewUserInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.reviewAvatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #443474 0%, #2b89ff 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.reviewMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewName {
+  font-family: "Jost", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #443474;
+}
+
+.reviewStars {
+  color: #ffb800;
+  font-size: 15px;
+  margin: 2px 0;
+  letter-spacing: 1px;
+}
+
+.reviewSubtitle {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.reviewGoogleBrand {
+  font-size: 28px;
+  color: #4285f4;
+  opacity: 0.95;
+}
+
+.reviewCardContent {
+  position: relative;
+}
+
+.reviewText {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+  font-style: italic;
+}
+
+.reviewNavButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgba(68, 52, 116, 0.08);
+  box-shadow: 0 4px 12px rgba(68, 52, 116, 0.04);
+  color: #443474;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.reviewNavButton:hover {
+  background-color: #2b89ff;
+  color: #ffffff;
+  border-color: #2b89ff;
+  box-shadow: 0 6px 16px rgba(43, 137, 255, 0.3);
+}
+
+.reviewNavPrev {
+  left: 0;
+}
+
+.reviewNavNext {
+  right: 0;
+}
+
+.reviewDots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.reviewDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.reviewDotActive {
+  background-color: #2b89ff;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .statsGrid {
+    gap: 24px;
+  }
+  .statsNumber {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .statsSection,
+  .reviewSection {
+    padding: 60px 20px;
+  }
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .statsTitle,
+  .reviewTitle {
+    font-size: 2.15rem;
+  }
+  .reviewCarouselWrapper {
+    padding: 0;
+  }
+  .reviewCard {
+    padding: 30px 24px;
+  }
+  .reviewNavButton {
+    display: none;
+  }
+}
+
+/* Prefers Reduced Motion support */
+@media (prefers-reduced-motion: reduce) {
+  .statsHeader,
+  .statsCard,
+  .reviewHeader,
+  .reviewSlide {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .statsCard:hover {
+    transform: none !important;
+    box-shadow: 0 4px 20px rgba(68, 52, 116, 0.02) !important;
+  }
+}
+
+/* ==========================================================================
+   Blogs Section Redesign
+   ========================================================================== */
+.blogSection {
+  position: relative;
+  padding: 60px 24px 40px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.blogContainer {
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.blogHeader {
+  text-align: center;
+  margin-bottom: 32px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.blogSectionVisible .blogHeader {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.blogSubtitle {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2b89ff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.blogTitle {
+  font-family: "Jost", sans-serif;
+  font-size: 2.45rem;
+  font-weight: 700;
+  color: #443474;
+  margin: 0 0 16px 0;
+}
+
+.blogDivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogDividerLine {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #443474 0%, #2b89ff 100%);
+  border-radius: 2px;
+}
+
+.blogCarouselWrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+
+.blogCarouselInner {
+  overflow: hidden;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.blogSliderTrack {
+  display: flex;
+  width: 100%;
+}
+
+.blogSlide {
+  box-sizing: border-box;
+}
+
+.blogLink {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+}
+
+.blogCard {
+  background-color: #ffffff;
+  border: 1px solid rgba(68, 52, 116, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(68, 52, 116, 0.03);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              border-color 0.4s ease;
+  height: 100%;
+}
+
+.blogCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(68, 52, 116, 0.07);
+  border-color: rgba(43, 137, 255, 0.2);
+}
+
+.blogImageWrapper {
+  width: 100%;
+  padding-top: 60%;
+  position: relative;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.blogImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.blogCard:hover .blogImage {
+  transform: scale(1.04);
+}
+
+.blogNavButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgba(68, 52, 116, 0.08);
+  box-shadow: 0 4px 12px rgba(68, 52, 116, 0.04);
+  color: #443474;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.blogNavButton:hover {
+  background-color: #2b89ff;
+  color: #ffffff;
+  border-color: #2b89ff;
+  box-shadow: 0 6px 16px rgba(43, 137, 255, 0.3);
+}
+
+.blogNavPrev {
+  left: 8px;
+}
+
+.blogNavNext {
+  right: 8px;
+}
+
+.blogDots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.blogDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.blogDotActive {
+  background-color: #2b89ff;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   Consultation Section Redesign
+   ========================================================================== */
+.consultSection {
+  position: relative;
+  padding: 90px 24px;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.consultBgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/wp-content/uploads/2024/04/Untitled-design-44.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.consultOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(68, 52, 116, 0.94) 0%, rgba(33, 44, 108, 0.92) 100%);
+  z-index: 2;
+}
+
+.consultShapeDividerTop {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 3;
+}
+
+.consultShapeDividerBottom {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 3;
+}
+
+.consultShapeDividerSvg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 40px;
+}
+
+.consultContainer {
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.consultSectionVisible .consultContainer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.consultTextColumn {
+  color: #ffffff;
+}
+
+.consultTitle {
+  font-family: "Jost", sans-serif;
+  font-size: 2.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+}
+
+.consultTitleDivider {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.consultTitleDividerLine {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #e06d6d;
+  border-radius: 2px;
+}
+
+.consultSupportText {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.consultFormColumn {
+  width: 100%;
+}
+
+.consultFormCard {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.15);
+  border-radius: 24px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.consultForm {
+  width: 100%;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.formLabel {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #443474;
+  margin-bottom: 8px;
+}
+
+.formRequired {
+  color: #e06d6d;
+  margin-left: 2px;
+}
+
+.formRow {
+  display: flex;
+  gap: 16px;
+}
+
+.formCol {
+  flex: 1;
+}
+
+.formInput,
+.formSelect {
+  width: 100%;
+  height: 46px;
+  padding: 10px 14px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.98rem;
+  border-radius: 8px;
+  border: 1px solid rgba(68, 52, 116, 0.18);
+  background-color: #ffffff;
+  color: #1e293b;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.formInput:focus,
+.formSelect:focus {
+  border-color: #2b89ff;
+  box-shadow: 0 0 0 3px rgba(43, 137, 255, 0.2);
+  background-color: #ffffff;
+}
+
+.formSelect {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.formSubmitWrapper {
+  margin-top: 28px;
+}
+
+.formSubmitBtn {
+  width: 100%;
+  height: 48px;
+  background-color: #e06d6d;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 0 24px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(224, 109, 109, 0.25);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formSubmitBtn:hover:not(:disabled) {
+  background-color: #d65c5c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(224, 109, 109, 0.45);
+}
+
+.formSubmitBtn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.formSubmitBtn:disabled {
+  background-color: rgba(224, 109, 109, 0.6);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.formSuccessMsg {
+  color: #10b981;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-top: 16px;
+  text-align: center;
+  background-color: rgba(16, 185, 129, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.formErrorMsg {
+  color: #ef4444;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-top: 16px;
+  text-align: center;
+  background-color: rgba(239, 68, 68, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.formTerms {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #64748b;
+  text-align: center;
+  margin: 16px 0 0 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .consultContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .consultTextColumn {
+    text-align: center;
+  }
+  .consultTitleDivider {
+    justify-content: center;
+  }
+  .consultTitle {
+    font-size: 2.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogSection {
+    padding: 60px 20px;
+  }
+  .blogCarouselWrapper {
+    padding: 0;
+  }
+  .blogNavButton {
+    display: none;
+  }
+  .blogTitle {
+    font-size: 2.15rem;
+  }
+  .consultSection {
+    padding: 100px 20px 80px;
+  }
+  .consultTitle {
+    font-size: 1.85rem;
+  }
+  .consultFormCard {
+    padding: 30px 24px;
+  }
+  .formRow {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .consultBgImage {
+    background-attachment: scroll;
+  }
+}
+
+/* Prefers Reduced Motion support */
+@media (prefers-reduced-motion: reduce) {
+  .blogHeader,
+  .blogCard,
+  .consultContainer {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .blogCard:hover {
+    transform: none !important;
+  }
+  .blogImage {
+    transition: none !important;
+  }
+  .blogCard:hover .blogImage {
+    transform: none !important;
+  }
+  .formSubmitBtn:hover:not(:disabled) {
+    transform: none !important;
+  }
+}
+
+

@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import styles from "@/app/Home.module.css";
 
 const BLOG_SLIDES = [
   {
@@ -28,19 +29,57 @@ const BLOG_SLIDES = [
 
 export default function Blogs() {
   const [activeIdx, setActiveIdx] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(3);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      const w = window.innerWidth;
+      if (w < 640) {
+        setVisibleCount(1);
+      } else if (w < 1024) {
+        setVisibleCount(2);
+      } else {
+        setVisibleCount(3);
+      }
     };
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const totalSlides = BLOG_SLIDES.length;
-  const maxIdx = isMobile ? totalSlides - 1 : totalSlides - 3;
+  const maxIdx = Math.max(0, totalSlides - visibleCount);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIdx((prev) => (prev >= maxIdx ? 0 : prev + 1));
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [maxIdx]);
 
   const handlePrev = () => {
     setActiveIdx((prev) => (prev === 0 ? maxIdx : prev - 1));
@@ -52,153 +91,91 @@ export default function Blogs() {
 
   return (
     <section
-      className="elementor-element elementor-element-3299d28 e-con-full e-flex e-con e-parent"
-      data-id="3299d28"
-      data-element_type="container"
-      style={{ padding: "40px 20px", maxWidth: "1140px", margin: "0 auto" }}
+      ref={sectionRef}
+      className={`${styles.blogSection} ${isVisible ? styles.blogSectionVisible : ""}`}
     >
-      {/* Heading Widget */}
-      <div
-        className="elementor-element elementor-element-fe98fa3 elementor-widget elementor-widget-heading"
-        data-id="fe98fa3"
-        data-element_type="widget"
-        data-widget_type="heading.default"
-        style={{ textAlign: "center", marginBottom: "30px" }}
-      >
-        <div className="elementor-widget-container">
-          <h2
-            className="elementor-heading-title elementor-size-default"
-            style={{
-              color: "#305595",
-              fontFamily: '"Nunito", sans-serif',
-              fontSize: "32px",
-              fontWeight: "700"
-            }}
-          >
-            Blogs
-          </h2>
+      <div className={styles.blogContainer}>
+        {/* Heading */}
+        <div className={styles.blogHeader}>
+          <span className={styles.blogSubtitle}>Latest News &amp; Insights</span>
+          <h2 className={styles.blogTitle}>Blogs</h2>
+          <div className={styles.blogDivider}>
+            <span className={styles.blogDividerLine} />
+          </div>
         </div>
-      </div>
 
-      {/* Media Carousel Swiper Widget */}
-      <div
-        className="elementor-element elementor-element-a8759f5 elementor-skin-carousel elementor-arrows-yes elementor-pagination-type-bullets elementor-widget elementor-widget-media-carousel"
-        data-id="a8759f5"
-        data-element_type="widget"
-        data-widget_type="media-carousel.default"
-        style={{ position: "relative", padding: "0 35px" }}
-      >
-        <div className="elementor-widget-container">
-          <div className="elementor-swiper" style={{ overflow: "hidden" }}>
-            <div className="elementor-main-swiper swiper">
-              <div
-                className="swiper-wrapper"
-                style={{
-                  display: "flex",
-                  gap: "15px",
-                  transition: "transform 0.5s ease-in-out",
-                  transform: isMobile 
-                    ? `translateX(-${activeIdx * 100}%)`
-                    : `translateX(-${activeIdx * (100 / 3)}%)`
-                }}
-              >
-                {BLOG_SLIDES.map((slide) => {
-                  const content = (
-                    <div
-                      className="elementor-carousel-image"
-                      style={{
-                        backgroundImage: `url('${slide.imageUrl}')`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        height: "240px",
-                        width: "100%",
-                        borderRadius: "0px"
-                      }}
-                    />
-                  );
-
-                  return (
-                    <div
-                      key={slide.id}
-                      className="swiper-slide"
-                      style={{
-                        flex: isMobile ? "0 0 100%" : "0 0 calc((100% - 30px) / 3)",
-                        boxSizing: "border-box"
-                      }}
-                    >
-                      {slide.link ? (
-                        <Link href={slide.link} style={{ display: "block", height: "100%" }}>
-                          {content}
-                        </Link>
-                      ) : (
-                        content
-                      )}
+        {/* Carousel Container */}
+        <div className={styles.blogCarouselWrapper}>
+          <div className={styles.blogCarouselInner}>
+            <div
+              className={styles.blogSliderTrack}
+              style={{
+                transform: `translateX(-${activeIdx * (100 / visibleCount)}%)`,
+                transition: "transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+              }}
+            >
+              {BLOG_SLIDES.map((slide) => {
+                const cardContent = (
+                  <div className={styles.blogCard}>
+                    <div className={styles.blogImageWrapper}>
+                      <img
+                        src={slide.imageUrl}
+                        alt="MMR Hospital Medical Blog"
+                        className={styles.blogImage}
+                        loading="lazy"
+                      />
                     </div>
-                  );
-                })}
-              </div>
+                  </div>
+                );
 
-              {/* Pagination Bullets */}
-              <div
-                className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"
-                style={{ display: "flex", justifyContent: "center", gap: "8px", marginTop: "25px" }}
-              >
-                {Array.from({ length: maxIdx + 1 }).map((_, index) => (
-                  <span
-                    key={index}
-                    onClick={() => setActiveIdx(index)}
-                    className={`swiper-pagination-bullet ${
-                      index === activeIdx ? "swiper-pagination-bullet-active" : ""
-                    }`}
+                return (
+                  <div
+                    key={slide.id}
+                    className={styles.blogSlide}
                     style={{
-                      width: "10px",
-                      height: "10px",
-                      borderRadius: "50%",
-                      backgroundColor: index === activeIdx ? "#305595" : "#ccc",
-                      cursor: "pointer",
-                      display: "inline-block"
+                      flex: `0 0 ${100 / visibleCount}%`,
+                      padding: "0 12px"
                     }}
-                  />
-                ))}
-              </div>
-
-              {/* Navigation Arrows */}
-              <div
-                onClick={handlePrev}
-                className="elementor-swiper-button elementor-swiper-button-prev"
-                role="button"
-                aria-label="Previous Slide"
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "0",
-                  transform: "translateY(-50%)",
-                  cursor: "pointer",
-                  fontSize: "22px",
-                  color: "#305595"
-                }}
-              >
-                <i className="fas fa-chevron-left" />
-              </div>
-              <div
-                onClick={handleNext}
-                className="elementor-swiper-button elementor-swiper-button-next"
-                role="button"
-                aria-label="Next Slide"
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  right: "0",
-                  transform: "translateY(-50%)",
-                  cursor: "pointer",
-                  fontSize: "22px",
-                  color: "#305595"
-                }}
-              >
-                <i className="fas fa-chevron-right" />
-              </div>
-
+                  >
+                    {slide.link ? (
+                      <Link href={slide.link} className={styles.blogLink}>
+                        {cardContent}
+                      </Link>
+                    ) : (
+                      cardContent
+                    )}
+                  </div>
+                );
+              })}
             </div>
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={handlePrev}
+            className={`${styles.blogNavButton} ${styles.blogNavPrev}`}
+            aria-label="Previous slide"
+          >
+            <i className="fas fa-chevron-left" />
+          </button>
+          <button
+            onClick={handleNext}
+            className={`${styles.blogNavButton} ${styles.blogNavNext}`}
+            aria-label="Next slide"
+          >
+            <i className="fas fa-chevron-right" />
+          </button>
+
+          {/* Dots Navigation */}
+          <div className={styles.blogDots}>
+            {Array.from({ length: maxIdx + 1 }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveIdx(index)}
+                className={`${styles.blogDot} ${index === activeIdx ? styles.blogDotActive : ""}`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>
