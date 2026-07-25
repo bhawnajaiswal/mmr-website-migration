@@ -1,0 +1,166 @@
+{
+  "css": [
+    "/css/animate.css",
+    "/css/bootstrap.min.css",
+    "/css/common.css",
+    "/css/responsive.css",
+    "/css/style.css",
+    "/css/swiper-bundle.min.css",
+    "/css/fontawesome/css/all.css",
+    "/css/fontawesome/css/all.min.css",
+    "/css/fontawesome/css/brands.css",
+    "/css/fontawesome/css/brands.min.css",
+    "/css/fontawesome/css/fontawesome.css",
+    "/css/fontawesome/css/fontawesome.min.css",
+    "/css/fontawesome/css/regular.css",
+    "/css/fontawesome/css/regular.min.css",
+    "/css/fontawesome/css/solid.css",
+    "/css/fontawesome/css/solid.min.css",
+    "/css/fontawesome/css/svg-with-js.css",
+    "/css/fontawesome/css/svg-with-js.min.css",
+    "/css/fontawesome/css/v4-font-face.css",
+    "/css/fontawesome/css/v4-font-face.min.css",
+    "/css/fontawesome/css/v4-shims.css",
+    "/css/fontawesome/css/v4-shims.min.css",
+    "/css/fontawesome/css/v5-font-face.css",
+    "/css/fontawesome/css/v5-font-face.min.css"
+  ],
+  "js": [
+    "/js/.htaccess",
+    "/js/bootstrap.bundle.min.js",
+    "/js/functions.js",
+    "/js/jquery-3.2.1.min.js",
+    "/js/swiper-bundle.min.js",
+    "/js/wow.min.js"
+  ],
+  "themeCss": [
+    "/wp-content/themes/hello-elementor/assets/js/hello-admin.css",
+    "/wp-content/themes/hello-elementor/assets/js/hello-admin.min.css",
+    "/wp-content/themes/hello-elementor/classic-editor.css",
+    "/wp-content/themes/hello-elementor/classic-editor.min.css",
+    "/wp-content/themes/hello-elementor/customizer.css",
+    "/wp-content/themes/hello-elementor/customizer.min.css",
+    "/wp-content/themes/hello-elementor/editor.css",
+    "/wp-content/themes/hello-elementor/editor.min.css",
+    "/wp-content/themes/hello-elementor/header-footer.css",
+    "/wp-content/themes/hello-elementor/header-footer.min.css",
+    "/wp-content/themes/hello-elementor/style.css",
+    "/wp-content/themes/hello-elementor/style.min.css",
+    "/wp-content/themes/hello-elementor/theme.css",
+    "/wp-content/themes/hello-elementor/theme.min.css"
+  ],
+  "fonts": [
+    "/css/fontawesome/webfonts/fa-brands-400.ttf",
+    "/css/fontawesome/webfonts/fa-brands-400.woff2",
+    "/css/fontawesome/webfonts/fa-regular-400.ttf",
+    "/css/fontawesome/webfonts/fa-regular-400.woff2",
+    "/css/fontawesome/webfonts/fa-solid-900.ttf",
+    "/css/fontawesome/webfonts/fa-solid-900.woff2",
+    "/css/fontawesome/webfonts/fa-v4compatibility.ttf",
+    "/css/fontawesome/webfonts/fa-v4compatibility.woff2"
+  ],
+  "pages": {
+    "home": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-5721.css"
+    },
+    "about": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-5925.css"
+    },
+    "treatment-services": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-5948.css"
+    },
+    "ivf": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-5969.css"
+    },
+    "iui": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6201.css"
+    },
+    "ivm": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6206.css"
+    },
+    "fertility-preservation-2": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6211.css"
+    },
+    "icsi-treatment": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6217.css"
+    },
+    "infertility-men-women": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6222.css"
+    },
+    "ectopic-pregnancy-2": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6227.css"
+    },
+    "female-infertility": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6232.css"
+    },
+    "male-infertility": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6237.css"
+    },
+    "infertility-testing": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6242.css"
+    },
+    "daignostic": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6253.css"
+    },
+    "renal-care-2": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6144.css"
+    },
+    "capd": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6358.css"
+    },
+    "evaluation-of-proteinuria": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6366.css"
+    },
+    "uti-urinary-tract-infection": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6374.css"
+    },
+    "faqs": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6174.css"
+    },
+    "our-expert-team": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6166.css"
+    },
+    "facilities": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-155.css"
+    },
+    "our-philosophy": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6385.css"
+    },
+    "infrastructure": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-1588.css"
+    },
+    "feedback": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6718.css"
+    },
+    "contact-us": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6684.css"
+    },
+    "news-blogs": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-159.css"
+    },
+    "career": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-161.css"
+    },
+    "privacy-policy": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-3.css"
+    },
+    "disclaimer": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-4148.css"
+    },
+    "terms-of-use": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-4160.css"
+    },
+    "thank-you-book-consultancy": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-1559.css"
+    },
+    "consultation": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-1801.css"
+    },
+    "consultation-for-renal-problems": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-3731.css"
+    },
+    "why-mmr-hospital-ivf-center": {
+      "elementorCss": "/wp-content/uploads/elementor/css/post-6652.css"
+    }
+  }
+}

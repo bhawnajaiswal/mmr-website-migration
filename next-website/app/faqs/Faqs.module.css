@@ -1,0 +1,468 @@
+/* Faqs.module.css - Scoped styles for the FAQs page */
+
+.container {
+  --color-primary: #5c359a;
+  --color-secondary: #305595;
+  --color-accent: #f08080;
+  --color-background-light: #f8fafc;
+  --color-text-dark: #1e293b;
+  --color-text-muted: #64748b;
+  --color-white: #ffffff;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 25px -5px rgba(48, 85, 149, 0.08), 0 8px 10px -6px rgba(48, 85, 149, 0.05);
+  --transition-smooth: all 0.25s ease-in-out;
+  
+  width: 100%;
+  color: var(--color-text-dark);
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Decorative Shape Dividers
+   ========================================================================== */
+.shapeDivider {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.shapeDividerBottom {
+  bottom: -1px;
+}
+
+.shapeDividerSvg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100%;
+  fill: #ffffff;
+}
+
+/* ==========================================================================
+   1. Hero Section
+   ========================================================================== */
+.heroSection {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #442a78 0%, #224378 100%);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(270deg, rgba(0, 181, 191, 0.25) 15%, rgba(255, 255, 255, 0.05) 80%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 5;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroDivider {
+  width: 48px;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+.heroTitle h1 {
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+  margin: 8px 0;
+}
+
+.heroButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #d88eec;
+  color: var(--color-white);
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid #d88eec;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(216, 142, 236, 0.3);
+  text-decoration: none;
+}
+
+.heroButton:hover {
+  background-color: transparent;
+  border-color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   2. Intro Section
+   ========================================================================== */
+.introSection {
+  background-color: var(--color-white);
+  padding: 75px 20px 45px;
+}
+
+.introContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.introContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.introTitle h2 {
+  font-size: 2.15rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-secondary);
+  letter-spacing: -0.01em;
+}
+
+.introText1 {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   3. FAQ Accordion Section
+   ========================================================================== */
+.faqSection {
+  background-color: var(--color-white);
+  padding: 0 20px 75px;
+}
+
+.faqContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accordionItem {
+  background-color: var(--color-white);
+  border: 1px solid rgba(48, 85, 149, 0.08);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.accordionItem:hover {
+  border-color: rgba(92, 53, 154, 0.15);
+  box-shadow: var(--shadow-md);
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--color-white);
+  transition: var(--transition-smooth);
+}
+
+.accordionHeaderActive {
+  background-color: rgba(92, 53, 154, 0.02);
+}
+
+.accordionTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  line-height: 1.4;
+  margin: 0;
+  padding-right: 16px;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.accordionHeader:hover .accordionTitle {
+  color: var(--color-primary);
+}
+
+.accordionIcon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(48, 85, 149, 0.05);
+  color: var(--color-secondary);
+  font-size: 0.85rem;
+  transition: var(--transition-smooth);
+}
+
+.accordionHeader:hover .accordionIcon {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.accordionHeaderActive .accordionIcon {
+  transform: rotate(180deg);
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* Smooth Accordion Content Transition using Grid Row height */
+.accordionContentWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.accordionContentOpen {
+  grid-template-rows: 1fr;
+}
+
+.accordionContentInner {
+  min-height: 0;
+  padding: 0 24px 24px;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+.accordionContentInner p {
+  margin: 0 0 12px;
+}
+
+.accordionContentInner p:last-child {
+  margin-bottom: 0;
+}
+
+.accordionContentInner ul {
+  margin: 0 0 12px;
+  padding-left: 20px;
+}
+
+.accordionContentInner li {
+  margin-bottom: 6px;
+}
+
+.accordionContentInner li:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   4. Final CTA Section
+   ========================================================================== */
+.ctaSection {
+  position: relative;
+  padding: 90px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ctaOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: #0c0500;
+  opacity: 0.75;
+  z-index: 1;
+}
+
+.ctaContainer {
+  position: relative;
+  z-index: 5;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ctaTitle h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-white);
+  letter-spacing: -0.01em;
+}
+
+.ctaDesc {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 700px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid var(--color-accent);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 15px rgba(240, 128, 128, 0.3);
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  background-color: transparent;
+  border-color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   Motion & Scroll Reveal Utilities
+   ========================================================================== */
+.scrollReveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.revealVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints & Media Queries
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .heroSection {
+    min-height: 45vh;
+  }
+  
+  .heroTitle h1 {
+    font-size: 2.75rem;
+  }
+
+  .introSection {
+    padding: 60px 20px 35px;
+  }
+
+  .faqSection {
+    padding: 0 20px 60px;
+  }
+
+  .ctaTitle h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 40vh;
+    padding: 50px 20px;
+  }
+  
+  .heroTitle h1 {
+    font-size: 2.25rem;
+  }
+  
+  .introSection {
+    padding: 55px 20px 30px;
+  }
+
+  .introTitle h2 {
+    font-size: 1.75rem;
+  }
+
+  .faqSection {
+    padding: 0 20px 55px;
+  }
+
+  .accordionHeader {
+    padding: 16px 20px;
+  }
+
+  .accordionTitle {
+    font-size: 1rem;
+  }
+
+  .ctaSection {
+    padding: 65px 20px;
+  }
+
+  .ctaTitle h2 {
+    font-size: 1.85rem;
+  }
+
+  .ctaDesc {
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroContent {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .scrollReveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .accordionItem:hover {
+    transform: none !important;
+  }
+}

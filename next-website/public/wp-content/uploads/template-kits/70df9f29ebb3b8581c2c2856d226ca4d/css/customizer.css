@@ -1,0 +1,25 @@
+/*Chrome Fix for Parallax */
+@media(min-width: 768px) {
+  .envato-background-fix {
+    -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+  }
+}
+
+/* Collection 41 Custom Styles */
+
+/* .elementor-element p,
+.elementor-icon-box-title {
+	margin-top: 0;
+} */
+
+.envato-top-0 p,
+.envato-top-0 .elementor-icon-box-title {
+	margin-top: 0;
+}
+
+.vet-schedule p,
+.vet-profiles p {
+	margin-top: 0;
+	margin-bottom: 0;
+}

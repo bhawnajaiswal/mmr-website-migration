@@ -1,0 +1,607 @@
+/* ExpertTeam.module.css - Scoped styles for the Our Expert Team page */
+
+.container {
+  --color-primary: #5c359a;
+  --color-secondary: #305595;
+  --color-accent: #f08080;
+  --color-background-light: #f8fafc;
+  --color-text-dark: #1e293b;
+  --color-text-muted: #64748b;
+  --color-white: #ffffff;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 25px -5px rgba(48, 85, 149, 0.08), 0 8px 10px -6px rgba(48, 85, 149, 0.05);
+  --transition-smooth: all 0.25s ease-in-out;
+  
+  width: 100%;
+  color: var(--color-text-dark);
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Shape Dividers
+   ========================================================================== */
+.shapeDivider {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.shapeDividerBottom {
+  bottom: -1px;
+}
+
+.shapeDividerTop {
+  top: -1px;
+}
+
+.shapeDividerSvg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100%;
+  fill: #ffffff;
+}
+
+.shapeDividerFillLight {
+  fill: var(--color-background-light);
+}
+
+/* ==========================================================================
+   1. Hero Section
+   ========================================================================== */
+.heroSection {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #442a78 0%, #224378 100%);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(270deg, rgba(0, 181, 191, 0.25) 15%, rgba(255, 255, 255, 0.05) 80%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 5;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroDivider {
+  width: 48px;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+.heroTitle h1 {
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+  margin: 8px 0;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   2. Intro Section
+   ========================================================================== */
+.introSection {
+  background-color: var(--color-white);
+  padding: 75px 20px 45px;
+}
+
+.introContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.introTitle h2 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--color-secondary);
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   3. Family Section (Collage + Description)
+   ========================================================================== */
+.familySection {
+  background-color: var(--color-background-light);
+  padding: 80px 20px;
+  position: relative;
+}
+
+.familyContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.familyLeft {
+  display: flex;
+  gap: 16px;
+}
+
+.collageCol1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.collageCol2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.collageImageWrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-white);
+  border: 1px solid rgba(48, 85, 149, 0.06);
+}
+
+.collageImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.collageImageWrapper:hover .collageImage {
+  transform: scale(1.05);
+}
+
+.familyRight {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.familySubtitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.familyTitle {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.familyDesc {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   4. Founders Header Title
+   ========================================================================== */
+.foundersHeader {
+  background-color: var(--color-white);
+  padding: 60px 20px 20px;
+  text-align: center;
+}
+
+.foundersHeaderTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.foundersHeaderTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   5. Profiles Section (Dr. Anuradha & Dr. Prawash)
+   ========================================================================== */
+.profilesSection {
+  background-color: var(--color-white);
+  padding: 20px 20px 80px;
+}
+
+.profileContainer {
+  max-width: 1000px;
+  margin: 0 auto 90px;
+}
+
+.profileContainer:last-child {
+  margin-bottom: 0;
+}
+
+/* Founder Card Header */
+.founderHeroCard {
+  background-color: var(--color-white);
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(92, 53, 154, 0.08);
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.founderImageWrapper {
+  flex: 0 0 42%;
+  max-height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+
+.founderImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.founderContent {
+  flex: 1;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.founderRole {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.founderName h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  line-height: 1.25;
+}
+
+.founderDesc {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin-top: 8px;
+}
+
+/* Founder Details Grid */
+.founderDetailsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.detailsCard {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  border: 1px solid rgba(48, 85, 149, 0.08);
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.detailsCard:hover {
+  border-color: rgba(92, 53, 154, 0.15);
+  box-shadow: var(--shadow-md);
+}
+
+.detailsCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(48, 85, 149, 0.05);
+  padding-bottom: 12px;
+}
+
+.detailsCardIcon {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  background-color: rgba(92, 53, 154, 0.05);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.detailsCardTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.detailsCardContent {
+  color: var(--color-text-muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.detailsCardContent ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.detailsCardContent li {
+  margin-bottom: 10px;
+  position: relative;
+  list-style-type: disc;
+}
+
+.detailsCardContent li::marker {
+  color: var(--color-accent);
+}
+
+.detailsCardContent listrong {
+  color: var(--color-text-dark);
+}
+
+.detailsCardContent p {
+  margin: 0 0 12px;
+}
+
+.detailsCardContent p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   6. Final CTA Section
+   ========================================================================== */
+.ctaSection {
+  position: relative;
+  padding: 90px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ctaOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: #0c0500;
+  opacity: 0.75;
+  z-index: 1;
+}
+
+.ctaContainer {
+  position: relative;
+  z-index: 5;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ctaSubtitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.ctaTitle h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-white);
+  letter-spacing: -0.01em;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid var(--color-accent);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 15px rgba(240, 128, 128, 0.3);
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.ctaButton:hover {
+  background-color: transparent;
+  border-color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   Motion & Scroll Reveal Utilities
+   ========================================================================== */
+.scrollReveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.revealVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints & Media Queries
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .heroSection {
+    min-height: 45vh;
+  }
+  
+  .heroTitle h1 {
+    font-size: 2.75rem;
+  }
+
+  .familyContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .founderHeroCard {
+    flex-direction: column;
+  }
+
+  .founderImageWrapper {
+    flex: 0 0 350px;
+    height: 350px;
+  }
+
+  .founderContent {
+    padding: 30px;
+  }
+
+  .ctaTitle h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 40vh;
+    padding: 50px 20px;
+  }
+  
+  .heroTitle h1 {
+    font-size: 2.25rem;
+  }
+  
+  .introSection {
+    padding: 55px 20px 30px;
+  }
+
+  .introTitle h2 {
+    font-size: 1.35rem;
+  }
+
+  .familySection {
+    padding: 60px 20px;
+  }
+
+  .familyTitle {
+    font-size: 2.25rem;
+  }
+
+  .founderImageWrapper {
+    flex: 0 0 280px;
+    height: 280px;
+  }
+
+  .founderName h2 {
+    font-size: 1.6rem;
+  }
+
+  .detailsCard {
+    padding: 20px;
+  }
+
+  .ctaSection {
+    padding: 65px 20px;
+  }
+
+  .ctaTitle h2 {
+    font-size: 1.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroContent {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .scrollReveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .collageImageWrapper:hover .collageImage {
+    transform: none !important;
+  }
+}

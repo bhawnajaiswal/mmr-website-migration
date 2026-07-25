@@ -1,0 +1,2062 @@
+[
+  {
+    "id": "715c41a",
+    "elType": "section",
+    "settings": {
+      "custom_height": {
+        "unit": "px",
+        "size": ""
+      },
+      "background_background": "classic",
+      "background_color_b": "#ffffff",
+      "padding_tablet": {
+        "unit": "px",
+        "top": "0",
+        "right": "20",
+        "bottom": "0",
+        "left": "20",
+        "isLinked": false
+      },
+      "padding_mobile": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+      },
+      "custom_height_mobile": {
+        "unit": "px",
+        "size": 100
+      },
+      "margin": {
+        "unit": "%",
+        "top": "",
+        "right": 0,
+        "bottom": "",
+        "left": 0,
+        "isLinked": false
+      },
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+      },
+      "layout": "full_width",
+      "gap": "no",
+      "text_align": "center",
+      "background_color": "#d2bad6",
+      "html_tag": "header"
+    },
+    "elements": [
+      {
+        "id": "b110bb5",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "_inline_size": null,
+          "_inline_size_tablet": 80,
+          "_inline_size_mobile": 100
+        },
+        "elements": [
+          {
+            "id": "0f99bf9",
+            "elType": "section",
+            "settings": {
+              "hide_mobile": "hidden-phone",
+              "height_inner": "min-height",
+              "custom_height_inner": {
+                "unit": "px",
+                "size": 5
+              },
+              "gap": "no",
+              "margin": {
+                "unit": "px",
+                "top": "0",
+                "right": 0,
+                "bottom": "0",
+                "left": 0,
+                "isLinked": true
+              }
+            },
+            "elements": [
+              {
+                "id": "a8897a2",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 100,
+                  "_inline_size": null,
+                  "_inline_size_mobile": 33,
+                  "margin": {
+                    "unit": "px",
+                    "top": "",
+                    "right": "",
+                    "bottom": "",
+                    "left": "",
+                    "isLinked": false
+                  },
+                  "padding": {
+                    "unit": "px",
+                    "top": "",
+                    "right": "",
+                    "bottom": "",
+                    "left": "",
+                    "isLinked": false
+                  }
+                },
+                "elements": [
+                  {
+                    "id": "557779e",
+                    "elType": "widget",
+                    "settings": {
+                      "view": "inline",
+                      "icon_list": [
+                        {
+                          "text": "Plot No. C, 132-133, Sector-9, Kamal Vihar, Raipur, Chhattisgarh 492004",
+                          "icon": "fa fa-map-marker",
+                          "_id": "5866efa",
+                          "selected_icon": {
+                            "value": "fas fa-map-marker-alt",
+                            "library": "fa-solid"
+                          },
+                          "__fa4_migrated": {
+                            "selected_icon": true
+                          },
+                          "link": {
+                            "url": "https://maps.app.goo.gl/c7A441wjCC8WnCNAA",
+                            "is_external": "",
+                            "nofollow": "",
+                            "custom_attributes": ""
+                          }
+                        },
+                        {
+                          "text": "info@mmrhospitals.com",
+                          "icon": "fa fa-envelope",
+                          "_id": "72b777d",
+                          "selected_icon": {
+                            "value": "fas fa-envelope",
+                            "library": "fa-solid"
+                          },
+                          "__fa4_migrated": {
+                            "selected_icon": true
+                          }
+                        },
+                        {
+                          "text": "+91 9244122040 / 41 / 48",
+                          "icon": "fa fa-phone",
+                          "_id": "99aba51",
+                          "selected_icon": {
+                            "value": "fas fa-phone",
+                            "library": "fa-solid"
+                          },
+                          "__fa4_migrated": {
+                            "selected_icon": true
+                          }
+                        }
+                      ],
+                      "space_between": {
+                        "unit": "px",
+                        "size": 30
+                      },
+                      "icon_align": "center",
+                      "icon_color": "#4c5b6d",
+                      "icon_size_mobile": {
+                        "unit": "px",
+                        "size": 25
+                      },
+                      "text_color": "#192431",
+                      "text_indent": {
+                        "unit": "px",
+                        "size": 10
+                      },
+                      "icon_typography_typography": "custom",
+                      "icon_typography_font_family": "Montserrat",
+                      "icon_typography_font_size": {
+                        "unit": "em",
+                        "size": 0.8
+                      },
+                      "icon_typography_font_weight": "500",
+                      "icon_typography_line_height": {
+                        "unit": "em",
+                        "size": 2.5
+                      },
+                      "_element_width": "initial",
+                      "_element_custom_width": {
+                        "unit": "%",
+                        "size": 98.154
+                      },
+                      "_flex_size": "none"
+                    },
+                    "elements": [],
+                    "widgetType": "icon-list"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "f095c92",
+    "elType": "section",
+    "settings": {
+      "content_position": "middle",
+      "structure": "31",
+      "background_background": "classic",
+      "background_color": "#FDFDFD",
+      "border_border": "solid",
+      "border_width": {
+        "unit": "px",
+        "top": "3",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+      },
+      "border_color": "#F4F4F4",
+      "padding_tablet": {
+        "unit": "px",
+        "top": "10",
+        "right": "10",
+        "bottom": "10",
+        "left": "10",
+        "isLinked": true
+      },
+      "padding_mobile": {
+        "unit": "px",
+        "top": "20",
+        "right": "20",
+        "bottom": "20",
+        "left": "20",
+        "isLinked": true
+      },
+      "padding": {
+        "unit": "em",
+        "top": "",
+        "right": "",
+        "bottom": "",
+        "left": "",
+        "isLinked": false
+      },
+      "background_color_stop": {
+        "unit": "%",
+        "size": 92
+      },
+      "background_color_b": "rgba(47,187,197,0)",
+      "background_gradient_angle": {
+        "unit": "deg",
+        "size": 0
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": 0,
+        "bottom": "0",
+        "left": 0,
+        "isLinked": true
+      },
+      "layout": "full_width",
+      "gap": "no",
+      "height": "min-height",
+      "custom_height": {
+        "unit": "px",
+        "size": 0,
+        "sizes": []
+      },
+      "html_tag": "header"
+    },
+    "elements": [
+      {
+        "id": "fe04131",
+        "elType": "column",
+        "settings": {
+          "_column_size": 25,
+          "_inline_size": 10,
+          "_inline_size_mobile": 80,
+          "content_position_mobile": "center",
+          "align_mobile": "center"
+        },
+        "elements": [
+          {
+            "id": "11a0f83",
+            "elType": "widget",
+            "settings": {
+              "image": {
+                "id": 6051,
+                "url": "https://mmrhospitals.com/wp-content/uploads/2024/04/Untitled-design-43.png",
+                "alt": "",
+                "source": "library",
+                "size": ""
+              },
+              "align": "center",
+              "align_mobile": "left",
+              "_element_width_mobile": "initial",
+              "_element_custom_width_mobile": {
+                "unit": "px",
+                "size": 74.463
+              },
+              "_flex_size": "none",
+              "image_size": "thumbnail",
+              "link_to": "custom",
+              "link": {
+                "url": "https://mmrhospitals.com/",
+                "is_external": "",
+                "nofollow": "",
+                "custom_attributes": ""
+              }
+            },
+            "elements": [],
+            "widgetType": "image"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "6baaf10",
+        "elType": "column",
+        "settings": {
+          "_column_size": 25,
+          "_inline_size": 11,
+          "_inline_size_mobile": 80,
+          "content_position_mobile": "center",
+          "align_mobile": "center",
+          "text_align_mobile": "right"
+        },
+        "elements": [
+          {
+            "id": "0ee4a8e",
+            "elType": "widget",
+            "settings": {
+              "title": "MMR Hospital &amp; IVF Center",
+              "header_size": "h1",
+              "typography_typography": "custom",
+              "typography_font_weight": "600",
+              "align_mobile": "center",
+              "title_color": "#443474",
+              "typography_text_transform": "uppercase",
+              "typography_font_family": "Jost",
+              "typography_font_size": {
+                "unit": "rem",
+                "size": 1.2
+              },
+              "typography_line_height": {
+                "unit": "em",
+                "size": 1.2
+              },
+              "typography_letter_spacing": {
+                "unit": "px",
+                "size": 0.7,
+                "sizes": []
+              },
+              "align": "center",
+              "link": {
+                "url": "https://mmrhospitals.com/",
+                "is_external": "",
+                "nofollow": "",
+                "custom_attributes": ""
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "7aaade3",
+        "elType": "column",
+        "settings": {
+          "_column_size": 50,
+          "_inline_size": 79,
+          "_inline_size_mobile": 20,
+          "background_background": "classic"
+        },
+        "elements": [
+          {
+            "id": "ce07457",
+            "elType": "widget",
+            "settings": {
+              "pointer": "background",
+              "color_menu_item": "#585858",
+              "color_menu_item_hover_pointer_bg": "#2b89ff",
+              "pointer_color_menu_item_hover": "#f1f1f1",
+              "menu_typography_typography": "custom",
+              "menu_typography_font_size": {
+                "unit": "em",
+                "size": 0.8
+              },
+              "menu_typography_font_weight": "700",
+              "menu_typography_text_transform": "uppercase",
+              "padding_horizontal_menu_item": {
+                "unit": "px",
+                "size": 31
+              },
+              "padding_vertical_menu_item": {
+                "unit": "px",
+                "size": 18
+              },
+              "full_width": "stretch",
+              "dropdown_top_distance_tablet": {
+                "unit": "px",
+                "size": 13
+              },
+              "toggle_color": "#443474",
+              "menu": "demo-menu",
+              "menu_typography_font_family": "Montserrat",
+              "align_items": "right",
+              "_element_width": "initial",
+              "_element_custom_width": {
+                "unit": "%",
+                "size": 100.117
+              },
+              "_flex_size": "none"
+            },
+            "elements": [],
+            "widgetType": "nav-menu"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "460c2d75",
+    "elType": "section",
+    "settings": {
+      "height": "min-height",
+      "custom_height": {
+        "unit": "vh",
+        "size": 34
+      },
+      "background_background": "classic",
+      "background_image": {
+        "id": "7065",
+        "url": "https://mmrhospitals.com/wp-content/uploads/2024/08/jay-wennington-364037-unsplash.jpg"
+      },
+      "background_position": "center center",
+      "background_attachment": "fixed",
+      "background_repeat": "no-repeat",
+      "background_size": "cover",
+      "background_overlay_background": "classic",
+      "background_overlay_color": "#0f0000",
+      "shape_divider_bottom_height": {
+        "unit": "px",
+        "size": 30
+      },
+      "gap": "no",
+      "shape_divider_bottom_negative": "yes",
+      "padding": {
+        "unit": "px",
+        "top": "",
+        "right": "",
+        "bottom": "",
+        "left": "",
+        "isLinked": false
+      },
+      "content_width": {
+        "unit": "px",
+        "size": 1040
+      },
+      "shape_divider_bottom_flip": "yes",
+      "padding_mobile": {
+        "unit": "px",
+        "top": "60",
+        "right": "0",
+        "bottom": "60",
+        "left": "0",
+        "isLinked": false
+      },
+      "css_classes": "envato-background-fix",
+      "overlay_blend_mode": "multiply",
+      "layout": "full_width"
+    },
+    "elements": [
+      {
+        "id": "23ae59f8",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "_inline_size": null,
+          "space_between_widgets": 0,
+          "margin": {
+            "unit": "%",
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": "",
+            "isLinked": false
+          },
+          "padding": {
+            "unit": "em",
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": "",
+            "isLinked": true
+          },
+          "animation": "fadeIn",
+          "animation_delay": 100,
+          "animation_duration": "slow"
+        },
+        "elements": [
+          {
+            "id": "332b0d0",
+            "elType": "widget",
+            "settings": {
+              "title": "News And Blogs",
+              "title_color": "#ffffff",
+              "typography_typography": "custom",
+              "typography_font_family": "Nunito",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 48
+              },
+              "typography_font_weight": "700",
+              "typography_line_height": {
+                "unit": "em",
+                "size": 1
+              },
+              "typography_letter_spacing": {
+                "unit": "px",
+                "size": -0.5
+              },
+              "align": "center"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "7e044b04",
+            "elType": "widget",
+            "settings": {
+              "weight": {
+                "unit": "px",
+                "size": 4
+              },
+              "color": "#f08080",
+              "width": {
+                "unit": "px",
+                "size": 48
+              },
+              "gap": {
+                "unit": "px",
+                "size": 6
+              },
+              "_padding": {
+                "unit": "px",
+                "top": "",
+                "right": "",
+                "bottom": "",
+                "left": "",
+                "isLinked": false
+              },
+              "_border_radius": {
+                "unit": "%",
+                "top": "",
+                "right": "",
+                "bottom": "",
+                "left": "",
+                "isLinked": true
+              },
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "align": "center",
+              "_animation": "bounceIn",
+              "_animation_delay": 200,
+              "text": "Divider"
+            },
+            "elements": [],
+            "widgetType": "divider"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "64b7f810",
+    "elType": "section",
+    "settings": {
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+      },
+      "background_background": "classic",
+      "background_position": "center center",
+      "background_attachment": "fixed",
+      "background_repeat": "no-repeat",
+      "background_size": "cover",
+      "background_overlay_opacity": {
+        "unit": "px",
+        "size": 0.97
+      },
+      "shape_divider_top": "pyramids",
+      "shape_divider_bottom": "pyramids",
+      "shape_divider_bottom_negative": "yes",
+      "content_width": {
+        "unit": "px",
+        "size": 1040
+      },
+      "layout": "full_width"
+    },
+    "elements": [
+      {
+        "id": "110abc7",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "_inline_size": null
+        },
+        "elements": [
+          {
+            "id": "66eba6a",
+            "elType": "widget",
+            "settings": {
+              "classic_meta_separator": "///",
+              "classic_read_more_text": "Read More »",
+              "cards_meta_separator": "•",
+              "cards_read_more_text": "Read More »",
+              "full_content_meta_separator": "///",
+              "pagination_page_limit": "5",
+              "pagination_prev_label": "&laquo; Previous",
+              "pagination_next_label": "Next &raquo;",
+              "text": "Load More",
+              "load_more_no_posts_custom_message": "No more posts to show"
+            },
+            "elements": [],
+            "widgetType": "posts"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "6070715",
+    "elType": "section",
+    "settings": {
+      "content_width": {
+        "unit": "px",
+        "size": 1600
+      },
+      "background_background": "classic",
+      "background_color": "#ffffff",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+      },
+      "background_overlay_background": "classic",
+      "background_overlay_position": "top left",
+      "background_overlay_repeat": "no-repeat",
+      "background_overlay_opacity": {
+        "unit": "px",
+        "size": 1
+      },
+      "layout": "full_width",
+      "gap": "no"
+    },
+    "elements": [
+      {
+        "id": "cda5bf2",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "margin_tablet": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "padding_tablet": {
+            "unit": "em",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+          }
+        },
+        "elements": [
+          {
+            "id": "0e015f4",
+            "elType": "section",
+            "settings": {
+              "structure": "20",
+              "content_width": {
+                "unit": "px",
+                "size": 1200
+              },
+              "layout": "full_width"
+            },
+            "elements": [
+              {
+                "id": "036ff78",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": 55.167,
+                  "space_between_widgets": 0,
+                  "margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "15",
+                    "bottom": "0",
+                    "left": "15",
+                    "isLinked": false
+                  },
+                  "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "_inline_size_tablet": 50,
+                  "margin_tablet": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "15",
+                    "bottom": "40",
+                    "left": "15",
+                    "isLinked": false
+                  },
+                  "margin_mobile": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "15",
+                    "bottom": "30",
+                    "left": "15",
+                    "isLinked": false
+                  }
+                },
+                "elements": [
+                  {
+                    "id": "93f97d3",
+                    "elType": "widget",
+                    "settings": {
+                      "title": "Our Hospital",
+                      "title_color": "#262626",
+                      "typography_typography": "custom",
+                      "typography_font_family": "Nunito",
+                      "typography_font_weight": "400",
+                      "typography_font_style": "italic",
+                      "_margin": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "30",
+                        "left": "0",
+                        "isLinked": false
+                      },
+                      "_padding": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "isLinked": false
+                      },
+                      "align": "left"
+                    },
+                    "elements": [],
+                    "widgetType": "heading"
+                  },
+                  {
+                    "id": "f2f77cc",
+                    "elType": "widget",
+                    "settings": {
+                      "title": "We are available for 24/7 for your service.",
+                      "title_color": "#000000",
+                      "typography_typography": "custom",
+                      "typography_font_size": {
+                        "unit": "px",
+                        "size": 35
+                      },
+                      "typography_font_weight": "700",
+                      "typography_line_height": {
+                        "unit": "px",
+                        "size": 50
+                      },
+                      "_margin": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "40",
+                        "left": "0",
+                        "isLinked": false
+                      },
+                      "typography_text_transform": "capitalize",
+                      "typography_font_family": "Nunito"
+                    },
+                    "elements": [],
+                    "widgetType": "heading"
+                  },
+                  {
+                    "id": "e8eee31",
+                    "elType": "widget",
+                    "settings": {
+                      "editor": "<p>At MMR Hospital &amp; IVF Center, we understand that healthcare needs can arise at any time, which is why we are proud to offer round-the-clock services to our patients. Our dedicated team of medical professionals and support staff is available 24/7 to provide timely and compassionate care to those in need. Whether you require urgent medical attention, have questions about your treatment plan, or simply need reassurance, you can count on us to be there for you every step of the way. Your health and well-being are our top priorities, that's why we are the best IVF Center in Raipur, Chhattisgarh and we are committed to ensuring that you receive the highest quality care, day or night. </p>",
+                      "typography_typography": "custom",
+                      "typography_font_weight": "400",
+                      "typography_line_height": {
+                        "unit": "em",
+                        "size": 1.6
+                      },
+                      "_margin": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "30",
+                        "left": "0",
+                        "isLinked": false
+                      },
+                      "_padding": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "isLinked": false
+                      },
+                      "typography_font_family": "Nunito"
+                    },
+                    "elements": [],
+                    "widgetType": "text-editor"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "46e91ab",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": 44.833,
+                  "space_between_widgets": 0,
+                  "margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "15",
+                    "bottom": "0",
+                    "left": "15",
+                    "isLinked": false
+                  },
+                  "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "_inline_size_tablet": 50,
+                  "margin_tablet": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "15",
+                    "bottom": "0",
+                    "left": "15",
+                    "isLinked": false
+                  },
+                  "padding_tablet": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "margin_mobile": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "15",
+                    "bottom": "30",
+                    "left": "15",
+                    "isLinked": false
+                  }
+                },
+                "elements": [
+                  {
+                    "id": "54c639f",
+                    "elType": "widget",
+                    "settings": {
+                      "image": {
+                        "id": 6102,
+                        "url": "https://mmrhospitals.com/wp-content/uploads/2024/04/MMR-Hospital-IVF-Center-1024-x-1024-px-1.png",
+                        "alt": "",
+                        "source": "library",
+                        "size": ""
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "image"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "f87e39c",
+    "elType": "section",
+    "settings": {
+      "height": "min-height",
+      "custom_height": {
+        "unit": "px",
+        "size": ""
+      },
+      "custom_height_mobile": {
+        "unit": "vh",
+        "size": 100
+      },
+      "structure": "30",
+      "background_background": "classic",
+      "background_position": "center right",
+      "background_repeat": "no-repeat",
+      "background_size": "cover",
+      "padding": {
+        "unit": "px",
+        "top": "50",
+        "right": "0",
+        "bottom": "50",
+        "left": "0",
+        "isLinked": false
+      },
+      "padding_tablet": {
+        "unit": "px",
+        "top": "60",
+        "right": "30",
+        "bottom": "60",
+        "left": "30",
+        "isLinked": false
+      },
+      "padding_mobile": {
+        "unit": "px",
+        "top": "40",
+        "right": "50",
+        "bottom": "40",
+        "left": "50",
+        "isLinked": false
+      },
+      "gap": "no",
+      "background_image": {
+        "id": 5744,
+        "url": "https://mmrhospitals.com/wp-content/uploads/2024/03/robin-spielmann-591331-unsplash.jpg",
+        "alt": "best ivf center in Raipur",
+        "source": "library",
+        "size": ""
+      },
+      "background_overlay_background": "classic",
+      "background_overlay_color": "#41316F",
+      "background_overlay_opacity": {
+        "unit": "px",
+        "size": 0.94
+      },
+      "layout": "full_width",
+      "column_position": "top"
+    },
+    "elements": [
+      {
+        "id": "953e025",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": null,
+          "_inline_size_tablet": 100,
+          "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "margin_tablet": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "content_position": "top",
+          "padding": {
+            "unit": "em",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          }
+        },
+        "elements": [
+          {
+            "id": "20cec49",
+            "elType": "widget",
+            "settings": {
+              "title": "Contact Us",
+              "header_size": "h3",
+              "title_color": "#FCFCFC",
+              "typography_typography": "custom",
+              "typography_font_family": "Nunito",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 24
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 22
+              },
+              "_animation": "fadeIn",
+              "animation_duration": "slow",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "12",
+                "left": "0",
+                "isLinked": false
+              },
+              "align": "center",
+              "typography_font_weight": "700",
+              "_element_width": "initial",
+              "_element_width_mobile": "initial",
+              "_element_custom_width": {
+                "unit": "%",
+                "size": 100
+              },
+              "_element_custom_width_mobile": {
+                "unit": "px",
+                "size": 238.2
+              },
+              "_flex_size": "none"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "ed08b4b",
+            "elType": "widget",
+            "settings": {
+              "title": "",
+              "link": {
+                "url": "#",
+                "is_external": "",
+                "nofollow": ""
+              },
+              "header_size": "p",
+              "align": "center",
+              "title_color": "#F7F7F7",
+              "typography_typography": "custom",
+              "typography_font_family": "Nunito Sans",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 16
+              },
+              "typography_font_weight": "500"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "2cdc5dc",
+            "elType": "widget",
+            "settings": {
+              "title": "Plot No. C, 132-133, Sector-9, Kamal Vihar, <br>Raipur, Chhattisgarh 492004",
+              "link": {
+                "url": "#",
+                "is_external": "",
+                "nofollow": ""
+              },
+              "header_size": "p",
+              "align": "center",
+              "title_color": "#F7F7F7",
+              "typography_typography": "custom",
+              "typography_font_family": "Nunito Sans",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 16
+              },
+              "typography_font_weight": "500"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "5d2c853",
+            "elType": "widget",
+            "settings": {
+              "title": "",
+              "link": {
+                "url": "#",
+                "is_external": "",
+                "nofollow": ""
+              },
+              "header_size": "p",
+              "align": "center",
+              "title_color": "#F7F7F7",
+              "typography_typography": "custom",
+              "typography_font_family": "Nunito Sans",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 14
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "7a0f321",
+            "elType": "widget",
+            "settings": {
+              "title": "info@mmrhospitals.com",
+              "link": {
+                "url": "#",
+                "is_external": "",
+                "nofollow": ""
+              },
+              "header_size": "p",
+              "align": "center",
+              "title_color": "#F7F7F7",
+              "typography_typography": "custom",
+              "typography_font_family": "Nunito Sans",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 14
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "2914f41",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": null,
+          "_inline_size_tablet": 100,
+          "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "margin_tablet": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "content_position": "top",
+          "padding": {
+            "unit": "em",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+          }
+        },
+        "elements": [
+          {
+            "id": "0fab50b",
+            "elType": "widget",
+            "settings": {
+              "title": "Links",
+              "header_size": "h3",
+              "title_color": "#F9FBFFFA",
+              "typography_typography": "custom",
+              "typography_font_family": "Nunito",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 24
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 22
+              },
+              "_animation": "fadeIn",
+              "animation_duration": "slow",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+              },
+              "align": "center",
+              "align_mobile": "center",
+              "typography_font_weight": "700"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "32510c2",
+            "elType": "widget",
+            "settings": {
+              "icon_list": [
+                {
+                  "text": "Treatment & Services",
+                  "icon": "",
+                  "_id": "53837ae",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "https://mmrhospitals.com/treatment-services/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                },
+                {
+                  "text": "Our Expert Team",
+                  "icon": "",
+                  "_id": "74b793c",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  }
+                },
+                {
+                  "text": "Renal care",
+                  "icon": "",
+                  "_id": "7e4ba1b",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "https://mmrhospitals.com/renal-care-2/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                },
+                {
+                  "text": "About us",
+                  "icon": "",
+                  "_id": "5978369",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "https://mmrhospitals.com/about-us/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                },
+                {
+                  "text": "FAQs",
+                  "icon": "",
+                  "_id": "839fdee",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "https://mmrhospitals.com/faqs/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                },
+                {
+                  "_id": "5f6176b",
+                  "text": "Contact us",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  }
+                }
+              ],
+              "space_between": {
+                "unit": "px",
+                "size": 23
+              },
+              "icon_align": "left",
+              "icon_color": "#7c7c7c",
+              "icon_color_hover": "#102d5e",
+              "text_color_hover": "#D48CD6",
+              "icon_typography_typography": "custom",
+              "icon_typography_font_family": "Nunito Sans",
+              "icon_typography_font_size": {
+                "unit": "px",
+                "size": 14
+              },
+              "icon_typography_line_height": {
+                "unit": "em",
+                "size": 1.2
+              },
+              "text_color": "#ECECEC",
+              "view": "",
+              "text_indent": {
+                "unit": "px",
+                "size": 0,
+                "sizes": []
+              },
+              "_margin": {
+                "unit": "px",
+                "top": "10",
+                "right": "10",
+                "bottom": "10",
+                "left": "10",
+                "isLinked": true
+              },
+              "_padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "_element_width": "initial",
+              "_element_custom_width": {
+                "unit": "%",
+                "size": 51.032
+              },
+              "_flex_size": "none"
+            },
+            "elements": [],
+            "widgetType": "icon-list"
+          },
+          {
+            "id": "9c1cff4",
+            "elType": "widget",
+            "settings": {
+              "icon_list": [
+                {
+                  "text": "IVF",
+                  "icon": "",
+                  "_id": "53837ae",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "https://mmrhospitals.com/ivf/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                },
+                {
+                  "text": "IUI",
+                  "icon": "",
+                  "_id": "74b793c",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "https://mmrhospitals.com/iui/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                },
+                {
+                  "_id": "5f6176b",
+                  "text": "IVM",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "https://mmrhospitals.com/ivm/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                },
+                {
+                  "text": "ICSI",
+                  "icon": "",
+                  "_id": "7e4ba1b",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "https://mmrhospitals.com/icsi/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                },
+                {
+                  "text": "Infertility men & women",
+                  "icon": "",
+                  "_id": "5978369",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "https://mmrhospitals.com/infertility-men-women/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                },
+                {
+                  "text": "Male infertility",
+                  "icon": "",
+                  "_id": "839fdee",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "https://mmrhospitals.com/male-infertility/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                }
+              ],
+              "space_between": {
+                "unit": "px",
+                "size": 23
+              },
+              "icon_align": "center",
+              "icon_color": "#7c7c7c",
+              "icon_color_hover": "#102d5e",
+              "text_color_hover": "#D48CD6",
+              "icon_typography_typography": "custom",
+              "icon_typography_font_family": "Nunito Sans",
+              "icon_typography_font_size": {
+                "unit": "px",
+                "size": 14
+              },
+              "icon_typography_line_height": {
+                "unit": "em",
+                "size": 1.2
+              },
+              "text_color": "#ECECEC",
+              "view": "",
+              "text_indent": {
+                "unit": "px",
+                "size": 0,
+                "sizes": []
+              },
+              "_margin": {
+                "unit": "px",
+                "top": "10",
+                "right": "10",
+                "bottom": "10",
+                "left": "10",
+                "isLinked": true
+              },
+              "_padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "_element_width": "initial",
+              "_element_custom_width": {
+                "unit": "%",
+                "size": 45.099
+              },
+              "_flex_size": "none"
+            },
+            "elements": [],
+            "widgetType": "icon-list"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "6e20e78",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": null,
+          "_inline_size_tablet": 100,
+          "content_position": "top",
+          "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "margin_tablet": {
+            "unit": "px",
+            "top": "40",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+          }
+        },
+        "elements": [
+          {
+            "id": "d86f725",
+            "elType": "widget",
+            "settings": {
+              "title": "Follow Us",
+              "header_size": "h3",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Nunito",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 24
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 22
+              },
+              "_animation": "fadeIn",
+              "animation_duration": "slow",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "50",
+                "left": "0",
+                "isLinked": false
+              },
+              "align": "center",
+              "typography_font_weight": "700"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "7d4d019",
+            "elType": "widget",
+            "settings": {
+              "social_icon_list": [
+                {
+                  "social": "fa fa-facebook",
+                  "_id": "28ca676",
+                  "social_icon": {
+                    "value": "fab fa-facebook-f",
+                    "library": "fa-brands"
+                  },
+                  "__fa4_migrated": {
+                    "social_icon": true
+                  },
+                  "link": {
+                    "url": "https://www.facebook.com/profile.php?id=61553532623603&mibextid=ZbWKwL",
+                    "is_external": "true",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                },
+                {
+                  "social": "fa fa-twitter",
+                  "_id": "b9e8776",
+                  "social_icon": {
+                    "value": "fab fa-twitter",
+                    "library": "fa-brands"
+                  },
+                  "__fa4_migrated": {
+                    "social_icon": true
+                  },
+                  "link": {
+                    "url": "https://twitter.com/MMRHospital",
+                    "is_external": "true",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                },
+                {
+                  "social": "fa fa-pinterest",
+                  "_id": "729475a",
+                  "social_icon": {
+                    "value": "fab fa-pinterest",
+                    "library": "fa-brands"
+                  },
+                  "__fa4_migrated": {
+                    "social_icon": true
+                  },
+                  "link": {
+                    "url": "https://in.pinterest.com/mmrhospitalraipur/",
+                    "is_external": "true",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                },
+                {
+                  "social": "fa fa-instagram",
+                  "_id": "516a61c",
+                  "social_icon": {
+                    "value": "fab fa-instagram",
+                    "library": "fa-brands"
+                  },
+                  "__fa4_migrated": {
+                    "social_icon": true
+                  },
+                  "link": {
+                    "url": "https://www.instagram.com/mmrhospitalandivfcenter/",
+                    "is_external": "true",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                }
+              ],
+              "shape": "circle",
+              "icon_color": "custom",
+              "icon_primary_color": "#102d5e",
+              "icon_secondary_color": "#ffffff",
+              "icon_size": {
+                "unit": "px",
+                "size": 12
+              },
+              "icon_padding": {
+                "unit": "em",
+                "size": 0.7
+              },
+              "icon_spacing": {
+                "unit": "px",
+                "size": 10
+              },
+              "hover_primary_color": "rgba(16,45,94,0.6)",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "30",
+                "left": "0",
+                "isLinked": false
+              }
+            },
+            "elements": [],
+            "widgetType": "social-icons"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "9688a72",
+    "elType": "section",
+    "settings": {
+      "content_width": {
+        "unit": "px",
+        "size": 1040
+      },
+      "background_background": "classic",
+      "background_image": {
+        "id": "6327",
+        "url": "https://mmrhospitals.com/wp-content/uploads/2024/04/hector-martinez-110928-unsplash.jpg"
+      },
+      "background_position": "center center",
+      "background_attachment": "fixed",
+      "background_repeat": "no-repeat",
+      "background_size": "cover",
+      "background_overlay_background": "classic",
+      "background_overlay_opacity": {
+        "unit": "px",
+        "size": 0.97
+      },
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+      },
+      "custom_height": {
+        "unit": "vh",
+        "size": 75
+      },
+      "gap": "no",
+      "padding_mobile": {
+        "unit": "em",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "structure": "30",
+      "css_classes": "envato-kit-141-top-0",
+      "background_overlay_color": "#111416",
+      "reverse_order_mobile": "reverse-mobile",
+      "layout": "full_width",
+      "content_position": "middle"
+    },
+    "elements": [
+      {
+        "id": "c766d0a",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": null,
+          "space_between_widgets": 16,
+          "background_background": "classic",
+          "border_radius": {
+            "unit": "px",
+            "top": "4",
+            "right": "4",
+            "bottom": "4",
+            "left": "4",
+            "isLinked": true
+          },
+          "box_shadow_box_shadow_type": "yes",
+          "box_shadow_box_shadow": {
+            "horizontal": 0,
+            "vertical": 3,
+            "blur": 12,
+            "spread": 0,
+            "color": "rgba(0,0,0,0.03)"
+          },
+          "padding": {
+            "unit": "em",
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": "",
+            "isLinked": true
+          },
+          "animation_delay": 200,
+          "_inline_size_tablet": 40,
+          "padding_mobile": {
+            "unit": "em",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+          }
+        },
+        "elements": [
+          {
+            "id": "821749a",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>Copyright © 2024 Martuchhaya Hospital</p>",
+              "text_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Nunito",
+              "typography_font_size": {
+                "unit": "rem",
+                "size": 0.9
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+                "unit": "em",
+                "size": 1.617
+              },
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+              },
+              "_animation": "fadeIn",
+              "_animation_delay": 100,
+              "align_mobile": "center",
+              "column_gap": {
+                "unit": "px",
+                "size": 0,
+                "sizes": []
+              },
+              "align": "left"
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "697ebe5",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": null,
+          "space_between_widgets": 16,
+          "background_background": "classic",
+          "border_radius": {
+            "unit": "px",
+            "top": "4",
+            "right": "4",
+            "bottom": "4",
+            "left": "4",
+            "isLinked": true
+          },
+          "box_shadow_box_shadow_type": "yes",
+          "box_shadow_box_shadow": {
+            "horizontal": 0,
+            "vertical": 3,
+            "blur": 12,
+            "spread": 0,
+            "color": "rgba(0,0,0,0.03)"
+          },
+          "padding": {
+            "unit": "em",
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": "",
+            "isLinked": true
+          },
+          "animation_delay": 300,
+          "_inline_size_tablet": 20,
+          "padding_mobile": {
+            "unit": "em",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+          }
+        },
+        "elements": [
+          {
+            "id": "9f9952e",
+            "elType": "widget",
+            "settings": {
+              "social_icon_list": [
+                {
+                  "social": "fa fa-facebook",
+                  "_id": "4c97b71"
+                },
+                {
+                  "social": "fa fa-twitter",
+                  "_id": "c7401b7"
+                },
+                {
+                  "social": "fa fa-google-plus",
+                  "_id": "a12a17c"
+                },
+                {
+                  "social": "fa fa-linkedin",
+                  "link": {
+                    "url": "#",
+                    "is_external": "true",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "_id": "85c85eb"
+                }
+              ],
+              "icon_color": "custom",
+              "icon_primary_color": "rgba(255,255,255,0)",
+              "icon_secondary_color": "rgba(255,255,255,0.7)",
+              "icon_size": {
+                "unit": "px",
+                "size": 14
+              },
+              "icon_padding": {
+                "unit": "em",
+                "size": 0.5
+              },
+              "icon_spacing": {
+                "unit": "px",
+                "size": 8
+              },
+              "border_radius": {
+                "unit": "px",
+                "top": "24",
+                "right": "24",
+                "bottom": "24",
+                "left": "24",
+                "isLinked": true
+              },
+              "hover_primary_color": "rgba(255,255,255,0)",
+              "hover_secondary_color": "#ffffff",
+              "_animation": "fadeIn",
+              "_animation_delay": 200
+            },
+            "elements": [],
+            "widgetType": "social-icons"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "2854d1b",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": null,
+          "space_between_widgets": 16,
+          "background_background": "classic",
+          "border_radius": {
+            "unit": "px",
+            "top": "4",
+            "right": "4",
+            "bottom": "4",
+            "left": "4",
+            "isLinked": true
+          },
+          "box_shadow_box_shadow_type": "yes",
+          "box_shadow_box_shadow": {
+            "horizontal": 0,
+            "vertical": 3,
+            "blur": 12,
+            "spread": 0,
+            "color": "rgba(0,0,0,0.03)"
+          },
+          "padding": {
+            "unit": "em",
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": "",
+            "isLinked": true
+          },
+          "animation_delay": 400,
+          "_inline_size_tablet": 40,
+          "padding_mobile": {
+            "unit": "em",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+          }
+        },
+        "elements": [
+          {
+            "id": "8ffffa7",
+            "elType": "widget",
+            "settings": {
+              "icon_list": [
+                {
+                  "text": "Privacy Policy",
+                  "icon": "",
+                  "_id": "48ff73c",
+                  "link": {
+                    "url": "#",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                },
+                {
+                  "text": "Terms",
+                  "icon": "",
+                  "_id": "a26609a",
+                  "link": {
+                    "url": "#",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                },
+                {
+                  "text": "Careers",
+                  "icon": "",
+                  "_id": "050eab3",
+                  "link": {
+                    "url": "#",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  }
+                }
+              ],
+              "space_between": {
+                "unit": "px",
+                "size": 12
+              },
+              "icon_color": "#cc9955",
+              "icon_size": {
+                "unit": "px",
+                "size": 16
+              },
+              "text_color": "rgba(255,255,255,0.7)",
+              "text_indent": {
+                "unit": "px",
+                "size": 0
+              },
+              "icon_typography_typography": "custom",
+              "icon_typography_font_family": "Nunito",
+              "icon_typography_font_size": {
+                "unit": "rem",
+                "size": 0.9
+              },
+              "icon_typography_line_height": {
+                "unit": "em",
+                "size": 1.5
+              },
+              "view": "inline",
+              "icon_align": "right",
+              "_animation": "fadeIn",
+              "_animation_delay": 300,
+              "icon_align_mobile": "center",
+              "text_color_hover": "#ffffff"
+            },
+            "elements": [],
+            "widgetType": "icon-list"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]
