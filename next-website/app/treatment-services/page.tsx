@@ -1,6 +1,7 @@
 import ServicesHero from "@/components/sections/treatment-services/ServicesHero/ServicesHero";
 import TreatmentSection from "@/components/sections/treatment-services/TreatmentSection/TreatmentSection";
 import ServicesCTA from "@/components/sections/treatment-services/ServicesCTA/ServicesCTA";
+import styles from "@/app/TreatmentPage.module.css";
 
 interface TreatmentData {
   secId: string;
@@ -165,27 +166,38 @@ export default function TreatmentServicesPage() {
   ];
 
   return (
-    <>
-      {/* Load page-specific Elementor Stylesheet */}
-      <link
-        rel="stylesheet"
-        href="/wp-content/uploads/elementor/css/post-5948.css"
-      />
-
+    <div className={styles.container}>
       <main className="main-content">
-        <div data-elementor-type="wp-page" data-elementor-id="5948" className="elementor elementor-5948">
-          {/* Section 1: Hero Banner */}
-          <ServicesHero />
+        {/* Section 1: Hero Banner */}
+        <ServicesHero />
 
-          {/* Section 2: Alternating Treatment Rows */}
-          {treatments.map((treatment) => (
-            <TreatmentSection key={treatment.secId} {...treatment} />
-          ))}
+        {/* Section 2: Alternating Treatment Rows */}
+        {treatments.map((treatment) => (
+          <TreatmentSection key={treatment.secId} {...treatment} />
+        ))}
 
-          {/* Section 3: Safe & Modern CTA Banner */}
-          <ServicesCTA />
-        </div>
+        {/* Section 3: Safe & Modern CTA Banner */}
+        <ServicesCTA />
       </main>
-    </>
+
+      {/* Scoped CSS overlays for mobile grid stacking & hover animations */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        @media (max-width: 768px) {
+          .responsive-grid-split {
+            grid-template-columns: 1fr !important;
+            gap: 30px !important;
+          }
+          .grid-image-col {
+            order: 1 !important;
+          }
+          .grid-image-col img {
+            max-width: 100% !important;
+          }
+        }
+        .hover-scale-img:hover {
+          transform: scale(1.03) !important;
+        }
+      ` }} />
+    </div>
   );
 }

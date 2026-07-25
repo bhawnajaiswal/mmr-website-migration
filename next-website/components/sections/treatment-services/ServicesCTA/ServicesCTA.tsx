@@ -1,97 +1,82 @@
 "use client";
 
+import { useEffect, useRef, useState, ReactNode } from "react";
 import Link from "next/link";
+import styles from "@/app/TreatmentPage.module.css";
+
+// Helper component for Intersection Observer Scroll Reveal
+function ScrollRevealSection({ children, className = "", style }: { children: ReactNode; className?: string; style?: React.CSSProperties }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.15 }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      style={style}
+      className={`${className} ${styles.scrollReveal} ${isVisible ? styles.revealVisible : ""}`}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function ServicesCTA() {
   return (
     <section
-      className="elementor-section elementor-top-section elementor-element elementor-element-66eabe0a elementor-section-height-min-height envato-background-fix elementor-section-full_width elementor-section-height-default elementor-section-items-middle"
-      data-id="66eabe0a"
-      data-element_type="section"
-      data-settings='{"background_background":"classic","shape_divider_bottom":"tilt","shape_divider_top":"tilt"}'
+      className={styles.ctaSection}
+      style={{
+        backgroundImage: "url('/wp-content/uploads/2024/03/happy-young-sri-lankan-parents-with-baby-scaled.jpg')"
+      }}
     >
-      <div className="elementor-background-overlay" />
-      
+      <div className={styles.ctaOverlay} />
+
       {/* Top Tilt Divider */}
-      <div className="elementor-shape elementor-shape-top" data-negative="false">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path className="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
-        </svg>
-      </div>
-
-      {/* Bottom Tilt Divider */}
-      <div className="elementor-shape elementor-shape-bottom" data-negative="false">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path className="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
-        </svg>
-      </div>
-
-      <div className="elementor-container elementor-column-gap-no">
-        <div
-          className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-15cf44d"
-          data-id="15cf44d"
-          data-element_type="column"
+      <div className={`${styles.shapeDivider} ${styles.shapeDividerTop}`}>
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 1000 100" 
+          preserveAspectRatio="none" 
+          className={`${styles.shapeDividerSvg} ${styles.shapeDividerFillLight}`}
         >
-          <div className="elementor-widget-wrap elementor-element-populated">
-            
-            {/* Title */}
-            <div
-              className="elementor-element elementor-element-2877a30 elementor-widget elementor-widget-heading"
-              data-id="2877a30"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">
-                  Safe &amp; modern treatments guaranteed.
-                </h2>
-              </div>
-            </div>
-
-            {/* Subtitle */}
-            <div
-              className="elementor-element elementor-element-2977a30 elementor-widget elementor-widget-heading"
-              data-id="2977a30"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div className="elementor-widget-container">
-                <h3 className="elementor-heading-title elementor-size-default">
-                  Thank you for considering MMR Hospital &amp; IVF Center for your healthcare needs. We
-                  look forward to serving you and helping you achieve your health and family-building
-                  goals. If you have any questions or would like to schedule a consultation, please
-                  don&apos;t hesitate to contact us.
-                </h3>
-              </div>
-            </div>
-
-            {/* Button Link */}
-            <div
-              className="elementor-element elementor-element-be9a68e elementor-widget elementor-widget-button"
-              data-id="be9a68e"
-              data-element_type="widget"
-              data-widget_type="button.default"
-            >
-              <div className="elementor-widget-container">
-                <div className="elementor-button-wrapper">
-                  <Link
-                    className="elementor-button elementor-button-link elementor-size-md elementor-animation-shrink"
-                    href="/consultation"
-                  >
-                    <span className="elementor-button-content-wrapper">
-                      <span className="elementor-button-icon">
-                        <i aria-hidden="true" className="fas fa-envelope-open" />
-                      </span>
-                      <span className="elementor-button-text">Get consultaion</span>
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
+          <path d="M0,6V0h1000v100L0,6z" />
+        </svg>
       </div>
+
+      <ScrollRevealSection className={styles.ctaContainer}>
+        <div className={styles.ctaTitle}>
+          <h2>Safe &amp; modern treatments guaranteed.</h2>
+        </div>
+        <p className={styles.ctaDesc}>
+          Thank you for considering MMR Hospital &amp; IVF Center for your healthcare needs. We
+          look forward to serving you and helping you achieve your health and family-building
+          goals. If you have any questions or would like to schedule a consultation, please
+          don&apos;t hesitate to contact us.
+        </p>
+        <Link className={styles.ctaButton} href="/consultation">
+          <i aria-hidden="true" className="fas fa-envelope-open" style={{ marginRight: "10px" }} />
+          Get consultation
+        </Link>
+      </ScrollRevealSection>
     </section>
   );
 }
