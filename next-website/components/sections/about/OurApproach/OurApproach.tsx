@@ -1,70 +1,98 @@
 "use client";
 
+import { useEffect, useRef, useState, ReactNode } from "react";
+import styles from "@/app/TreatmentPage.module.css";
+
+// Helper component for Intersection Observer Scroll Reveal
+function ScrollRevealSection({ children, className = "", style }: { children: ReactNode; className?: string; style?: React.CSSProperties }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.15 }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      style={style}
+      className={`${className} ${styles.scrollReveal} ${isVisible ? styles.revealVisible : ""}`}
+    >
+      {children}
+    </div>
+  );
+}
+
 export default function OurApproach() {
   return (
-    <section
-      className="elementor-section elementor-top-section elementor-element elementor-element-919b759 envato-background-fix elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-      data-id="919b759"
-      data-element_type="section"
-      data-settings='{"background_background":"classic","shape_divider_top":"tilt","shape_divider_bottom":"tilt"}'
+    <ScrollRevealSection
+      className={styles.introSection}
+      style={{
+        position: "relative",
+        backgroundColor: "var(--color-white)",
+        padding: "100px 20px",
+        textAlign: "center"
+      }}
     >
-      <div className="elementor-background-overlay" />
-      
       {/* Top Tilt Divider */}
-      <div className="elementor-shape elementor-shape-top" data-negative="false">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path className="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
+      <div className={`${styles.shapeDivider} ${styles.shapeDividerTop}`}>
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 1000 100" 
+          preserveAspectRatio="none" 
+          className={`${styles.shapeDividerSvg}`}
+          style={{ fill: "var(--color-white)" }}
+        >
+          <path d="M0,6V0h1000v100L0,6z" />
         </svg>
       </div>
 
       {/* Bottom Tilt Divider */}
-      <div className="elementor-shape elementor-shape-bottom" data-negative="false">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path className="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
+      <div className={`${styles.shapeDivider} ${styles.shapeDividerBottom}`}>
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 1000 100" 
+          preserveAspectRatio="none" 
+          className={`${styles.shapeDividerSvg}`}
+          style={{ fill: "var(--color-white)" }}
+        >
+          <path d="M0,6V0h1000v100L0,6z" />
         </svg>
       </div>
 
-      <div className="elementor-container elementor-column-gap-no">
-        <div
-          className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2977a30"
-          data-id="2977a30"
-          data-element_type="column"
-        >
-          <div className="elementor-widget-wrap elementor-element-populated">
-            
-            {/* Title */}
-            <div
-              className="elementor-element elementor-element-17d5275 elementor-widget elementor-widget-heading"
-              data-id="17d5275"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">Our Approach</h2>
-              </div>
-            </div>
-
-            {/* Description */}
-            <div
-              className="elementor-element elementor-element-5db0b4c elementor-widget elementor-widget-text-editor"
-              data-id="5db0b4c"
-              data-element_type="widget"
-              data-widget_type="text-editor.default"
-            >
-              <div className="elementor-widget-container">
-                <p>
-                  At MMR Hospital &amp; IVF Center, we believe in a multidisciplinary approach to
-                  healthcare, where collaboration and communication between different specialties lead
-                  to optimal patient care. Our team of skilled doctors, nurses, embryologists, and
-                  support staff work together to deliver comprehensive, integrated services tailored
-                  to each patient&#8217;s unique needs.
-                </p>
-              </div>
-            </div>
-
+      <div className={styles.introContainer} style={{ maxWidth: "800px", margin: "0 auto" }}>
+        <div className={styles.introContent} style={{ alignItems: "center" }}>
+          <div className={styles.introTitle}>
+            <h2 style={{ fontSize: "2.15rem", fontWeight: 800, color: "var(--color-secondary)", marginTop: "0" }}>
+              Our Approach
+            </h2>
           </div>
+          
+          <p className={styles.introText1} style={{ fontSize: "1.05rem", fontWeight: "400", lineHeight: "1.65", color: "var(--color-text-dark)", margin: "0" }}>
+            At MMR Hospital &amp; IVF Center, we believe in a multidisciplinary approach to
+            healthcare, where collaboration and communication between different specialties lead
+            to optimal patient care. Our team of skilled doctors, nurses, embryologists, and
+            support staff work together to deliver comprehensive, integrated services tailored
+            to each patient&apos;s unique needs.
+          </p>
         </div>
       </div>
-    </section>
+    </ScrollRevealSection>
   );
 }

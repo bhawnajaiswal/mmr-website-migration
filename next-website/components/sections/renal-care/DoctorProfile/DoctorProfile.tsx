@@ -1,140 +1,157 @@
 "use client";
 
+import { useEffect, useRef, useState, ReactNode } from "react";
 import Link from "next/link";
+import styles from "@/app/TreatmentPage.module.css";
+
+// Helper component for Intersection Observer Scroll Reveal
+function ScrollRevealSection({ children, className = "", style }: { children: ReactNode; className?: string; style?: React.CSSProperties }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.15 }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      style={style}
+      className={`${className} ${styles.scrollReveal} ${isVisible ? styles.revealVisible : ""}`}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function DoctorProfile() {
   return (
-    <section
-      className="elementor-section elementor-top-section elementor-element elementor-element-4a5fbb72 elementor-section-content-middle envato-background-fix elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-      data-id="4a5fbb72"
-      data-element_type="section"
-      data-settings='{"background_background":"classic","shape_divider_bottom":"tilt","shape_divider_top":"tilt"}'
+    <ScrollRevealSection 
+      className={styles.introSection}
+      style={{
+        position: "relative",
+        backgroundColor: "var(--color-background-light)",
+        padding: "100px 20px"
+      }}
     >
-      <div className="elementor-background-overlay" />
-      
       {/* Top Tilt Divider */}
-      <div className="elementor-shape elementor-shape-top" data-negative="false">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path className="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
+      <div className={`${styles.shapeDivider} ${styles.shapeDividerTop}`}>
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 1000 100" 
+          preserveAspectRatio="none" 
+          className={`${styles.shapeDividerSvg}`}
+          style={{ fill: "var(--color-white)" }}
+        >
+          <path d="M0,6V0h1000v100L0,6z" />
         </svg>
       </div>
 
       {/* Bottom Tilt Divider */}
-      <div className="elementor-shape elementor-shape-bottom" data-negative="false">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path className="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
+      <div className={`${styles.shapeDivider} ${styles.shapeDividerBottom}`}>
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 1000 100" 
+          preserveAspectRatio="none" 
+          className={`${styles.shapeDividerSvg}`}
+          style={{ fill: "var(--color-white)" }}
+        >
+          <path d="M0,6V0h1000v100L0,6z" />
         </svg>
       </div>
 
-      <div className="elementor-container elementor-column-gap-wider">
-        
-        {/* Column 1: Image */}
-        <div
-          className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-373b4fe"
-          data-id="373b4fe"
-          data-element_type="column"
+      <div className={styles.introContainer}>
+        <div 
+          style={{ 
+            display: "grid", 
+            gridTemplateColumns: "1fr 1fr", 
+            gap: "50px", 
+            alignItems: "center" 
+          }}
+          className="responsive-grid-split"
         >
-          <div className="elementor-widget-wrap elementor-element-populated">
-            <div
-              className="elementor-element elementor-element-8c874c5 elementor-widget elementor-widget-image"
-              data-id="8c874c5"
-              data-element_type="widget"
-              data-widget_type="image.default"
-            >
-              <div className="elementor-widget-container">
-                <img
-                  decoding="async"
-                  src="/wp-content/uploads/2024/04/Urology-3-768x768.png"
-                  className="attachment-medium_large size-medium_large wp-image-6316"
-                  alt="best ivf center in Raipur"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </div>
-            </div>
+          {/* Column 1: Image */}
+          <div 
+            style={{ 
+              position: "relative", 
+              overflow: "hidden", 
+              borderRadius: "16px", 
+              boxShadow: "var(--shadow-lg)",
+              border: "1px solid rgba(0, 0, 0, 0.04)"
+            }}
+            className="grid-image-col"
+          >
+            <img
+              src="/wp-content/uploads/2024/04/Urology-3-768x768.png"
+              alt="best ivf center in Raipur"
+              style={{ width: "100%", height: "auto", display: "block", transition: "transform 0.4s ease" }}
+              className="hover-scale-img"
+            />
           </div>
-        </div>
 
-        {/* Column 2: Bio details */}
-        <div
-          className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-19e2fdd"
-          data-id="19e2fdd"
-          data-element_type="column"
-        >
-          <div className="elementor-widget-wrap elementor-element-populated">
-            
-            {/* Sub-heading */}
-            <div
-              className="elementor-element elementor-element-619ee691 elementor-widget elementor-widget-heading"
-              data-id="619ee691"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">
-                  Meet Our Renal Expert:
-                </h2>
-              </div>
-            </div>
-
-            {/* Doctor Name Heading */}
-            <div
-              className="elementor-element elementor-element-3e4def2f elementor-widget elementor-widget-heading"
-              data-id="3e4def2f"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">
+          {/* Column 2: Bio details */}
+          <div className={styles.introContent}>
+            <div>
+              <span 
+                style={{ 
+                  textTransform: "uppercase", 
+                  letterSpacing: "0.1em", 
+                  fontSize: "0.85rem", 
+                  fontWeight: 700, 
+                  color: "var(--color-accent)",
+                  display: "block",
+                  marginBottom: "8px"
+                }}
+              >
+                Meet Our Renal Expert:
+              </span>
+              <div className={styles.introTitle}>
+                <h2 style={{ fontSize: "2.15rem", fontWeight: 800, color: "var(--color-secondary)", marginTop: "0" }}>
                   Dr. Prawash Chowdhary
                 </h2>
               </div>
             </div>
 
-            {/* Description Text */}
-            <div
-              className="elementor-element elementor-element-da3c85d elementor-widget elementor-widget-text-editor"
-              data-id="da3c85d"
-              data-element_type="widget"
-              data-widget_type="text-editor.default"
-            >
-              <div className="elementor-widget-container">
-                <p>
-                  Dr. Prawash Chowdhary is a distinguished nephrologist and urologist renowned for
-                  his expertise and dedication to the field of renal science. With years of experience
-                  and a commitment to excellence, Dr. Chowdhary leads our team in delivering exceptional
-                  care to patients with kidney diseases and urological disorders.
-                </p>
-              </div>
-            </div>
+            <p className={styles.introText1} style={{ fontSize: "1.05rem", fontWeight: "400", lineHeight: "1.6", color: "var(--color-text-dark)" }}>
+              Dr. Prawash Chowdhary is a distinguished nephrologist and urologist renowned for
+              his expertise and dedication to the field of renal science. With years of experience
+              and a commitment to excellence, Dr. Chowdhary leads our team in delivering exceptional
+              care to patients with kidney diseases and urological disorders.
+            </p>
 
-            {/* Read More Button */}
-            <div
-              className="elementor-element elementor-element-632fe206 elementor-widget elementor-widget-button"
-              data-id="632fe206"
-              data-element_type="widget"
-              data-widget_type="button.default"
+            <Link
+              className={styles.introButton}
+              href="/our-expert-team"
+              style={{
+                marginTop: "10px",
+                borderColor: "var(--color-accent)",
+                color: "var(--color-primary)",
+                alignSelf: "flex-start",
+                gap: "8px"
+              }}
             >
-              <div className="elementor-widget-container">
-                <div className="elementor-button-wrapper">
-                  <Link
-                    className="elementor-button elementor-button-link elementor-size-sm"
-                    href="/our-expert-team"
-                  >
-                    <span className="elementor-button-content-wrapper">
-                      <span className="elementor-button-icon">
-                        <i aria-hidden="true" className="fas fa-play-circle" />
-                      </span>
-                      <span className="elementor-button-text">Read more</span>
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
+              <i aria-hidden="true" className="fas fa-play-circle" />
+              Read more
+            </Link>
           </div>
         </div>
-
       </div>
-    </section>
+    </ScrollRevealSection>
   );
 }

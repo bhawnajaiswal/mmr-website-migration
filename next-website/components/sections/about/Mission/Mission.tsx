@@ -1,94 +1,114 @@
 "use client";
 
+import { useEffect, useRef, useState, ReactNode } from "react";
 import Link from "next/link";
+import styles from "@/app/TreatmentPage.module.css";
+
+// Helper component for Intersection Observer Scroll Reveal
+function ScrollRevealSection({ children, className = "", style }: { children: ReactNode; className?: string; style?: React.CSSProperties }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.15 }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      style={style}
+      className={`${className} ${styles.scrollReveal} ${isVisible ? styles.revealVisible : ""}`}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function Mission() {
   return (
-    <section
-      className="elementor-section elementor-top-section elementor-element elementor-element-e8eed5 envato-background-fix elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-      data-id="e8eed5"
-      data-element_type="section"
-      data-settings='{"background_background":"classic","shape_divider_top":"tilt","shape_divider_bottom":"tilt"}'
+    <ScrollRevealSection
+      className={styles.introSection}
+      style={{
+        position: "relative",
+        backgroundColor: "var(--color-background-light)",
+        padding: "100px 20px",
+        textAlign: "center"
+      }}
     >
-      <div className="elementor-background-overlay" />
-      
       {/* Top Tilt Divider */}
-      <div className="elementor-shape elementor-shape-top" data-negative="false">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path className="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
+      <div className={`${styles.shapeDivider} ${styles.shapeDividerTop}`}>
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 1000 100" 
+          preserveAspectRatio="none" 
+          className={`${styles.shapeDividerSvg}`}
+          style={{ fill: "var(--color-white)" }}
+        >
+          <path d="M0,6V0h1000v100L0,6z" />
         </svg>
       </div>
 
       {/* Bottom Tilt Divider */}
-      <div className="elementor-shape elementor-shape-bottom" data-negative="false">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path className="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
+      <div className={`${styles.shapeDivider} ${styles.shapeDividerBottom}`}>
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 1000 100" 
+          preserveAspectRatio="none" 
+          className={`${styles.shapeDividerSvg}`}
+          style={{ fill: "var(--color-white)" }}
+        >
+          <path d="M0,6V0h1000v100L0,6z" />
         </svg>
       </div>
 
-      <div className="elementor-container elementor-column-gap-wider">
-        <div
-          className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-170fb1ab"
-          data-id="170fb1ab"
-          data-element_type="column"
-        >
-          <div className="elementor-widget-wrap elementor-element-populated">
-            
-            {/* Title */}
-            <div
-              className="elementor-element elementor-element-36f41906 elementor-widget elementor-widget-heading"
-              data-id="36f41906"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">Our Mission</h2>
-              </div>
-            </div>
-
-            {/* Description Text */}
-            <div
-              className="elementor-element elementor-element-54a88976 elementor-widget elementor-widget-text-editor"
-              data-id="54a88976"
-              data-element_type="widget"
-              data-widget_type="text-editor.default"
-            >
-              <div className="elementor-widget-container">
-                <p>
-                  At MMR Hospital &amp; IVF Center, our mission is to empower individuals and
-                  couples to overcome fertility challenges and achieve their dream of parenthood. We
-                  are committed to delivering the highest standard of care with integrity, empathy,
-                  and respect for every patient we serve. Additionally, we strive to improve the
-                  quality of life for patients with renal conditions by offering comprehensive renal
-                  care services tailored to their individual needs.
-                </p>
-              </div>
-            </div>
-
-            {/* Link Button */}
-            <div
-              className="elementor-element elementor-element-16218ea9 elementor-widget elementor-widget-button"
-              data-id="16218ea9"
-              data-element_type="widget"
-              data-widget_type="button.default"
-            >
-              <div className="elementor-widget-container">
-                <div className="elementor-button-wrapper">
-                  <Link
-                    className="elementor-button elementor-button-link elementor-size-sm"
-                    href="/facilities"
-                  >
-                    <span className="elementor-button-content-wrapper">
-                      <span className="elementor-button-text">See Gallery &raquo;</span>
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
+      <div className={styles.introContainer} style={{ maxWidth: "800px", margin: "0 auto" }}>
+        <div className={styles.introContent} style={{ alignItems: "center" }}>
+          <div className={styles.introTitle}>
+            <h2 style={{ fontSize: "2.15rem", fontWeight: 800, color: "var(--color-secondary)", marginTop: "0" }}>
+              Our Mission
+            </h2>
           </div>
+          
+          <p className={styles.introText1} style={{ fontSize: "1.05rem", fontWeight: "400", lineHeight: "1.65", color: "var(--color-text-dark)" }}>
+            At MMR Hospital &amp; IVF Center, our mission is to empower individuals and
+            couples to overcome fertility challenges and achieve their dream of parenthood. We
+            are committed to delivering the highest standard of care with integrity, empathy,
+            and respect for every patient we serve. Additionally, we strive to improve the
+            quality of life for patients with renal conditions by offering comprehensive renal
+            care services tailored to their individual needs.
+          </p>
+
+          <Link
+            className={styles.introButton}
+            href="/facilities"
+            style={{
+              marginTop: "15px",
+              borderColor: "var(--color-accent)",
+              color: "var(--color-primary)",
+              alignSelf: "center",
+              gap: "8px"
+            }}
+          >
+            See Gallery &raquo;
+          </Link>
         </div>
       </div>
-    </section>
+    </ScrollRevealSection>
   );
 }
