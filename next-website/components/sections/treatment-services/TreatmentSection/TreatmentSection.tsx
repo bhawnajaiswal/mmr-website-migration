@@ -111,11 +111,31 @@ export default function TreatmentSection({
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-              {/* {iconSrc && (
-                <div style={{ width: "48px", height: "48px", flexShrink: 0, borderRadius: "50%", background: "rgba(92, 53, 154, 0.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <img src={iconSrc} alt="" style={{ width: "24px", height: "24px", objectFit: "contain" }} />
-                </div>
-              )} */}
+              {(() => {
+                const match = iconSrc ? iconSrc.match(/\/([1-4])\.png$/) : null;
+                const stepNum = match ? match[1] : null;
+                if (stepNum) {
+                  return (
+                    <div style={{
+                      width: "44px",
+                      height: "44px",
+                      flexShrink: 0,
+                      borderRadius: "50%",
+                      background: "linear-gradient(135deg, var(--color-primary), var(--color-secondary))",
+                      color: "var(--color-white)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontWeight: 700,
+                      fontSize: "1.1rem",
+                      boxShadow: "0 2px 8px rgba(92, 53, 154, 0.25)"
+                    }}>
+                      {stepNum}
+                    </div>
+                  );
+                }
+                return null;
+              })()}
               <div className={styles.introTitle}>
                 <h2 style={{ fontSize: "2rem", fontWeight: 800, color: "var(--color-primary)" }}>{title}</h2>
               </div>
