@@ -13,22 +13,12 @@ export const metadata: Metadata = {
 
 export default function ConsultationPage() {
   return (
-    <>
-      {/* Load page-specific Elementor Stylesheet */}
-      <link
-        rel="stylesheet"
-        href="/wp-content/uploads/elementor/css/post-1801.css"
-      />
+    <main className="main-content">
+      {/* Section 1: Hero Banner */}
+      <GynConsultationHero />
 
-      <main className="main-content">
-        <div data-elementor-type="wp-page" data-elementor-id="1801" className="elementor elementor-1801">
-          {/* Section 1: Hero Banner */}
-          <GynConsultationHero />
-
-          {/* Section 2: Content & Appointment Form */}
-          <GynConsultationForm />
-        </div>
-      </main>
-    </>
+      {/* Section 2: Content & Appointment Form */}
+      <GynConsultationForm />
+    </main>
   );
 }

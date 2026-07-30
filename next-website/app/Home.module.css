@@ -465,15 +465,54 @@
 /* Mobile Devices (768px & below) */
 @media (max-width: 768px) {
   .heroSection {
-    height: 380px;
+    height: 65vh;
+    min-height: 400px;
+    max-height: 480px;
   }
   
+  .slideInner {
+    justify-content: center !important;
+    padding: 20px !important;
+  }
+
+  .slideContent {
+    max-width: 80% !important;
+    gap: 8px !important;
+  }
+
   .slideHeading {
-    font-size: 2.25rem;
+    font-size: 1.7rem !important;
+    line-height: 1.25 !important;
+    margin: 0 0 8px 0 !important;
   }
   
   .slideDescription {
-    font-size: 1rem;
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+    margin: 0 0 8px 0 !important;
+  }
+
+  .slideButton {
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    align-self: center !important;
+  }
+
+  .navButton {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .navButton i {
+    font-size: 18px !important;
+  }
+
+  .navPrev {
+    left: 8px !important;
+  }
+
+  .navNext {
+    right: 8px !important;
   }
   
   .introSection {
@@ -522,16 +561,21 @@
 /* Small Mobile Devices (~375px) */
 @media (max-width: 375px) {
   .heroSection {
-    height: 340px;
+    height: 60vh;
+    min-height: 380px;
   }
 
   .slideHeading {
-    font-size: 1.85rem;
+    font-size: 1.45rem !important;
+  }
+
+  .slideDescription {
+    font-size: 0.85rem !important;
   }
   
   .slideButton {
-    padding: 12px 28px;
-    font-size: 0.9rem;
+    padding: 8px 16px !important;
+    font-size: 13px !important;
   }
 
   .introTitle h2 {
@@ -892,10 +936,10 @@
 
 .docCardContent {
   flex: 1;
-  padding: 30px;
+  padding: var(--card-padding-lg);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
@@ -929,6 +973,7 @@
 .docCardSocial {
   display: flex;
   gap: 10px;
+  margin-top: auto;
 }
 
 .docCardSocial a {

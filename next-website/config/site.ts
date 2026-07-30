@@ -4,7 +4,7 @@ export const SITE = {
   description: "Best IVF Center in Raipur, Chhattisgarh. We provide best infertility & IVF treatment.",
   logo: "/wp-content/uploads/2024/04/Untitled-design-43.png",
   logoEnq: "/wp-content/uploads/2023/10/enq-round-1.png",
-  logoWM: "/wp-content/uploads/2023/10/icon-WM.png",
+  logoWM: "/favicon.ico",
   ctaButtonImg: "/wp-content/uploads/2023/10/button-book-consultaton.png",
   address: "Plot No. C, 132-133, Sector-9, Kamal Vihar, Raipur, Chhattisgarh 492004",
 

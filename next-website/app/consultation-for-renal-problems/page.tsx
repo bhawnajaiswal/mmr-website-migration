@@ -88,17 +88,9 @@ export default function RenalConsultationPage() {
   };
 
   return (
-    <>
-      {/* Load page-specific Elementor Stylesheet */}
-      <link
-        rel="stylesheet"
-        href="/wp-content/uploads/elementor/css/post-3731.css"
-      />
-
-      <main className="main-content">
-        <div data-elementor-type="wp-page" data-elementor-id="3731" className="elementor elementor-3731">
-          
-          {/* Section 1: Hero Banner */}
+    <main className="main-content">
+      
+      {/* Section 1: Hero Banner */}
           <section className={heroStyles.heroSection}>
             <div className={heroStyles.heroContainer}>
               <div className={heroStyles.heroRow}>
@@ -129,32 +121,13 @@ export default function RenalConsultationPage() {
           </section>
 
           {/* Section 2: Banner CTA (Schedule button) */}
-          <div
-            className="elementor-element elementor-element-018a738 e-con-boxed e-con"
-            data-id="018a738"
-            data-element_type="container"
-          >
-            <div className="e-con-inner">
-              <div
-                className="elementor-element elementor-element-7f7bdf1 elementor-align-center elementor-widget elementor-widget-button"
-                data-id="7f7bdf1"
-                data-element_type="widget"
-                data-widget_type="button.default"
-              >
-                <div className="elementor-widget-container">
-                  <div className="elementor-button-wrapper">
-                    <a
-                      href="#Appointment"
-                      className="elementor-button elementor-button-link elementor-size-md"
-                    >
-                      <span className="elementor-button-content-wrapper">
-                        <span className="elementor-button-text">Schedule an Appointment</span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className={formStyles.ctaContainer}>
+            <a
+              href="#Appointment"
+              className={formStyles.ctaScheduleButton}
+            >
+              Schedule an Appointment
+            </a>
           </div>
 
           {/* Section 3: Consultation Content & Form */}
@@ -376,9 +349,6 @@ export default function RenalConsultationPage() {
               </div>
             </div>
           </section>
-
-        </div>
       </main>
-    </>
-  );
-}
+    );
+  }

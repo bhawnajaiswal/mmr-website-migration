@@ -39,7 +39,7 @@ const ROW_2_CARDS = [
   {
     columnId: "5078c741",
     widgetId: "1c09e062",
-    iconClass: "icon icon-laptop-phone",
+    iconClass: "fas fa-microchip",
     title: "Technology",
     description: "Utilizing the latest technology which can greatly enhance patient care, streamline operations, improve efficiency, and ensure better outcomes."
   },
