@@ -260,17 +260,14 @@
 }
 
 .processCard {
+  composes: card-foundation-vertical from global;
   background-color: var(--color-white);
   padding: var(--card-padding-md);
   border-radius: var(--card-radius-lg);
   border: 1px solid rgba(0, 0, 0, 0.04);
   box-shadow: var(--shadow-sm);
   transition: var(--transition-smooth);
-  display: flex;
-  flex-direction: column;
   gap: var(--space-3);
-  height: 100%;
-  box-sizing: border-box;
 }
 
 .processCard:hover {
@@ -352,18 +349,15 @@
 }
 
 .serviceCard {
+  composes: card-foundation-vertical from global;
   background-color: var(--color-white);
   padding: var(--card-padding-lg);
   border-radius: var(--card-radius-lg);
   border: 1px solid rgba(0, 0, 0, 0.04);
   box-shadow: var(--shadow-sm);
   transition: var(--transition-smooth);
-  display: flex;
-  flex-direction: column;
   gap: var(--space-4);
   align-items: flex-start;
-  height: 100%;
-  box-sizing: border-box;
 }
 
 .serviceCardLight {
@@ -503,14 +497,13 @@
 }
 
 .whyCard {
+  composes: card-foundation-vertical from global;
   background-color: var(--color-white);
   padding: 28px 22px;
   border-radius: 12px;
   border: 1px solid rgba(92, 53, 154, 0.08);
   border-top: 4px solid var(--color-primary);
   transition: var(--transition-smooth);
-  display: flex;
-  flex-direction: column;
   gap: 15px;
 }
 
@@ -591,14 +584,13 @@
 }
 
 .facilityCard {
+  composes: card-foundation-vertical from global;
   background-color: var(--color-white);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(0, 0, 0, 0.04);
   transition: var(--transition-smooth);
-  display: flex;
-  flex-direction: column;
 }
 
 .facilityCard:hover {
@@ -625,9 +617,8 @@
 }
 
 .facilityCardContent {
+  composes: card-body-foundation from global;
   padding: 24px 20px;
-  display: flex;
-  flex-direction: column;
   gap: 10px;
 }
 

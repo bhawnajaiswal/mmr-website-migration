@@ -844,3 +844,22 @@
     width: 100% !important;
   }
 }
+
+/* ==========================================================================
+   Informational Card Foundation Layout Alignments
+   ========================================================================== */
+
+/* Enforce equal-height layout behaviors on all processCards and serviceCards */
+[class*="processCard"],
+[class*="serviceCard"] {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure the grid cells stretch symmetrically to fill heights */
+[class*="processGrid"],
+[class*="servicesGrid"] {
+  align-items: stretch !important;
+}
