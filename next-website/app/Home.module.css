@@ -936,10 +936,10 @@
 
 .docCardContent {
   flex: 1;
-  padding: 30px;
+  padding: var(--card-padding-lg);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
@@ -973,6 +973,7 @@
 .docCardSocial {
   display: flex;
   gap: 10px;
+  margin-top: auto;
 }
 
 .docCardSocial a {

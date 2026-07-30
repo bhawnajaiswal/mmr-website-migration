@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import styles from "./PersonalizedProgram.module.css";
 
 interface AccordionItem {
   id: string;
@@ -128,99 +129,52 @@ export default function PersonalizedProgram() {
   ];
 
   return (
-    <section
-      className="elementor-section elementor-top-section elementor-element elementor-element-1f4a9d6 elementor-section-full_width elementor-section-items-stretch elementor-section-height-min-height elementor-section-height-default"
-      data-id="1f4a9d6"
-      data-element_type="section"
-      data-settings='{"background_background":"classic"}'
-    >
-      <div className="elementor-container elementor-column-gap-no">
-        
-        {/* Left Column: Background Image (stretches to fill height) */}
-        <div
-          className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-158c73ed why-left-image-col"
-          data-id="158c73ed"
-          data-element_type="column"
-          data-settings='{"background_background":"classic"}'
-        >
-          <div className="elementor-widget-wrap elementor-element-populated" style={{ height: "100%", position: "relative" }}>
-            <div className="elementor-background-overlay" />
-          </div>
-        </div>
+    <section className={styles.programSection}>
+      {/* Left Column: Background Image (stretches to fill height) */}
+      <div className={styles.programLeftCol}>
+        <div className={styles.programLeftOverlay} />
+      </div>
 
-        {/* Right Column: Accordion */}
-        <div
-          className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-115606df envato-kit-140-scrollable"
-          data-id="115606df"
-          data-element_type="column"
-        >
-          <div className="elementor-widget-wrap elementor-element-populated">
-            
-            <div
-              className="elementor-element elementor-element-51b9c79f envato-kit-140-faq elementor-widget elementor-widget-accordion"
-              data-id="51b9c79f"
-              data-element_type="widget"
-              data-widget_type="accordion.default"
-            >
-              <div className="elementor-widget-container">
-                <div className="elementor-accordion">
-                  {accordionItems.map((item) => {
-                    const isOpen = activeTab === item.tabNum;
-                    return (
-                      <div key={item.id} className="elementor-accordion-item">
-                        {/* Accordion Tab Title Header */}
-                        <h4
-                          id={`elementor-tab-title-${item.id}`}
-                          className={`elementor-tab-title ${isOpen ? "elementor-active" : ""}`}
-                          data-tab={item.tabNum}
-                          role="button"
-                          aria-controls={`elementor-tab-content-${item.id}`}
-                          aria-expanded={isOpen ? "true" : "false"}
-                          onClick={() => toggleTab(item.tabNum)}
-                        >
-                          <span
-                            className="elementor-accordion-icon elementor-accordion-icon-right"
-                            aria-hidden="true"
-                          >
-                            <span
-                              className="elementor-accordion-icon-closed"
-                              style={{ display: isOpen ? "none" : "block" }}
-                            >
-                              <i className="fas fa-plus" />
-                            </span>
-                            <span
-                              className="elementor-accordion-icon-opened"
-                              style={{ display: isOpen ? "block" : "none" }}
-                            >
-                              <i className="fas fa-minus" />
-                            </span>
-                          </span>
-                          <a className="elementor-accordion-title" tabIndex={0}>
-                            {item.title}
-                          </a>
-                        </h4>
+      {/* Right Column: Accordion */}
+      <div className={styles.programRightCol}>
+        <div className={styles.accordion}>
+          {accordionItems.map((item) => {
+            const isOpen = activeTab === item.tabNum;
+            return (
+              <div key={item.id} className={styles.accordionItem}>
+                {/* Accordion Tab Title Header */}
+                <h4
+                  id={`elementor-tab-title-${item.id}`}
+                  className={`${styles.tabTitle} ${isOpen ? styles.tabTitleActive : ""}`}
+                  role="button"
+                  aria-controls={`elementor-tab-content-${item.id}`}
+                  aria-expanded={isOpen ? "true" : "false"}
+                  onClick={() => toggleTab(item.tabNum)}
+                >
+                  <span>{item.title}</span>
+                  <span className={styles.accordionIcon}>
+                    {isOpen ? (
+                      <i className="fas fa-minus" />
+                    ) : (
+                      <i className="fas fa-plus" />
+                    )}
+                  </span>
+                </h4>
 
-                        {/* Accordion Tab Content */}
-                        <div
-                          id={`elementor-tab-content-${item.id}`}
-                          className="elementor-tab-content elementor-clearfix"
-                          data-tab={item.tabNum}
-                          role="region"
-                          aria-labelledby={`elementor-tab-title-${item.id}`}
-                          style={{ display: isOpen ? "block" : "none" }}
-                        >
-                          {item.content}
-                        </div>
-                      </div>
-                    );
-                  })}
+                {/* Accordion Tab Content */}
+                <div
+                  id={`elementor-tab-content-${item.id}`}
+                  className={styles.tabContent}
+                  role="region"
+                  aria-labelledby={`elementor-tab-title-${item.id}`}
+                  style={{ display: isOpen ? "block" : "none" }}
+                >
+                  {item.content}
                 </div>
               </div>
-            </div>
-
-          </div>
+            );
+          })}
         </div>
-
       </div>
     </section>
   );

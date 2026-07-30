@@ -1,0 +1,121 @@
+.programSection {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+}
+
+.programLeftCol {
+  width: 50%;
+  background-color: #2872F8;
+  background-image: url("/wp-content/uploads/2024/04/Untitled-design-44.png");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  min-height: 500px;
+}
+
+.programLeftOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: #2872F8;
+  opacity: 0.74;
+  mix-blend-mode: lighten;
+}
+
+.programRightCol {
+  width: 50%;
+  padding: 5% 5% 5% 5%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(12, 12, 12, 0.16);
+}
+
+.accordionItem {
+  border-bottom: 1px solid rgba(12, 12, 12, 0.16);
+}
+
+.tabTitle {
+  background-color: #ffffff;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #666666;
+  transition: color 0.3s ease;
+  margin: 0;
+}
+
+.tabTitle:hover {
+  color: #0c010a;
+}
+
+.tabTitleActive {
+  color: #0c010a;
+}
+
+.accordionIcon {
+  font-size: 0.95rem;
+  color: #666666;
+  display: flex;
+  align-items: center;
+}
+
+.tabTitleActive .accordionIcon {
+  color: #0c010a;
+}
+
+.tabContent {
+  color: #000000;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  padding: 0 0 20px 0;
+}
+
+.tabContent p {
+  margin: 0 0 12px 0;
+}
+
+.tabContent p:last-child {
+  margin-bottom: 0;
+}
+
+.tabContent ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.tabContent li {
+  margin-bottom: 8px;
+}
+
+.tabContent li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .programSection {
+    flex-direction: column;
+  }
+  .programLeftCol {
+    width: 100%;
+    min-height: 350px;
+  }
+  .programRightCol {
+    width: 100%;
+    padding: 40px 20px;
+  }
+}
