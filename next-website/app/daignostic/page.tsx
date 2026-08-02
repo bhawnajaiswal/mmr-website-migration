@@ -206,7 +206,7 @@ export default function DiagnosticPage() {
               <div className={styles.sectionDivider} />
             </ScrollRevealSection>
 
-            <div className={styles.benefitsGrid} style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
+            <div className={styles.benefitsGrid} style={{ "--grid-columns": 2 } as React.CSSProperties}>
               {imagingStudies.map((item, idx) => (
                 <ScrollRevealSection key={idx}>
                   <div
@@ -262,7 +262,7 @@ export default function DiagnosticPage() {
               <div className={styles.sectionDivider} />
             </ScrollRevealSection>
 
-            <div className={styles.benefitsGrid} style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
+            <div className={styles.benefitsGrid} style={{ "--grid-columns": 2 } as React.CSSProperties}>
               {geneticTesting.map((item, idx) => (
                 <ScrollRevealSection key={idx}>
                   <div

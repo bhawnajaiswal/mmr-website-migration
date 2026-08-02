@@ -132,13 +132,12 @@
 }
 
 .blogCard {
+  composes: card-foundation-vertical from global;
   background-color: var(--color-white);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(48, 85, 149, 0.08);
-  display: flex;
-  flex-direction: column;
   transition: var(--transition-smooth);
 }
 
@@ -168,10 +167,8 @@
 }
 
 .blogCardContent {
+  composes: card-body-foundation from global;
   padding: 24px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
 }
 
 .blogMeta {
@@ -216,6 +213,7 @@
 }
 
 .readMoreLink {
+  composes: card-footer-foundation from global;
   align-self: flex-start;
   font-size: 0.9rem;
   font-weight: 700;

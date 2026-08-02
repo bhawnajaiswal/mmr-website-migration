@@ -125,14 +125,14 @@
   max-width: 1420px;
   min-height: 80px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px;
   box-sizing: border-box;
 }
 
 .header-col-left {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   flex: 0 0 auto;
 }
 
@@ -159,6 +159,7 @@
 .header-col-center {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   flex: 1;
   min-width: 0;
   margin-left: 32px;
@@ -172,36 +173,31 @@
 }
 
 .logo-img {
-  width: 130px;
-  height: auto !important;
-  aspect-ratio: 130 / 62;
+  width: 150px;
+  height: auto ;
+  aspect-ratio: 150 / 62;
   object-fit: contain;
   display: block;
   flex-shrink: 0;
 }
 
-.header-col-left {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex: 0 0 auto;
-}
+/* Duplicate style removed */
 
 /* ==========================================================================
    Navigation Dropdowns (Desktop)
    ========================================================================== */
 .hfe-nav {
-  width: 100%;
+  width: auto;
 }
 
 .hfe-nav-menu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 0;
+  gap: 5px;
 }
 
 .hfe-nav-menu > li {
@@ -348,14 +344,19 @@
   }
 
   .header-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0 30px;
-  box-sizing: border-box;
-}
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  .header-col-left {
+    flex: 0 0 auto;
+    max-width: none;
+  }
 
   .header-col-right {
     margin-left: auto;
@@ -843,4 +844,23 @@
   .special-facility-card {
     width: 100% !important;
   }
+}
+
+/* ==========================================================================
+   Informational Card Foundation Layout Alignments
+   ========================================================================== */
+
+/* Enforce equal-height layout behaviors on all processCards and serviceCards */
+[class*="processCard"],
+[class*="serviceCard"] {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure the grid cells stretch symmetrically to fill heights */
+[class*="processGrid"],
+[class*="servicesGrid"] {
+  align-items: stretch !important;
 }
