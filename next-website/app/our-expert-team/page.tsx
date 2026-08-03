@@ -334,7 +334,7 @@ export default function OurExpertTeamPage() {
                   <h2>Dr. Prawash Chowdhary</h2>
                 </div>
                 <p className={styles.founderDesc}>
-                  With a specialization in nephrology, Dr. Prawash leads our Renal Care department with compassion and clinical excellence. He is committed to providing comprehensive care to patients with kidney-related conditions, including dialysis, transplant evaluation, and management of kidney diseases.
+                  With a specialization in nephrology, Dr. Prawash leads our Kidney Care department with compassion and clinical excellence. He is committed to providing comprehensive care to patients with kidney-related conditions, including dialysis, transplant evaluation, and management of kidney diseases.
                 </p>
               </div>
             </ScrollRevealSection>
@@ -446,7 +446,7 @@ export default function OurExpertTeamPage() {
           <ScrollRevealSection className={styles.ctaContainer}>
             <span className={styles.ctaSubtitle}>MMR HOSPITAL &amp; IVF CENTER</span>
             <div className={styles.ctaTitle}>
-              <h2>We are the best in IVF treatment &amp; Renal care also.</h2>
+              <h2>We are the best in IVF treatment &amp; Kidney care also.</h2>
             </div>
             {/* Preserving production quirk: unlinked button */}
             <Link className={styles.ctaButton} href="#">

@@ -28,7 +28,7 @@ export default function Home() {
           {/* Section 2: IVF Center Intro Section */}
           <Intro />
 
-          {/* Section 3: Renal Care/Nephrology Section */}
+          {/* Section 3: Kidney Care/Nephrology Section */}
           <Nephrology />
         </div>
 

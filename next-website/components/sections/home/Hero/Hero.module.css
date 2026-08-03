@@ -1,0 +1,535 @@
+.heroSection {
+  position: relative;
+  background: linear-gradient(135deg, #f0f4ff 0%, #f6ebff 50%, #e0e9ff 100%);
+  min-height: 100vh; /* Make sure it takes full viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 0 110px 0; /* Wave offset bottom */
+  overflow: hidden;
+}
+
+/* Background Depth Glows */
+.heroSection::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, rgba(168, 85, 247, 0) 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heroSection::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0) 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floatingPlus {
+  position: absolute;
+  color: rgba(107, 33, 168, 0.015);
+  font-weight: 300;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.plus1 {
+  top: 10%;
+  left: 45%;
+  font-size: 2.5rem;
+}
+
+.plus2 {
+  top: 25%;
+  right: 40%;
+  font-size: 2rem;
+}
+
+.plus3 {
+  bottom: 25%;
+  left: 10%;
+  font-size: 1.8rem;
+}
+
+.waveDivider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 3;
+}
+
+.waveDividerSvg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 30px;
+}
+
+.heroContainer {
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 30px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contentGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.emergencyBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 50px;
+  border: 1px solid rgba(192, 132, 252, 0.35);
+  background: rgba(243, 232, 255, 0.5);
+  color: #6b21a8;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.heroTitle {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #1e1b4b;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.colorKidney {
+  color: #6b21a8;
+}
+
+.colorIvf {
+  color: #3b82f6;
+}
+
+.heroSubtitle {
+  font-size: 1rem;
+  color: #1e293b;
+  font-weight: 500;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.btnGroup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.appointmentBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 28px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+  color: #ffffff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  width: fit-content;
+  box-shadow: 0 4px 10px rgba(126, 34, 206, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.appointmentBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(126, 34, 206, 0.25);
+}
+
+.callBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 28px;
+  border-radius: 50px;
+  background: #ffffff;
+  color: #6b21a8 !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  border: 2px solid #6b21a8;
+  width: fit-content;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.callBtn:hover {
+  transform: translateY(-2px);
+  background: #fdfaff;
+}
+
+/* Service Cards Layout */
+.serviceCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 4px;
+  align-items: stretch; /* Guarantees equal height */
+}
+
+.serviceCard {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  padding: 10px 14px; /* Reduced by ~30% */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.serviceIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.bgKidney {
+  background-color: #6b21a8;
+}
+
+.bgIvf {
+  background-color: #3b82f6;
+}
+
+.serviceTitle {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #1e1b4b;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px; /* Tighter bullet lists spacing */
+}
+
+.bulletList li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.checkKidney {
+  color: #6b21a8;
+  font-size: 0.8rem;
+}
+
+.checkIvf {
+  color: #3b82f6;
+  font-size: 0.8rem;
+}
+
+/* Right Artwork Column */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  width: 100%;
+}
+
+.doctorImageWrapper {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  margin-top: -30px;
+  margin-left: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  
+  /* Apply linear gradient alpha mask */
+  mask-image: linear-gradient(to right, transparent 0%, black 15%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%);
+}
+
+.doctorImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center bottom;
+  z-index: 2;
+  border-radius: 12px;
+}
+
+/* Stats Strip */
+.statsStrip {
+  max-width: 1420px;
+  margin: 25px auto 15px auto; /* Tighter layout integration */
+  padding: 10px 24px; /* Slimmer height */
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(107, 33, 168, 0.06);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid rgba(107, 33, 168, 0.05);
+  position: relative;
+  z-index: 20;
+  width: calc(100% - 32px);
+}
+
+.statsItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.statsIcon {
+  width: 48px; /* Enlarge stats icon container size */
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(107, 33, 168, 0.05);
+  color: #6b21a8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem; /* Enlarged stats icon size */
+  flex-shrink: 0;
+}
+
+.statsText {
+  display: flex;
+  flex-direction: column;
+}
+
+.statsNum {
+  font-size: 1.45rem; /* Enlarged stats value size */
+  font-weight: 800;
+  color: #1e1b4b;
+  line-height: 1.1;
+}
+
+.statsLabel {
+  font-size: 0.72rem;
+  color: #64748b;
+  font-weight: 600;
+  margin-top: 1px;
+}
+
+/* Diagnostics Facilities Section */
+.diagnosticsContainer {
+  max-width: 1420px;
+  margin: 10px auto 0 auto; /* Directly below stats strip */
+  padding: 0 16px;
+  width: 100%;
+  position: relative;
+  z-index: 20;
+}
+
+.diagnosticsDividerLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px; /* Reduced vertical gap */
+}
+
+.dividerDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #6b21a8;
+  opacity: 0.4;
+}
+
+.diagnosticsTitle {
+  font-size: 1.05rem; /* Smaller one-line font-size on desktop */
+  font-weight: 800;
+  color: #1e1b4b;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap; /* Prevent wrapping on desktop */
+}
+
+.diagnosticsGrid {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr); /* Fits all cards in a single row on desktop */
+  gap: 8px; /* Equal tight spacing */
+}
+
+.diagnosticCard {
+  background: #ffffff;
+  border: 1px solid rgba(107, 33, 168, 0.05);
+  border-radius: 10px;
+  padding: 10px 4px; /* Reduced padding & width height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 85px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.015);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.diagnosticCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(107, 33, 168, 0.06);
+  border-color: rgba(107, 33, 168, 0.15);
+}
+
+.diagnosticIcon {
+  font-size: 1.35rem; /* Reduced icon size slightly */
+  color: #6b21a8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diagnosticLabel {
+  font-size: 0.7rem; /* Reduced label font-size slightly */
+  font-weight: 700;
+  color: #334155;
+  text-align: center;
+  line-height: 1.25;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .heroTitle {
+    font-size: 2.6rem;
+  }
+  .heroContainer {
+    gap: 20px;
+  }
+  .diagnosticsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  .diagnosticsTitle {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 1024px) {
+  .heroSection {
+    padding: 30px 0 100px 0;
+    min-height: auto;
+  }
+  .heroContainer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  .leftColumn {
+    align-items: center;
+  }
+  .contentGroup {
+    align-items: center;
+  }
+  .emergencyBadge,
+  .btnGroup {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+  .serviceCards {
+    justify-content: center;
+  }
+  .doctorImageWrapper {
+    margin-top: 0;
+    margin-left: 0;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  .statsStrip {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .diagnosticsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+  .serviceCards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+    max-width: 420px;
+  }
+  .bulletList {
+    align-items: flex-start;
+  }
+  .btnGroup {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  .appointmentBtn, .callBtn {
+    width: 100%;
+    justify-content: center;
+  }
+  .statsStrip {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+}

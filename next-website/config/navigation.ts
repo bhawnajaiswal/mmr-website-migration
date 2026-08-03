@@ -15,7 +15,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
     ]
   },
   {
-    title: "Treatment & services",
+    title: "IVF CARE",
     url: "/treatment-services",
     subItems: [
       { title: "IVF", url: "/ivf" },
@@ -32,7 +32,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
     ]
   },
   {
-    title: "Renal care",
+    title: "Kidney care",
     url: "/renal-care-2",
     subItems: [
       { title: "CAPD", url: "/capd" },
@@ -40,7 +40,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
       { title: "UTI ( urinary tract infection )", url: "/uti-urinary-tract-infection" }
     ]
   },
-  {
+  /* {
     title: "FAQs",
     url: "/faqs"
   },
@@ -53,7 +53,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
       { title: "Our Philosophy", url: "/uti-urinary-tract-infection-2" },
       { title: "Infrastructure", url: "/infrastructure" }
     ]
-  },
+  }, */
   {
     title: "Feedback",
     url: "/feedback"

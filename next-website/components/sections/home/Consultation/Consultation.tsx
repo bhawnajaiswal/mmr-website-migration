@@ -163,7 +163,7 @@ export default function Consultation() {
                   className={styles.formSelect}
                 >
                   <option value="Fertility">Fertility</option>
-                  <option value="Renal Care">Renal Care</option>
+                  <option value="Kidney Care">Kidney Care</option>
                 </select>
               </div>
 

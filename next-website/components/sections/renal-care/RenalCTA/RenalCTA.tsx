@@ -68,7 +68,7 @@ export default function RenalCTA() {
           <h2>Get best treatment for all types renal problems.</h2>
         </div>
         <p className={styles.ctaDesc}>
-          Thank you for considering MMR Hospital &amp; IVF Center for your renal care needs. If
+          Thank you for considering MMR Hospital &amp; IVF Center for your kidney care needs. If
           you have any questions or would like to schedule a consultation, please don&apos;t hesitate
           to contact us. We are here to help you achieve and maintain optimal kidney health.
         </p>

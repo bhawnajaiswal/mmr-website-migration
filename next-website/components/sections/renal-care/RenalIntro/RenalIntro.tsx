@@ -57,7 +57,7 @@ export default function RenalIntro() {
           <div className={styles.introContent}>
             <div className={styles.introTitle}>
               <h2 style={{ fontSize: "2.15rem", fontWeight: 800, color: "var(--color-secondary)" }}>
-                Renal Care at MMR Hospital &amp; IVF Center
+                Kidney Care at MMR Hospital &amp; IVF Center
               </h2>
             </div>
             
@@ -70,7 +70,7 @@ export default function RenalIntro() {
             </p>
             
             <p className={styles.introText2} style={{ fontSize: "0.95rem", color: "var(--color-text-muted)" }}>
-              We provide best renal care treatment in Raipur.
+              We provide best kidney care treatment in Raipur.
             </p>
             
             <Link

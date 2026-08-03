@@ -1,0 +1,510 @@
+.heroSection {
+  position: relative;
+  background: linear-gradient(135deg, #f0f4ff 0%, #f6ebff 50%, #e0e9ff 100%);
+  min-height: 630px; /* Match homepage hero desktop height */
+  display: flex;
+  align-items: center; /* Vertically center all content */
+  padding: 40px 0; /* Proportional top/bottom padding instead of a fixed height */
+  overflow: hidden;
+}
+
+/* Background Depth Glows */
+.heroSection::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, rgba(168, 85, 247, 0) 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heroSection::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(59, 130, 246, 0) 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.kidneyBgGraphic {
+  position: absolute;
+  right: -5%;
+  top: 5%;
+  width: 50%;
+  max-width: 700px;
+  height: auto;
+  opacity: 0.18;
+  mix-blend-mode: screen;
+  filter: blur(14px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floatingPlus {
+  position: absolute;
+  color: rgba(107, 33, 168, 0.02); /* Reduced opacity slightly to be barely visible */
+  font-weight: 300;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.plus1 {
+  top: 15%;
+  left: 45%;
+  font-size: 3rem;
+}
+
+.plus2 {
+  top: 30%;
+  right: 40%;
+  font-size: 2.5rem;
+}
+
+.plus3 {
+  bottom: 20%;
+  left: 10%;
+  font-size: 2rem;
+}
+
+.waveDivider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 3;
+}
+
+.waveDividerSvg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 36px;
+}
+
+.heroContainer {
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 35px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contentGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.emergencyBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: 50px;
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  background: rgba(243, 232, 255, 0.6);
+  color: #6b21a8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: fit-content;
+  box-shadow: 0 2px 4px rgba(107, 33, 168, 0.03);
+}
+
+.heroTitle {
+  font-size: 4.75rem;
+  font-weight: 900; /* Bolder font-weight */
+  color: #1e1b4b;
+  line-height: 1.05;
+  letter-spacing: -0.02em; /* Explicit letter spacing */
+  margin: 0;
+}
+
+.underlineText {
+  position: relative;
+  color: #1e1b4b;
+  display: inline-block;
+}
+
+.underlineText::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 4px;
+  background-color: #ef4444;
+  border-radius: 2px;
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  color: #0f172a; /* Darker slate-900 color for increased contrast */
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 14px;
+  margin-top: 2px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e293b;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 7px 14px; /* Reduced vertical padding by 2px (approx 22% reduction) */
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.015);
+}
+
+.featureIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #6b21a8;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.appointmentBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 40px; /* Increased horizontal padding by ~16px from 32px */
+  border-radius: 50px;
+  background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+  color: #ffffff !important;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  width: fit-content;
+  box-shadow: 0 6px 12px rgba(126, 34, 206, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.appointmentBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(126, 34, 206, 0.3);
+}
+
+.bottomTrustRow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border-top: none;
+  padding-top: 0;
+  margin-top: 4px;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #576475;
+}
+
+.trustItem:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding-right: 24px; /* Increased spacing between trust items from 20px */
+  margin-right: 24px; /* Increased spacing between trust items from 20px */
+}
+
+.trustIcon {
+  color: #3b82f6;
+  font-size: 0.8rem;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align wrapper to the right edge */
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.doctorImageWrapper {
+  width: 100%;
+  max-width: 720px;
+
+  position: relative;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  margin-top: -40px;
+  margin-left: -115px;
+  margin-bottom: 0;
+  margin-right: 0;
+
+  overflow: visible;
+
+  mask-image: linear-gradient(to right, transparent 0%, black 22%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 22%);
+}
+
+/* Circular backdrop behind doctor image wrapper */
+.doctorImageWrapper::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle, 
+    rgba(59, 130, 246, 0.45) 0%, 
+    rgba(139, 92, 246, 0.15) 50%, 
+    rgba(139, 92, 246, 0) 70%
+  );
+  filter: blur(15px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.doctorImage{
+    width:100%;
+    height:auto;
+
+    object-fit:contain;
+    object-position:center bottom;
+
+    display:block;
+    z-index:2;
+}
+
+.doctorCard {
+  position: absolute;
+  bottom: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 530px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 12px 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-sizing: border-box;
+}
+
+.doctorBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 50px;
+  background-color: rgba(107, 33, 168, 0.06);
+  color: #6b21a8;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.doctorName {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1e1b4b;
+  margin: 0;
+}
+
+.doctorTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #7e22ce;
+  margin: 0;
+}
+
+.doctorCredentials {
+  font-size: 0.8rem;
+  color: #475569;
+  line-height: 1.45;
+  font-weight: 500;
+  margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 6px;
+}
+
+.statsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.statIcon {
+  color: #3b82f6;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.statText {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #1e1b4b;
+  line-height: 1.1;
+}
+
+.statLabel {
+  font-size: 0.65rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .heroTitle {
+    font-size: 3.2rem;
+  }
+  .heroContainer {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .heroSection {
+    padding: 60px 0 100px 0;
+    min-height: auto; /* Allow auto scaling on stack */
+  }
+  .heroContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .leftColumn {
+    align-items: center;
+  }
+  .contentGroup {
+    align-items: center;
+  }
+  .emergencyBadge,
+  .appointmentBtn,
+  .bottomTrustRow {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+  .featureGrid {
+    justify-content: center;
+  }
+  .doctorCard {
+    max-width: 100%;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 20px;
+  }
+  .doctorImageWrapper {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 0;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  .doctorImageWrapper::before {
+    display: none; /* Hide circular backdrop on mobile stacking */
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 30px 0 70px 0;
+  }
+  .heroTitle {
+    font-size: 2.6rem;
+  }
+  .featureGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .bottomTrustRow {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+  }
+  .bottomTrustRow .trustItem:not(:last-child) {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .heroContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Doctor image should appear below heading and CTA on mobile */
+  .leftColumn {
+    order: 1;
+  }
+  .rightColumn {
+    order: 2;
+    margin-top: 20px;
+  }
+  /* Trust row can be placed at the very bottom */
+  .bottomTrustRow {
+    order: 3;
+    margin-top: 15px;
+  }
+}
