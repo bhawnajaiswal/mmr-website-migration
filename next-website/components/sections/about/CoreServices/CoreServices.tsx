@@ -69,7 +69,7 @@ export default function CoreServices() {
     {
       title: "Nephrology services",
       url: "/renal-care-2",
-      desc: "Experience excellence in renal care at MMR Hospital, where our Nephrology core service offers comprehensive solutions for kidney health.",
+      desc: "Experience excellence in kidney care at MMR Hospital, where our Nephrology core service offers comprehensive solutions for kidney health.",
       iconClass: "fas fa-heartbeat"
     },
     {

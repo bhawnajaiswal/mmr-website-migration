@@ -63,7 +63,7 @@ export default function AboutIntroduction() {
             <p className={styles.introText1} style={{ fontSize: "1.05rem", fontWeight: "400", lineHeight: "1.6", color: "var(--color-text-dark)" }}>
               Welcome to MMR Hospital &amp; IVF Center, where we are dedicated to providing
               exceptional healthcare services with a focus on In Vitro Fertilization (IVF) and
-              Renal Care. Our state-of-the-art facility combines advanced medical technology with
+              Kidney Care. Our state-of-the-art facility combines advanced medical technology with
               compassionate, patient-centered care to meet the unique needs of individuals and
               families seeking fertility treatment and renal services.
             </p>

@@ -54,9 +54,9 @@ export default function Footer() {
         <FooterColumn title="Treatment & Services">
           <ul>
             <li><Link href="/treatment-services">Treatment & Services</Link></li>
-            <li><Link href="/renal-care-2">Renal care</Link></li>
-            <li><Link href="/about-us">About us</Link></li>
-            <li><Link href="/faqs">FAQs</Link></li>
+            <li><Link href="/renal-care-2">Kidney care</Link></li>
+            {/* <li><Link href="/about-us">About us</Link></li>
+            <li><Link href="/faqs">FAQs</Link></li> */}
           </ul>
         </FooterColumn>
 

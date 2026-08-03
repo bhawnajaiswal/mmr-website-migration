@@ -86,7 +86,7 @@ export default function RenalApproach() {
           </div>
           
           <p className={styles.introText1} style={{ fontSize: "1.05rem", fontWeight: "400", lineHeight: "1.65", color: "var(--color-text-dark)" }}>
-            At MMR Hospital &amp; IVF Center, we take a patient-centered approach to renal care,
+            At MMR Hospital &amp; IVF Center, we take a patient-centered approach to kidney care,
             emphasizing personalized treatment plans tailored to each individual&apos;s unique
             needs. Our team of nephrologists, urologists, nurses, and support staff work collaboratively
             to ensure comprehensive and integrated care for our patients. We prioritize open
