@@ -119,6 +119,15 @@
   letter-spacing: 0.05em;
 }
 
+.heroSubtitleText {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  max-width: 600px;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
 /* ==========================================================================
    2. Info Blocks Section (3 columns)
    ========================================================================== */
@@ -131,8 +140,63 @@
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+}
+
+.infoContainerSingle {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.infoCardSingle {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  border: 1px solid rgba(48, 85, 149, 0.08);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: var(--transition-smooth);
+}
+
+.infoCardSingle:hover {
+  border-color: rgba(92, 53, 154, 0.15);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.infoCardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hospitalDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hospitalName {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+.hospitalCompany {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.detailsSpacer {
+  height: 1px;
+  background-color: rgba(48, 85, 149, 0.08);
+  margin: 4px 0;
 }
 
 .infoCard {

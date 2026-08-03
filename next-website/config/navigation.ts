@@ -15,7 +15,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
     ]
   },
   {
-    title: "Treatment & services",
+    title: "IVF CARE",
     url: "/treatment-services",
     subItems: [
       { title: "IVF", url: "/ivf" },

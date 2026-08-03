@@ -101,77 +101,56 @@ export default function ContactUsPage() {
           <div className={styles.heroContent}>
             <div className={styles.heroDivider} />
             <div className={styles.heroTitle}>
-              {/* Preserving production title quirk: "Thanks for Connecting with us..." */}
-              <h1>Thanks for Connecting with us...</h1>
+              <h1>Contact Us</h1>
             </div>
+            <p className={styles.heroSubtitleText}>
+              We&apos;re here to answer your questions, help you book an appointment, and guide you to the right specialist.
+            </p>
             <span className={styles.heroSubtitle}>+91 9244122040</span>
+            <Link href="/consultation" className={styles.bookButton} style={{ marginTop: "12px" }}>
+              Book Appointment
+            </Link>
           </div>
         </section>
 
-        {/* Section 2: Info Block (3 columns) */}
+        {/* Section 2: Info Block (Single Premium Card) */}
         <section className={styles.infoSection}>
-          <div className={styles.infoContainer}>
+          <div className={styles.infoContainerSingle}>
             
-            {/* Column 1: Hospital Name */}
             <ScrollRevealSection>
-              <div className={styles.infoCard}>
-                <div className={styles.infoCardHeader}>
-                  <div className={styles.infoCardIcon}>
-                    <i className="fas fa-hospital" />
-                  </div>
-                  <h3 className={styles.infoCardTitle}>Our Center</h3>
-                </div>
-                <div className={styles.infoList}>
-                  <p style={{ fontWeight: "700", color: "#305595", fontSize: "1.1rem", margin: 0 }}>
-                    MMR Hospital &amp; IVF Center.
-                  </p>
-                  <p style={{ color: "#64748b", margin: 0, fontSize: "0.95rem" }}>
-                    Matruchhaya Medicare &amp; Research Pvt. Ltd.
-                  </p>
-                </div>
-              </div>
-            </ScrollRevealSection>
-
-            {/* Column 2: Contact Us Info */}
-            <ScrollRevealSection>
-              <div className={styles.infoCard}>
+              <div className={styles.infoCardSingle}>
                 <div className={styles.infoCardHeader}>
                   <div className={styles.infoCardIcon}>
                     <i className="fas fa-info-circle" />
                   </div>
-                  <h3 className={styles.infoCardTitle}>Contact Info</h3>
+                  <h3 className={styles.infoCardTitle}>Contact Information</h3>
                 </div>
-                <ul className={styles.infoList}>
-                  <li className={styles.infoListItem}>
-                    <i className="fas fa-map-marker-alt" />
-                    <span>Plot No. C, 132-133, Sector-9, Kamal Vihar, Raipur, Dunda, Chhattisgarh 492004</span>
-                  </li>
-                  <li className={styles.infoListItem}>
-                    <i className="fas fa-phone-alt" />
-                    <a href="tel:+919244122040">+91 9244122040</a>
-                  </li>
-                  <li className={styles.infoListItem}>
-                    <i className="fas fa-envelope" />
-                    <a href="mailto:info@mmrhospitals.com">info@mmrhospitals.com</a>
-                  </li>
-                </ul>
-              </div>
-            </ScrollRevealSection>
-
-            {/* Column 3: Appointments */}
-            <ScrollRevealSection>
-              <div className={styles.infoCard}>
-                <div className={styles.infoCardHeader}>
-                  <div className={styles.infoCardIcon}>
-                    <i className="fas fa-calendar-check" />
+                
+                <div className={styles.infoCardBody}>
+                  {/* Hospital Details */}
+                  <div className={styles.hospitalDetails}>
+                    <h4 className={styles.hospitalName}>MMR Hospital &amp; IVF Center</h4>
+                    <p className={styles.hospitalCompany}>Matruchhaya Medicare &amp; Research Pvt. Ltd.</p>
                   </div>
-                  <h3 className={styles.infoCardTitle}>Appointments</h3>
-                </div>
-                <div className={styles.infoList}>
-                  <p className={styles.bookText}>Book an appointment for you.</p>
-                  <Link href="/consultation" className={styles.bookButton}>
-                    Book Online
-                  </Link>
+                  
+                  {/* Comfortable Spacing Separator */}
+                  <div className={styles.detailsSpacer} />
+                  
+                  {/* Address and Contacts */}
+                  <ul className={styles.infoList}>
+                    <li className={styles.infoListItem}>
+                      <i className="fas fa-map-marker-alt" />
+                      <span>Plot No. C, 132-133, Sector-9, Kamal Vihar, Dunda, Raipur, Chhattisgarh 492004</span>
+                    </li>
+                    <li className={styles.infoListItem}>
+                      <i className="fas fa-phone-alt" />
+                      <a href="tel:+919244122040">+91 9244122040</a>
+                    </li>
+                    <li className={styles.infoListItem}>
+                      <i className="fas fa-envelope" />
+                      <a href="mailto:info@mmrhospitals.com">info@mmrhospitals.com</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </ScrollRevealSection>
