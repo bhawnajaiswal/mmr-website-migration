@@ -1,4 +1,5 @@
 import styles from "@/app/Home.module.css";
+import { HERO_IMAGES } from "@/config/assets/heroes";
 
 interface HeroSlideProps {
   heading: string;
@@ -17,10 +18,10 @@ export default function HeroSlide({
   slideIdClass,
   isActive
 }: HeroSlideProps) {
-  // Original legacy Elementor properties
+  // Business-oriented asset references
   const bgImgUrl = slideIdClass === "elementor-repeater-item-fc4f1bf"
-    ? "/wp-content/uploads/2024/04/Home-10.png"
-    : "/wp-content/uploads/2024/04/Home-12.png";
+    ? HERO_IMAGES.homeHeroIVF
+    : HERO_IMAGES.homeHeroKidney;
 
   const bgColor = slideIdClass === "elementor-repeater-item-fc4f1bf"
     ? "#833ca3"

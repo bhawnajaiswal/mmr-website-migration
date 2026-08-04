@@ -1,4 +1,4 @@
-import styles from "@/app/Home.module.css";
+import styles from "./WhyChooseUs.module.css";
 
 interface WhyChooseCardProps {
   iconClass: string;
@@ -17,7 +17,7 @@ export default function WhyChooseCard({
 }: WhyChooseCardProps) {
   return (
     <div
-      className={`${styles.whyCard} ${animate ? styles.whyCardVisible : ""}`}
+      className={`${styles.whyCard} ${animate ? styles.revealVisible : ""}`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       <div className={styles.whyCardIconContainer}>

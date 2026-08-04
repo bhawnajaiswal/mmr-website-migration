@@ -1,35 +1,32 @@
+"use client";
+
 import TopBar from "./TopBar";
-import Logo from "./Logo";
-import Navigation from "./Navigation";
-import MobileMenu from "./MobileMenu";
-import Link from "next/link";
+import DesktopNavigation from "./DesktopNavigation";
+import MobileNavigation from "./MobileNavigation";
+import Branding from "./Branding";
+import styles from "./Header.module.css";
 
 export default function Header() {
   return (
-    <header className="site-header">
-      {/* Top Contact Bar */}
-      {/* <TopBar /> */}
+    <header className={styles.siteHeader}>
+      {/* Scoped Top Info Bar */}
+      <TopBar />
 
-      {/* Main Branding & Navigation Row */}
-      <div className="main-header-row">
-        <div className="header-container">
+      {/* Main Brand & Nav Bar */}
+      <div className={styles.mainHeaderRow}>
+        <div className={styles.headerContainer}>
           
-          {/* Left Side: Logo & Brand Name Title */}
-          <div className="header-col-left">
-            <Logo variant="header" />
-            <h2 className="header-brand-title">
-              <Link href="/">MMR Hospital &amp; IVF Center</Link>
-            </h2>
+          {/* Brand Logo & Name */}
+          <Branding />
+
+          {/* Centered Desktop Menu */}
+          <div className={styles.headerColCenter}>
+            <DesktopNavigation />
           </div>
 
-          {/* Center/Right: Desktop Navigation */}
-          <div className="header-col-center">
-            <Navigation />
-          </div>
-
-          {/* Right Side: Mobile Drawer Trigger */}
-          <div className="header-col-right">
-            <MobileMenu />
+          {/* Right-aligned Mobile Trigger */}
+          <div className={styles.headerColRight}>
+            <MobileNavigation />
           </div>
 
         </div>

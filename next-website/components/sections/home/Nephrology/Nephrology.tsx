@@ -1,7 +1,6 @@
-"use client";
-
-import Link from "next/link";
-import styles from "@/app/Home.module.css";
+import Container from "@/components/shared/Container/Container";
+import { SHARED_IMAGES } from "@/config/assets/shared";
+import styles from "./Nephrology.module.css";
 
 export default function Nephrology() {
   return (
@@ -21,14 +20,13 @@ export default function Nephrology() {
         </svg>
       </div>
 
-      <div className={styles.nephrologyContainer}>
-        
+      <Container className={styles.nephrologyContainer}>
         {/* Left Column: Modern 3-Image Grid Collage */}
         <div className={styles.collageGrid}>
           {/* Main Large Left Image */}
           <div className={styles.collageMain}>
             <img
-              src="/wp-content/uploads/2024/03/Untitled-design-38.png"
+              src={SHARED_IMAGES.kidneyCareGraphic}
               alt="best ivf center in Raipur"
               className={styles.collageImage}
               loading="lazy"
@@ -72,12 +70,11 @@ export default function Nephrology() {
             From managing chronic kidney disease and hypertension to offering dialysis and kidney transplant services, we are committed to improving the quality of life for our patients. With state-of-the-art facilities and a patient-centered approach, MMR Hospital ensures that every patient receives the highest standard of care and support on their journey to kidney health. Trust us to be your partner in managing kidney-related conditions with expertise, compassion, and dedication.
           </p>
 
-          <Link href="/renal-care-2" className={styles.nephrologyButton}>
+          <a href="/renal-care-2" className={styles.nephrologyButton}>
             Learn more &raquo;
-          </Link>
+          </a>
         </div>
-
-      </div>
+      </Container>
     </section>
   );
 }

@@ -1,0 +1,76 @@
+/* Button.module.css - Styles for shared button component */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 12px 28px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  box-sizing: border-box;
+}
+
+/* Primary Button Variant */
+.primary {
+  background-color: var(--color-primary);
+  color: var(--color-bg-white);
+  box-shadow: 0 4px 15px rgba(68, 52, 116, 0.2);
+}
+
+.primary:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+/* Secondary Button Variant */
+.secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-bg-white);
+  box-shadow: 0 4px 15px rgba(48, 85, 149, 0.2);
+}
+
+.secondary:hover {
+  background-color: transparent;
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  transform: translateY(-2px);
+}
+
+/* CTA Accent Button Variant */
+.cta {
+  background-color: var(--color-accent);
+  color: var(--color-bg-white);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 15px rgba(216, 142, 236, 0.3);
+}
+
+.cta:hover {
+  background-color: transparent;
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+/* Outline Bordered Button Variant */
+.outline {
+  background-color: transparent;
+  color: var(--color-text-dark);
+  border-color: var(--color-border-dark);
+}
+
+.outline:hover {
+  background-color: var(--color-bg-light);
+  border-color: var(--color-text-dark);
+  transform: translateY(-2px);
+}

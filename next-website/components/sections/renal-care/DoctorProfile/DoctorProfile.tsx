@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, ReactNode } from "react";
 import Link from "next/link";
+import { DOCTOR_IMAGES } from "@/config/assets/doctors";
 import styles from "@/app/TreatmentPage.module.css";
 
 // Helper component for Intersection Observer Scroll Reveal
@@ -98,7 +99,7 @@ export default function DoctorProfile() {
             className="grid-image-col"
           >
             <img
-              src="/wp-content/uploads/2024/04/Urology-3-768x768.png"
+              src={DOCTOR_IMAGES.doctorPrawashProfile}
               alt="best ivf center in Raipur"
               style={{ width: "100%", height: "auto", display: "block", transition: "transform 0.4s ease" }}
               className="hover-scale-img"

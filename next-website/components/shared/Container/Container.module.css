@@ -1,0 +1,17 @@
+/* Container.module.css - Scoped container layouts */
+
+.standard {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  box-sizing: border-box;
+}
+
+.wide {
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  box-sizing: border-box;
+}

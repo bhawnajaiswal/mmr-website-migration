@@ -54,10 +54,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
       { title: "Infrastructure", url: "/infrastructure" }
     ]
   }, */
-  {
-    title: "Feedback",
-    url: "/feedback"
-  },
+
   {
     title: "Contact Us",
     url: "/contact-us"

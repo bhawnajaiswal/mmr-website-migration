@@ -2,7 +2,8 @@
 
 import { useEffect, useState, useRef } from "react";
 import WhyChooseCard from "./WhyChooseCard";
-import styles from "@/app/Home.module.css";
+import Container from "@/components/shared/Container/Container";
+import styles from "./WhyChooseUs.module.css";
 
 const ROW_1_CARDS = [
   {
@@ -83,7 +84,7 @@ export default function WhyChooseUs() {
   return (
     <section
       ref={sectionRef}
-      className={`${styles.whySection} ${isVisible ? styles.whySectionVisible : ""}`}
+      className={`${styles.whySection} ${isVisible ? styles.revealVisible : ""}`}
     >
       {/* Top Shape Divider */}
       <div className={styles.whyShapeDivider}>
@@ -92,7 +93,7 @@ export default function WhyChooseUs() {
         </svg>
       </div>
 
-      <div className={styles.whyContainer}>
+      <Container className={styles.whyContainer}>
         {/* Header Block */}
         <div className={styles.whyHeader}>
           <span className={styles.whySubtitle}>Six reasons we&apos;re the best</span>
@@ -115,7 +116,7 @@ export default function WhyChooseUs() {
             />
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import CounterCard from "./CounterCard";
+import Container from "@/components/shared/Container/Container";
 import styles from "@/app/Home.module.css";
 
 const COUNTERS = [
@@ -56,7 +57,7 @@ export default function Statistics() {
       ref={sectionRef}
       className={`${styles.statsSection} ${isVisible ? styles.statsSectionVisible : ""}`}
     >
-      <div className={styles.statsContainer}>
+      <Container className={styles.statsContainer}>
         {/* Header Block */}
         <div className={styles.statsHeader}>
           <span className={styles.statsSubtitle}>
@@ -82,7 +83,7 @@ export default function Statistics() {
             />
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

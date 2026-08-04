@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Container from "@/components/shared/Container/Container";
+import Button from "@/components/shared/Button/Button";
 import styles from "@/app/Home.module.css";
 
 export default function Consultation() {
@@ -72,7 +74,7 @@ export default function Consultation() {
       <div className={styles.consultBgImage} />
       <div className={styles.consultOverlay} />
       
-      {/* Top Pyramid shape divider (consistent with legacy layout transition) */}
+      {/* Top Pyramid shape divider */}
       <div className={styles.consultShapeDividerTop}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={styles.consultShapeDividerSvg}>
           <path d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9" fill="#ffffff" />
@@ -86,7 +88,7 @@ export default function Consultation() {
         </svg>
       </div>
 
-      <div className={styles.consultContainer}>
+      <Container className={styles.consultContainer}>
         {/* Left Side: Consultation Heading */}
         <div className={styles.consultTextColumn}>
           <h2 className={styles.consultTitle}>
@@ -169,13 +171,14 @@ export default function Consultation() {
 
               {/* Submit Button */}
               <div className={styles.formSubmitWrapper}>
-                <button
+                <Button
                   type="submit"
-                  disabled={status === "submitting"}
+                  variant="primary"
                   className={styles.formSubmitBtn}
+                  ariaLabel="Book Appointment"
                 >
                   {status === "submitting" ? "Sending..." : "Book Appointment"}
-                </button>
+                </Button>
               </div>
 
               {/* Status Messages */}
@@ -195,7 +198,7 @@ export default function Consultation() {
             <p className={styles.formTerms}>Terms &amp; conditions are apply</p>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

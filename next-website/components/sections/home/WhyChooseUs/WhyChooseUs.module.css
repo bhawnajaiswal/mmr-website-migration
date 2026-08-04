@@ -1,0 +1,194 @@
+/* WhyChooseUs.module.css - Stylesheet restored to original visual styling */
+
+.whySection {
+  position: relative;
+  padding: 100px 24px 80px;
+  background: linear-gradient(180deg, #f8f6fc 0%, #ffffff 100%);
+  overflow: hidden;
+}
+
+.whyShapeDivider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.whyShapeDividerSvg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 40px;
+  transform: rotateY(180deg);
+}
+
+.whyContainer {
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.whyHeader {
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.whySectionVisible .whyHeader {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whySubtitle {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6995cb;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.whyTitle {
+  font-family: "Jost", sans-serif;
+  font-size: 2.45rem;
+  font-weight: 700;
+  color: #443474;
+  margin: 0 0 16px 0;
+}
+
+.whyDivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whyDividerLine {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #443474 0%, #2b89ff 100%);
+  border-radius: 2px;
+}
+
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+}
+
+.whyCard {
+  composes: card-foundation-vertical from global;
+  background-color: #ffffff;
+  border: 1px solid rgba(68, 52, 116, 0.08);
+  border-radius: 16px;
+  padding: var(--space-8) var(--space-7);
+  box-shadow: 0 4px 20px rgba(68, 52, 116, 0.03);
+  align-items: flex-start;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              border-color 0.4s ease, 
+              opacity 0.8s ease, 
+              transform 0.8s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.whyCardVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whyCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(68, 52, 116, 0.08);
+  border-color: rgba(43, 137, 255, 0.2);
+}
+
+.whyCardIconContainer {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background-color: rgba(68, 52, 116, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: #443474;
+  font-size: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.whyCard:hover .whyCardIconContainer {
+  background-color: #2b89ff;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.whyCardTitle {
+  font-family: "Jost", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #443474;
+  margin: 0 0 12px 0;
+  transition: color 0.3s ease;
+}
+
+.whyCard:hover .whyCardTitle {
+  color: #2b89ff;
+}
+
+.whyCardDescription {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .whyGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .whyTitle {
+    font-size: 2.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .whySection {
+    padding: 70px 20px 60px;
+  }
+  .whyGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .whyTitle {
+    font-size: 1.85rem;
+  }
+  .whyCard {
+    padding: 30px 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whyHeader,
+  .whyCard {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .whyCard:hover {
+    transform: none !important;
+    box-shadow: 0 4px 20px rgba(68, 52, 116, 0.03) !important;
+  }
+}
