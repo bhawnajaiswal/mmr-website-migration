@@ -1,5 +1,3 @@
-"use client";
-
 import styles from "./Badge.module.css";
 
 interface BadgeProps {

@@ -1,8 +1,7 @@
-"use client";
-
 import Link from "next/link";
 import Container from "@/components/shared/Container/Container";
 import Button from "@/components/shared/Button/Button";
+import { SHARED_IMAGES } from "@/config/assets/shared";
 import styles from "@/app/Home.module.css";
 
 export default function Intro() {
@@ -47,7 +46,7 @@ export default function Intro() {
           {/* Main Large Left Image */}
           <div className={styles.collageMain}>
             <img
-              src="/wp-content/uploads/2024/03/Untitled-design-37.png"
+              src={SHARED_IMAGES.ivfHeartGraphic}
               alt="best ivf center in Raipur"
               className={styles.collageImage}
               loading="lazy"
@@ -57,7 +56,7 @@ export default function Intro() {
           {/* Right Top Image */}
           <div className={styles.collageSub1}>
             <img
-              src="/wp-content/uploads/2024/03/vitro-fertilization-human-female-cell-blue-background-microscopic-view-ivf-close-up-3d-rendering-scaled.jpg"
+              src={SHARED_IMAGES.ivfCellMicroscopeIllustration}
               alt="vitro fertilization human female cell microscopic view"
               className={styles.collageImage}
               loading="lazy"
@@ -67,7 +66,7 @@ export default function Intro() {
           {/* Right Bottom Image */}
           <div className={styles.collageSub2}>
             <img
-              src="/wp-content/uploads/2024/03/woman-s-hands-support-human-embryo-icon-blurred-background-tree-scaled.jpg"
+              src={SHARED_IMAGES.embryoSupportIllustration}
               alt="woman's hands support human embryo icon"
               className={styles.collageImage}
               loading="lazy"

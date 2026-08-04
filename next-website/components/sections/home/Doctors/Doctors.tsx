@@ -2,7 +2,9 @@
 
 import { useEffect, useState, useRef } from "react";
 import DoctorCard from "./DoctorCard";
-import styles from "@/app/Home.module.css";
+import Container from "@/components/shared/Container/Container";
+import { DOCTOR_IMAGES } from "@/config/assets/doctors";
+import styles from "./Doctors.module.css";
 
 const DOCTORS = [
   {
@@ -12,7 +14,7 @@ const DOCTORS = [
     degreeWidgetId: "6ced47a4",
     descWidgetId: "7bda7ecd",
     socialWidgetId: "1716b06",
-    imageUrl: "/wp-content/uploads/2024/03/Untitled-1600-x-1990-px.png",
+    imageUrl: DOCTOR_IMAGES.doctorAnuradha,
     name: "Dr. Anuradha Tibrewal Chowdhary",
     degree: "MD (OBGYN) ,FRM,FICOG,FAMS",
     description: "Infertility / IVF - ICSI specialist , Laparoscopic surgeon, Consultant in reproductive medicine.",
@@ -31,7 +33,7 @@ const DOCTORS = [
     degreeWidgetId: "15efb330",
     descWidgetId: "a59d85",
     socialWidgetId: "4583da0f",
-    imageUrl: "/wp-content/uploads/2024/03/Untitled-1600-x-1090-px.png",
+    imageUrl: DOCTOR_IMAGES.doctorPrawash,
     name: "Dr. Prawash Chowdhary",
     degree: "MD, DNB (Nephrology)",
     description: "MNAMS, FASN (USA), FISN - ANIO, FRCP (London), Interventional Nephrologist.",
@@ -83,7 +85,7 @@ export default function Doctors() {
         </svg>
       </div>
 
-      <div className={styles.docContainer}>
+      <Container className={styles.docContainer}>
         {/* Header Block */}
         <div className={styles.docHeader}>
           <span className={styles.docSubtitle}>Dedicated Professionals</span>
@@ -108,7 +110,7 @@ export default function Doctors() {
             />
           ))}
         </div>
-      </div>
+      </Container>
 
       {/* Bottom Pyramids Negative Shape Divider */}
       <div className={styles.docShapeDividerBottom}>

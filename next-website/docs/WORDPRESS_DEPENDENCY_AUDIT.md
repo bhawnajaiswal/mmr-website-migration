@@ -10,11 +10,11 @@
 
 The following table lists every legacy global stylesheet injected into the page `<head>` inside [`app/layout.tsx`](file:///c:/Users/bhawn/OneDrive/ドキュメント/website-MMR/mmr-website-migration/next-website/app/layout.tsx):
 
-| Stylesheet File Path | Purpose | Loaded By | Active Pages | Deletion Risk | Proposed Action |
+| Stylesheet File Path | Purpose | Loaded By | Active Pages | Deletion Risk | Status & Evidence |
 | :--- | :--- | :--- | :--- | :---: | :--- |
-| `public/css/bootstrap.min.css` | Framework grids and defaults | layout.tsx | None | None | **Delete Today** |
-| `public/css/widget-slides.min.css` | Slider layout rules | layout.tsx | None | None | **Delete Today** |
-| `public/wp-content/themes/hello-elementor/header-footer.min.css` | Legacy site header/footer | layout.tsx | None | None | **Delete Today** |
+| `public/css/bootstrap.min.css` | Framework grids and defaults | layout.tsx | None | None | **Verified Safe Removed** (No components reference bootstrap classes) |
+| `public/css/widget-slides.min.css` | Slider layout rules | layout.tsx | None | None | **Verified Safe Removed** (Slider was redesigned into standard CSS Grid) |
+| `public/wp-content/themes/hello-elementor/header-footer.min.css` | Legacy site header/footer | layout.tsx | None | None | **Verified Safe Removed** (Header and footer use scoped modules) |
 | `public/css/frontend-lite.min.css` | Core Elementor grid and columns | layout.tsx | 13+ subpages | **High** | Refactor pages before deleting |
 | `public/wp-content/themes/hello-elementor/style.min.css` | Theme layout reset defaults | layout.tsx | All pages | **Medium** | Replaced by global CSS variables |
 | `public/wp-content/themes/hello-elementor/theme.min.css` | Theme base variables | layout.tsx | All pages | **Medium** | Replaced by global CSS variables |
@@ -109,3 +109,33 @@ To perform the migration without regression issues, engineers must follow this o
 
 ### Files Safe to Delete After Migration
 *   All assets inside `/public/wp-content/` and elementor stylesheets.
+
+---
+
+## 8. Rebuilt Static Component Audit (OurHospital)
+*   **Component**: `OurHospital.tsx`
+*   **Status**: ✅ Elementor Layout Removed
+*   **Wrappers Removed**: 8 nested `div` layout wrappers (Elementor grid columns, inner sections, widget containers).
+*   **Legacy Classes Removed**: 16 Elementor layout classes (e.g., `elementor-section`, `elementor-column`, `elementor-col-50`, `elementor-widget-container`).
+*   **Data Attributes Removed**: 12 attributes (e.g., `data-id`, `data-element_type`, `data-settings`).
+*   **Remaining Dependencies**: None. All layout markup is native semantic React, and styling is localized in `OurHospital.module.css`.
+
+---
+
+## 9. Rebuilt Static Component Audit (WhyChooseUs)
+*   **Component**: `WhyChooseUs.tsx`
+*   **Status**: ✅ Elementor Layout Removed
+*   **Wrappers Removed**: 0 nested wrappers (already abstracted, but now standardizing container boundaries).
+*   **Legacy Classes Removed**: Removed dependencies on global custom grid styles in `Home.module.css`.
+*   **Data Attributes Removed**: None.
+*   **Remaining Dependencies**: None. Styled via local `WhyChooseUs.module.css`.
+
+---
+
+## 10. Rebuilt Static Component Audit (Nephrology)
+*   **Component**: `Nephrology.tsx`
+*   **Status**: ✅ Elementor Layout Removed
+*   **Wrappers Removed**: Replaced all custom column wrappers with standard `<Container>` and flex grid blocks.
+*   **Legacy Classes Removed**: Removed dependencies on global collage styles in `Home.module.css`.
+*   **Data Attributes Removed**: None.
+*   **Remaining Dependencies**: None. Styled via local `Nephrology.module.css`.

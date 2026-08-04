@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, ReactNode } from "react";
 import Link from "next/link";
+import { DOCTOR_IMAGES } from "@/config/assets/doctors";
 import styles from "@/app/TreatmentPage.module.css";
 
 // Helper component for Intersection Observer Scroll Reveal
@@ -104,7 +105,7 @@ export default function Founders() {
           <div className={styles.facilityCard} style={{ display: "flex", flexDirection: "column" }}>
             <div className={styles.facilityImageWrapper} style={{ flex: 1, maxHeight: "320px" }}>
               <img
-                src="/wp-content/uploads/2024/04/Untitled-design-66.png"
+                src={DOCTOR_IMAGES.founderAnuradha}
                 alt="best ivf center in Raipur"
                 className={`${styles.facilityImage} hover-scale-img`}
                 style={{ height: "100%", objectFit: "cover" }}
@@ -132,7 +133,7 @@ export default function Founders() {
           <div className={styles.facilityCard} style={{ display: "flex", flexDirection: "column" }}>
             <div className={styles.facilityImageWrapper} style={{ flex: 1, maxHeight: "320px" }}>
               <img
-                src="/wp-content/uploads/2024/04/Untitled-design-67.png"
+                src={DOCTOR_IMAGES.founderPrawash}
                 alt="best ivf center in Raipur"
                 className={`${styles.facilityImage} hover-scale-img`}
                 style={{ height: "100%", objectFit: "cover" }}

@@ -1,0 +1,252 @@
+/* Doctors.module.css - Scoped stylesheet for Doctors and DoctorCard sections */
+
+.docSection {
+  position: relative;
+  padding: 120px 24px 100px;
+  background-color: #eef1f3;
+  overflow: hidden;
+}
+
+.docShapeDividerTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.docShapeDividerBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.docShapeDividerSvg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 40px;
+}
+
+.docContainer {
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.docHeader {
+  text-align: center;
+  margin-bottom: 55px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.docSectionVisible .docHeader {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.docSubtitle {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2b89ff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.docTitle {
+  font-family: "Jost", sans-serif;
+  font-size: 2.45rem;
+  font-weight: 700;
+  color: #443474;
+  margin: 0 0 16px 0;
+}
+
+.docDivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.docDividerLine {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #443474 0%, #2b89ff 100%);
+  border-radius: 2px;
+}
+
+.docGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  width: 100%;
+}
+
+.docCard {
+  background-color: #ffffff;
+  border: 1px solid rgba(68, 52, 116, 0.06);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(68, 52, 116, 0.02);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              opacity 0.8s ease, 
+              transform 0.8s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.docCardVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.docCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(68, 52, 116, 0.07);
+}
+
+.docCardImageWrapper {
+  flex: 0 0 40%;
+  position: relative;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.docCardImage {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.docCard:hover .docCardImage {
+  transform: scale(1.03);
+}
+
+.docCardContent {
+  flex: 1;
+  padding: var(--card-padding-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.docCardName {
+  font-family: "Jost", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #443474;
+  margin: 0 0 6px 0;
+}
+
+.docCardDegree {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #e06d6d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.docCardDesc {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: #64748b;
+  margin: 0 0 16px 0;
+}
+
+.docCardSocial {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.docCardSocial a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(68, 52, 116, 0.05);
+  color: #443474;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.docCardSocial a:hover {
+  background-color: #2b89ff;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .docGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .docCard {
+    flex-direction: column;
+  }
+  .docCardImageWrapper {
+    width: 100%;
+    height: 240px;
+  }
+  .docCardImage {
+    min-height: auto;
+  }
+  .docCardContent {
+    padding: 24px;
+  }
+  .docTitle {
+    font-size: 2.15rem;
+  }
+}
+
+/* Prefers Reduced Motion support */
+@media (prefers-reduced-motion: reduce) {
+  .docHeader,
+  .docCard {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .docCard:hover {
+    transform: none !important;
+    box-shadow: 0 4px 20px rgba(68, 52, 116, 0.02) !important;
+  }
+  .docCardImage {
+    transition: none !important;
+  }
+  .docCard:hover .docCardImage {
+    transform: none !important;
+  }
+}

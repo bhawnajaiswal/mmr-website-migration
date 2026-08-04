@@ -1,4 +1,4 @@
-import styles from "@/app/Home.module.css";
+import styles from "./Doctors.module.css";
 
 interface DoctorCardProps {
   imageUrl: string;

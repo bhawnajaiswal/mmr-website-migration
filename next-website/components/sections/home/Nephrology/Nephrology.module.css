@@ -1,0 +1,188 @@
+/* Nephrology.module.css - Stylesheet restored to original visual styling */
+
+.nephrologySection {
+  position: relative;
+  background-color: var(--color-background-light);
+  padding: 75px 20px;
+}
+
+/* Decoupled Scoped Top Pyramids Divider */
+.shapeDivider {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.shapeDividerTop {
+  top: 0;
+  left: 0;
+}
+
+.shapeDividerBottom {
+  bottom: 0;
+  left: 0;
+}
+
+.shapeDividerSvg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 40px;
+}
+
+.shapeDividerTop .shapeDividerSvg {
+  fill: #ffffff;
+}
+
+.shapeDividerBottom .shapeDividerSvg {
+  fill: #ffffff;
+}
+
+.nephrologyContainer {
+  position: relative;
+  z-index: 5;
+  max-width: 1220px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr; /* Images left, text right (mirrored from intro) */
+  gap: 64px;
+  align-items: center;
+}
+
+/* 3-Image Collage Grid Composition */
+.collageGrid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.collageMain {
+  grid-row: span 2;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.collageSub1, .collageSub2 {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.collageImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.collageMain:hover .collageImage, 
+.collageSub1:hover .collageImage, 
+.collageSub2:hover .collageImage {
+  transform: scale(1.02);
+}
+
+.nephrologyContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nephrologySub {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nephrologyTitle h2 {
+  font-size: 2.45rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-secondary);
+  letter-spacing: -0.01em;
+}
+
+.nephrologyText1 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.nephrologyText2 {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+.nephrologyButton {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  color: var(--color-secondary);
+  background-color: transparent;
+  border: 2px solid var(--color-accent);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.nephrologyButton:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Tablet Portrait & below (1024px) */
+@media (max-width: 1024px) {
+  .nephrologyContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  /* Stack images below text on mobile/tablet */
+  .nephrologyContainer > div:first-child {
+    grid-row: 2;
+  }
+  
+  .collageGrid {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* Mobile Devices (768px & below) */
+@media (max-width: 768px) {
+  .nephrologySection {
+    padding: 55px 20px;
+  }
+
+  .nephrologyTitle h2 {
+    font-size: 1.85rem;
+    text-align: center;
+  }
+
+  .nephrologySub {
+    text-align: center;
+  }
+
+  .nephrologyContent {
+    text-align: center;
+  }
+
+  .nephrologyButton {
+    align-self: center;
+  }
+}

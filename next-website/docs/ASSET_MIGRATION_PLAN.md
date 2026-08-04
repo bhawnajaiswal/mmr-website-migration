@@ -78,3 +78,17 @@ The physical migration operates in three risk-controlled steps:
 
 *   **Version Rollback**: If paths fail, restore the git state of `config/assets/*.ts` to point to `/wp-content/uploads/...`.
 *   **Zero File Loss**: Do not delete physical files from the uploads directory until the entire Next.js build is verified as clean.
+
+---
+
+## 6. Phase 1 Static Components Migration Log (REF-009)
+
+| Component | Old Asset Path | New Registry Variable | Registry File | Status |
+| :--- | :--- | :--- | :--- | :---: |
+| `Intro.tsx` | `/wp-content/uploads/2024/03/Untitled-design-37.png` | `SHARED_IMAGES.ivfHeartGraphic` | `shared.ts` | Complete |
+| `Intro.tsx` | `/wp-content/uploads/2024/03/vitro-fertilization-human-female-cell-blue-background-microscopic-view-ivf-close-up-3d-rendering-scaled.jpg` | `SHARED_IMAGES.ivfCellMicroscopeIllustration` | `shared.ts` | Complete |
+| `Intro.tsx` | `/wp-content/uploads/2024/03/woman-s-hands-support-human-embryo-icon-blurred-background-tree-scaled.jpg` | `SHARED_IMAGES.embryoSupportIllustration` | `shared.ts` | Complete |
+| `OurHospital.tsx` | `/wp-content/uploads/2024/04/MMR-Hospital-IVF-Center-1024-x-1024-px-1.png` | `FACILITY_IMAGES.hospitalGeneral` | `facilities.ts` | Complete |
+| `Founders.tsx` | `/wp-content/uploads/2024/04/Untitled-design-66.png` | `DOCTOR_IMAGES.founderAnuradha` | `doctors.ts` | Complete |
+| `Founders.tsx` | `/wp-content/uploads/2024/04/Untitled-design-67.png` | `DOCTOR_IMAGES.founderPrawash` | `doctors.ts` | Complete |
+| `DoctorProfile.tsx` | `/wp-content/uploads/2024/04/Urology-3-768x768.png` | `DOCTOR_IMAGES.doctorPrawashProfile` | `doctors.ts` | Complete |
