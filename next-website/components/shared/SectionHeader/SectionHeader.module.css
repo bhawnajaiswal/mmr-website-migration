@@ -1,0 +1,59 @@
+/* SectionHeader.module.css - Styles for shared SectionHeader component */
+
+.header {
+  margin-bottom: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+}
+
+.right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin: var(--space-2) 0 0 0;
+  line-height: 1.25;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.divider {
+  width: 48px;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-sm);
+  margin-top: var(--space-3);
+}
+
+.center .divider {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.right .divider {
+  margin-left: auto;
+}

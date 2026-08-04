@@ -1,0 +1,30 @@
+/* Badge.module.css - Styles for shared Badge component */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 16px;
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius-full);
+  box-sizing: border-box;
+}
+
+.primary {
+  background-color: rgba(68, 52, 116, 0.1);
+  color: var(--color-primary);
+}
+
+.secondary {
+  background-color: rgba(48, 85, 149, 0.1);
+  color: var(--color-secondary);
+}
+
+.accent {
+  background-color: rgba(216, 142, 236, 0.15);
+  color: var(--color-accent);
+}

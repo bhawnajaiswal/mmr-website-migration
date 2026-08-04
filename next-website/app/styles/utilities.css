@@ -1,0 +1,61 @@
+/* app/styles/utilities.css - Reusable Page Utilities */
+
+/* Core Centered Container Grid */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  box-sizing: border-box;
+}
+
+/* Wide Container for Header layouts */
+.container-wide {
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  box-sizing: border-box;
+}
+
+/* Section Margins */
+.section {
+  padding: var(--space-12) 0;
+}
+
+.section-large {
+  padding: var(--space-20) 0;
+}
+
+/* Alignment utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Flexbox/Grid centering quick classes */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Accessibility screen-reader utilities */
+.sr-only,
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

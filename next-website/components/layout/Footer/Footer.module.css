@@ -1,0 +1,178 @@
+/* Footer.module.css - Stylesheet scoped to Footer layout components */
+
+.siteFooter {
+  width: 100%;
+  max-width: none !important;
+  margin: 0 !important;
+  background: #51437f;
+  color: #ffffff;
+  padding: 0;
+  font-family: var(--font-body);
+  box-sizing: border-box;
+}
+
+.footerTopContainer {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 12px 7%;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.2fr 1fr;
+  align-items: start;
+  gap: 50px;
+  box-sizing: border-box;
+}
+
+.footerColumn {
+  margin: 0;
+  text-align: left;
+}
+
+.footerColumn h5 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+/* Contact Column (First Column Layout overrides) */
+.contactColumn {
+  text-align: center;
+}
+
+.contactColumnHeader {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.footerLogoWrap,
+.footerCtaWrap,
+.phoneWrap {
+  display: none; /* Hidden layout elements matching WordPress style defaults */
+}
+
+.footerContactInfo {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.footerContactInfo p {
+  margin: 8px 0;
+}
+
+.footerContactInfo a,
+.footerColumn a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.footerContactInfo a:hover,
+.footerColumn a:hover {
+  color: var(--color-accent);
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: normal;
+}
+
+.footerColumn li {
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+/* Social icons block */
+.footerSocials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.footerSocials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #173c70;
+  color: #ffffff;
+  font-size: 14px;
+  transition: var(--transition-fast);
+}
+
+.footerSocials a:hover {
+  background-color: var(--color-accent);
+}
+
+/* Bottom copyright layouts */
+.footerBottom {
+  background: #171b1e;
+  border: 0;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.footerBottomContainer {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 16%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.footerBottomCredits,
+.footerBottomLegal {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footerBottomCredits a,
+.footerBottomLegal a {
+  color: #dddddd;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.footerBottomCredits a:hover,
+.footerBottomLegal a:hover {
+  color: #ffffff;
+}
+
+.footerBottomCredits img {
+  display: none; /* hidden developer icon matching production */
+}
+
+/* Responsive constraints */
+@media (max-width: 767px) {
+  .footerTopContainer {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .footerBottomContainer {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,97 @@
+/* app/styles/tokens.css - Custom Properties (Design Tokens) */
+
+:root {
+  /* ==========================================================================
+     1. Color Palette (Business Domain Tokens)
+     ========================================================================== */
+  --color-primary: #443474;          /* Lilac / Deep Purple Theme Color */
+  --color-primary-light: #5c359a;    /* Scoped Treatment Page Purple */
+  --color-secondary: #305595;        /* Secondary Slate Blue */
+  --color-secondary-light: #105ab5;  /* Contact Links / Icon Blue */
+  --color-accent: #d88eec;           /* CTA / Special Accent Pink */
+  --color-accent-light: #f08080;     /* Coral Red Highlights */
+  
+  --color-text-dark: #192431;        /* Primary Body Text */
+  --color-text-gray: #4f4f4f;        /* Sub-navigation & Muted Labels */
+  --color-text-muted: #64748b;       /* Caption and Meta Gray */
+  
+  --color-border: #e2e8f0;           /* Soft Border Divider Color */
+  --color-border-dark: #cbd5e1;      /* Input & Form Border Color */
+  
+  --color-bg-light: #f8fafc;         /* Light Background Panels */
+  --color-bg-white: #ffffff;         /* Pure Background White */
+  --color-bg-purple: #fdfdfd;        /* Header background tone */
+
+  /* ==========================================================================
+     2. Typography Scales
+     ========================================================================== */
+  --font-heading: "Jost", sans-serif;
+  --font-body: "Montserrat", sans-serif;
+  --font-alt: "Nunito", sans-serif;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;           /* 12px */
+  --font-size-sm: 0.875rem;          /* 14px */
+  --font-size-md: 1rem;              /* 16px */
+  --font-size-lg: 1.125rem;          /* 18px */
+  --font-size-xl: 1.25rem;           /* 20px */
+  --font-size-2xl: 1.5rem;           /* 24px */
+  --font-size-3xl: 1.875rem;         /* 30px */
+  --font-size-4xl: 2.25rem;          /* 36px */
+  --font-size-5xl: 3.25rem;          /* 52px */
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* ==========================================================================
+     3. Spacing Scale (8px Grid System)
+     ========================================================================== */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+
+  /* ==========================================================================
+     4. Border Radius
+     ========================================================================== */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* ==========================================================================
+     5. Elevation Shadows
+     ========================================================================== */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 25px -5px rgba(48, 85, 149, 0.08), 0 8px 10px -6px rgba(48, 85, 149, 0.05);
+  --shadow-dropdown: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  /* ==========================================================================
+     6. Z-Index Layering
+     ========================================================================== */
+  --z-header: 1000;
+  --z-dropdown: 999;
+  --z-mobile-drawer: 9999;
+  --z-overlay: 9995;
+  --z-back-to-top: 100;
+
+  /* ==========================================================================
+     7. Transition Curves
+     ========================================================================== */
+  --transition-fast: all 0.15s ease-in-out;
+  --transition-normal: all 0.25s ease-in-out;
+  --transition-slow: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
