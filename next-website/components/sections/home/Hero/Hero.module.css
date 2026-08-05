@@ -326,10 +326,67 @@
   width: calc(100% - 32px);
 }
 
-.statsItem {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.statsStrip{
+    display:flex;
+    align-items:stretch;
+    overflow:visible;
+}
+
+.statsItem{
+    position:relative;
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    padding:14px 18px;
+
+    transition:
+        flex .35s cubic-bezier(.22,1,.36,1),
+        transform .35s cubic-bezier(.22,1,.36,1),
+        opacity .25s;
+}
+
+.statsItem::before{
+    content:"";
+    position:absolute;
+
+    top:0;
+    bottom:0;
+    left:2px;
+    right:2px;
+
+    background:#fff;
+    border-radius:16px;
+
+    transition:.35s cubic-bezier(.22,1,.36,1);
+
+    z-index:-1;
+}
+
+.statsStrip:hover .statsItem{
+    opacity:.65;
+}
+
+.statsStrip:hover .statsItem:hover{
+    flex:1.35;
+    opacity:1;
+    transform:translateY(-3px);
+}
+
+.statsStrip:hover .statsItem:hover::before{
+
+    top:-14px;
+    bottom:-14px;
+
+    left:-2px;
+    right:-2px;
+
+    border-radius:22px;
+
+    box-shadow:
+        0 16px 32px rgba(107,33,168,.12);
 }
 
 .statsIcon {
@@ -400,50 +457,79 @@
   white-space: nowrap; /* Prevent wrapping on desktop */
 }
 
-.diagnosticsGrid {
-  display: grid;
-  grid-template-columns: repeat(13, 1fr); /* Fits all cards in a single row on desktop */
-  gap: 8px; /* Equal tight spacing */
+.diagnosticsMarquee{
+    width:100%;
+    overflow:hidden;
+    position:relative;
 }
 
-.diagnosticCard {
-  background: #ffffff;
-  border: 1px solid rgba(107, 33, 168, 0.05);
-  border-radius: 10px;
-  padding: 10px 4px; /* Reduced padding & width height */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 85px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.015);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
+.diagnosticsViewport{
+    overflow:hidden;
+    width:100%;
+    position:relative;
+    mask-image:linear-gradient(to right,
+        transparent,
+        black 6%,
+        black 94%,
+        transparent);
+    -webkit-mask-image:linear-gradient(to right,
+        transparent,
+        black 6%,
+        black 94%,
+        transparent);
 }
 
-.diagnosticCard:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(107, 33, 168, 0.06);
-  border-color: rgba(107, 33, 168, 0.15);
+.diagnosticsTrack{
+    display:flex;
+    width:max-content;
+    animation:heroMarquee 76s linear infinite;
+    will-change:transform;
 }
 
-.diagnosticIcon {
-  font-size: 1.35rem; /* Reduced icon size slightly */
-  color: #6b21a8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.diagnosticsGroup{
+    display:flex;
+    flex-shrink:0;
 }
 
-.diagnosticLabel {
-  font-size: 0.7rem; /* Reduced label font-size slightly */
-  font-weight: 700;
-  color: #334155;
-  text-align: center;
-  line-height: 1.25;
+.diagnosticCard{
+    flex:0 0 125px;
+    margin-right:12px;
+}
+
+@keyframes heroMarquee{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+.diagnosticCard{
+    flex:0 0 125px;
+    min-height:90px;
+    background:#fff;
+    border-radius:12px;
+    border:1px solid rgba(107,33,168,.08);
+    box-shadow:0 4px 12px rgba(0,0,0,.03);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:12px 8px;
+
+    transition:
+        transform .25s,
+        box-shadow .25s,
+        border-color .25s;
+}
+
+.diagnosticCard:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 22px rgba(107,33,168,.12);
+    border-color:rgba(107,33,168,.22);
 }
 
 /* ==========================================================================
@@ -527,9 +613,28 @@
     width: 100%;
     justify-content: center;
   }
-  .statsStrip {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 16px;
-  }
+  .statsStrip{
+    flex-direction:row;
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    scroll-snap-type:x mandatory;
+
+    scrollbar-width:none;
+
+    -ms-overflow-style:none;
+
+    gap:14px;
+
+    padding:16px;
+}
+
+.statsStrip::-webkit-scrollbar{
+display:none;
+}
+
+.statsItem{
+    flex:0 0 250px;
+    scroll-snap-align:start;
+}
 }

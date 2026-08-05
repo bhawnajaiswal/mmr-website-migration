@@ -46,6 +46,21 @@ const DIAGNOSTICS = [
   { icon: "fas fa-pager", label: "Holter Monitoring" }
 ];
 
+function renderDiagnosticsGroup(isHidden = false) {
+  return (
+    <div className={styles.diagnosticsGroup} aria-hidden={isHidden ? "true" : undefined}>
+      {DIAGNOSTICS.map((diag, idx) => (
+        <div key={`${diag.label}-${isHidden ? 'dup' : 'base'}-${idx}`} className={styles.diagnosticCard}>
+          <div className={styles.diagnosticIcon}>
+            <i className={diag.icon} />
+          </div>
+          <span className={styles.diagnosticLabel}>{diag.label}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function Hero() {
   return (
     <section className={styles.heroSection}>
@@ -187,23 +202,21 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Diagnostics Grid Section */}
+      {/* Diagnostics Marquee Section */}
       <div className={styles.diagnosticsContainer}>
         <div className={styles.diagnosticsDividerLine}>
           <span className={styles.dividerDot} />
           <h2 className={styles.diagnosticsTitle}>ADVANCED DIAGNOSTIC FACILITIES</h2>
           <span className={styles.dividerDot} />
         </div>
-        
-        <div className={styles.diagnosticsGrid}>
-          {DIAGNOSTICS.map((diag, idx) => (
-            <div key={idx} className={styles.diagnosticCard}>
-              <div className={styles.diagnosticIcon}>
-                <i className={diag.icon} />
-              </div>
-              <span className={styles.diagnosticLabel}>{diag.label}</span>
+
+        <div className={styles.diagnosticsMarquee} aria-label="Advanced diagnostic facilities">
+          <div className={styles.diagnosticsViewport}>
+            <div className={styles.diagnosticsTrack}>
+              {renderDiagnosticsGroup(false)}
+              {renderDiagnosticsGroup(true)}
             </div>
-          ))}
+          </div>
         </div>
       </div>
 
