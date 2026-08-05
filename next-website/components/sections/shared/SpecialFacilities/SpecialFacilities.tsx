@@ -1,5 +1,7 @@
 "use client";
 
+import { SITE } from "@/config/site";
+
 interface SpecialFacilitiesProps {
   showSocialIcons?: boolean;
 }
@@ -238,31 +240,31 @@ export default function SpecialFacilities({ showSocialIcons = false }: SpecialFa
                           <div className="elementor-widget-container">
                             <div className="elementor-social-icons-wrapper elementor-grid">
                               <span className="elementor-grid-item">
-                                <a className="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-243955a" target="_blank" rel="noopener noreferrer">
+                                <a className="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-243955a" target="_blank" rel="noopener noreferrer" href={SITE.social.facebook}>
                                   <span className="elementor-screen-only">Facebook</span>
                                   <i className="fa fa-facebook"></i>
                                 </a>
                               </span>
                               <span className="elementor-grid-item">
-                                <a className="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-7fb45c0" target="_blank" rel="noopener noreferrer">
+                                <a className="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-7fb45c0" target="_blank" rel="noopener noreferrer" href={SITE.social.twitter}>
                                   <span className="elementor-screen-only">Twitter</span>
                                   <i className="fa fa-twitter"></i>
                                 </a>
                               </span>
                               <span className="elementor-grid-item">
-                                <a className="elementor-icon elementor-social-icon elementor-social-icon-google-plus elementor-repeater-item-9eef2b8" target="_blank" rel="noopener noreferrer">
+                                <a className="elementor-icon elementor-social-icon elementor-social-icon-google-plus elementor-repeater-item-9eef2b8" target="_blank" rel="noopener noreferrer" href="#">
                                   <span className="elementor-screen-only">Google-plus</span>
                                   <i className="fa fa-google-plus"></i>
                                 </a>
                               </span>
                               <span className="elementor-grid-item">
-                                <a className="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-3693876" target="_blank" rel="noopener noreferrer">
+                                <a className="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-3693876" target="_blank" rel="noopener noreferrer" href={SITE.social.linkedin}>
                                   <span className="elementor-screen-only">Linkedin</span>
                                   <i className="fa fa-linkedin"></i>
                                 </a>
                               </span>
                               <span className="elementor-grid-item">
-                                <a className="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-918189a" target="_blank" rel="noopener noreferrer">
+                                <a className="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-918189a" target="_blank" rel="noopener noreferrer" href={SITE.social.instagram}>
                                   <span className="elementor-screen-only">Instagram</span>
                                   <i className="fa fa-instagram"></i>
                                 </a>

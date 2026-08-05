@@ -375,3 +375,11 @@
 [class*="servicesGrid"] {
   align-items: stretch !important;
 }
+
+/* next/font/google global variables overrides for legacy stylesheet bindings */
+:root {
+  --font-jost: "Jost", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}

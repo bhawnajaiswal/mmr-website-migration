@@ -76,14 +76,14 @@ export default function Consultation() {
       
       {/* Top Pyramid shape divider */}
       <div className={styles.consultShapeDividerTop}>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={styles.consultShapeDividerSvg}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={styles.consultShapeDividerSvg} aria-hidden="true" focusable="false">
           <path d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9" fill="#ffffff" />
         </svg>
       </div>
 
       {/* Bottom Pyramid shape divider */}
       <div className={styles.consultShapeDividerBottom}>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={styles.consultShapeDividerSvg}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={styles.consultShapeDividerSvg} aria-hidden="true" focusable="false">
           <path d="M761.9,40.6L643.1,24L333.9,93.8L0.1,1H0v99h1000V1" fill="#ffffff" />
         </svg>
       </div>
@@ -109,29 +109,33 @@ export default function Consultation() {
               
               {/* Name Fields (First & Last side-by-side) */}
               <div className={styles.formGroup}>
-                <label className={styles.formLabel}>
+                <label className={styles.formLabel} htmlFor="firstName">
                   Name <span className={styles.formRequired}>*</span>
                 </label>
                 <div className={styles.formRow}>
                   <div className={styles.formCol}>
                     <input
                       type="text"
+                      id="firstName"
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
                       required
                       placeholder="First Name"
+                      aria-label="First Name"
                       className={styles.formInput}
                     />
                   </div>
                   <div className={styles.formCol}>
                     <input
                       type="text"
+                      id="lastName"
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
                       required
                       placeholder="Last Name"
+                      aria-label="Last Name"
                       className={styles.formInput}
                     />
                   </div>
@@ -140,11 +144,12 @@ export default function Consultation() {
 
               {/* Email Field */}
               <div className={styles.formGroup}>
-                <label className={styles.formLabel}>
+                <label className={styles.formLabel} htmlFor="email">
                   Email <span className={styles.formRequired}>*</span>
                 </label>
                 <input
                   type="email"
+                  id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -157,8 +162,9 @@ export default function Consultation() {
 
               {/* Dropdown Select Field */}
               <div className={styles.formGroup}>
-                <label className={styles.formLabel}>Treatment For</label>
+                <label className={styles.formLabel} htmlFor="treatment">Treatment For</label>
                 <select
+                  id="treatment"
                   name="treatment"
                   value={formData.treatment}
                   onChange={handleChange}

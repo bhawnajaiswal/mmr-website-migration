@@ -133,7 +133,7 @@ export default function Testimonials() {
                       </div>
 
                       <div className={styles.reviewGoogleBrand}>
-                        <i className="fab fa-google" />
+                        <i className="fab fa-google" aria-hidden="true" />
                       </div>
                     </div>
 
@@ -152,14 +152,14 @@ export default function Testimonials() {
             className={`${styles.reviewNavButton} ${styles.reviewNavPrev}`}
             aria-label="Previous review"
           >
-            <i className="fas fa-chevron-left" />
+            <i className="fas fa-chevron-left" aria-hidden="true" />
           </button>
           <button
             onClick={handleNext}
             className={`${styles.reviewNavButton} ${styles.reviewNavNext}`}
             aria-label="Next review"
           >
-            <i className="fas fa-chevron-right" />
+            <i className="fas fa-chevron-right" aria-hidden="true" />
           </button>
 
           {/* Pagination Dots */}

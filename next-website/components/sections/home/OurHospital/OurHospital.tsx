@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/components/shared/Container/Container";
 import { FACILITY_IMAGES } from "@/config/assets/facilities";
 import styles from "./OurHospital.module.css";
@@ -30,10 +31,11 @@ export default function OurHospital() {
 
           {/* Column 2: Hospital Image */}
           <div className={styles.imageContent}>
-            <img
-              decoding="async"
+            <Image
               src={FACILITY_IMAGES.hospitalGeneral}
               alt="best ivf center in Raipur"
+              width={800}
+              height={800}
               className={styles.image}
             />
           </div>

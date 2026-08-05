@@ -1,14 +1,34 @@
+import dynamic from "next/dynamic";
 import styles from "./Home.module.css";
 import Hero from "@/components/sections/home/Hero/Hero";
 import Intro from "@/components/sections/home/Intro/Intro";
 import Nephrology from "@/components/sections/home/Nephrology/Nephrology";
-import WhyChooseUs from "@/components/sections/home/WhyChooseUs/WhyChooseUs";
-import Doctors from "@/components/sections/home/Doctors/Doctors";
-import Statistics from "@/components/sections/home/Statistics/Statistics";
-import Testimonials from "@/components/sections/home/Testimonials/Testimonials";
-import Blogs from "@/components/sections/home/Blogs/Blogs";
-import Consultation from "@/components/sections/home/Consultation/Consultation";
 import OurHospital from "@/components/sections/home/OurHospital/OurHospital";
+
+// Dynamically imported client-side interactive sections below the fold
+const WhyChooseUs = dynamic(() => import("@/components/sections/home/WhyChooseUs/WhyChooseUs"), {
+  loading: () => <div style={{ minHeight: "650px", backgroundColor: "#f8f6fc" }} />
+});
+
+const Doctors = dynamic(() => import("@/components/sections/home/Doctors/Doctors"), {
+  loading: () => <div style={{ minHeight: "750px", backgroundColor: "#eef1f3" }} />
+});
+
+const Statistics = dynamic(() => import("@/components/sections/home/Statistics/Statistics"), {
+  loading: () => <div style={{ minHeight: "350px", backgroundColor: "#ffffff" }} />
+});
+
+const Testimonials = dynamic(() => import("@/components/sections/home/Testimonials/Testimonials"), {
+  loading: () => <div style={{ minHeight: "500px", backgroundColor: "#ffffff" }} />
+});
+
+const Blogs = dynamic(() => import("@/components/sections/home/Blogs/Blogs"), {
+  loading: () => <div style={{ minHeight: "600px", backgroundColor: "#ffffff" }} />
+});
+
+const Consultation = dynamic(() => import("@/components/sections/home/Consultation/Consultation"), {
+  loading: () => <div style={{ minHeight: "750px", backgroundColor: "#eef1f3" }} />
+});
 
 export default function Home() {
   return (

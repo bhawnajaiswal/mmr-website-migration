@@ -53,7 +53,7 @@ export default function CounterCard({
         </span>
         <span className={styles.statsSuffix}>{suffix}</span>
       </div>
-      <h4 className={styles.statsCardTitle}>{title}</h4>
+      <h3 className={styles.statsCardTitle}>{title}</h3>
     </div>
   );
 }

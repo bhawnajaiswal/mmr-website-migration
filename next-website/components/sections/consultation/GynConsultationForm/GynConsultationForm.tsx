@@ -105,7 +105,8 @@ export default function GynConsultationForm() {
                   <span className={styles.contactIcon}>
                     <img
                       src="/wp-content/uploads/2023/11/call-2.svg"
-                      alt="Call Icon"
+                      alt=""
+                      aria-hidden="true"
                       width={32}
                       height={32}
                     />
@@ -122,7 +123,8 @@ export default function GynConsultationForm() {
                   <span className={styles.contactIcon}>
                     <img
                       src="/wp-content/uploads/2023/11/email-1.svg"
-                      alt="Email Icon"
+                      alt=""
+                      aria-hidden="true"
                       width={32}
                       height={32}
                     />

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Hero.module.css";
 
 const STATS = [
@@ -159,10 +160,13 @@ export default function Hero() {
         {/* Right Column */}
         <div className={styles.rightColumn}>
           <div className={styles.doctorImageWrapper}>
-            <img 
+            <Image 
               src="/images/home_hero.png" 
               alt="MMR Hospital IVF &amp; Kidney Care Doctors and Building Facade" 
               className={styles.doctorImage}
+              width={1000}
+              height={750}
+              priority
             />
           </div>
         </div>
@@ -211,6 +215,8 @@ export default function Hero() {
           xmlns="http://www.w3.org/2000/svg" 
           preserveAspectRatio="none" 
           className={styles.waveDividerSvg}
+          aria-hidden="true"
+          focusable="false"
         >
           <path 
             d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z" 
