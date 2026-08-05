@@ -6,7 +6,7 @@ import styles from "./Header.module.css";
 
 export default function DesktopNavigation() {
   return (
-    <nav className={styles.headerNav}>
+    <nav className={styles.headerNav} aria-label="Primary navigation">
       <ul className={styles.navList}>
         {NAVIGATION_ITEMS.map((item) => (
           <NavigationItem key={item.title} item={item} />

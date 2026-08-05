@@ -1,6 +1,6 @@
 "use client";
 
-import TopBar from "./TopBar";
+// import TopBar from "./TopBar";
 import DesktopNavigation from "./DesktopNavigation";
 import MobileNavigation from "./MobileNavigation";
 import Branding from "./Branding";
@@ -9,8 +9,8 @@ import styles from "./Header.module.css";
 export default function Header() {
   return (
     <header className={styles.siteHeader}>
-      {/* Scoped Top Info Bar */}
-      <TopBar />
+      {/* Scoped Top Info Bar
+      <TopBar /> */}
 
       {/* Main Brand & Nav Bar */}
       <div className={styles.mainHeaderRow}>

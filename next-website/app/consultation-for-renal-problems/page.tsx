@@ -120,16 +120,6 @@ export default function RenalConsultationPage() {
             </div>
           </section>
 
-          {/* Section 2: Banner CTA (Schedule button) */}
-          <div className={formStyles.ctaContainer}>
-            <a
-              href="#Appointment"
-              className={formStyles.ctaScheduleButton}
-            >
-              Schedule an Appointment
-            </a>
-          </div>
-
           {/* Section 3: Consultation Content & Form */}
           <section
             className={formStyles.formSection}

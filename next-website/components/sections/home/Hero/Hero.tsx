@@ -1,6 +1,9 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Hero.module.css";
+import Lottie from "lottie-react";
+import ambulanceAnimation from "@/public/animations/ambulance.json";
 
 const STATS = [
   {
@@ -46,6 +49,21 @@ const DIAGNOSTICS = [
   { icon: "fas fa-pager", label: "Holter Monitoring" }
 ];
 
+function renderDiagnosticsGroup(isHidden = false) {
+  return (
+    <div className={styles.diagnosticsGroup} aria-hidden={isHidden ? "true" : undefined}>
+      {DIAGNOSTICS.map((diag, idx) => (
+        <div key={`${diag.label}-${isHidden ? 'dup' : 'base'}-${idx}`} className={styles.diagnosticCard}>
+          <div className={styles.diagnosticIcon}>
+            <i className={diag.icon} />
+          </div>
+          <span className={styles.diagnosticLabel}>{diag.label}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function Hero() {
   return (
     <section className={styles.heroSection}>
@@ -87,70 +105,99 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Two Service Cards */}
-            <div className={styles.serviceCards}>
-              {/* Kidney Care Card */}
-              <div className={styles.serviceCard}>
-                <div className={styles.serviceHeader}>
-                  <div className={`${styles.serviceIcon} ${styles.bgKidney}`}>
-                    <i className="fas fa-tint" />
+            {/* Service Section */}
+            <div className={styles.serviceSection}>
+              {/* Two Service Cards */}
+              <div className={styles.serviceCards}>
+                {/* Kidney Care Card */}
+                <div className={styles.serviceCard}>
+                  <div className={styles.serviceHeader}>
+                    <div className={`${styles.serviceIcon} ${styles.bgKidney}`}>
+                      <i className="fas fa-tint" />
+                    </div>
+                    <h3 className={styles.serviceTitle}>KIDNEY CARE</h3>
                   </div>
-                  <h3 className={styles.serviceTitle}>KIDNEY CARE</h3>
+                  <ul className={styles.bulletList}>
+                    <li>
+                      <i className={`fas fa-check-circle ${styles.checkKidney}`} />
+                      <span>Kidney Transplant</span>
+                    </li>
+                    <li>
+                      <i className={`fas fa-check-circle ${styles.checkKidney}`} />
+                      <span>Nephrology Care</span>
+                    </li>
+                    <li>
+                      <i className={`fas fa-check-circle ${styles.checkKidney}`} />
+                      <span>Dialysis &amp; CRRT</span>
+                    </li>
+                    <li>
+                      <i className={`fas fa-check-circle ${styles.checkKidney}`} />
+                      <span>Advanced ICU Support</span>
+                    </li>
+                    <li>
+                      <i className={`fas fa-check-circle ${styles.checkKidney}`} />
+                      <span>Urology Treatments</span>
+                    </li>
+                  </ul>
                 </div>
-                <ul className={styles.bulletList}>
-                  <li>
-                    <i className={`fas fa-check-circle ${styles.checkKidney}`} />
-                    <span>Kidney Transplant</span>
-                  </li>
-                  <li>
-                    <i className={`fas fa-check-circle ${styles.checkKidney}`} />
-                    <span>Nephrology Care</span>
-                  </li>
-                  <li>
-                    <i className={`fas fa-check-circle ${styles.checkKidney}`} />
-                    <span>Dialysis &amp; CRRT</span>
-                  </li>
-                  <li>
-                    <i className={`fas fa-check-circle ${styles.checkKidney}`} />
-                    <span>Advanced ICU Support</span>
-                  </li>
-                  <li>
-                    <i className={`fas fa-check-circle ${styles.checkKidney}`} />
-                    <span>Urology Treatments</span>
-                  </li>
-                </ul>
+
+                {/* IVF Care Card */}
+                <div className={styles.serviceCard}>
+                  <div className={styles.serviceHeader}>
+                    <div className={`${styles.serviceIcon} ${styles.bgIvf}`}>
+                      <i className="fas fa-baby" />
+                    </div>
+                    <h3 className={styles.serviceTitle}>IVF &amp; FERTILITY</h3>
+                  </div>
+                  <ul className={styles.bulletList}>
+                    <li>
+                      <i className={`fas fa-check-circle ${styles.checkIvf}`} />
+                      <span>IVF &amp; ICSI</span>
+                    </li>
+                    <li>
+                      <i className={`fas fa-check-circle ${styles.checkIvf}`} />
+                      <span>Laparoscopy</span>
+                    </li>
+                    <li>
+                      <i className={`fas fa-check-circle ${styles.checkIvf}`} />
+                      <span>Fertility Evaluation</span>
+                    </li>
+                    <li>
+                      <i className={`fas fa-check-circle ${styles.checkIvf}`} />
+                      <span>Women&apos;s Health Care</span>
+                    </li>
+                    <li>
+                      <i className={`fas fa-check-circle ${styles.checkIvf}`} />
+                      <span>High-Risk Pregnancy Care</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
-              {/* IVF Care Card */}
-              <div className={styles.serviceCard}>
-                <div className={styles.serviceHeader}>
-                  <div className={`${styles.serviceIcon} ${styles.bgIvf}`}>
-                    <i className="fas fa-baby" />
-                  </div>
-                  <h3 className={styles.serviceTitle}>IVF &amp; FERTILITY</h3>
+              {/* Emergency Helpline Panel */}
+              <div className={styles.emergencyPanel}>
+                <span className={styles.emergencySmall}>
+                    EMERGENCY HELPLINE
+                </span>
+
+                <div className={styles.emergencyNumbers}>
+                  <a
+                    href="tel:+919244122040"
+                    className={styles.emergencyNumber}
+                  >
+                    92441 22040
+                  </a>
+                  <a
+                    href="tel:+919244122044"
+                    className={styles.emergencyNumber}
+                  >
+                    92441 22044
+                  </a>
                 </div>
-                <ul className={styles.bulletList}>
-                  <li>
-                    <i className={`fas fa-check-circle ${styles.checkIvf}`} />
-                    <span>IVF &amp; ICSI</span>
-                  </li>
-                  <li>
-                    <i className={`fas fa-check-circle ${styles.checkIvf}`} />
-                    <span>Laparoscopy</span>
-                  </li>
-                  <li>
-                    <i className={`fas fa-check-circle ${styles.checkIvf}`} />
-                    <span>Fertility Evaluation</span>
-                  </li>
-                  <li>
-                    <i className={`fas fa-check-circle ${styles.checkIvf}`} />
-                    <span>Women&apos;s Health Care</span>
-                  </li>
-                  <li>
-                    <i className={`fas fa-check-circle ${styles.checkIvf}`} />
-                    <span>High-Risk Pregnancy Care</span>
-                  </li>
-                </ul>
+
+                <p className={styles.emergencyText}>
+                    24×7 Emergency & Ambulance Support
+                </p>
               </div>
             </div>
 
@@ -169,8 +216,23 @@ export default function Hero() {
               priority
             />
           </div>
+          <div className={styles.heroLottie}>
+            <Lottie
+              animationData={ambulanceAnimation}
+              loop
+              autoplay
+              style={{
+                width: "100%",
+                height: "100%",
+                maxWidth: "100%",
+                maxHeight: "100%",
+              }}
+            />
+          </div>
+
         </div>
       </div>
+
 
       {/* Stats Strip */}
       <div className={styles.statsStrip}>
@@ -187,23 +249,21 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Diagnostics Grid Section */}
+      {/* Diagnostics Marquee Section */}
       <div className={styles.diagnosticsContainer}>
         <div className={styles.diagnosticsDividerLine}>
           <span className={styles.dividerDot} />
           <h2 className={styles.diagnosticsTitle}>ADVANCED DIAGNOSTIC FACILITIES</h2>
           <span className={styles.dividerDot} />
         </div>
-        
-        <div className={styles.diagnosticsGrid}>
-          {DIAGNOSTICS.map((diag, idx) => (
-            <div key={idx} className={styles.diagnosticCard}>
-              <div className={styles.diagnosticIcon}>
-                <i className={diag.icon} />
-              </div>
-              <span className={styles.diagnosticLabel}>{diag.label}</span>
+
+        <div className={styles.diagnosticsMarquee} aria-label="Advanced diagnostic facilities">
+          <div className={styles.diagnosticsViewport}>
+            <div className={styles.diagnosticsTrack}>
+              {renderDiagnosticsGroup(false)}
+              {renderDiagnosticsGroup(true)}
             </div>
-          ))}
+          </div>
         </div>
       </div>
 

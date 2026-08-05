@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 import Link from "next/link";
 import { NAVIGATION_ITEMS } from "@/config/navigation";
 import styles from "./Header.module.css";
@@ -9,30 +9,31 @@ export default function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({});
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen((prev) => !prev);
 
-  const toggleSubItem = (title: string, e: React.MouseEvent) => {
+  const toggleSubItem = (title: string, e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    setExpandedItems(prev => ({
+    setExpandedItems((prev) => ({
       ...prev,
-      [title]: !prev[title]
+      [title]: !prev[title],
     }));
   };
 
   return (
     <div className={styles.mobileMenu}>
-      {/* Hamburger Toggle */}
       <button
+        type="button"
         onClick={toggleMenu}
-        aria-label="Toggle Menu"
+        aria-label="Toggle menu"
+        aria-expanded={isOpen}
+        aria-controls="mobile-navigation-drawer"
         className={styles.mobileToggle}
       >
-        <i className={isOpen ? "fas fa-times" : "fas fa-bars"}></i>
+        <i className={isOpen ? "fas fa-times" : "fas fa-bars"} aria-hidden="true"></i>
       </button>
 
-      {/* Drawer Overlay */}
       {isOpen && (
-        <div className={styles.mobileDrawer}>
+        <div className={styles.mobileDrawer} id="mobile-navigation-drawer">
           <ul className={styles.mobileMenuList}>
             {NAVIGATION_ITEMS.map((item) => {
               const hasChildren = item.subItems && item.subItems.length > 0;
@@ -50,17 +51,20 @@ export default function MobileNavigation() {
                     </Link>
                     {hasChildren && (
                       <button
+                        type="button"
                         onClick={(e) => toggleSubItem(item.title, e)}
                         className={styles.mobileMenuExpandBtn}
-                        aria-label={isExpanded ? `Collapse ${item.title} submenu` : `Expand ${item.title} submenu`}
+                        aria-label={`${isExpanded ? "Collapse" : "Expand"} ${item.title}`}
                         aria-expanded={isExpanded}
                       >
-                        <i className={isExpanded ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i>
+                        <i
+                          className={isExpanded ? "fas fa-chevron-up" : "fas fa-chevron-down"}
+                          aria-hidden="true"
+                        ></i>
                       </button>
                     )}
                   </div>
 
-                  {/* Sub-menu Level 1 */}
                   {hasChildren && isExpanded && (
                     <ul className={styles.mobileSubMenu}>
                       {item.subItems!.map((subItem) => {
@@ -79,17 +83,20 @@ export default function MobileNavigation() {
                               </Link>
                               {hasSubChildren && (
                                 <button
+                                  type="button"
                                   onClick={(e) => toggleSubItem(subItem.title, e)}
                                   className={styles.mobileMenuExpandBtnSmall}
-                                  aria-label={isSubExpanded ? `Collapse ${subItem.title} submenu` : `Expand ${subItem.title} submenu`}
+                                  aria-label={`${isSubExpanded ? "Collapse" : "Expand"} ${subItem.title}`}
                                   aria-expanded={isSubExpanded}
                                 >
-                                  <i className={isSubExpanded ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i>
+                                  <i
+                                    className={isSubExpanded ? "fas fa-chevron-up" : "fas fa-chevron-down"}
+                                    aria-hidden="true"
+                                  ></i>
                                 </button>
                               )}
                             </div>
 
-                            {/* Sub-menu Level 2 */}
                             {hasSubChildren && isSubExpanded && (
                               <ul className={styles.mobileSubSubMenu}>
                                 {subItem.subItems!.map((subSub) => (
