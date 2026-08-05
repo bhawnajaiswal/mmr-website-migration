@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { SITE } from "@/config/site";
 import styles from "./Footer.module.css";
 
 export default function FooterBottom() {
@@ -11,15 +9,9 @@ export default function FooterBottom() {
   return (
     <div className={styles.footerBottom}>
       <div className={styles.footerBottomContainer}>
-        {/* Copyright notice & credit links */}
+        {/* Copyright notice */}
         <div className={styles.footerBottomCredits}>
           <span>Copyright © {currentYear} Martuchhaya Hospital.</span>
-          <span>
-            <a href="https://www.webmantra.net/" target="_blank" rel="noopener noreferrer">
-              Credits Webmantra
-            </a>
-          </span>
-          <Image src={SITE.logoWM} alt="Webmantra Icon" width={20} height={21} />
         </div>
 
         {/* Legal links */}
