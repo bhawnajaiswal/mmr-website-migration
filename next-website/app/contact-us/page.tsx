@@ -107,9 +107,6 @@ export default function ContactUsPage() {
               We&apos;re here to answer your questions, help you book an appointment, and guide you to the right specialist.
             </p>
             <span className={styles.heroSubtitle}>+91 9244122040</span>
-            <Link href="/consultation" className={styles.bookButton} style={{ marginTop: "12px" }}>
-              Book Appointment
-            </Link>
           </div>
         </section>
 

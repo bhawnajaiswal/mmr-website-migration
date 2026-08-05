@@ -180,12 +180,20 @@ export default function Hero() {
                     EMERGENCY HELPLINE
                 </span>
 
-                <a
-                  href="tel:9999999999"
-                  className={styles.emergencyNumber}
-                >
-                    92441 22040, 92441 22044
-                </a>
+                <div className={styles.emergencyNumbers}>
+                  <a
+                    href="tel:+919244122040"
+                    className={styles.emergencyNumber}
+                  >
+                    92441 22040
+                  </a>
+                  <a
+                    href="tel:+919244122044"
+                    className={styles.emergencyNumber}
+                  >
+                    92441 22044
+                  </a>
+                </div>
 
                 <p className={styles.emergencyText}>
                     24×7 Emergency & Ambulance Support
@@ -213,6 +221,12 @@ export default function Hero() {
               animationData={ambulanceAnimation}
               loop
               autoplay
+              style={{
+                width: "100%",
+                height: "100%",
+                maxWidth: "100%",
+                maxHeight: "100%",
+              }}
             />
           </div>
 
