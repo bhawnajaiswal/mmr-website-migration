@@ -25,9 +25,9 @@
   /* ==========================================================================
      2. Typography Scales
      ========================================================================== */
-  --font-heading: "Jost", sans-serif;
-  --font-body: "Montserrat", sans-serif;
-  --font-alt: "Nunito", sans-serif;
+  --font-heading: var(--font-jost), "Jost", sans-serif;
+  --font-body: var(--font-montserrat), "Montserrat", sans-serif;
+  --font-alt: var(--font-nunito), "Nunito", sans-serif;
 
   /* Font Sizes */
   --font-size-xs: 0.75rem;           /* 12px */

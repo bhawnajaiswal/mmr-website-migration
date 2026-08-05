@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { SITE } from "@/config/site";
 import styles from "./Footer.module.css";
 
@@ -10,7 +11,7 @@ export default function FooterContact() {
       
       {/* Hidden brand logo wrap to preserve DOM structure but hide via CSS */}
       <div className={styles.footerLogoWrap}>
-        <img
+        <Image
           src={SITE.logo}
           alt={SITE.name}
           width={144}
@@ -20,10 +21,11 @@ export default function FooterContact() {
       
       {/* Hidden cta wrap */}
       <div className={styles.footerCtaWrap}>
-        <img
+        <Image
           src={SITE.ctaButtonImg}
           alt="Book Consultation"
           width={250}
+          height={62}
         />
       </div>
 

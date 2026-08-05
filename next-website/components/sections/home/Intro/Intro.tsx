@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Container from "@/components/shared/Container/Container";
 import Button from "@/components/shared/Button/Button";
 import { SHARED_IMAGES } from "@/config/assets/shared";
@@ -45,31 +46,34 @@ export default function Intro() {
         <div className={styles.collageGrid}>
           {/* Main Large Left Image */}
           <div className={styles.collageMain}>
-            <img
+            <Image
               src={SHARED_IMAGES.ivfHeartGraphic}
               alt="best ivf center in Raipur"
               className={styles.collageImage}
-              loading="lazy"
+              width={800}
+              height={1200}
             />
           </div>
           
           {/* Right Top Image */}
           <div className={styles.collageSub1}>
-            <img
+            <Image
               src={SHARED_IMAGES.ivfCellMicroscopeIllustration}
               alt="vitro fertilization human female cell microscopic view"
               className={styles.collageImage}
-              loading="lazy"
+              width={800}
+              height={533}
             />
           </div>
 
           {/* Right Bottom Image */}
           <div className={styles.collageSub2}>
-            <img
+            <Image
               src={SHARED_IMAGES.embryoSupportIllustration}
               alt="woman's hands support human embryo icon"
               className={styles.collageImage}
-              loading="lazy"
+              width={800}
+              height={533}
             />
           </div>
         </div>

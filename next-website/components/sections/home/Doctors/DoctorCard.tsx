@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./Doctors.module.css";
 
 interface DoctorCardProps {
@@ -31,11 +32,12 @@ export default function DoctorCard({
       style={{ transitionDelay: `${index * 150}ms` }}
     >
       <div className={styles.docCardImageWrapper}>
-        <img
+        <Image
           src={imageUrl}
           alt={name}
           className={styles.docCardImage}
-          loading="lazy"
+          fill
+          sizes="(max-width: 640px) 100vw, 40vw"
         />
       </div>
       <div className={styles.docCardContent}>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/config/site";
 import styles from "./Footer.module.css";
@@ -18,7 +19,7 @@ export default function FooterBottom() {
               Credits Webmantra
             </a>
           </span>
-          <img src={SITE.logoWM} alt="Webmantra Icon" width={20} height={21} />
+          <Image src={SITE.logoWM} alt="Webmantra Icon" width={20} height={21} />
         </div>
 
         {/* Legal links */}

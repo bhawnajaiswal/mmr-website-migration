@@ -52,6 +52,8 @@ export default function MobileNavigation() {
                       <button
                         onClick={(e) => toggleSubItem(item.title, e)}
                         className={styles.mobileMenuExpandBtn}
+                        aria-label={isExpanded ? `Collapse ${item.title} submenu` : `Expand ${item.title} submenu`}
+                        aria-expanded={isExpanded}
                       >
                         <i className={isExpanded ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i>
                       </button>
@@ -79,6 +81,8 @@ export default function MobileNavigation() {
                                 <button
                                   onClick={(e) => toggleSubItem(subItem.title, e)}
                                   className={styles.mobileMenuExpandBtnSmall}
+                                  aria-label={isSubExpanded ? `Collapse ${subItem.title} submenu` : `Expand ${subItem.title} submenu`}
+                                  aria-expanded={isSubExpanded}
                                 >
                                   <i className={isSubExpanded ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i>
                                 </button>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { SITE } from "@/config/site";
 import styles from "./Header.module.css";
 
@@ -18,12 +19,13 @@ export default function Logo({ variant = "header" }: LogoProps) {
 
   return (
     <Link href="/" className={linkClass}>
-      <img
+      <Image
         src={SITE.logo}
         alt={SITE.name}
         width={width}
         height={height}
         className={imgClass}
+        priority={variant === "header"}
       />
     </Link>
   );

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/components/shared/Container/Container";
 import { SHARED_IMAGES } from "@/config/assets/shared";
 import styles from "./Nephrology.module.css";
@@ -8,14 +9,14 @@ export default function Nephrology() {
       
       {/* Decoupled Scoped Top Pyramids Divider */}
       <div className={`${styles.shapeDivider} ${styles.shapeDividerTop}`}>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={styles.shapeDividerSvg}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={styles.shapeDividerSvg} aria-hidden="true" focusable="false">
           <path d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9" />
         </svg>
       </div>
 
       {/* Decoupled Scoped Bottom Pyramids Negative Divider */}
       <div className={`${styles.shapeDivider} ${styles.shapeDividerBottom}`}>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={styles.shapeDividerSvg}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" className={styles.shapeDividerSvg} aria-hidden="true" focusable="false">
           <path d="M761.9,40.6L643.1,24L333.9,93.8L0.1,1H0v99h1000V1" />
         </svg>
       </div>
@@ -25,31 +26,34 @@ export default function Nephrology() {
         <div className={styles.collageGrid}>
           {/* Main Large Left Image */}
           <div className={styles.collageMain}>
-            <img
+            <Image
               src={SHARED_IMAGES.kidneyCareGraphic}
               alt="best ivf center in Raipur"
               className={styles.collageImage}
-              loading="lazy"
+              width={800}
+              height={1200}
             />
           </div>
           
           {/* Right Top Image */}
           <div className={styles.collageSub1}>
-            <img
+            <Image
               src="/wp-content/uploads/2024/03/senior-man-suffering-from-kidney-pain-home-scaled.jpg"
               alt="senior man suffering from kidney pain"
               className={styles.collageImage}
-              loading="lazy"
+              width={800}
+              height={505}
             />
           </div>
 
           {/* Right Bottom Image */}
           <div className={styles.collageSub2}>
-            <img
+            <Image
               src="/wp-content/uploads/2024/03/urethra-kidneys-man-with-hands-holding-her-crotch-male-anatomy-concept-scaled.jpg"
               alt="kidneys man with hands holding crotch"
               className={styles.collageImage}
-              loading="lazy"
+              width={800}
+              height={535}
             />
           </div>
         </div>

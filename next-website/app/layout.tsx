@@ -1,9 +1,40 @@
 import type { Metadata } from "next";
+import { Jost, Montserrat, Nunito, Roboto } from "next/font/google";
 import { SITE } from "@/config/site";
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
 import "./globals.css";
 
+// Google Fonts Optimization via next/font/google
+const jost = Jost({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-jost",
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+  variable: "--font-nunito",
+  display: "swap",
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-roboto",
+  display: "swap",
+});
+
+// App Router Metadata API Configuration
 export const metadata: Metadata = {
   title: {
     default: SITE.name,
@@ -11,13 +42,45 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   metadataBase: new URL(SITE.url),
+  keywords: [
+    "IVF Raipur", 
+    "Kidney Care Raipur", 
+    "Best IVF Center Raipur", 
+    "MMR Hospital", 
+    "Nephrology Chhattisgarh"
+  ],
+  authors: [{ name: "MMR Hospital & IVF Center" }],
+  creator: "MMR Hospital",
+  publisher: "MMR Hospital",
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     title: SITE.name,
     description: SITE.description,
     url: SITE.url,
     siteName: SITE.name,
     locale: "en_US",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "/favicon.ico",
+        width: 1200,
+        height: 630,
+        alt: SITE.name,
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE.name,
+    description: SITE.description,
+    images: ["/favicon.ico"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   }
 };
 
@@ -27,20 +90,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html 
+      lang="en" 
+      className={`${jost.variable} ${montserrat.variable} ${nunito.variable} ${roboto.variable}`}
+    >
       <head>
-        {/* Google Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;500;700&display=swap"
-          rel="stylesheet"
-        />
-
-        {/* Global Stylesheets from Asset Layer */}
+        {/* Global Stylesheets from Asset Layer (Swiper stylesheet purged in REF-016) */}
         <link rel="stylesheet" href="/css/fontawesome/css/all.min.css" />
         <link rel="stylesheet" href="/css/frontend-lite.min.css" />
-        <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
         <link rel="stylesheet" href="/wp-content/themes/hello-elementor/style.min.css" />
         <link rel="stylesheet" href="/wp-content/themes/hello-elementor/theme.min.css" />
         <link rel="stylesheet" href="/css/common.css" />

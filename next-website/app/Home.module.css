@@ -263,11 +263,12 @@
   margin-top: 10px;
 }
 
-.btnPrimary {
+.btnGroup .btnPrimary {
   display: inline-flex;
   align-items: center;
-  background-color: var(--color-accent);
-  color: var(--color-white);
+  justify-content: center;
+  background-color: #f08080;
+  color: #ffffff;
   padding: 12px 28px;
   border-radius: 50px;
   font-weight: 700;
@@ -276,22 +277,24 @@
   letter-spacing: 0.05em;
   transition: var(--transition-smooth);
   text-decoration: none;
-  border: 2px solid var(--color-accent);
+  border: 2px solid #f08080;
 }
 
-.btnPrimary:hover {
+.btnGroup .btnPrimary:hover {
   background-color: transparent;
-  color: var(--color-accent);
+  color: #f08080;
+  border-color: #f08080;
   transform: translateY(-2px);
 }
 
-.btnSecondary {
+.btnGroup .btnSecondary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  color: var(--color-secondary);
-  background-color: transparent;
-  border: 2px solid var(--color-accent);
+  color: #305595;
+  background-color: #ffffff;
+  border: 2px solid #f08080;
   padding: 12px 28px;
   border-radius: 50px;
   font-weight: 700;
@@ -302,10 +305,20 @@
   text-decoration: none;
 }
 
-.btnSecondary:hover {
-  background-color: var(--color-accent);
-  color: var(--color-white);
+.btnGroup .btnSecondary i {
+  color: #305595;
+  transition: color 0.3s ease;
+}
+
+.btnGroup .btnSecondary:hover {
+  background-color: #f08080;
+  color: #ffffff;
+  border-color: #f08080;
   transform: translateY(-2px);
+}
+
+.btnGroup .btnSecondary:hover i {
+  color: #ffffff;
 }
 
 /* 3-Image Collage Grid Composition */

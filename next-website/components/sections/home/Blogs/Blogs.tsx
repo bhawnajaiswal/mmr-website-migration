@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "@/app/Home.module.css";
 
 const BLOG_SLIDES = [
@@ -117,12 +118,13 @@ export default function Blogs() {
               {BLOG_SLIDES.map((slide) => {
                 const cardContent = (
                   <div className={styles.blogCard}>
-                    <div className={styles.blogImageWrapper}>
-                      <img
+                    <div className={styles.blogImageWrapper} style={{ position: "relative" }}>
+                      <Image
                         src={slide.imageUrl}
                         alt="MMR Hospital Medical Blog"
                         className={styles.blogImage}
-                        loading="lazy"
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
                   </div>
@@ -156,14 +158,14 @@ export default function Blogs() {
             className={`${styles.blogNavButton} ${styles.blogNavPrev}`}
             aria-label="Previous slide"
           >
-            <i className="fas fa-chevron-left" />
+            <i className="fas fa-chevron-left" aria-hidden="true" />
           </button>
           <button
             onClick={handleNext}
             className={`${styles.blogNavButton} ${styles.blogNavNext}`}
             aria-label="Next slide"
           >
-            <i className="fas fa-chevron-right" />
+            <i className="fas fa-chevron-right" aria-hidden="true" />
           </button>
 
           {/* Dots Navigation */}
