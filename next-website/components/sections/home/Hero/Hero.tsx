@@ -76,16 +76,9 @@ export default function Hero() {
         {/* Left Column */}
         <div className={styles.leftColumn}>
           <div className={styles.contentGroup}>
-            {/* Emergency Badge */}
-            <div className={styles.emergencyBadge}>
-              <i className="far fa-clock" />
-              <span>24/7 Emergency &amp; Ambulance Service</span>
-            </div>
-
             {/* Main Headline */}
             <h1 className={styles.heroTitle}>
-              ONE STOP SOLUTION<br />
-              FOR <span className={styles.colorKidney}>KIDNEY</span> &amp; <span className={styles.colorIvf}>IVF</span>
+              ONE STOP SOLUTION FOR <span className={styles.colorKidney}>KIDNEY</span> &amp; <span className={styles.colorIvf}>IVF</span>
             </h1>
 
             {/* Supporting Text */}
@@ -93,111 +86,113 @@ export default function Hero() {
               Advanced care. Compassionate approach.<br />Better outcomes.
             </p>
 
-            {/* CTA Buttons */}
-            <div className={styles.btnGroup}>
-              <Link className={styles.appointmentBtn} href="/consultation">
-                <i className="far fa-calendar-check" />
-                Book an Appointment
-              </Link>
-              <a className={styles.callBtn} href="tel:+919244122040">
-                <i className="fas fa-phone-alt" />
-                Call Now
-              </a>
+            {/* Two Service Cards */}
+            <div className={styles.careCardsGroup}>
+              {/* Kidney Care Card */}
+              <div className={styles.careCard}>
+                <div className={styles.careHeader}>
+                  <div className={`${styles.careIcon} ${styles.bgKidney}`}>
+                    <i className="fas fa-tint" />
+                  </div>
+                  <h3 className={styles.careTitle}>KIDNEY CARE</h3>
+                </div>
+                <ul className={styles.bulletList}>
+                  <li>
+                    <i className={`fas fa-check-circle ${styles.checkKidney}`} />
+                    <span>Kidney Transplant</span>
+                  </li>
+                  <li>
+                    <i className={`fas fa-check-circle ${styles.checkKidney}`} />
+                    <span>Nephrology Care</span>
+                  </li>
+                  <li>
+                    <i className={`fas fa-check-circle ${styles.checkKidney}`} />
+                    <span>Dialysis &amp; CRRT</span>
+                  </li>
+                  <li>
+                    <i className={`fas fa-check-circle ${styles.checkKidney}`} />
+                    <span>Advanced ICU Support</span>
+                  </li>
+                  <li>
+                    <i className={`fas fa-check-circle ${styles.checkKidney}`} />
+                    <span>Urology Treatments</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* IVF Care Card */}
+              <div className={styles.careCard}>
+                <div className={styles.careHeader}>
+                  <div className={`${styles.careIcon} ${styles.bgIvf}`}>
+                    <i className="fas fa-baby" />
+                  </div>
+                  <h3 className={styles.careTitle}>IVF &amp; FERTILITY</h3>
+                </div>
+                <ul className={styles.bulletList}>
+                  <li>
+                    <i className={`fas fa-check-circle ${styles.checkIvf}`} />
+                    <span>IVF &amp; ICSI</span>
+                  </li>
+                  <li>
+                    <i className={`fas fa-check-circle ${styles.checkIvf}`} />
+                    <span>Laparoscopy</span>
+                  </li>
+                  <li>
+                    <i className={`fas fa-check-circle ${styles.checkIvf}`} />
+                    <span>Fertility Evaluation</span>
+                  </li>
+                  <li>
+                    <i className={`fas fa-check-circle ${styles.checkIvf}`} />
+                    <span>Women&apos;s Health Care</span>
+                  </li>
+                  <li>
+                    <i className={`fas fa-check-circle ${styles.checkIvf}`} />
+                    <span>High-Risk Pregnancy Care</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            {/* Service Section */}
-            <div className={styles.serviceSection}>
-              {/* Two Service Cards */}
-              <div className={styles.serviceCards}>
-                {/* Kidney Care Card */}
-                <div className={styles.serviceCard}>
-                  <div className={styles.serviceHeader}>
-                    <div className={`${styles.serviceIcon} ${styles.bgKidney}`}>
-                      <i className="fas fa-tint" />
-                    </div>
-                    <h3 className={styles.serviceTitle}>KIDNEY CARE</h3>
+            {/* Emergency Helpline Panel */}
+            <div className={styles.emergencyPanel}>
+              <div className={styles.emergencyRow}>
+                <div className={styles.emergencyInfo}>
+                  <span className={styles.emergencySmall}>
+                      EMERGENCY HELPLINE
+                  </span>
+                  <div className={styles.emergencyNumbers}>
+                    <a href="tel:+919244122040" className={styles.emergencyNumber}>
+                      92441 22040
+                    </a>
+                    <a href="tel:+919244122044" className={styles.emergencyNumber}>
+                      92441 22044
+                    </a>
                   </div>
-                  <ul className={styles.bulletList}>
-                    <li>
-                      <i className={`fas fa-check-circle ${styles.checkKidney}`} />
-                      <span>Kidney Transplant</span>
-                    </li>
-                    <li>
-                      <i className={`fas fa-check-circle ${styles.checkKidney}`} />
-                      <span>Nephrology Care</span>
-                    </li>
-                    <li>
-                      <i className={`fas fa-check-circle ${styles.checkKidney}`} />
-                      <span>Dialysis &amp; CRRT</span>
-                    </li>
-                    <li>
-                      <i className={`fas fa-check-circle ${styles.checkKidney}`} />
-                      <span>Advanced ICU Support</span>
-                    </li>
-                    <li>
-                      <i className={`fas fa-check-circle ${styles.checkKidney}`} />
-                      <span>Urology Treatments</span>
-                    </li>
-                  </ul>
+                  <p className={styles.emergencyText}>
+                      24×7 Emergency &amp; Ambulance Support
+                  </p>
                 </div>
 
-                {/* IVF Care Card */}
-                <div className={styles.serviceCard}>
-                  <div className={styles.serviceHeader}>
-                    <div className={`${styles.serviceIcon} ${styles.bgIvf}`}>
-                      <i className="fas fa-baby" />
-                    </div>
-                    <h3 className={styles.serviceTitle}>IVF &amp; FERTILITY</h3>
-                  </div>
-                  <ul className={styles.bulletList}>
-                    <li>
-                      <i className={`fas fa-check-circle ${styles.checkIvf}`} />
-                      <span>IVF &amp; ICSI</span>
-                    </li>
-                    <li>
-                      <i className={`fas fa-check-circle ${styles.checkIvf}`} />
-                      <span>Laparoscopy</span>
-                    </li>
-                    <li>
-                      <i className={`fas fa-check-circle ${styles.checkIvf}`} />
-                      <span>Fertility Evaluation</span>
-                    </li>
-                    <li>
-                      <i className={`fas fa-check-circle ${styles.checkIvf}`} />
-                      <span>Women&apos;s Health Care</span>
-                    </li>
-                    <li>
-                      <i className={`fas fa-check-circle ${styles.checkIvf}`} />
-                      <span>High-Risk Pregnancy Care</span>
-                    </li>
-                  </ul>
+                <div className={styles.emergencyLottieContainer}>
+                  <Lottie
+                    animationData={ambulanceAnimation}
+                    loop
+                    autoplay
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      maxWidth: "100%",
+                      maxHeight: "100%",
+                    }}
+                  />
                 </div>
               </div>
 
-              {/* Emergency Helpline Panel */}
-              <div className={styles.emergencyPanel}>
-                <span className={styles.emergencySmall}>
-                    EMERGENCY HELPLINE
-                </span>
-
-                <div className={styles.emergencyNumbers}>
-                  <a
-                    href="tel:+919244122040"
-                    className={styles.emergencyNumber}
-                  >
-                    92441 22040
-                  </a>
-                  <a
-                    href="tel:+919244122044"
-                    className={styles.emergencyNumber}
-                  >
-                    92441 22044
-                  </a>
-                </div>
-
-                <p className={styles.emergencyText}>
-                    24×7 Emergency & Ambulance Support
-                </p>
+              <div className={styles.emergencyCta}>
+                <a className={styles.callBtn} href="tel:+919244122040">
+                  <i className="fas fa-phone-alt" />
+                  Call Now
+                </a>
               </div>
             </div>
 
@@ -216,20 +211,6 @@ export default function Hero() {
               priority
             />
           </div>
-          <div className={styles.heroLottie}>
-            <Lottie
-              animationData={ambulanceAnimation}
-              loop
-              autoplay
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: "100%",
-                maxHeight: "100%",
-              }}
-            />
-          </div>
-
         </div>
       </div>
 

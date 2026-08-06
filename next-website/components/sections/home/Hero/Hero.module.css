@@ -1,727 +1,882 @@
+/* =========================================================
+   HERO FOUNDATION
+========================================================= */
+
 .heroSection {
   position: relative;
-  background: linear-gradient(135deg, #f0f4ff 0%, #f6ebff 50%, #e0e9ff 100%);
-  min-height: 100vh; /* Make sure it takes full viewport */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 30px 0 110px 0; /* Wave offset bottom */
   overflow: hidden;
-}
-
-/* Background Depth Glows */
-.heroSection::before {
-  content: "";
-  position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 50%;
-  height: 50%;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, rgba(168, 85, 247, 0) 70%);
-  filter: blur(40px);
-  pointer-events: none;
-  z-index: 1;
-}
-
-.heroSection::after {
-  content: "";
-  position: absolute;
-  bottom: -10%;
-  right: -10%;
-  width: 60%;
-  height: 60%;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0) 70%);
-  filter: blur(50px);
-  pointer-events: none;
-  z-index: 1;
-}
-
-.floatingPlus {
-  position: absolute;
-  color: rgba(107, 33, 168, 0.015);
-  font-weight: 300;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.plus1 {
-  top: 10%;
-  left: 45%;
-  font-size: 2.5rem;
-}
-
-.plus2 {
-  top: 25%;
-  right: 40%;
-  font-size: 2rem;
-}
-
-.plus3 {
-  bottom: 25%;
-  left: 10%;
-  font-size: 1.8rem;
-}
-
-.waveDivider {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  line-height: 0;
-  z-index: 3;
-}
-
-.waveDividerSvg {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 30px;
+  background:
+    radial-gradient(circle at 78% 22%, rgba(139,92,246,.10), transparent 32%),
+    linear-gradient(90deg, #f8f6ff 0%, #f4efff 55%, #edf4ff 100%);
+  padding: 32px 0 0;
 }
 
 .heroContainer {
-  max-width: 1420px;
+  width: min(1440px, calc(100% - 60px));
   margin: 0 auto;
-  padding: 0 16px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: 48% 52%;
+  gap: 24px;
   align-items: stretch;
-  position: relative;
-  z-index: 10;
-  width: 100%;
 }
+
+/* =========================================================
+   LEFT COLUMN
+========================================================= */
 
 .leftColumn {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  height: 100%;
 }
 
 .contentGroup {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+  flex: 1;
+  height: 100%;
 }
 
-.emergencyBadge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 4px 12px;
-  border-radius: 50px;
-  border: 1px solid rgba(192, 132, 252, 0.35);
-  background: rgba(243, 232, 255, 0.5);
-  color: #6b21a8;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  width: fit-content;
+/* =========================================================
+   RIGHT COLUMN
+========================================================= */
+
+.rightColumn {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
 }
+
+.doctorImageWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.doctorImage {
+  width: 112%;
+  max-width: none;
+  height: auto;
+  display: block;
+  margin-left: -45px;
+  margin-top: -5px;
+  border-top-left-radius: 300px;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
 
 .heroTitle {
-  font-size: 3.2rem;
-  font-weight: 900;
-  color: #1e1b4b;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
   margin: 0;
+  font-size: clamp(2.2rem, 2.8vw, 3.4rem);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  white-space: nowrap;
+  color: #161a52;
+  max-width: 780px;
 }
 
 .colorKidney {
-  color: #6b21a8;
+  color: #6d28d9;
 }
 
 .colorIvf {
-  color: #3b82f6;
+  color: #4f8dfd;
 }
 
 .heroSubtitle {
-  font-size: 1rem;
-  color: #1e293b;
-  font-weight: 500;
-  line-height: 1.35;
   margin: 0;
+  font-size: 17px;
+  line-height: 1.45;
+  color: #44546f;
+  max-width: 500px;
 }
 
-.btnGroup {
+/* =========================================================
+   CARDS LAYOUT
+========================================================= */
+
+.careCardsGroup {
+  display: grid;
+  grid-template-columns: 290px 290px;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+/* =========================================================
+   CARE CARDS
+========================================================= */
+
+.careCard {
+  background: #fff;
+  border-radius: 18px;
+  padding: 16px 18px;
+  min-height: 168px;
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 10px 24px rgba(25, 35, 70, 0.06),
+    0 2px 5px rgba(25, 35, 70, 0.03);
+  border: 1px solid rgba(111, 92, 255, 0.08);
+  transition: 0.25s;
+}
+
+.careCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 32px rgba(25, 35, 70, 0.09);
+}
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.careHeader {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
-.appointmentBtn {
-  display: inline-flex;
+.careIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 28px;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
-  color: #ffffff !important;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-decoration: none !important;
-  width: fit-content;
-  box-shadow: 0 4px 10px rgba(126, 34, 206, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.appointmentBtn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(126, 34, 206, 0.25);
+.careIcon i {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.bgKidney {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+}
+
+.bgIvf {
+  background: linear-gradient(135deg, #4f8dfd, #2c65d8);
+}
+
+.careTitle {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #16214f;
+}
+
+/* =========================================================
+   BULLET LIST
+========================================================= */
+
+.bulletList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bulletList li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.bulletList i {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.checkKidney {
+  color: #7c3aed;
+}
+
+.checkIvf {
+  color: #4f8dfd;
+}
+
+.bulletList span {
+  font-size: 15px;
+  line-height: 1.45;
+  color: #4d5a73;
+}
+
+/* =========================================================
+   CARD HEIGHT BALANCE
+========================================================= */
+
+.careCardsGroup > .careCard {
+  height: 100%;
+}
+
+/* =========================================================
+   EMERGENCY PANEL
+========================================================= */
+
+.emergencyPanel {
+  background: #fff;
+  width: 100%;
+  max-width: 596px;
+  border-radius: 20px;
+  padding: 16px 18px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 150px;
+  border: 1px solid rgba(111, 92, 255, 0.08);
+  box-shadow: 0 10px 24px rgba(25, 35, 70, 0.06);
+}
+
+/* =========================================================
+   TOP ROW
+========================================================= */
+
+.emergencyRow {
+  display: grid;
+  grid-template-columns: 1fr 190px;
+  gap: 18px;
+  align-items: center;
+}
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.emergencyInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.emergencySmall {
+  font-size: 0.82rem;
+  color: #7c3aed;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.emergencyNumbers {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.emergencyNumber {
+  text-decoration: none;
+  color: #161a52;
+  font-size: 28px;
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+.emergencyText {
+  margin: 0;
+  color: #68758d;
+  font-size: 0.92rem;
+}
+
+/* =========================================================
+   LOTTIE
+========================================================= */
+
+.emergencyLottieContainer {
+  width: 100%;
+  max-width: 180px;
+  aspect-ratio: 1.45;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emergencyLottieContainer > * {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.emergencyCta {
+  margin-top: 2px;
 }
 
 .callBtn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 28px;
-  border-radius: 50px;
-  background: #ffffff;
-  color: #6b21a8 !important;
-  font-size: 0.85rem;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  color: #fff;
+  font-size: 15px;
   font-weight: 700;
-  text-decoration: none !important;
-  border: 2px solid #6b21a8;
-  width: fit-content;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.02);
-  transition: transform 0.2s ease, background 0.2s ease;
+  text-decoration: none;
+  transition: 0.25s;
 }
 
 .callBtn:hover {
   transform: translateY(-2px);
-  background: #fdfaff;
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.25);
 }
 
-/* Service Cards Layout */
-.serviceCards {
-    width:340px;
-    display:flex;
-    flex-direction:column;
-    gap:16px;
-}
+/* =========================================================
+   PREMIUM STATISTICS RIBBON
+========================================================= */
 
-.serviceCard {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 12px;
-  padding: clamp(16px, 1.8vw, 22px) clamp(16px, 1.8vw, 22px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+.statsStrip {
+  position: relative;
+  width: min(1400px, calc(100% - 48px));
+  margin: 18px auto 0;
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  width:100%;
-  flex: 1;
+  background: #fff;
+  border-radius: 20px;
+  overflow: visible;
+  box-shadow: 0 16px 40px rgba(20, 30, 70, 0.08);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.serviceHeader {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.statsStrip::-webkit-scrollbar {
+  display: none;
 }
 
-.serviceIcon {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+.statsItem {
+  position: relative;
+  flex: 1 1 20%;
+  min-width: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  font-size: 0.8rem;
-  flex-shrink: 0;
+  gap: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+  z-index: 1;
 }
 
-.bgKidney {
-  background-color: #6b21a8;
+.statsItem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: #fff;
+  transition: 0.35s ease;
+  z-index: -1;
 }
 
-.bgIvf {
-  background-color: #3b82f6;
+.statsItem:first-child::before {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
-.serviceTitle {
-  font-size: 0.9rem;
-  font-weight: 800;
-  color: #1e1b4b;
-  margin: 0;
-  letter-spacing: 0.02em;
+.statsItem:last-child::before {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
-.bulletList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(5px, 0.6vw, 9px);
-}
+@media (hover: hover) {
+  .statsStrip:hover .statsItem {
+    opacity: 0.82;
+  }
 
-.bulletList li {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #475569;
-}
+  .statsStrip:hover .statsItem:hover {
+    opacity: 1;
+    z-index: 5;
+    transform: translateY(-4px) scale(1.03);
+  }
 
-.checkKidney {
-  color: #6b21a8;
-  font-size: 0.8rem;
-}
+  .statsStrip:hover .statsItem:hover::before {
+    top: -8px;
+    bottom: -8px;
+    left: -2px;
+    right: -2px;
+    border-radius: 22px;
+    box-shadow: 0 12px 28px rgba(20, 30, 70, 0.08);
+  }
 
-.checkIvf {
-  color: #3b82f6;
-  font-size: 0.8rem;
-}
+  .statsStrip:hover .statsItem:first-child:hover::before {
+    left: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
 
-/* Right Artwork Column */
-.rightColumn{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-self: stretch;
-    height: 100%;
-}
+  .statsStrip:hover .statsItem:last-child:hover::before {
+    right: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 
-.doctorImageWrapper{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    flex:0 0 auto;
+  .statsStrip:hover .statsItem:hover .statsIcon {
+    transform: translateY(-2px);
+  }
 
-    mask-image:linear-gradient(to right,transparent 0%,black 15%);
-    -webkit-mask-image:linear-gradient(to right,transparent 0%,black 15%);
-}
-
-.doctorImage {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center top;
-  z-index: 2;
-  border-radius: 12px;
-}
-
-.heroLottie {
-    flex: 1;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    min-height: 0;
-    overflow: hidden;
-    width: 100%;
-    pointer-events: none;
-    z-index: 10;
-}
-
-.heroLottie > * {
-    width: min(100%, 100%);
-    height: auto;
-    max-height: 100%;
-}
-
-/* Stats Strip */
-.statsStrip {
-  max-width: 1420px;
-  margin: 25px auto 15px auto; /* Tighter layout integration */
-  padding: 10px 24px; /* Slimmer height */
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(107, 33, 168, 0.06);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid rgba(107, 33, 168, 0.05);
-  position: relative;
-  z-index: 20;
-  width: calc(100% - 32px);
-}
-
-.statsStrip{
-    display:flex;
-    align-items:stretch;
-    overflow:visible;
-}
-
-.statsItem{
-    position:relative;
-    flex:1;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-
-    padding:14px 18px;
-
-    transition:
-        flex .35s cubic-bezier(.22,1,.36,1),
-        transform .35s cubic-bezier(.22,1,.36,1),
-        opacity .25s;
-}
-
-.statsItem::before{
-    content:"";
-    position:absolute;
-
-    top:0;
-    bottom:0;
-    left:2px;
-    right:2px;
-
-    background:#fff;
-    border-radius:16px;
-
-    transition:.35s cubic-bezier(.22,1,.36,1);
-
-    z-index:-1;
-}
-
-.statsStrip:hover .statsItem{
-    opacity:.65;
-}
-
-.statsStrip:hover .statsItem:hover{
-    flex:1.35;
-    opacity:1;
-    transform:translateY(-3px);
-}
-
-.statsStrip:hover .statsItem:hover::before{
-
-    top:-14px;
-    bottom:-14px;
-
-    left:-2px;
-    right:-2px;
-
-    border-radius:22px;
-
-    box-shadow:
-        0 16px 32px rgba(107,33,168,.12);
+  .statsStrip:hover .statsItem:hover .statsText {
+    transform: translateY(-2px);
+  }
 }
 
 .statsIcon {
-  width: 48px; /* Enlarge stats icon container size */
-  height: 48px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  background-color: rgba(107, 33, 168, 0.05);
-  color: #6b21a8;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem; /* Enlarged stats icon size */
-  flex-shrink: 0;
+  background: #f4efff;
+  color: #6d28d9;
+  transition: 0.35s ease;
+}
+
+.statsIcon i {
+  font-size: 1.2rem;
 }
 
 .statsText {
   display: flex;
   flex-direction: column;
+  transition: 0.35s ease;
 }
 
 .statsNum {
-  font-size: 1.45rem; /* Enlarged stats value size */
+  font-size: 1.35rem;
   font-weight: 800;
-  color: #1e1b4b;
-  line-height: 1.1;
+  color: #17204f;
 }
 
 .statsLabel {
-  font-size: 0.72rem;
-  color: #64748b;
-  font-weight: 600;
-  margin-top: 1px;
+  color: #65748b;
+  font-size: 0.9rem;
 }
 
-/* Diagnostics Facilities Section */
+/* =========================================================
+   DIAGNOSTICS SECTION
+========================================================= */
+
 .diagnosticsContainer {
-  max-width: 1420px;
-  margin: 10px auto 0 auto; /* Directly below stats strip */
-  padding: 0 16px;
-  width: 100%;
-  position: relative;
-  z-index: 20;
+  width: min(1440px, calc(100% - 60px));
+  margin: 14px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
+
+/* =========================================================
+   TITLE
+========================================================= */
 
 .diagnosticsDividerLine {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 16px; /* Reduced vertical gap */
+}
+
+.diagnosticsDividerLine::before,
+.diagnosticsDividerLine::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e8e9f5;
 }
 
 .dividerDot {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: #6b21a8;
-  opacity: 0.4;
+  background: #7c3aed;
+  opacity: 0.55;
 }
 
 .diagnosticsTitle {
-  font-size: 1.05rem; /* Smaller one-line font-size on desktop */
-  font-weight: 800;
-  color: #1e1b4b;
-  letter-spacing: 0.08em;
   margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #1e1b4b;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   MARQUEE
+========================================================= */
+
+.diagnosticsMarquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.diagnosticsViewport {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+}
+
+.diagnosticsTrack {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: heroMarquee 76s linear infinite;
+}
+
+.diagnosticsGroup {
+  display: flex;
+  flex-shrink: 0;
+  gap: 14px;
+  padding-right: 14px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.diagnosticCard {
+  flex: 0 0 122px;
+  min-height: 102px;
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid rgba(124, 58, 237, 0.08);
+  box-shadow: 0 8px 20px rgba(20, 30, 70, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 10px;
   text-align: center;
-  white-space: nowrap; /* Prevent wrapping on desktop */
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.diagnosticsMarquee{
-    width:100%;
-    overflow:hidden;
-    position:relative;
+.diagnosticCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px rgba(20, 30, 70, 0.09);
 }
 
-.diagnosticsViewport{
-    overflow:hidden;
-    width:100%;
-    position:relative;
-    mask-image:linear-gradient(to right,
-        transparent,
-        black 6%,
-        black 94%,
-        transparent);
-    -webkit-mask-image:linear-gradient(to right,
-        transparent,
-        black 6%,
-        black 94%,
-        transparent);
+.diagnosticIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4efff;
+  color: #6d28d9;
 }
 
-.diagnosticsTrack{
-    display:flex;
-    width:max-content;
-    animation:heroMarquee 76s linear infinite;
-    will-change:transform;
+.diagnosticIcon i {
+  font-size: 1.25rem;
 }
 
-.diagnosticsGroup{
-    display:flex;
-    flex-shrink:0;
+.diagnosticLabel {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #49566d;
 }
 
-.diagnosticCard{
-    flex:0 0 125px;
-    margin-right:12px;
-}
+/* =========================================================
+   MARQUEE LOOP
+========================================================= */
 
-@keyframes heroMarquee{
-    from{
-        transform:translateX(0);
-    }
-    to{
-        transform:translateX(-50%);
-    }
-}
-
-.diagnosticCard{
-    flex:0 0 125px;
-    min-height:90px;
-    background:#fff;
-    border-radius:12px;
-    border:1px solid rgba(107,33,168,.08);
-    box-shadow:0 4px 12px rgba(0,0,0,.03);
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    padding:12px 8px;
-
-    transition:
-        transform .25s,
-        box-shadow .25s,
-        border-color .25s;
-}
-
-.diagnosticCard:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 22px rgba(107,33,168,.12);
-    border-color:rgba(107,33,168,.22);
-}
-
-/* ==========================================================================
-   Responsive Breakpoints
-   ========================================================================== */
-
-@media (max-width: 1200px) {
-  .heroTitle {
-    font-size: 2.6rem;
+@keyframes heroMarquee {
+  from {
+    transform: translateX(0);
   }
-  .heroContainer {
-    gap: 20px;
-  }
-  .diagnosticsGrid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  }
-  .diagnosticsTitle {
-    white-space: normal;
+  to {
+    transform: translateX(-50%);
   }
 }
 
-@media (max-width: 1024px) {
-  .heroSection {
-    padding: 30px 0 100px 0;
-    min-height: auto;
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+/*
+@media (prefers-reduced-motion: reduce) {
+  .diagnosticsTrack {
+    animation: none;
   }
+
+  .diagnosticsGroup:last-child {
+    display: none;
+  }
+}
+*/
+
+/* =========================================================
+   FLOATING DECORATIONS
+========================================================= */
+
+.floatingPlus {
+  position: absolute;
+  color: rgba(124, 58, 237, 0.1);
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.plus1 {
+  font-size: 42px;
+  top: 10%;
+  left: 4%;
+}
+
+.plus2 {
+  font-size: 32px;
+  top: 38%;
+  right: 12%;
+}
+
+.plus3 {
+  font-size: 54px;
+  bottom: 18%;
+  left: 48%;
+}
+
+/* =========================================================
+   WAVE DIVIDER
+========================================================= */
+
+.waveDivider {
+  margin-top: 56px;
+  line-height: 0;
+}
+
+.waveDividerSvg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
   .heroContainer {
     grid-template-columns: 1fr;
-    gap: 30px;
-    text-align: center;
+    gap: clamp(24px, 5vw, 48px);
   }
+
   .leftColumn {
-    align-items: center;
+    order: 1;
   }
-  .contentGroup {
-    align-items: center;
-  }
-  .emergencyBadge,
-  .btnGroup {
-    margin-left: auto;
-    margin-right: auto;
+
+  .rightColumn {
+    order: 2;
     justify-content: center;
   }
 
   .doctorImageWrapper {
-    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+    height: auto;
+  }
+
+  .doctorImage {
+    width: 100%;
+    max-width: 500px;
     margin-left: 0;
-    mask-image: none;
-    -webkit-mask-image: none;
+    margin-top: 0;
   }
-  .statsStrip {
-    flex-wrap: wrap;
-    gap: 20px;
+
+  .heroTitle {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    white-space: normal;
   }
-  .diagnosticsGrid {
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+
+  .careCardsGroup {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .emergencyRow {
+    grid-template-columns: 1fr auto;
+  }
+
+  .statsItem {
+    min-width: 200px;
+  }
+
+  .diagnosticCard {
+    width: 122px;
   }
 }
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 768px) {
-  .heroTitle {
-    font-size: 2rem;
+  .heroSection {
+    padding-top: 36px;
   }
-  .serviceCards {
+
+  .heroContainer {
+    width: min(100% - 32px, 1400px);
+    gap: 36px;
+  }
+
+  .contentGroup {
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroTitle {
+    font-size: clamp(1.8rem, 6.5vw, 2.7rem);
+    line-height: 1.15;
+    white-space: normal;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+
+  .careCardsGroup {
     grid-template-columns: 1fr;
-    gap: 12px;
     width: 100%;
     max-width: 420px;
+    margin-inline: auto;
   }
-  .bulletList {
-    align-items: flex-start;
+
+  .emergencyRow {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
-  .btnGroup {
-    flex-direction: column;
-    width: 100%;
-    max-width: 300px;
+
+  .emergencyInfo {
+    align-items: center;
   }
-  .appointmentBtn, .callBtn {
-    width: 100%;
+
+  .emergencyNumber {
+    text-align: center;
+  }
+
+  .emergencyCta {
+    display: flex;
     justify-content: center;
   }
-  .statsStrip{
-    flex-direction:row;
-    overflow-x:auto;
-    overflow-y:hidden;
 
-    scroll-snap-type:x mandatory;
+  .emergencyLottieContainer {
+    max-width: 180px;
+    margin-inline: auto;
+  }
 
-    scrollbar-width:none;
+  .statsStrip {
+    margin-top: 32px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
+    border-radius: 0;
+    padding: 0 16px;
+  }
 
-    -ms-overflow-style:none;
+  .statsItem {
+    flex: 0 0 82%;
+    min-width: 260px;
+    scroll-snap-align: center;
+  }
 
-    gap:14px;
+  .diagnosticsTitle {
+    white-space: normal;
+    text-align: center;
+  }
 
-    padding:16px;
+  .diagnosticCard {
+    width: 110px;
+    min-height: 105px;
+  }
+
+  .floatingPlus {
+    display: none;
+  }
+
+  .waveDivider {
+    margin-top: 36px;
+  }
+
+  .waveDividerSvg {
+    height: 40px;
+  }
 }
 
-.statsStrip::-webkit-scrollbar{
-display:none;
-}
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
-.statsItem{
-    flex:0 0 250px;
-    scroll-snap-align:start;
-}
-}
+@media (max-width: 480px) {
+  .heroContainer {
+    width: calc(100% - 24px);
+  }
 
-.serviceSection{
-    display:grid;
-    grid-template-columns:auto 1fr;
-    gap:28px;
-    align-items:stretch;
-}
+  .heroTitle {
+    font-size: clamp(1.4rem, 7vw, 1.85rem);
+  }
 
-.emergencyPanel{
-    height:100%;
+  .careCard {
+    padding: 12px 14px;
+  }
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+  .bulletList span {
+    font-size: 14px;
+  }
 
-    padding: clamp(24px, 2.5vw, 36px);
+  .emergencyPanel {
+    padding: 12px 14px;
+  }
 
-    border-radius:16px;
+  .emergencyNumber {
+    font-size: clamp(20px, 6vw, 24px);
+  }
 
-    background:rgba(255,255,255,.45);
-    backdrop-filter:blur(20px);
+  .statsStrip {
+    width: calc(100% + 24px);
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 0 12px;
+  }
 
-    border:1px solid rgba(255,255,255,.45);
-}
+  .statsItem {
+    min-width: 230px;
+  }
 
-.emergencySmall{
-    font-size:.8rem;
-    font-weight:700;
-    color:#6b21a8;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-}
-
-.emergencyNumbers {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-top: 10px;
-}
-
-.emergencyNumber{
-    font-size: clamp(2.4rem, 3vw, 3.4rem);
-    line-height: 1.05;
-    font-weight: 700;
-    white-space: nowrap;
-    letter-spacing: -0.02em;
-    color: #6b21a8;
-    text-decoration: none;
-}
-
-.emergencyText{
-    margin-top: 14px;
-    color: #64748b;
-    font-size: clamp(1rem, 1.1vw, 1.25rem);
-    line-height: 1.5;
-    font-weight: 600;
-}
-
-@media (max-width:1024px){
-
-    .serviceSection{
-        grid-template-columns:1fr;
-    }
-
-    .serviceCards{
-        width:100%;
-        max-width:420px;
-    }
-
-    .emergencyPanel{
-        text-align:center;
-    }
-
+  .diagnosticCard {
+    width: 100px;
+    min-height: 100px;
+  }
 }
