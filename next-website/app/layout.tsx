@@ -3,6 +3,7 @@ import { Jost, Montserrat, Nunito, Roboto } from "next/font/google";
 import { SITE } from "@/config/site";
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
+import Script from "next/script";
 import "./globals.css";
 
 // Google Fonts Optimization via next/font/google
@@ -95,6 +96,21 @@ export default function RootLayout({
       className={`${jost.variable} ${montserrat.variable} ${nunito.variable} ${roboto.variable}`}
     >
       <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18149939807"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-18149939807');
+          `}
+        </Script>
         {/* Global Stylesheets from Asset Layer (Swiper stylesheet purged in REF-016) */}
         <link rel="stylesheet" href="/css/fontawesome/css/all.min.css" />
         <link rel="stylesheet" href="/css/frontend-lite.min.css" />
