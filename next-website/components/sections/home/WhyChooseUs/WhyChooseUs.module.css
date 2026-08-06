@@ -39,7 +39,7 @@
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.whySectionVisible .whyHeader {
+.revealVisible .whyHeader {
   opacity: 1;
   transform: translateY(0);
 }
@@ -101,7 +101,7 @@
   transform: translateY(30px);
 }
 
-.whyCardVisible {
+.whyCard.revealVisible {
   opacity: 1;
   transform: translateY(0);
 }
