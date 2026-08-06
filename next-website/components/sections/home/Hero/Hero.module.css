@@ -225,7 +225,8 @@
 
 .emergencyPanel {
   background: #fff;
-  width: 596px;
+  width: 100%;
+  max-width: 596px;
   border-radius: 20px;
   padding: 16px 18px;
   margin-top: 16px;
@@ -341,8 +342,7 @@
   display: flex;
   background: #fff;
   border-radius: 20px;
-  overflow-x: auto;
-  overflow-y: visible;
+  overflow: visible;
   box-shadow: 0 16px 40px rgba(20, 30, 70, 0.08);
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -354,8 +354,8 @@
 
 .statsItem {
   position: relative;
-  flex: 1 0 20%;
-  min-width: 220px;
+  flex: 1 1 20%;
+  min-width: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -363,7 +363,6 @@
   padding: 20px;
   cursor: pointer;
   transition:
-    flex 0.35s ease,
     transform 0.35s ease,
     opacity 0.35s ease;
   z-index: 1;
@@ -379,6 +378,16 @@
   z-index: -1;
 }
 
+.statsItem:first-child::before {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.statsItem:last-child::before {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
 @media (hover: hover) {
   .statsStrip:hover .statsItem {
     opacity: 0.82;
@@ -386,25 +395,37 @@
 
   .statsStrip:hover .statsItem:hover {
     opacity: 1;
-    flex: 1.15;
     z-index: 5;
+    transform: translateY(-4px) scale(1.03);
   }
 
   .statsStrip:hover .statsItem:hover::before {
-    top: -12px;
-    bottom: -12px;
+    top: -8px;
+    bottom: -8px;
     left: -2px;
     right: -2px;
-    border-radius: 24px;
-    box-shadow: 0 18px 34px rgba(20, 30, 70, 0.1);
+    border-radius: 22px;
+    box-shadow: 0 12px 28px rgba(20, 30, 70, 0.08);
+  }
+
+  .statsStrip:hover .statsItem:first-child:hover::before {
+    left: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .statsStrip:hover .statsItem:last-child:hover::before {
+    right: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   .statsStrip:hover .statsItem:hover .statsIcon {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
   }
 
   .statsStrip:hover .statsItem:hover .statsText {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
   }
 }
 
@@ -600,6 +621,7 @@
    REDUCED MOTION
 ========================================================= */
 
+/*
 @media (prefers-reduced-motion: reduce) {
   .diagnosticsTrack {
     animation: none;
@@ -609,6 +631,7 @@
     display: none;
   }
 }
+*/
 
 /* =========================================================
    FLOATING DECORATIONS
@@ -663,7 +686,7 @@
 @media (max-width: 1100px) {
   .heroContainer {
     grid-template-columns: 1fr;
-    gap: 56px;
+    gap: clamp(24px, 5vw, 48px);
   }
 
   .leftColumn {
@@ -672,10 +695,26 @@
 
   .rightColumn {
     order: 2;
+    justify-content: center;
+  }
+
+  .doctorImageWrapper {
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+    height: auto;
+  }
+
+  .doctorImage {
+    width: 100%;
+    max-width: 500px;
+    margin-left: 0;
+    margin-top: 0;
   }
 
   .heroTitle {
-    font-size: clamp(2.7rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    white-space: normal;
   }
 
   .careCardsGroup {
@@ -709,17 +748,28 @@
     gap: 36px;
   }
 
+  .contentGroup {
+    align-items: center;
+    text-align: center;
+  }
+
   .heroTitle {
-    font-size: clamp(2rem, 8vw, 3rem);
-    line-height: 1.12;
+    font-size: clamp(1.8rem, 6.5vw, 2.7rem);
+    line-height: 1.15;
+    white-space: normal;
   }
 
   .heroSubtitle {
     font-size: 1rem;
+    max-width: 480px;
+    margin-inline: auto;
   }
 
   .careCardsGroup {
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 420px;
+    margin-inline: auto;
   }
 
   .emergencyRow {
@@ -731,7 +781,12 @@
     align-items: center;
   }
 
+  .emergencyNumber {
+    text-align: center;
+  }
+
   .emergencyCta {
+    display: flex;
     justify-content: center;
   }
 
@@ -744,6 +799,11 @@
     margin-top: 32px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
+    border-radius: 0;
+    padding: 0 16px;
   }
 
   .statsItem {
@@ -762,8 +822,16 @@
     min-height: 105px;
   }
 
+  .floatingPlus {
+    display: none;
+  }
+
   .waveDivider {
     margin-top: 36px;
+  }
+
+  .waveDividerSvg {
+    height: 40px;
   }
 }
 
@@ -777,15 +845,30 @@
   }
 
   .heroTitle {
-    font-size: 1.85rem;
+    font-size: clamp(1.4rem, 7vw, 1.85rem);
   }
 
   .careCard {
-    padding: 20px;
+    padding: 12px 14px;
+  }
+
+  .bulletList span {
+    font-size: 14px;
   }
 
   .emergencyPanel {
-    padding: 20px;
+    padding: 12px 14px;
+  }
+
+  .emergencyNumber {
+    font-size: clamp(20px, 6vw, 24px);
+  }
+
+  .statsStrip {
+    width: calc(100% + 24px);
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 0 12px;
   }
 
   .statsItem {
@@ -795,25 +878,5 @@
   .diagnosticCard {
     width: 100px;
     min-height: 100px;
-  }
-}
-
-/* =========================================================
-   REDUCED MOTION (FALLBACK)
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-  .heroSection *,
-  .heroSection *::before,
-  .heroSection *::after {
-    animation: none;
-    transition: none;
-  }
-}
-
-@media (max-width: 1024px) {
-  .careCardsGroup {
-    width: 100%;
-    max-width: 420px;
   }
 }
